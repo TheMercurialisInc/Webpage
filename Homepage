@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mercurialis Inc.</title>
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0
+      }
+
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        display: flex
+      }
+
+      .content {
+        flex: 3;
+        padding-right: 20px
+      }
+
+      .sidebar {
+        flex: 1;
+        background-color: #404040;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 2px solid #fefe5d
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0
+      }
+
+      .sidebar ul li {
+        margin-bottom: 10px
+      }
+
+      .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px
+      }
+
+      .header {
+        text-align: center;
+        padding: 20px 0
+      }
+
+      .main-content {
+        padding: 20px
+      }
+
+      .footer {
+        text-align: center;
+        background-color: #4c0000;
+        padding: 20px 0;
+        margin-top: 20px
+      }
+
+      .corp-logo {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 200px
+      }
+
+      .trim-box {
+        background-color: #4c0000;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 2px solid #fefe5d
+      }
+
+      .link-box {
+        background-color: #576b84;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 2px solid #fefe5d
+      }
+
+      .decorative-shape {
+        width: 100px;
+        height: 100px;
+        background-color: #fefe5d;
+        transform: rotate(45deg);
+        position: relative;
+        margin-bottom: 20px
+      }
+
+      .decorative-shape:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        transform: rotate(-45deg)
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc." class="corp-logo">
+      <h1>Mercurialis Inc.</h1>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div class="main-content">
+          <h2>Welcome to Mercurialis Inc.</h2>
+          <div class="trim-box">
+            <h3>Recruitment Status</h3>
+            <p>Established in 2002 during EVE Online's beta phase, MINC has become the epitome of longevity and success in nullsec PvP. With a remarkable 90% kill efficiency rate spanning over 21 years, MINC has solidified its position as the longest-standing corporation in this arena.</p>
+            <p></p>
+            Comprising approximately 150 pilots spread across various timezones, MINC maintains a robust presence in EVE's nullsec landscape. From small-scale skirmishes to large capital engagements, its members exhibit a diverse range of skills and expertise, ensuring formidable performance on the battlefield.</p>
+            <p>What sets MINC apart is its vibrant and inclusive community, characterized by a mature and drama-free atmosphere. Whether engaging in PvP, mining, or ratting, members benefit from experienced leadership, extensive logistical support, and a generous Ship Replacement Program (SRP).</p>
+            <p>Joining MINC means embracing a legacy of excellence and camaraderie. With a commitment to providing both seasoned veterans and newcomers with ample opportunities for combat and fun, MINC remains a beacon of resilience and determination in the ever-evolving universe of EVE Online.</p>
+
+          </div>
+          <h3>How Join Mercurialis Inc.?</h3>
+          <div class="link-box">
+            <p>Join our discord or in game channel "MINC BAR" and find message a recruiter or director.</p>
+            <p>For a limited time all recruitment fees and permits curently are 50% off!!!!</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h3><u>Navigation</u></h3>
+        <ul>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Recruitment</a>
+          </li>
+          <li>
+            <a href="#">SEAT</a>
+          </li>
+          <li>
+            <a href="#">Discord</a>
+        <li>
+            <a href="#">Wiki</a>
+        </li>
+        <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Mercurialis Inc. All rights reserved.</p>
+    </div>
+  </body>
+</html>
