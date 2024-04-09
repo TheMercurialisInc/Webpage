@@ -6,102 +6,122 @@
     <title>Mercurialis Inc.</title>
     <style>
       body {
-        background-color: #000;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0
-      }
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-      .container {
-        width: 80%;
-        margin: 20px auto;
-        display: flex
-      }
+.container {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
 
-      .content {
-        flex: 3;
-        padding-right: 20px
-      }
+.content {
+  flex: 0 0 70%;
+  padding-right: 20px;
+  order: 2;
+}
 
-      .sidebar {
-        flex: 1;
-        background-color: #404040;
-        padding: 20px;
-        margin-bottom: 20px;
-        border: 2px solid #fefe5d
-      }
+.sidebar {
+  width: 500px;
+  height:70px;
+  font-size:18px;
+  background-color: #404040;
+  padding: 20px 20px 20px;
+  margin: 0 auto 10px;
+  border: 2px solid #fefe5d;
+  text-align: center; 
+}
+.sidebar h3 {
+    margin-top:10px;
+}
 
-      .sidebar ul {
-        list-style-type: none;
-        padding: 0
-      }
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+}
 
-      .sidebar ul li {
-        margin-bottom: 10px
-      }
+.sidebar ul li {
+  margin-right: 20px;
+}
 
-      .sidebar a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px
-      }
+.sidebar ul li:last-child {
+  margin-right: 0;
+}
 
-      .header {
-        text-align: center;
-        padding: 20px 0
-      }
+.sidebar ul li a {
+  color: #fefe5d;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-      .main-content {
-        padding: 20px
-      }
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
 
-      .footer {
-        text-align: center;
-        background-color: #4c0000;
-        padding: 20px 0;
-        margin-top: 20px
-      }
+.main-content {
+  padding: 20px;
+}
 
-      .corp-logo {
-        display: block;
-        margin: 0 auto 20px;
-        max-width: 200px
-      }
+.footer {
+  text-align: center;
+  background-color: #4c0000;
+  padding: 28px 0;
+  margin-top: 20px;
+}
 
-      .trim-box {
-        background-color: #4c0000;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 2px solid #fefe5d
-      }
+.footer p {
+  font-size: 12px;
+  padding: 0 50px;
+}
 
-      .link-box {
-        background-color: #576b84;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 2px solid #fefe5d
-      }
+.corp-logo {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 200px;
+}
 
-      .decorative-shape {
-        width: 100px;
-        height: 100px;
-        background-color: #fefe5d;
-        transform: rotate(45deg);
-        position: relative;
-        margin-bottom: 20px
-      }
+.trim-box {
+  background-color: #4c0000;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #fefe5d;
+}
 
-      .decorative-shape:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        border: 2px solid #fff;
-        box-sizing: border-box;
-        transform: rotate(-45deg)
-      }
+.link-box {
+  background-color: #576b84;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #fefe5d;
+}
+
+.decorative-shape {
+  width: 100px;
+  height: 100px;
+  background-color: #fefe5d;
+  transform: rotate(45deg);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.decorative-shape:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+}
     </style>
   </head>
   <body>
@@ -110,27 +130,10 @@
       <h1>Mercurialis Inc.</h1>
     </div>
     <div class="container">
-      <div class="content">
-        <div class="main-content">
-          <h2>Welcome to Mercurialis Inc.</h2>
-          <div class="trim-box">
-            <h3>Recruitment Status</h3>
-            <p>Established in 2002 during EVE Online's beta phase, MINC has become the epitome of longevity and success in nullsec PvP. With a remarkable 90% kill efficiency rate spanning over 21 years, MINC has solidified its position as the longest-standing corporation in this arena.</p>
-            <p></p>
-            Comprising approximately 150 pilots spread across various timezones, MINC maintains a robust presence in EVE's nullsec landscape. From small-scale skirmishes to large capital engagements, its members exhibit a diverse range of skills and expertise, ensuring formidable performance on the battlefield.</p>
-            <p>What sets MINC apart is its vibrant and inclusive community, characterized by a mature and drama-free atmosphere. Whether engaging in PvP, mining, or ratting, members benefit from experienced leadership, extensive logistical support, and a generous Ship Replacement Program (SRP).</p>
-            <p>Joining MINC means embracing a legacy of excellence and camaraderie. With a commitment to providing both seasoned veterans and newcomers with ample opportunities for combat and fun, MINC remains a beacon of resilience and determination in the ever-evolving universe of EVE Online.</p>
-
-          </div>
-          <h3>How Join Mercurialis Inc.?</h3>
-          <div class="link-box">
-            <p>Join our discord or in game channel "MINC BAR" and find message a recruiter or director.</p>
-            <p>For a limited time all recruitment fees and permits curently are 50% off!!!!</p>
-          </div>
-        </div>
-      </div>
       <div class="sidebar">
-        <h3><u>Navigation</u></h3>
+        <h3>
+          <u>Site Navigation</u>
+        </h3>
         <ul>
           <li>
             <a href="https://forums.eveonline.com/t/mercurialis-inc-the-oldest-eve-online-corporation/391123">About Us</a>
@@ -143,14 +146,41 @@
           </li>
           <li>
             <a href="https://www.google.com">Discord</a>
-        <li>
+          </li>
+          <li>
             <a href="https://forums.eveonline.com/">Contact Us</a>
           </li>
         </ul>
       </div>
+      <div class="content">
+        <div class="main-content">
+          <h2>Welcome to Mercurialis Inc.</h2>
+          <div class="trim-box">
+            <h3>Recruitment Status</h3>
+            <p>Established in 2002 during EVE Online's beta phase, MINC has become the epitome of longevity and success in nullsec PvP. With a remarkable 90% kill efficiency rate spanning over 21 years, MINC has solidified its position as the longest-standing corporation in this arena.</p>
+            <p>Comprising approximately 150 pilots spread across various timezones, MINC maintains a robust presence in EVE's nullsec landscape. From small-scale skirmishes to large capital engagements, its members exhibit a diverse range of skills and expertise, ensuring formidable performance on the battlefield.</p>
+            <p>What sets MINC apart is its vibrant and inclusive community, characterized by a mature and drama-free atmosphere. Whether engaging in PvP, mining, or ratting, members benefit from experienced leadership, extensive logistical support, and a generous Ship Replacement Program (SRP).</p>
+            <p>Joining MINC means embracing a legacy of excellence and camaraderie. With a commitment to providing both seasoned veterans and newcomers with ample opportunities for combat and fun, MINC remains a beacon of resilience and determination in the ever-evolving universe of EVE Online.</p>
+          </div>
+          <h3>Joining the ranks of Mercurialis Inc. </h3>
+<div class="link-box">
+  <p>Join us at Mercurialis Inc., where legends are forged, and space adventures await!</p>
+  <p>Ready to embark on this epic journey? It's as easy as warp-speed travel:</p>
+  <ol>
+    <li>Step boldly into our Discord or slip into our in-game channel "MINC BAR".</li>
+    <li>Seek out a recruiter or director - they'll be the ones with the saltiest ships and the grandest tales.</li>
+    <li>Prepare to move to while awaiting for the recruiters response. <i>Bribes are accepted to expidite approval</i>
+  </ol>
+  <p>Remember, for a limited time, all recruitment fees and permits are 50% off! Don't miss your chance to join the ranks of spacefaring legends.</p>
+</div>
+
+        </div>
+      </div>
     </div>
     <div class="footer">
-      <p>&copy; 2024 Mercurialis Inc. All rights reserved.</p>
+      <p>&copy; 2024 Mercurialis Inc. All rights reserved. <br>Disclaimer: All money lost, stolen, scammed, misplaced, laundered, or used to buy questionable spaceship upgrades was done so voluntarily and with a complete lack of judgment on the part of the user. We take no responsibility for the consequences of your space adventures. Please fly responsibly. <br>
+        <br>EVE Online is the intellectual property of CCP Games in Reykjavik, Iceland. The use of any trademark or copyright material is not intended to infringe on the rights of CCP Games. Mercurialis Inc. is an independent entity and is not affiliated with or endorsed by CCP Games. Any references to in-game entities, characters, locations, or events are purely fictional and do not represent real-world entities or events. By accessing or using our website, you agree to abide by the terms and conditions set forth herein.
+      </p>
     </div>
   </body>
 </html>
