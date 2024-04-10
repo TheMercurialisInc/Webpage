@@ -142,11 +142,11 @@ body {
       <li><a href="https://forums.eveonline.com/">Contact Us</a></li>
     </ul>
   </div>
-  <audio controls autoplay volume="0.45">
-    <source src="Map10 - The Demon's Dead.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <script>
+  <audio id="audioPlayer" controls autoplay volume="0.45">
+  <source src="Map10 - The Demon's Dead.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
   var audioPlayer = document.getElementById("audioPlayer");
   audioPlayer.play();
