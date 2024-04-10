@@ -142,14 +142,17 @@ body {
       <li><a href="https://forums.eveonline.com/">Contact Us</a></li>
     </ul>
   </div>
-  <audio id="audioPlayer" controls autoplay volume="0.45">
+ <audio id="audioPlayer" controls volume="0.45">
   <source src="Map10 - The Demon's Dead.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var audioPlayer = document.getElementById("audioPlayer");
-  audioPlayer.play();
+  audioPlayer.play().catch(function(error) {
+    console.log("Autoplay failed:", error);
+  });
 });
 </script>
   <div class="content">
