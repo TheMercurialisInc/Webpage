@@ -19,6 +19,7 @@ body {
 }
 
 .navigation-container {
+	position: relative;
     display: flex;
     align-items: center;
     width: 100%;
@@ -29,18 +30,23 @@ body {
 .cyno-container,
 .covertcyno-container {
     flex-basis: 150px;
-    margin-top: 20px;
+    margin-top: -25px;
+    position: absolute;
+    top: 10px;
 }
 
 .cyno-container {
-    margin-right: auto; /* Align cyno gif to the left */
-}
+    margin-right: auto; 
+    left: 10px;
+    }
 
 .covertcyno-container {
-    margin-left: auto; /* Align covertcyno gif to the right */
+    margin-left: auto;
+    padding-bottom: 10px; 
+    right: 10px;
 }
 
-.navigation {
+.navigation {   
     width: 400px;
     height: 80px;
     font-size: 18px;
@@ -48,6 +54,8 @@ body {
     padding: 20px;
     border: 2px solid #fefe5d;
     text-align: center; 
+    position: relative;
+    margin: 0 auto;
 }
 
 .navigation h3 {
@@ -58,7 +66,7 @@ body {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    align-content: center;
     flex: 1; 
 }
 
@@ -68,6 +76,7 @@ body {
 
 .navigation ul li:last-child {
     margin-right: 0;
+    
 }
 
 .navigation ul li a {
