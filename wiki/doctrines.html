@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctrines</title>
+    <link rel="stylesheet" href="../styles/wiki.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+        <h1>Mercurialis Inc. Wiki</h1>
+        <h2>Your Guide to All Things MINC</h2>
+    </div>
+
+<div id="nav-container"></div>
+<script>
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
+
+<div class="wiki-section">
+    <h3>Fleet Doctrines: Precision and Power</h3>
+    <p>
+        Mercurialis Inc. prides itself on deploying the most effective and battle-tested fleet doctrines in New Eden. Our doctrines are meticulously crafted to ensure dominance in any engagement, whether it's large-scale nullsec warfare, small gang skirmishes, or strategic defense operations. Every pilot in MINC is expected to be familiar with these setups to maintain our tactical superiority.
+    </p>
+    <p>
+        Below is a selection of our official fleet doctrines. Study them well, prepare your ships, and always be ready to undock at a moment’s notice.
+    </p>
+</div>
+
+<div class="wiki-section">
+    <h3>1. The Drake Train</h3>
+    <p>
+        The backbone of any resilient fleet, the Drake Train combines unparalleled tanking capabilities with long-range missile barrages to ensure sustained dominance on the battlefield. This doctrine is perfect for both defensive and offensive operations, with its reliability making it a cornerstone of MINC fleet strategy.
+    </p>
+    <h4>Setup:</h4>
+    <ul>
+        <li><strong>Ships:</strong> Drakes</li>
+        <li><strong>Fit:</strong>
+            <ul>
+                <li>High Slots: Heavy Missile Launchers</li>
+                <li>Mid Slots: Shield Extenders, Shield Hardeners, Afterburners</li>
+                <li>Low Slots: Ballistic Control Systems</li>
+            </ul>
+        </li>
+        <li><strong>Strategy:</strong> Anchor up, align to the FC’s call, and unleash coordinated missile volleys to wear down enemy fleets.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>2. Alpha Maelstroms</h3>
+    <p>
+        Known for its devastating first-strike capability, the Alpha Maelstrom doctrine is designed to remove enemy ships from the field before they even realize what hit them. With unparalleled artillery firepower, this doctrine is a favorite for engagements requiring precision and overwhelming damage output.
+    </p>
+    <h4>Setup:</h4>
+    <ul>
+        <li><strong>Ships:</strong> Maelstroms</li>
+        <li><strong>Fit:</strong>
+            <ul>
+                <li>High Slots: 1400mm Artillery Cannons</li>
+                <li>Mid Slots: Shield Hardeners, Shield Extenders</li>
+                <li>Low Slots: Gyrostabilizers</li>
+            </ul>
+        </li>
+        <li><strong>Strategy:</strong> Execute synchronized volleys to “alpha” enemy targets off the field, focusing fire with deadly precision.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>3. Slowcats</h3>
+    <p>
+        The Slowcat doctrine exemplifies the ultimate in defensive fleet operations. With unparalleled sustainability, these carrier-based fleets provide overwhelming firepower and logistics support. Slowcats dominate the battlefield by holding key positions and outlasting any enemy force.
+    </p>
+    <h4>Setup:</h4>
+    <ul>
+        <li><strong>Ships:</strong> Carriers (Archons preferred)</li>
+        <li><strong>Fit:</strong>
+            <ul>
+                <li>High Slots: Capital Remote Armor Repairers, Fighters</li>
+                <li>Mid Slots: Cap Rechargers</li>
+                <li>Low Slots: Capacitor Power Relays, Armor Hardeners</li>
+            </ul>
+        </li>
+        <li><strong>Strategy:</strong> Deploy in key strategic locations, use fighters for offense, and rely on capital remote reps to ensure fleet survival.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>4. Svipul Swarm</h3>
+    <p>
+        The Svipul Swarm doctrine is the epitome of versatility and speed. These Tactical Destroyers excel in both offensive and defensive roles, offering flexibility and firepower in small gang and larger fleet compositions. Perfect for rapid response and surgical strikes.
+    </p>
+    <h4>Setup:</h4>
+    <ul>
+        <li><strong>Ships:</strong> Svipuls</li>
+        <li><strong>Fit:</strong>
+            <ul>
+                <li>High Slots: Autocannons or Artillery Cannons</li>
+                <li>Mid Slots: Propulsion Modules, Shield Hardeners</li>
+                <li>Low Slots: Gyrostabilizers, Nanofiber Internal Structures</li>
+            </ul>
+        </li>
+        <li><strong>Strategy:</strong> Quickly adapt modes to control the battlefield, chasing down targets or holding positions as needed.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>5. Armor HACs</h3>
+    <p>
+        Combining durability with damage output, the Armor HAC doctrine is the gold standard for operations requiring endurance and efficiency. These Heavy Assault Cruisers can absorb punishment while delivering consistent firepower, making them a favorite for extended engagements.
+    </p>
+    <h4>Setup:</h4>
+    <ul>
+        <li><strong>Ships:</strong> Zealots, Ishtars</li>
+        <li><strong>Fit:</strong>
+            <ul>
+                <li>High Slots: Medium Pulse Lasers (Zealots), Drone Damage Amplifiers (Ishtars)</li>
+                <li>Mid Slots: Cap Boosters, Tracking Computers</li>
+                <li>Low Slots: Energized Adaptive Nano Membranes, Armor Plates</li>
+            </ul>
+        </li>
+        <li><strong>Strategy:</strong> Anchor with the fleet, focus fire on primary targets, and rely on armor tanking to outlast the enemy.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>6. T1 Frigate Swarm</h3>
+    <p>
+        For fast, disposable firepower, the T1 Frigate Swarm is an invaluable doctrine. These nimble ships overwhelm larger fleets through sheer numbers and unmatched speed. An excellent choice for new pilots or operations requiring rapid deployment.
+    </p>
+    <h4>Setup:</h4>
+    <ul>
+        <li><strong>Ships:</strong> Any T1 frigates (Rifters, Atrons, Punishers)</li>
+        <li><strong>Fit:</strong>
+            <ul>
+                <li>High Slots: Small Autocannons or Blasters</li>
+                <li>Mid Slots: Warp Disruptors, Webifiers</li>
+                <li>Low Slots: Damage Mods, Nanofiber Internal Structures</li>
+            </ul>
+        </li>
+        <li><strong>Strategy:</strong> Swarm the enemy fleet, overwhelm with speed and numbers, and force your opponents into chaos.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>Operational Readiness</h3>
+    <p>
+        All pilots are expected to maintain at least one ship for each doctrine, fitted and ready to undock at a moment’s notice. Ensure you review the fleet commander’s instructions before deployment and always bring spare modules and ammunition.
+    </p>
+</div>
+</body>
+</html>

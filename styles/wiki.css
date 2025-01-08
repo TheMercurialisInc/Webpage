@@ -1,0 +1,183 @@
+/* Global Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(../assets/JWSTPIX.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 3px solid gold;
+}
+
+.header img {
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: gold;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.header h2 {
+    font-size: 20px;
+    color: #49ce5a;
+    margin-top: 0;
+}
+
+/* Navigation Panel Styling */
+.navigation-panel {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark, semi-transparent background */
+    border: 2px solid gold;
+    padding: 15px 20px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); /* Slightly stronger shadow for depth */
+}
+
+.navigation-panel ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    gap: 20px; /* Larger spacing between links */
+}
+
+.navigation-panel ul li {
+    margin: 0;
+}
+
+.navigation-panel ul li a {
+    color: #49ce5a; /* Green text for links */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px; /* Better spacing inside links */
+    border: 2px solid transparent; /* Invisible border for hover effect */
+    border-radius: 5px; /* Rounded edges */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navigation-panel ul li a:hover {
+    background-color: #576b84; /* Subtle background color change */
+    color: gold; /* Gold text on hover */
+    border: 2px solid white; /* Highlight border on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Highlight active page */
+.navigation-panel ul li a.active {
+    background-color: gold; /* Highlight current page */
+    color: black;
+    border: 2px solid #49ce5a; /* Green border for active link */
+}
+
+/* Responsive Design: Center links on small screens */
+@media (max-width: 600px) {
+    .navigation-panel ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce gap between links */
+    }
+}
+
+/* Main Content Styling */
+.wiki-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid gold;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 0 3px rgba(255, 215, 0, 0.8);
+}
+
+.wiki-section h3 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+.wiki-section p,
+.wiki-section ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.wiki-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.wiki-section ul li {
+    margin: 10px 0;
+}
+
+.wiki-section ul li a {
+    color: #49ce5a;
+    text-decoration: none;
+}
+
+.wiki-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #4c0000;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    border-top: 2px solid gold;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #49ce5a;
+    color: white;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

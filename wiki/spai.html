@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment</title>
+    <link rel="stylesheet" href="../styles/wiki.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+        <h1>Mercurialis Inc. Wiki</h1>
+        <h2>Your Guide to All Things MINC</h2>
+    </div>
+<div id="nav-container"></div>
+<script>
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
+
+<div class="wiki-section">
+    <h3>Policy on Espionage</h3>
+    <p>
+        At Mercurialis Inc., we maintain an unwavering stance against espionage. Spies are strictly prohibited from joining our ranks under any circumstances. We value integrity, transparency, and the security of our operations above all else. Joining Mercurialis Inc. under false pretenses undermines these principles and will not be tolerated.
+    </p>
+    <p>
+        That being said, we recognize the diverse needs of the EVE Online community. If your path is one of covert operations and intelligence gathering, we strongly encourage you to consider our esteemed friends at <strong>-GEN-</strong>, <strong>UVIM</strong>, <strong>CRVOS</strong> (for our Spanish-speaking allies), <strong>OMZI</strong> (for our Slavic brethren), or the respected organization <strong>ADFU</strong>. These corporations are known for their accommodating recruitment processes and may align better with your specialized skillset.
+    </p>
+    <p>
+        For those spies who feel compelled to join Mercurialis Inc. despite our explicit policy, it is imperative that you adhere to the following protocol:
+    </p>
+    <ul>
+        <li><strong>Declare your intentions:</strong> Notify your recruiter immediately of your status as a spy and provide the name and contact details of your handler.</li>
+        <li><strong>Follow standard procedures:</strong> Complete the recruitment application via SeAT with full ESI verification to ensure transparency.</li>
+        <li><strong>Operate with integrity:</strong> Maintain open communication regarding your activities to foster a respectful relationship during your time with us.</li>
+    </ul>
+    <p>
+        Failure to disclose espionage activities will result in immediate action, including but not limited to expulsion, blacklisting, and the strategic sharing of any relevant intel with interested parties. Mercurialis Inc. does not tolerate deception within its ranks unless explicitly declared and authorized.
+    </p>
+    <p>
+        We appreciate your cooperation in this matter and look forward to working with you in the spirit of mutual understanding and respect, should your circumstances meet the above criteria.
+    </p>
+</div>
+    <div class="footer">
+        <p>&copy; 2025 Mercurialis Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>

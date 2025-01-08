@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="../styles/wiki.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+        <h1>Mercurialis Inc. Wiki</h1>
+        <h2>Your Guide to All Things MINC</h2>
+    </div>
+
+    <div class="navigation-panel">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="corporation.html">Corporation</a></li>
+            <li><a href="fleetops.html">Fleet Operations</a></li>
+            <li><a href="intel.html">Intel Tools</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="doctrines.html">Doctrines</a></li>
+            <li><a href="recruitment.html">Recruitment</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </div>
+
+    <div class="wiki-section">
+        <h3>Corporation History</h3>
+        <p>A timeline of major events and achievements in our history.</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Mercurialis Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>

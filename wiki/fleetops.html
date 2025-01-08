@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Operations</title>
+    <link rel="stylesheet" href="../styles/wiki.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+        <h1>Mercurialis Inc. Wiki</h1>
+        <h2>Your Guide to All Things MINC</h2>
+    </div>
+
+<div id="nav-container"></div>
+<script>
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
+
+<div class="wiki-section">
+    <h3>Fleet Operations: United in Strength</h3>
+    <p>
+        Fleet operations are the backbone of Mercurialis Inc.’s dominance in New Eden. As a corporation, we understand that no capsuleer stands alone, and together we achieve far more than we ever could individually. From large-scale nullsec battles to tactical wormhole skirmishes, our fleets are designed to maximize teamwork, efficiency, and adaptability.
+    </p>
+    <p>
+        Whether you’re a seasoned fleet commander or a new recruit, this page will guide you through everything you need to know about participating in and contributing to our fleet operations. Prepare your ships, rally with your comrades, and help write the next chapter of Mercurialis Inc.’s storied legacy.
+    </p>
+</div>
+
+<div class="wiki-section">
+    <h3>Types of Fleet Operations</h3>
+    <p>
+        Mercurialis Inc. conducts a variety of fleet operations, each tailored to different objectives and playstyles. Here’s an overview of the types of fleets we run:
+    </p>
+    <ul>
+        <li><strong>PvP Roams:</strong> Engage in fast-paced combat as we patrol and disrupt enemy territories. These fleets prioritize mobility, coordination, and rapid decision-making.</li>
+        <li><strong>Nullsec Sovereignty Battles:</strong> Fight alongside our allies to defend or expand territorial control in nullsec space. Expect large-scale fleet warfare, coordinated tactics, and high stakes.</li>
+        <li><strong>Wormhole Expeditions:</strong> Explore and exploit wormhole space for resources, combat opportunities, and strategic positioning.</li>
+        <li><strong>Mining Defense Operations:</strong> Protect our industrial operations by fending off hostile threats during mining fleets.</li>
+        <li><strong>Structure Bashes:</strong> Participate in organized attacks on enemy structures or defend our assets from hostile incursions.</li>
+        <li><strong>Training Fleets:</strong> Designed for newer members, these fleets focus on teaching fleet mechanics, ship roles, and effective communication.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>Getting Started with Fleet Operations</h3>
+    <p>
+        Joining a fleet operation is easy, and our experienced fleet commanders (FCs) ensure every member is equipped with the knowledge and tools they need to succeed. Follow these steps to get started:
+    </p>
+    <ol>
+        <li><strong>Stay Informed:</strong> Keep an eye on our <em>Discord</em> and in-game channel <em>MINC BAR</em> for fleet pings and announcements.</li>
+        <li><strong>Check Doctrines:</strong> Ensure you have a ship that aligns with our fleet doctrines. Visit the <a href="doctrines.html">Doctrines</a> page for up-to-date fittings and requirements.</li>
+        <li><strong>Be Prepared:</strong> Stock your ships with the necessary modules, ammunition, and scripts. Keep backup ships ready in case of losses.</li>
+        <li><strong>Join Voice Comms:</strong> Communication is critical in fleet operations. Log into our <em>Discord</em> server and join the designated fleet channel before undocking.</li>
+        <li><strong>Follow the FC:</strong> The Fleet Commander’s instructions are paramount. Follow their orders promptly to ensure fleet success.</li>
+    </ol>
+</div>
+
+<div class="wiki-section">
+    <h3>Fleet Roles and Responsibilities</h3>
+    <p>
+        Each fleet relies on specific roles to function effectively. Here’s a breakdown of the key roles in our operations:
+    </p>
+    <ul>
+        <li><strong>Fleet Commander (FC):</strong> Leads the operation, makes tactical decisions, and ensures the fleet achieves its objectives.</li>
+        <li><strong>Logistics Pilots:</strong> Provide crucial remote repairs and support to keep the fleet operational during combat.</li>
+        <li><strong>Tacklers:</strong> Pin down enemy ships using warp disruptors and scramblers, ensuring they can’t escape.</li>
+        <li><strong>DPS Pilots:</strong> Deal the majority of damage to enemy ships and structures.</li>
+        <li><strong>Scouts:</strong> Provide intel on enemy movements, fleet compositions, and potential threats.</li>
+        <li><strong>Electronic Warfare (EWAR):</strong> Disrupt enemy operations by jamming targeting systems, dampening sensors, or neutralizing energy.</li>
+        <li><strong>Support Roles:</strong> Includes command burst pilots and specialized roles like interdiction and cyno deployment.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>Fleet Etiquette and Tips for Success</h3>
+    <p>
+        To ensure smooth and effective operations, it’s important to adhere to the following guidelines:
+    </p>
+    <ul>
+        <li><strong>Be On Time:</strong> Arrive in the staging system and ready to undock before the fleet’s scheduled departure time.</li>
+        <li><strong>Communicate Clearly:</strong> Keep comms clear during combat. Use Discord’s voice channels for critical information only.</li>
+        <li><strong>Stay Aligned:</strong> Always align to the designated target or object unless instructed otherwise by the FC.</li>
+        <li><strong>Ask Questions:</strong> If you’re unsure about your role or orders, don’t hesitate to ask. Fleet commanders and veterans are here to help.</li>
+        <li><strong>Be Flexible:</strong> Fleet dynamics can change rapidly. Stay adaptable and follow the FC’s instructions without hesitation.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>Upcoming Fleet Events</h3>
+    <p>
+        Don’t miss out on upcoming operations! Check the fleet schedule regularly on our <em>Discord</em> server and in the in-game <em>MINC BAR</em> channel. Whether it’s a nullsec sovereignty battle or a training session, there’s always an opportunity to contribute.
+    </p>
+    <p>
+        Stay informed, stay prepared, and let’s dominate the stars together.
+    </p>
+</div>
+
+
+    <div class="footer">
+        <p>&copy; 2025 Mercurialis Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>

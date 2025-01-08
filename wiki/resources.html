@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="../styles/wiki.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+        <h1>Mercurialis Inc. Wiki</h1>
+        <h2>Your Guide to All Things MINC</h2>
+    </div>
+
+<div id="nav-container"></div>
+<script>
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
+
+<div class="wiki-section">
+    <h3>Resources: Your Toolkit for New Eden</h3>
+    <p>
+        The universe of EVE Online is vast and complex, but you don’t have to navigate it alone. Mercurialis Inc. has compiled a list of essential resources to help you excel in every aspect of the game, from PvP to industry, from intelligence gathering to community events. These tools and services have been vetted by our pilots and are considered invaluable for success in New Eden.
+    </p>
+</div>
+
+<div class="wiki-section">
+    <h3>1. Pyfa: Ship Fitting Tool</h3>
+    <p>
+        <strong>Pyfa</strong> (Python Fitting Assistant) is the go-to tool for planning and optimizing your ship fits. It allows you to experiment with different modules, rigs, and skills to see how they affect your ship's performance without committing in-game resources.
+    </p>
+    <ul>
+        <li><strong>Key Features:</strong> Detailed ship stats, integration with character skills, and module comparisons.</li>
+        <li><strong>Download:</strong> <a href="https://github.com/pyfa-org/Pyfa" target="_blank">GitHub Repository</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>2. Dotlan</h3>
+    <p>
+        <strong>Dotlan</strong> is an indispensable map tool for navigating New Eden. It provides detailed maps of all regions, jump bridges, sovereignty, and system statistics.
+    </p>
+    <ul>
+        <li><strong>Use Case:</strong> Planning fleet routes, finding trade hubs, and tracking sovereignty changes.</li>
+        <li><strong>Website:</strong> <a href="https://evemaps.dotlan.net/" target="_blank">evemaps.dotlan.net</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>3. ZKillboard</h3>
+    <p>
+        <strong>ZKillboard</strong> is the definitive tool for tracking kills and losses in EVE Online. Use it to analyze enemy fleet compositions, track your corporation's performance, or scout for potential targets.
+    </p>
+    <ul>
+        <li><strong>Use Case:</strong> Intel gathering, PvP analysis, and bragging rights.</li>
+        <li><strong>Website:</strong> <a href="https://zkillboard.com/" target="_blank">zkillboard.com</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>4. Eve Rift Intel Fusion Tool (RIFT)</h3>
+    <p>
+        Designed by Mercurialis Inc.’s own <strong>Nohus</strong>, <strong>RIFT</strong> is our official intel tool for staying ahead in New Eden. RIFT allows pilots to manage and analyze intel efficiently, giving us a strategic edge in every operation.
+    </p>
+    <ul>
+        <li><strong>Download:</strong> <a href="https://riftforeve.online/" target="_blank">RIFT Website</a></li>
+        <li><strong>Source Code:</strong> <a href="https://gitlab.com/rift-intel-fusion-tool/rift-intel-fusion-tool" target="_blank">GitLab Repository</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>5. aDashboard</h3>
+    <p>
+        <strong>aDashboard</strong> is an invaluable web-based tool for managing your in-game assets, finances, and production lines. It's particularly useful for industrialists and trade-focused pilots.
+    </p>
+    <ul>
+        <li><strong>Use Case:</strong> Asset tracking, market analysis, and production planning.</li>
+        <li><strong>Website:</strong> <a href="https://adashboard.info/" target="_blank">adashboard.info</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>6. Industry Tools</h3>
+    <p>
+        Managing industry in EVE requires precise planning and the right tools. Here are some of the best tools for industrialists:
+    </p>
+    <ul>
+        <li><strong>EVE ISK Per Hour (IPH):</strong> A comprehensive tool for calculating profitability and managing industry projects. <a href="https://eveiph.github.io/" target="_blank">Learn More</a></li>
+        <li><strong>Fuzzwork Industry Tools:</strong> Covers everything from blueprint calculators to market hubs. <a href="https://www.fuzzwork.co.uk/" target="_blank">Learn More</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>7. Red Frog Freight</h3>
+    <p>
+        <strong>Red Frog Freight</strong> is the gold standard for hauling services in New Eden. Whether you're moving assets across highsec or lowsec, their trusted service ensures your goods arrive safely.
+    </p>
+    <ul>
+        <li><strong>Website:</strong> <a href="https://red-frog.org/" target="_blank">red-frog.org</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>8. Best of US (Military Veterans Group)</h3>
+    <p>
+        Best of US is a community group specifically for military veterans who play EVE Online. They provide camaraderie, support, and a shared space for those who’ve served.
+    </p>
+    <ul>
+        <li><strong>Website:</strong> <a href="https://bestofusgaming.org/" target="_blank">bestofusgaming.org</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>9. EVE Online Devblogs</h3>
+    <p>
+        Stay up to date with official news, patch notes, and announcements directly from CCP through their developer blogs.
+    </p>
+    <ul>
+        <li><strong>Website:</strong> <a href="https://www.eveonline.com/news/dev-blogs" target="_blank">EVE Devblogs</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>10. Fanfest</h3>
+    <p>
+        Fanfest is the ultimate gathering of EVE Online players, hosted annually by CCP in Reykjavik, Iceland. Meet the developers, connect with other players, and celebrate the world of New Eden.
+    </p>
+    <ul>
+        <li><strong>Website:</strong> <a href="https://www.eveonline.com/fanfest" target="_blank">EVE Fanfest</a></li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>11. Communication Tools: Mumble and Jabber</h3>
+    <p>
+        Communication is the key to success in EVE Online. Mercurialis Inc. utilizes Mumble for voice comms and Jabber for operational pings and alerts.
+    </p>
+    <ul>
+        <li><strong>Mumble:</strong> Join our server for fleet comms and real-time coordination.</li>
+        <li><strong>Jabber:</strong> Stay informed of fleet pings and urgent updates.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>12. Intel Channels (ITL)</h3>
+    <p>
+        ITL (Intel Channels) is a network of intel-sharing tools and in-game channels that help you stay ahead of enemy movements. Ensure you're active in these channels to maintain situational awareness.
+    </p>
+</div>
+
+
+    <div class="footer">
+        <p>&copy; 2025 Mercurialis Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>
