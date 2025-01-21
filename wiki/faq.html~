@@ -27,114 +27,85 @@
         .catch(error => console.error('Error loading navigation:', error));
 </script>
 
+
 <div class="wiki-section">
     <h3>Mercurialis Inc. Official FAQ</h3>
     <p>
         Welcome to the Mercurialis Inc. FAQ. Below, you'll find answers to some of the most frequently asked questions about our operations, policies, and community. This document is intended to provide clarity and guidance for all current and prospective members.
     </p>
 </div>
-
 <div class="wiki-section">
     <h3>General Information</h3>
-    <ul>
-        <li><strong>What is Mercurialis Inc.?</strong><br>
-            Mercurialis Inc. is a long-established corporation in EVE Online specializing in PvP, industry, and community engagement across New Eden.</li>
-        <li><strong>How do I join Mercurialis Inc.?</strong><br>
-            Prospective members must complete a recruitment application, pass an interview, and demonstrate alignment with our corporate objectives.</li>
-        <li><strong>What time zones does Mercurialis Inc. operate in?</strong><br>
-            We maintain global coverage, with active members in all major time zones to ensure 24/7 operational readiness.</li>
-        <li><strong>Does Mercurialis Inc. have a ship replacement program (SRP)?</strong><br>
-            Yes, we provide SRP for approved fleet losses to ensure our members remain combat-ready at all times.</li>
-    </ul>
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What is Mercurialis Inc.?</strong></p>
+    <p>Mercurialis Inc. is a long-established corporation in EVE Online specializing in PvP, industry, and community engagement across New Eden.</p><br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>How do I join Mercurialis Inc.?</strong></p>
+    <p>Prospective members must complete a recruitment application, pass an interview, and demonstrate alignment with our corporate objectives.</p><br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What time zones does Mercurialis Inc. operate in?</strong></p>
+    <p>We maintain global coverage, with active members in all major time zones to ensure 24/7 operational readiness.</p><br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Does Mercurialis Inc. have a ship replacement program (SRP)?</strong></p>
+    <p>Yes, we provide SRP for approved fleet losses to ensure our members remain combat-ready at all times.</p><br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What is the procedure for joining a fleet?</strong></p><br>
+    <p>Join the designated voice comms channel, follow the FC’s instructions, and ensure your ship matches the current fleet doctrine.<br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Can I fly a non-doctrinal ship in a fleet?</strong></p><br>
+    <p>No, adherence to fleet doctrines is mandatory to ensure operational consistency and success.</p><br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What happens if I disconnect during a fleet operation?</strong></p><br>
+    <p>Reconnect as quickly as possible and don't die.</p><br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Can I bring my mining barge to a PvP fleet?</strong></p><br>
+    <p>Mining barges are not authorized for PvP operations, except in approved tactical scenarios.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Does Mercurialis Inc. allow spies?</strong></p><br>
+    <p>No. Spying is strictly prohibited unless declared during recruitment and approved by leadership.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What happens if I am caught smuggling contraband in corporate space?</strong></p><br>
+    <p>Smuggling is reviewed on a case-by-case basis, with penalties ranging from fines to immediate expulsion.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Are there restrictions on ship names?</strong></p><br>
+    <p>Ship names must align with corporate standards and avoid profanity or sensitive topics.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What is the policy on unsolicited cyno deployments?</strong></p><br>
+    <p>Unauthorized cyno deployments are subject to disciplinary review and potential reimbursement obligations.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Does Mercurialis Inc. offer hauling services?</strong></p><br>
+    <p>Yes, members can request hauling services through approved corporate logistics channels.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>hat resources are prioritized during mining operations?</strong></p><br>
+    <p>Operations typically target high-value ores such as Arkonor, Bistot, and moon materials.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Can I build a Titan in highsec?</strong></p><br>
+    <p>No. Titans are restricted to nullsec construction facilities as per game mechanics.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What is the protocol for salvaging wrecks during a fleet operation?</strong></p><br>
+    <p>Wrecks are considered corporate assets unless otherwise specified by the FC.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Can I ransom enemy ships while piloting a freighter?</strong></p><br>
+    <p>Freighter pilots are discouraged from engaging in ransom negotiations due to limited maneuverability.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Can I warp to the FC at zero decloaked when setting up for a bomber run?</strong></p><br>
+    <p>No.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What is the penalty for losing a Titan in a mining fleet?</strong></p><br>
+    <p>Pilots responsible for such losses will undergo a comprehensive review of tactical decision-making processes.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Are cloaked ships allowed to participate in karaoke night?</strong></p><br>
+    <p>Yes, but cloaked ships must decloak before performing to ensure fairness and transparency.</p><br>
+    
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>Can I replace my ship’s tanks with PLEX?</strong></p><br>
+    <p>Such modifications are discouraged due to inefficiency and increased vulnerability.</p><br>
+
+    <p style="text-align: center; color: gold; font-size: 1.2em; margin-top: 50px;"><strong>What is the policy on requesting inappropriate pictures from leadership?</strong></p><br>
+    <p>All communications with leadership must adhere to corporate professionalism standards. Requests for inappropriate images, including but not limited to "feet pics for PLEX," are strictly prohibited and will result in immediate disciplinary action. Additionally, moaning on comms during fleet operations disrupts tactical coordination and is subject to review by the leadership team with possible mandatory re-training in comms etiquette.</p><br><br><br>
 </div>
-
-<div class="wiki-section">
-    <h3>Fleet Operations</h3>
-    <ul>
-        <li><strong>What is the procedure for joining a fleet?</strong><br>
-            Join the designated voice comms channel, follow the FC’s instructions, and ensure your ship matches the current fleet doctrine.</li>
-        <li><strong>Can I fly a non-doctrinal ship in a fleet?</strong><br>
-            No, adherence to fleet doctrines is mandatory to ensure operational consistency and success.</li>
-        <li><strong>What happens if I disconnect during a fleet operation?</strong><br>
-            Reconnect as quickly as possible and notify the FC upon reentry. Extended disconnections may result in reassignment.</li>
-        <li><strong>Can I bring my mining barge to a PvP fleet?</strong><br>
-            Mining barges are not authorized for PvP operations, except in approved tactical scenarios.</li>
-    </ul>
-</div>
-
-<div class="wiki-section">
-    <h3>Corporate Policies</h3>
-    <ul>
-        <li><strong>Does Mercurialis Inc. allow spies?</strong><br>
-            No. Spying is strictly prohibited unless declared during recruitment and approved by leadership.</li>
-        <li><strong>What happens if I am caught smuggling contraband in corporate space?</strong><br>
-            Smuggling is reviewed on a case-by-case basis, with penalties ranging from fines to immediate expulsion.</li>
-        <li><strong>Are there restrictions on ship names?</strong><br>
-            Ship names must align with corporate standards and avoid profanity or sensitive topics.</li>
-        <li><strong>What is the policy on unsolicited cyno deployments?</strong><br>
-            Unauthorized cyno deployments are subject to disciplinary review and potential reimbursement obligations.</li>
-    </ul>
-</div>
-
-<div class="wiki-section">
-    <h3>Logistics and Industry</h3>
-    <ul>
-        <li><strong>Does Mercurialis Inc. offer hauling services?</strong><br>
-            Yes, members can request hauling services through approved corporate logistics channels.</li>
-        <li><strong>What resources are prioritized during mining operations?</strong><br>
-            Operations typically target high-value ores such as Arkonor, Bistot, and moon materials.</li>
-        <li><strong>Can I build a Titan in highsec?</strong><br>
-            No. Titans are restricted to nullsec construction facilities as per game mechanics.</li>
-        <li><strong>What is the protocol for salvaging wrecks during a fleet operation?</strong><br>
-            Wrecks are considered corporate assets unless otherwise specified by the FC.</li>
-    </ul>
-</div>
-
-<div class="wiki-section">
-    <h3>Special Scenarios</h3>
-    <ul>
-        <li><strong>What should I do if my ship becomes sentient during an operation?</strong><br>
-            Immediately dock at the nearest station and notify leadership. The ship will be reviewed for potential tactical applications.</li>
-        <li><strong>Can I ransom enemy ships while piloting a freighter?</strong><br>
-            Freighter pilots are discouraged from engaging in ransom negotiations due to limited maneuverability.</li>
-        <li><strong>What is the protocol for reporting time anomalies during wormhole exploration?</strong><br>
-            All time anomalies must be logged and reported to leadership. Avoid entering affected areas without explicit authorization.</li>
-        <li><strong>Does Mercurialis Inc. recognize claims of "space whales" interfering with mining lasers?</strong><br>
-            Space whales remain unverified phenomena. Members encountering such claims must provide evidence for review.</li>
-    </ul>
-</div>
-
-<div class="wiki-section">
-    <h3>Uncommon Member Inquiries</h3>
-    <ul>
-        <li><strong>Can I warp to the FC at zero during combat?</strong><br>
-            No. Unauthorized warps compromise fleet positioning and are strictly prohibited.</li>
-        <li><strong>What is the penalty for losing a Titan in a mining fleet?</strong><br>
-            Pilots responsible for such losses will undergo a comprehensive review of tactical decision-making processes.</li>
-        <li><strong>Are cloaked ships allowed to participate in karaoke night?</strong><br>
-            Yes, but cloaked ships must decloak before performing to ensure fairness and transparency.</li>
-        <li><strong>What is the corporate stance on pilots attempting to duel Triglavian NPCs?</strong><br>
-            Such actions are not officially sanctioned and may require extensive counseling if unsuccessful.</li>
-    </ul>
-</div>
-
-<div class="wiki-section">
-    <h3>Absurd Situations</h3>
-    <ul>
-        <li><strong>What is the procedure for declaring war on Jovian NPCs?</strong><br>
-            War declarations against Jovian entities are currently restricted due to lack of operational access.</li>
-        <li><strong>What should I do if a stargate leads to an alternate reality?</strong><br>
-            Notify leadership and refrain from entering until further analysis is conducted.</li>
-        <li><strong>Can I replace my ship’s hull with solid gold?</strong><br>
-            Such modifications are discouraged due to inefficiency and increased vulnerability.</li>
-        <li><strong>What is Mercurialis Inc.’s policy on interstellar time travel?</strong><br>
-            Unauthorized temporal activities are strictly prohibited to preserve operational continuity.</li>
-    </ul>
-</div>
-
-
-    <div class="footer">
-        <p>&copy; 2025 Mercurialis Inc. All rights reserved.</p>
+<div class="footer">
+        <p>&copy; 2025 Mercurialis Inc. All rights reserved. <br>Disclaimer: All money lost, stolen, scammed, misplaced, laundered, or used to buy questionable spaceship upgrades was done so voluntarily and with a complete lack of judgment on the part of the user. We take no responsibility for the consequences of your space adventures. Please fly responsibly. <br>
+        <br>EVE Online is the intellectual property of CCP Games in Reykjavik, Iceland. The use of any trademark or copyright material is not intended to infringe on the rights of CCP Games. Mercurialis Inc. is an independent entity and is not affiliated with or endorsed by CCP Games. Any references to in-game entities, characters, locations, or events are purely fictional and do not represent real-world entities or events. By accessing or using our website, you agree to abide by the terms and conditions set forth herein.
+    </p>
     </div>
 </body>
 </html>

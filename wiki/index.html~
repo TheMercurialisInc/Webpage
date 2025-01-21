@@ -15,8 +15,11 @@
 
 <div id="nav-container"></div>
 <script>
-    fetch('../nav.html')
-        .then(response => response.text())
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
         .then(data => {
             document.getElementById('nav-container').innerHTML = data;
         })
@@ -26,40 +29,11 @@
     <div class="wiki-section">
     <h3>Welcome to the Mercurialis Inc. Wiki</h3>
     <p>
-        Mercurialis Inc. (MINC) stands as a shining beacon in the vast universe of EVE Online—a corporation rooted in history, camaraderie, and a relentless pursuit of excellence. Established during the beta phase of EVE Online in 2002, MINC is one of the longest-standing corporations in New Eden, embodying resilience, adaptability, and unity. Over two decades later, we remain a cornerstone of the EVE Online community, where legends are forged and new opportunities await.
-    </p>
-    <p>
-        This wiki serves as the ultimate repository of knowledge for all things Mercurialis Inc. Whether you're a seasoned capsuleer, a wide-eyed recruit, or simply curious about our legacy, this wiki is your gateway to understanding the core of who we are and what we do. Through these pages, you'll gain insight into our operations, history, doctrines, and the tools that keep us ahead of the curve in the ever-evolving universe of EVE.
+        Mercurialis Inc. (MINC) is the oldest active a corporation in EVE Online.Whether you're an experienced pilot or new to our ranks, MINC provides a place to learn, contribute, and be part of something bigger. This wiki is here to help you find the information you need about our operations, strategies, and day-to-day activities. It’s a resource for understanding how we work, what we do, and how you can get involved.
     </p>
 </div>
 
-<div class="wiki-section">
-    <h3>Our History: A Legacy of Perseverance</h3>
-    <p>
-        From humble beginnings in the chaotic days of EVE's beta phase, Mercurialis Inc. has grown into an enduring powerhouse. Our journey has been punctuated by every major event in New Eden’s history, from the colossal battles of nullsec to the stealthy operations of wormhole space. We have weathered storms, built empires, and stood shoulder-to-shoulder with allies to defend the ideals we hold dear.
-    </p>
-    <h4>Highlights of Our Legacy:</h4>
-    <ul>
-        <li><strong>The Early Years (2002–2006):</strong> As pioneers in EVE Online’s beta phase, MINC quickly established a reputation for boldness and innovation. These formative years were marked by rapid growth, exploration, and the forging of alliances that would shape our future.</li>
-        <li><strong>The Great Wars (2006–2012):</strong> During a period of intense conflict across New Eden, MINC was at the forefront of major alliances, contributing to some of the most legendary battles in EVE history. Our pilots became known for their expertise in fleet operations, intelligence gathering, and adaptability under fire.</li>
-        <li><strong>The Age of Exploration (2012–2017):</strong> As the game evolved, so did we. MINC expanded its horizons into wormhole space, capital production, and the pursuit of cutting-edge technologies to ensure our dominance.</li>
-        <li><strong>The Modern Era (2017–Present):</strong> Today, MINC is a diverse, multicultural corporation that thrives in both PvP and industry. Our continued success lies in the strength of our community and our commitment to staying ahead of the curve.</li>
-    </ul>
-</div>
 
-<div class="wiki-section">
-    <h3>Why Join Mercurialis Inc.?</h3>
-    <p>
-        At MINC, we believe that every capsuleer has a unique role to play in our shared journey. Whether you’re drawn to large-scale fleet battles, intricate industry projects, or covert operations, there’s a place for you here.
-    </p>
-    <h4>What We Offer:</h4>
-    <ul>
-        <li><strong>Camaraderie:</strong> We’re more than just a corporation—we’re a family of like-minded pilots who support each other both in-game and beyond.</li>
-        <li><strong>Opportunities for Growth:</strong> From new recruits to veteran pilots, everyone is given the tools and guidance to succeed in their chosen path.</li>
-        <li><strong>Cutting-Edge Tools:</strong> As the official users of the Eve Rift Intel Fusion Tool (RIFT), we empower our pilots with the best intelligence-gathering capabilities available.</li>
-        <li><strong>Diverse Playstyles:</strong> Whether you prefer mining in the safety of our industrial fleets or diving into the chaos of nullsec PvP, MINC provides a platform for every playstyle.</li>
-    </ul>
-</div>
 
 <div class="wiki-section">
     <h3>What This Wiki Provides</h3>
@@ -81,23 +55,19 @@
 
 <div class="wiki-section">
     <h3>Stay Connected</h3>
-    <p>
-        The heart of Mercurialis Inc. lies not only in our achievements but in our connections with one another. To foster this sense of community, we provide multiple avenues for communication and collaboration:
-    </p>
-    <ul>
+        <ul>
         <li><strong>In-Game:</strong> Join our official channel, <em>MINC BAR</em>, to connect with fellow pilots and leadership.</li>
-        <li><strong>Discord:</strong> Our Discord server is the central hub for planning operations, sharing insights, and socializing with other members.</li>
-        <li><strong>Eve Rift Intel Fusion Tool (RIFT):</strong> Take advantage of our powerful intelligence tool, designed specifically for the EVE community to stay ahead of adversaries.</li>
+        <li><strong>Discord:</strong> Our Discord server is the central hub for planning operations, sharing insights, and socializing with other members. Click the SeAT link on our main page to join </li>
     </ul>
 </div>
 
 <div class="wiki-section">
-    <h3>Join Us and Forge Your Legacy</h3>
+    <h3>Wiki Disclaimer</h3>
     <p>
-        Becoming a part of Mercurialis Inc. means joining a legacy that has spanned decades. It means standing shoulder-to-shoulder with skilled pilots, taking on the challenges of New Eden with determination and ingenuity. It means being part of a corporation that values your unique contributions and provides a platform for growth, adventure, and unforgettable experiences.
-    </p>
-    <p>
-        So what are you waiting for? Dive into this wiki, equip yourself with knowledge, and take your first step toward forging your legacy with Mercurialis Inc. Together, we’ll continue to shape the history of EVE Online—one pilot, one fleet, and one victory at a time.
+        By participating in any Mercurialis Inc. (MINC) operations, communications, or logistical activities, you acknowledge and accept the terms outlined below. Your continued existence in New Eden under the MINC banner constitutes implicit acceptance of these conditions, regardless of your origin, affiliation, or personal ambitions.
+<br><br>MINC understands that capsuleers come from diverse backgrounds, whether bound by the faith of the Amarr, the discipline of the Caldari, the freedoms of the Gallente, or the resourcefulness of the Minmatar. However, it is important to note that divine intervention, corporate efficiency, artistic expression, or improvised engineering do not exempt pilots from the realities of loss and liability. The wreckage of your ship, regardless of its cultural significance, remains your responsibility. Overconfidence in doctrine deviations, unapproved modifications, or spontaneous acts of heroism are undertaken at your own risk, and MINC assumes no obligation to reimburse for assets lost due to such actions.
+<br><br>By engaging in MINC operations, you waive any expectation of privacy. Communications, fleet movements, and strategic discussions are subject to logging, review, and potential blackmail for the greater good of the corporation. Private channels are monitored, and intelligence gathering is a core function of MINC operations. If you were hoping for confidentiality, you are in the wrong universe.
+<br><br>By continuing to serve under Mercurialis Inc., you accept full accountability for your actions, losses, and triumphs. The universe is harsh, and only the prepared survive. Fly smart, fly safe, and remember—your ship, your responsibility.
     </p>
 </div>
 

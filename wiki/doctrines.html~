@@ -27,13 +27,17 @@
         .catch(error => console.error('Error loading navigation:', error));
 </script>
 
-    <div class="wiki-section">
-        <h3>Fleet Doctrines</h3>
-        <p>Our official fleet doctrines and ship fittings.</p>
-    </div>
+<div class="wiki-section">
+    <h3>Fleet Doctrines: Under Construction</h3>
+    <p>
+        Mercurialis Inc. prides itself on deploying the most effective and battle-tested fleet doctrines in New Eden. Our doctrines are meticulously crafted to ensure dominance in any engagement, whether it's large-scale nullsec warfare, small gang skirmishes, or strategic defense operations. When complete every pilot in MINC is expected to be familiar with these setups to maintain our tactical superiority.
+    </p>
+    <p>
+        This section will contain our official fleet doctrines.
+    </p>
+</div>
 
-    <div class="footer">
-        <p>&copy; 2025 Mercurialis Inc. All rights reserved.</p>
-    </div>
+
+</div>
 </body>
 </html>

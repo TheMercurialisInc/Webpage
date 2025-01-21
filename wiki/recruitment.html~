@@ -14,20 +14,18 @@
         <h2>Your Guide to All Things MINC</h2>
     </div>
 
-    <div class="navigation-panel">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="corporation.html">Corporation</a></li>
-            <li><a href="fleetops.html">Fleet Operations</a></li>
-            <li><a href="intel.html">Intel Tools</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="doctrines.html">Doctrines</a></li>
-            <li><a href="recruitment.html">Recruitment</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </div>
+<div id="nav-container"></div>
+<script>
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
 
 <div class="wiki-section">
     <h3>Recruitment: Join the Ranks of Mercurialis Inc.</h3>
@@ -122,7 +120,7 @@
         At Mercurialis Inc., we maintain an unwavering stance against espionage. Spies are strictly prohibited from joining our ranks under any circumstances. We value integrity, transparency, and the security of our operations above all else. Joining Mercurialis Inc. under false pretenses undermines these principles and will not be tolerated.
     </p>
     <p>
-        That being said, we recognize the diverse needs of the EVE Online community. If your path is one of covert operations and intelligence gathering, we strongly encourage you to consider our esteemed friends at <strong>ADFU</strong>, <strong>UVIM</strong>, <strong>CRVOS</strong> (for our Spanish-speaking allies), <strong>OMZI</strong> (for our Slavic brethren), or the respected organization <strong>-GEN-</strong>. These corporations are known for their accommodating recruitment processes and may align better with your specialized skillset.
+        That being said, we recognize the diverse needs of the EVE Online community. If your path is one of covert operations and intelligence gathering, we strongly encourage you to consider our esteemed friends at <strong>-GEN-</strong>, <strong>UVIM</strong>, <strong>CRVOS</strong> (for our Spanish-speaking allies), <strong>OMZI</strong> (for our Slavic brethren), or the respected organization <strong>ADFU</strong>. These corporations are known for their accommodating recruitment processes and may align better with your specialized skillset.
     </p>
     <p>
         For those spies who feel compelled to join Mercurialis Inc. despite our explicit policy, it is imperative that you adhere to the following protocol:
@@ -139,8 +137,10 @@
         We appreciate your cooperation in this matter and look forward to working with you in the spirit of mutual understanding and respect, should your circumstances meet the above criteria.
     </p>
 </div>
-    <div class="footer">
-        <p>&copy; 2025 Mercurialis Inc. All rights reserved.</p>
+<div class="footer">
+        <p>&copy; 2025 Mercurialis Inc. All rights reserved. <br>Disclaimer: All money lost, stolen, scammed, misplaced, laundered, or used to buy questionable spaceship upgrades was done so voluntarily and with a complete lack of judgment on the part of the user. We take no responsibility for the consequences of your space adventures. Please fly responsibly. <br>
+        <br>EVE Online is the intellectual property of CCP Games in Reykjavik, Iceland. The use of any trademark or copyright material is not intended to infringe on the rights of CCP Games. Mercurialis Inc. is an independent entity and is not affiliated with or endorsed by CCP Games. Any references to in-game entities, characters, locations, or events are purely fictional and do not represent real-world entities or events. By accessing or using our website, you agree to abide by the terms and conditions set forth herein.
+    </p>
     </div>
 </body>
 </html>

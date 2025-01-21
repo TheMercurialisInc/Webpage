@@ -13,16 +13,20 @@
         <h2>"When reality can't keep up - dare to dream."</h2>
         <h3>Est. Oct 28, 2002</h3>
     </div>
-    <div class="navigation-panel">
-        <h2>Site Navigation</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="media.html">Videos</a></li>
-            <li><a href="https://seat.mercurialisinc.com">SeAT</a></li>
-            <li><a href="/wiki/index2.html">Wiki</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </div>
+<div id="nav-container"></div>
+
+    <script>
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+
         <div class="info-section">
             <div class="margin-column"></div>
             <div class="fixed-column">

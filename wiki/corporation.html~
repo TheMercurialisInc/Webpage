@@ -26,10 +26,45 @@
         })
         .catch(error => console.error('Error loading navigation:', error));
 </script>
-    <div class="wiki-section">
-        <h3>PAGE_HEADING</h3>
-        <p>CONTENT_PLACEHOLDER</p>
-    </div>
+
+<div class="wiki-section">
+    <h3>Mercurialis Inc. Corporation Resources</h3>
+    <p>
+        This page serves as a hub for resources related to Mercurialis Inc. Here, you can find information about our performance, history, and presence in the wider EVE Online community.
+    </p>
+</div>
+
+<div class="wiki-section">
+    <h3>Our Presence</h3>
+    <ul>
+        <li><strong>ZKillboard:</strong> Track our latest kills, losses, and fleet engagements on <a href="https://zkillboard.com/corporation/144534752/" target="_blank">ZKillboard</a>.</li>
+        <li><strong>Dotlan Map:</strong> Explore our operational space and strategic assets on <a href="https://evemaps.dotlan.net/corp/Mercurialis_Inc" target="_blank">Dotlan</a>.</li>
+        <li><strong>ESI Tools:</strong> Manage and monitor your involvement with the corporation through <a href="https://seat.mercurialisinc.com" target="_blank">SeAT</a>.</li>
+    </ul>
+</div>
+<div class="wiki-section">
+    <h3>Performance Metrics</h3>
+    <p>
+        Stay updated with Mercurialis Inc.’s activity, performance, and contributions to New Eden:
+    </p>
+    <ul>
+        <li><strong>Monthly Kill Reports:</strong> Summary of kills and ISK efficiency (<a href="https://zkillboard.com/corporation/144534752/stats/" target="_blank">View Stats</a>).</li>
+        <li><strong>Economic Impact:</strong> Placeholder for industry contributions and resource generation.</li>
+        <li><strong>Operational Successes:</strong> Placeholder for fleet engagements and sovereignty campaigns.</li>
+    </ul>
+</div>
+
+<div class="wiki-section">
+    <h3>Get Involved</h3>
+    <p>
+        Interested in being a part of Mercurialis Inc. or learning more about our operations? Check out the following resources:
+    </p>
+    <ul>
+        <li><a href="recruitment.html">Recruitment Page</a></li>
+        <li><a href="fleetops.html">Fleet Operations</a></li>
+        <li><a href="contact.html">Contact Leadership</a></li>
+    </ul>
+</div>
 
     <div class="footer">
         <p>&copy; 2025 Mercurialis Inc. All rights reserved. <br>Disclaimer: All money lost, stolen, scammed, misplaced, laundered, or used to buy questionable spaceship upgrades was done so voluntarily and with a complete lack of judgment on the part of the user. We take no responsibility for the consequences of your space adventures. Please fly responsibly. <br>

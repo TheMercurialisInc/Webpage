@@ -13,7 +13,18 @@
         <h1>Mercurialis Inc. Wiki</h1>
         <h2>Your Guide to All Things MINC</h2>
     </div>
-
+<div id="nav-container"></div>
+<script>
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
 
 <div class="wiki-section">
     <h3>Policy on Espionage</h3>
