@@ -110,41 +110,63 @@ body {
     text-align: center;
 }
 
+/* Navigation Panel Styling */
 .navigation-panel {
-    padding-top: 0px;
-    padding-bottom: 15px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border: 3px solid #ffff00;
-    margin-bottom: 20px;
-    background-color: #404040;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark, semi-transparent background */
+    border: 2px solid gold;
+    padding: 15px 20px;
+    margin: 20px auto;
     text-align: center;
-    margin-top: 0px;
-    width: 444px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.navigation-panel h2 {
-    margin: 5px 5px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: 30px;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0 1spx rgba(255, 215, 0, 0.8); /* Slightly stronger shadow for depth */
 }
 
 .navigation-panel ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
     margin: 0;
-    padding: 5px;
-    list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center links horizontally */
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    gap: 20px; /* Larger spacing between links */
 }
 
 .navigation-panel ul li {
+    margin: 0;
+}
+
+.navigation-panel ul li a {
+    color: #49ce5a; /* Green text for links */
+    text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    text-decoration: underline;
+    padding: 5px 10px; /* Better spacing inside links */
+    border: 2px solid transparent; /* Invisible border for hover effect */
+    border-radius: 5px; /* Rounded edges */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navigation-panel ul li a:hover {
+    background-color: #576b84; /* Subtle background color change */
+    color: gold; /* Gold text on hover */
+    border: 2px solid white; /* Highlight border on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Highlight active page */
+.navigation-panel ul li a.active {
+    background-color: gold; /* Highlight current page */
+    color: black;
+    border: 2px solid #49ce5a; /* Green border for active link */
+}
+
+/* Responsive Design: Center links on small screens */
+@media (max-width: 600px) {
+    .navigation-panel ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce gap between links */
+    }
 }
 
 .centerbox1 {
@@ -155,6 +177,7 @@ body {
     margin: auto;
     background-color: #4c0000;
     border: 2px solid #ffff00;
+    border-radius: 2px;
     position: inherit;
 }
 
@@ -166,6 +189,7 @@ body {
     margin: auto;
     background-color: #576b84;
     border: 2px solid #ffff00;
+    border-radius: 2px;
 }
 
 .footer {
@@ -199,4 +223,18 @@ text-align: center;
 color: white;
 font-size: 20px;
 
+}
+.video-section {
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    border: 2px solid #FFD700;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.video-title {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.5em;
 }
