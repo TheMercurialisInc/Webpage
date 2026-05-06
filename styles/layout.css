@@ -2,7 +2,7 @@
 body {
     height: 100%;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: Lucida Console, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -45,6 +45,8 @@ body {
     font-size: 20px;
     text-align: center;
     color: #fefe5d;
+    position: relative;
+    z-index: 2;
 }
 
 .header h3 {
@@ -112,16 +114,15 @@ body {
 
 /* Navigation Panel Styling */
 .navigation-panel {
-    background-color: rgba(0, 0, 0, 0.9); /* Dark, semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.9);
     border: 2px solid gold;
-    padding: 15px 20px;
+    padding: 15px 40px;
     margin: 20px auto;
     text-align: center;
-    width: 500px;
+    width: 480px;
     max-width: 100%;
     margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: 0 0 1spx rgba(255, 215, 0, 0.8); /* Slightly stronger shadow for depth */
+    box-shadow: 0 0 1px rgba(255, 215, 0, 0.8);
 }
 
 .navigation-panel ul {
@@ -131,29 +132,31 @@ body {
     display: flex;
     justify-content: center; /* Center links horizontally */
     flex-wrap: wrap; /* Wrap links on smaller screens */
-    gap: 20px; /* Larger spacing between links */
+    gap: 10px; /* Larger spacing between links */
 }
 
 .navigation-panel ul li {
     margin: 0;
+    height: 35px;
+    display: flex;
+    align-items: center;
 }
 
 .navigation-panel ul li a {
-    color: #49ce5a; /* Green text for links */
-    text-decoration: none;
+    color: #49ce5a;
+    text-decoration: underline;
     font-size: 18px;
     font-weight: bold;
-    padding: 5px 10px; /* Better spacing inside links */
-    border: 2px solid transparent; /* Invisible border for hover effect */
-    border-radius: 5px; /* Rounded edges */
-    transition: all 0.3s ease; /* Smooth transition */
+    padding: 5px 10px;
+    border: 2px solid transparent;
 }
 
 .navigation-panel ul li a:hover {
-    background-color: #576b84; /* Subtle background color change */
-    color: gold; /* Gold text on hover */
-    border: 2px solid white; /* Highlight border on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    color: gold;
+    text-decoration: none;
+    font-size: 22px;
+    transform: rotate(-5deg);
+    display: inline-block;
 }
 
 /* Highlight active page */
@@ -179,7 +182,6 @@ body {
     margin: auto;
     background-color: #4c0000;
     border: 2px solid #ffff00;
-    border-radius: 5px;
     position: inherit;
 }
 
@@ -191,7 +193,6 @@ body {
     margin: auto;
     background-color: #576b84;
     border: 2px solid #ffff00;
-    border-radius: 5px;
 }
 
 .footer {
@@ -240,3 +241,11 @@ font-size: 20px;
     font-weight: bold;
     font-size: 1.5em;
 }
+marquee {
+    color: #fefe5d;
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+    z-index: 2;
+}
+
