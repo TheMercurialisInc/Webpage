@@ -85,7 +85,7 @@ body {
     height: auto;
     border: 0px solid #ccc;
     padding: 10px;
-    margin-top: -175px;
+    margin-top: 0px;
 }
 
 .main-info-column {
@@ -114,49 +114,32 @@ body {
 
 /* Navigation Panel Styling */
 .navigation-panel {
-    background-color: rgba(0, 0, 0, 0.9);
-    border: 2px solid gold;
-    padding: 15px 40px;
-    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    padding: 15px 20px;
+    width: 600px;
+    margin: 10px auto;
+}
+.navigation-panel a {
     text-align: center;
-    width: 480px;
-    max-width: 100%;
-    margin: 0 auto;
-    box-shadow: 0 0 1px rgba(255, 215, 0, 0.8);
-}
-
-.navigation-panel ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Center links horizontally */
-    flex-wrap: wrap; /* Wrap links on smaller screens */
-    gap: 10px; /* Larger spacing between links */
-}
-
-.navigation-panel ul li {
-    margin: 0;
-    height: 35px;
-    display: flex;
-    align-items: center;
-}
-
-.navigation-panel ul li a {
     color: #49ce5a;
-    text-decoration: underline;
-    font-size: 18px;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 28px;
     font-weight: bold;
-    padding: 5px 10px;
-    border: 2px solid transparent;
+}
+.navigation-panel a p {
+    margin: 5px 0 0 0;
 }
 
-.navigation-panel ul li a:hover {
+.navigation-panel a:hover img {
+    transform: rotate(20deg);
+}
+
+.navigation-panel a:hover p {
     color: gold;
-    text-decoration: none;
-    font-size: 22px;
-    transform: rotate(-5deg);
-    display: inline-block;
 }
 
 /* Highlight active page */
