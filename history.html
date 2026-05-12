@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercurialis Inc. - History</title>
+    <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" width="250" alt="Mercurialis Inc." class="corp-logo">
+        <h1>Mercurialis Inc.</h1>
+        <marquee behavior="scroll" direction="left" scrollamount="3">"When reality can't keep up - dare to dream."</marquee>
+        <h3>Est. Oct 28, 2002</h3>
+    </div>
+
+    <div class="centeredmedia">
+        <audio id="audioPlayer" controls volume="0.45">
+            <source src="Map10 - The Demon's Dead.mp3" type="audio/mpeg">
+        </audio>
+        <p>Hit play for vibes.</p>
+    </div>
+
+    <div id="nav-container"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+
+    <div class="info-section">
+    <div class="main-info-column-wide">
+        <div class="main-info">
+            <h3>MINC Through The Years</h3>
+
+            <div class="timeline">
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2002</span>
+                    <p>Mercurialis Inc. is founded on October 28th during EVE Online's beta phase, making us one of the oldest corporations in New Eden.</p>
+                </div>
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2013</span>
+                    <p>Battle of Asakai — one of EVE's most famous engagements, kicked off by a fleet commander who accidentally jumped his titan. MINC was on the field.</p>
+                </div>
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2014</span>
+                    <p>Bloodbath of B-R5RB — the most famous battle in EVE history, triggered by an unpaid sovereignty bill. MINC answered the call.</p>
+                </div>
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2016</span>
+                    <p>Casino War / World War Bee — the war that toppled the Imperium at its peak. MINC fought through the entire campaign.</p>
+                </div>
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2018</span>
+                    <p>Siege of 9-4RP2 — a record breaking battle at the time. MINC was present for the fight.</p>
+                </div>
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2018</span>
+                    <p>Battle of X47L-Q — 58 titans destroyed in a single engagement. MINC was on the field.</p>
+                </div>
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2020</span>
+                    <p>Fury at FWST-8 — the current Guinness World Record holder for the largest PvP battle in gaming history. MINC was there.</p>
+                </div>
+
+                <div class="timeline-entry">
+                    <span class="timeline-year">2020</span>
+                    <p>Massacre at M2-XFE — the most destructive battle in EVE history, 257 titans destroyed. MINC answered the call.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="footer">
+        <p>&copy; 2024 Mercurialis Inc. All rights reserved. <br>Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transactions was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it. EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.
+        </p>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
