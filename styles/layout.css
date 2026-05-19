@@ -10,7 +10,7 @@ body {
     background-image: url(../assets/JWSTPIX.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: auto 1300px; 
+    background-size: auto 1300px;
     background-position: top right -200px;
 }
 
@@ -93,7 +93,8 @@ body {
     width: 600px;
     padding: 20px;
     margin: 0 10px;
-    border: 0px solid white;
+    background-color: rgba(0, 0, 0, 0.82);
+    border: 3px solid #d4b800;
 }
 
 .main-info h3 {
@@ -255,6 +256,221 @@ marquee {
     width: 900px;
     padding: 20px;
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.82);
+    border: 1px solid #d4b800;
+}
+
+/* CEO Horizontal Timeline */
+.ceo-timeline {
+    width: 100%;
+    overflow-x: auto;
+    margin: 10px 0 30px 0;
+    padding: 10px 0;
+}
+
+.ceo-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.ceo-track::before {
+    content: '';
+    position: absolute;
+    top: 93px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #576b84;
+    z-index: 0;
+}
+
+.ceo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 110px;
+    max-width: 130px;
+    position: relative;
+    z-index: 1;
+}
+
+.ceo-portrait-wrap {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #576b84;
+    overflow: hidden;
+    background: #111;
+    flex-shrink: 0;
+}
+
+.ceo-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ceo-dot {
+    width: 10px;
+    height: 10px;
+    background: #576b84;
+    border-radius: 50%;
+    margin: 8px 0 6px 0;
+    flex-shrink: 0;
+}
+
+.ceo-card.ceo-current .ceo-dot {
+    background: #49ce5a;
+    box-shadow: 0 0 6px #49ce5a;
+}
+
+.ceo-card.ceo-current .ceo-portrait-wrap {
+    border-color: #49ce5a;
+    box-shadow: 0 0 8px #49ce5a44;
+}
+
+.ceo-name {
+    color: #a8c0d6;
+    font-size: 11px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    display: block;
+    line-height: 1.3;
+}
+
+.ceo-years {
+    color: #576b84;
+    font-size: 10px;
+    display: block;
+    margin-top: 2px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Battle Roster Grid */
+.roster-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 8px 0 6px 0;
+}
+
+.roster-card {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-areas:
+        "portrait ship"
+        "pname    pname"
+        "sname    sname";
+    column-gap: 5px;
+    row-gap: 2px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #2a2a2a;
+    padding: 4px;
+    align-items: start;
+}
+
+.roster-portrait {
+    grid-area: portrait;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    display: block;
+}
+
+.roster-ship {
+    grid-area: ship;
+    width: 41px;
+    height: 41px;
+    object-fit: contain;
+    display: block;
+}
+
+.roster-ships {
+    grid-area: ship;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: flex-start;
+}
+
+.roster-ships .roster-ship {
+    grid-area: unset;
+}
+
+.roster-ship-wrap {
+    position: relative;
+    display: inline-block;
+    width: 41px;
+    height: 41px;
+    grid-area: ship;
+    flex-shrink: 0;
+}
+
+.roster-ship-wrap .roster-ship {
+    grid-area: unset;
+    width: 100%;
+    height: 100%;
+}
+
+.roster-ships .roster-ship-wrap {
+    grid-area: unset;
+}
+
+.ship-tier-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: auto;
+    pointer-events: none;
+}
+
+/* Belegvaethor inline name+ships layout */
+.roster-card-nameship {
+    grid-template-columns: 50px auto;
+    grid-template-areas:
+        "portrait namerow"
+        "sname    sname";
+}
+
+.roster-nameship-row {
+    grid-area: namerow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.roster-card-nameship .roster-name {
+    grid-area: unset;
+}
+
+.roster-card-nameship .roster-ships {
+    grid-area: unset;
+}
+
+.roster-name {
+    grid-area: pname;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    display: block;
+    line-height: 1.3;
+}
+
+.roster-ship-name {
+    grid-area: sname;
+    font-size: 14px;
+    color: #8a9bb0;
+    font-family: 'Courier New', monospace;
+    display: block;
+    line-height: 1.3;
 }
  /* Timeline */
 .timeline {
@@ -264,13 +480,13 @@ marquee {
 }
  
 .timeline-entry {
-    border-left: 3px solid gold;
+    border-left: 3px solid #8b0000;
     padding: 10px 0 20px 20px;
     margin-bottom: 10px;
 }
- 
+
 .timeline-year {
-    color: gold;
+    color: #f8d701;
     font-size: 24px;
     font-weight: bold;
     font-family: 'Courier New', monospace;
@@ -286,15 +502,15 @@ marquee {
 }
  
 .battle-tag {
-    display: inline-block;
+    display: block;
     color: #fefe5d;
-    border: 1px solid #fefe5d;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 2px;
-    padding: 1px 8px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    margin-top: 10px;
     text-transform: uppercase;
     font-family: 'Courier New', monospace;
+    font-weight: bold;
 }
  
 .tl-stats {
@@ -306,13 +522,8 @@ marquee {
     font-size: 11px;
     font-family: 'Courier New', monospace;
 }
+
  
 .tl-hi  { color: #49ce5a; }
 .tl-gld { color: #fefe5d; }
 .tl-red { color: #ff5555; }
- 
-.main-info-column-wide {
-    width: 900px;
-    padding: 20px;
-    margin: 0 auto;
-}

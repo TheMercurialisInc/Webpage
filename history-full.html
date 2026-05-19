@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercurialis Inc. - History</title>
+    <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" width="250" alt="Mercurialis Inc." class="corp-logo">
+        <h1>Mercurialis Inc.</h1>
+        <marquee behavior="scroll" direction="left" scrollamount="3">"When reality can't keep up - dare to dream."</marquee>
+        <h3>Est. Oct 28, 2002</h3>
+    </div>
+
+    <div class="centeredmedia">
+        <audio id="audioPlayer" controls volume="0.45">
+            <source src="Map10 - The Demon's Dead.mp3" type="audio/mpeg">
+        </audio>
+        <p>Hit play for vibes.</p>
+    </div>
+
+    <div id="nav-container"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+
+    <div class="info-section">
+        <div class="main-info-column-wide">
+            <div class="main-info">
+                <h3>MINC Through The Years</h3>
+
+                <!-- CEO portraits: replace src paths with EVE image server URLs once you have character IDs -->
+                <!-- Format: https://image.eveonline.com/Character/CHARACTER_ID_128.jpg -->
+                <div class="ceo-timeline">
+                    <div class="ceo-track">
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/portraits/Isayo-Arkindra.jpeg" alt="Isayo Arkindra" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">Isayo Arkindra</span>
+                            <span class="ceo-years">2002 – 2010</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/portraits/xMillz.jpeg" alt="xMillz" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">xMillz</span>
+                            <span class="ceo-years">2010 – 2012</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/portraits/Nairb-Ecrep.jpeg" alt="Nairb Ecrep" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">Nairb Ecrep</span>
+                            <span class="ceo-years">2012 – 2015</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/portraits/marley-cortez.jpeg" alt="marly cortez" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">marly cortez</span>
+                            <span class="ceo-years">2015 – 2018</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/portraits/primus-buck.jpeg" alt="primus buck" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">primus buck</span>
+                            <span class="ceo-years">2018 – 2021</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/portraits/khronos-thellere.jpeg" alt="Khronos Thellere" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">Khronos Thellere</span>
+                            <span class="ceo-years">2021 – 2024</span>
+                        </div>
+
+                        <div class="ceo-card ceo-current">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/portraits/rvamitchell.jpeg" alt="RVAMitchell" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">RVAMitchell</span>
+                            <span class="ceo-years">2024 – present</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="ceo-timeline alliance-theme">
+                    <div class="ceo-track">
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/logos/iac.png" alt="Interstellar Alcohol Conglomerate" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">Interstellar Alcohol Conglomerate</span>
+                            <span class="ceo-years">2005 – 2008</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/logos/wi.png" alt="Wildly Inappropriate" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">Wildly Inappropriate</span>
+                            <span class="ceo-years">2008 – 2010</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/logos/rzr.png" alt="RAZOR Alliance" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">RAZOR Alliance</span>
+                            <span class="ceo-years">2010 – 2016</span>
+                        </div>
+
+                        <div class="ceo-card">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/logos/bastn.png" alt="The Bastion" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">The Bastion</span>
+                            <span class="ceo-years">2016 – 2022</span>
+                        </div>
+
+                        <div class="ceo-card ceo-current">
+                            <div class="ceo-portrait-wrap">
+                                <img src="assets/logos/condi.png" alt="Goonswarm Federation" class="ceo-portrait">
+                            </div>
+                            <div class="ceo-dot"></div>
+                            <span class="ceo-name">Goonswarm Federation</span>
+                            <span class="ceo-years">2022 – present</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2002</span>
+                        <p>Mercurialis Inc. is founded on <span class="tl-gld">October 28th</span> during EVE Online's beta phase, making us one of the oldest corporations in New Eden. The game itself is still finding its footing, with only a few thousand players testing the mechanics that will define nullsec warfare for decades to come.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2005</span>
+                        <p>MINC joins its first alliance, <span class="tl-gld">Interstellar Alcohol Conglomerate (IAC)</span>, and establishes operations in Catch. The alliance consists of European and American players with a strong shared culture. Member corporations maintain their own identities while participating in alliance operations. At the time, MINC has roughly 20 active pilots.</p>
+                        <p>IAC's neighbors in Querious provide constant combat opportunities. With enemy headquarters just one jump away, small gang roams are frequent. In one engagement, what started as a station provocation turned into both sides forming a conga line around the structure before the fight eventually kicked off.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2007</span>
+                        <p>MINC continues operations in IAC. Notable members during this period include CEO Isayo Arkindra, officers Mannakin and Thundirr, and an Irish pilot from Cork. The corp maintains a small but active presence in Catch's ongoing conflicts.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2008</span>
+                        <p>Several MINC members attend EVE Fanfest in Reykjavik, Iceland: Isayo Arkindra, Thundirr, Mannakin, and Rylok. This marks one of the first real-world gatherings of the corp. <em>(Note: a video of the event is archived on YouTube under the title "IAC Fanfest 2007" but appears to be mislabeled.)</em></p>
+                        <p>MINC builds its first station, <span class="tl-gld">MINC Delirium</span>, in <span class="tl-hi">RNF-YH (Catch)</span>. AAA uses its larger numbers to force IAC out of the region. During the conflict high value ships were stolen from MINC, including two motherships and the <span class="tl-red">MINC Ragnarok</span>. MINC leaves Interstellar Alcohol Conglomerate and joins <span class="tl-gld">Wildly Inappropriate</span>.</p>
+                        <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">
+                            <img src="assets/DOTLAN-Event-MINC-Delirium.png" alt="MINC Delirium — DOTLAN EveMaps" style="max-width:65%; border:1px solid #d4b800;">
+                        </a>
+                        <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">DOTLAN EveMaps</a></p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2009</span>
+                        <p>MINC builds a second station, <span class="tl-gld">MINC Aberration</span>, in <span class="tl-hi">C-4ZOS (Branch)</span>. The corp continues to establish infrastructure in nullsec despite the turbulent political landscape.</p>
+                        <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">
+                            <img src="assets/DOTLAN-Event-MINC-Aberration.png" alt="MINC Aberration — DOTLAN EveMaps" style="max-width:65%; border:1px solid #d4b800;">
+                        </a>
+                        <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">DOTLAN EveMaps</a></p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2010</span>
+                        <p>Looney Toons conquers MINC Aberration. MINC leaves Wildly Inappropriate and joins <span class="tl-gld">RAZOR Alliance</span>, beginning what will become a six-year partnership. Isayo Arkindra steps down as CEO, appointing <span class="tl-gld">xMillz</span>.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2011</span>
+                        <p>MINC runs a <span class="tl-gld">Titans and Supercarriers class for EVE University</span>, one of the game's premier teaching organizations. A recording survives to this day, documenting the corp's expertise in capital warfare during this era.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2012</span>
+                        <p>xMillz leaves the game and passes the CEO title to <span class="tl-gld">Nairb Ecrep</span> but retains his corporation shares. During the RAZOR period, MINC conquers a station in <span class="tl-hi">P-E (Geminate)</span>, naming it <span class="tl-gld">De Ja Vu</span>. The corp continues operations in the northern regions as part of RAZOR's holdings.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2013</span>
+                        <p><span class="tl-gld">Battle of Asakai:</span> On January 27, 2013, a Cluster Fuck Coalition fleet commander accidentally jumped his titan instead of bridging his fleet during a routine operation in Asakai. What should have been a minor skirmish escalated within minutes as both the CFC and HBC (HoneyBadger Coalition) committed supercapital fleets to save or kill the stranded titan. The battle drew over 3,000 players and lasted nearly six hours, with losses exceeding <span class="tl-red">700 billion ISK</span>. It became one of the first massive supercapital brawls to capture mainstream gaming media attention.</p>
+                        <p>MINC deployed supercarriers, battleships, and interdictors to the engagement.</p>
+                        <div class="roster-grid">
+                            <div class="roster-card"><img src="assets/portraits/Dobriy.jpeg" alt="" class="roster-portrait"><span class="roster-name">Dobriy</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                            <div class="roster-card"><img src="assets/portraits/wifi.jpeg" alt="" class="roster-portrait"><span class="roster-name">wifi</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                            <div class="roster-card"><img src="assets/portraits/nimkando-hapkido.jpeg" alt="" class="roster-portrait"><span class="roster-name">Nimkando Hapkido</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                            <div class="roster-card"><img src="assets/portraits/death-vixxen.jpeg" alt="" class="roster-portrait"><span class="roster-name">Death Vixxen</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                            <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Rancide Bunny</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                            <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Menalya Zamayid</span><img src="assets/ship-icons/256px-Rokh.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Rokh</span></div>
+                            <div class="roster-card"><img src="assets/portraits/scabrunner.jpeg" alt="" class="roster-portrait"><span class="roster-name">ScabRunner</span><img src="assets/ship-icons/256px-Tornado.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Tornado</span></div>
+                            <div class="roster-card"><img src="assets/portraits/flatliner-111.jpeg" alt="" class="roster-portrait"><span class="roster-name">Flatliner 111</span><img src="assets/ship-icons/256px-Tornado.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Tornado</span></div>
+                            <div class="roster-card"><img src="assets/portraits/Morphius1280.jpeg" alt="" class="roster-portrait"><span class="roster-name">Morphius1280</span><img src="assets/ship-icons/256px-Naga.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naga</span></div>
+                            <div class="roster-card"><img src="assets/portraits/treyah.jpeg" alt="" class="roster-portrait"><span class="roster-name">Treyah</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2014</span>
+                        <p><span class="tl-gld">Bloodbath of B-R5RB:</span> On January 27, 2014, exactly one year after Asakai, the sovereignty bill for B-R5RB in Immensea went unpaid due to a clerical error. The system became vulnerable, and N3/PL moved to reinforce it. The CFC and Russian coalitions responded in force. What followed was the largest and most destructive battle in gaming history at the time: over 7,500 players, <span class="tl-gld">21 hours</span> of continuous fighting, and <span class="tl-red">75 titans</span> destroyed along with dozens of supercarriers. Total losses exceeded 11 trillion ISK, roughly $300,000 USD in real-world value. The battle made international news and cemented EVE's reputation for epic-scale warfare.</p>
+                        <p>MINC deployed capitals, subcapitals, and tackle to the grind.</p>
+                        <div class="roster-grid">
+                            <div class="roster-card"><img src="assets/portraits/borakh-tieberius.jpeg" alt="" class="roster-portrait"><span class="roster-name">Borakh Tieberius</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                            <div class="roster-card"><img src="assets/portraits/diaspore.jpeg" alt="" class="roster-portrait"><span class="roster-name">Diaspore</span><img src="assets/ship-icons/256px-Revelation.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Revelation</span></div>
+                            <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Mantro x</span><img src="assets/ship-icons/256px-Naglfar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naglfar</span></div>
+                            <div class="roster-card"><img src="assets/portraits/arbalesttom.jpeg" alt="" class="roster-portrait"><span class="roster-name">Arbalesttom</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                            <div class="roster-card"><img src="assets/portraits/karl-mason.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karl Mason</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                            <div class="roster-card"><img src="assets/portraits/marley-cortez.jpeg" alt="" class="roster-portrait"><span class="roster-name">marly cortez</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="assets/portraits/adaram-kori'nh.jpeg" alt="" class="roster-portrait"><span class="roster-name">Adaram Kori'nh</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">mercuryyy</span><div class="roster-ships"><img src="assets/ship-icons/256px-Claw.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Devoter.jpg" alt="" class="roster-ship"></div><span class="roster-ship-name">Claw / Devoter</span></div>
+                            <div class="roster-card"><img src="assets/portraits/billa-clack.jpeg" alt="" class="roster-portrait"><span class="roster-name">Billa Clack</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Claw.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Claw</span></div>
+                            <div class="roster-card"><img src="assets/portraits/psyentific.jpeg" alt="" class="roster-portrait"><span class="roster-name">Psyentific</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="assets/portraits/purpleshadez.jpeg" alt="" class="roster-portrait"><span class="roster-name">Purpleshadez</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Agaetis Byrjun</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="assets/portraits/ben-mcrock.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ben McRock</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="assets/portraits/chaosstation.jpeg" alt="" class="roster-portrait"><span class="roster-name">Chaosstation</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="assets/portraits/bratan-juzik.jpeg" alt="" class="roster-portrait"><span class="roster-name">Bratan Juzik</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                            <div class="roster-card"><img src="assets/portraits/auldare.jpeg" alt="" class="roster-portrait"><span class="roster-name">Auldare</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                            <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Cool9th</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Stiletto.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Stiletto</span></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2015</span>
+                        <p>Nairb Ecrep has disappeared and gone completely AFK. The directorship is planning to sunset the corp. A plan emerges to reclaim the shares held by xMillz and allow the directorship to assign a new CEO. When xMillz is contacted, he decides to ransom the shares. He takes advantage of still having ownership of the corporation holding the coffers, wealth accumulated from years of moon mining and asset building, including the corporation's entire collection of super capital ship production BPOs. Before agreeing to transfer the shares, he demands payment: the entire corp wallet and all super capital BPOs locked in his alt corporation.</p>
+                        <p>Reluctantly, the directorship agrees to the terms. In <span class="tl-gld">January 2015</span>, <span class="tl-gld">marly cortez</span> takes over as CEO and immediately begins the recovery process. The timing proves fortunate. Marly's son Rich DK is a leader in RAZOR Alliance, giving MINC the support it needs to rebuild from near bankruptcy.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2016</span>
+                        <p><strong>[NOTE: Need to ask primus why we left Razor]</strong></p>
+                        <p>As the decision is made to leave RAZOR, the directorship discusses options. Goonswarm Federation seems like a viable choice, but the consensus is that it represents an endgame move. The concern is that Goonswarm's stability and security, while appealing, might lead to complacency and a slow fade into irrelevance. The directorship chooses instead to join <span class="tl-gld">The Bastion</span>, a newly formed member alliance of the Imperium.</p>
+                        <p>Shortly after, <span class="tl-gld">Casino War</span> erupts. A coalition of Imperium enemies, bankrolled by wealthy EVE gambling site operators, assembles the largest military mobilization the game has seen in years. The Moneybadgers Coalition drives the Imperium out of the north, system by system. MINC fights through the entire campaign, participating in the evacuation and the long retreat south to Delve.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2017</span>
+                        <p>The Imperium consolidates in Delve following the Casino War losses. MINC participates in the rebuilding effort as The Bastion establishes new infrastructure in the southern regions. The year is marked by reconstruction and preparation for future conflicts.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2018</span>
+                        <p><span class="tl-gld">marly cortez</span> steps down as CEO, appointing <span class="tl-gld">primus buck</span>.</p>
+                        <p><span class="tl-gld">Battle of X47L-Q:</span> On August 8, 2018, the Imperial Legacy coalition launches an assault on a Northern Coalition Keepstar in X47L-Q, Pure Blind. The engagement draws 6,270 pilots, surpassing the famous B-R5RB battle in player count, though not total ISK destroyed. Both sides commit unprecedented supercapital forces: over 540 titans and 510 supercarriers enter the grid, marking a historic escalation in supercapital warfare.</p>
+                        <p>The battle rages for hours as both fleets trade fire in heavy time dilation. The attackers successfully destroy the Keepstar's armor layer, with total losses reaching approximately 10 trillion ISK. The engagement demonstrates that the supercapital arms race has reached new heights, with both coalitions now fielding titan fleets that dwarf the forces seen at B-R5RB four years earlier.</p>
+                        <div class="roster-grid">
+                            <div class="roster-card"><img src="assets/portraits/rox-evechan.jpeg" alt="" class="roster-portrait"><span class="roster-name">Rox Evechan</span><img src="assets/ship-icons/256px-Hel.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Hel</span></div>
+                            <div class="roster-card"><img src="assets/portraits/karl-mason.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karl Mason</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                            <div class="roster-card"><img src="assets/portraits/mannakin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mannakin</span><img src="assets/ship-icons/256px-Megathron.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Megathron</span></div>
+                            <div class="roster-card"><img src="assets/portraits/qicia.jpeg" alt="" class="roster-portrait"><span class="roster-name">Qicia</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Legion.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT3h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Legion</span></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2019</span>
+                        <span class="battle-tag">Prelude to World War Bee 2</span>
+                        <p>The political landscape of nullsec shifts as <span class="tl-gld">TEST Alliance</span> and PanFam begin consolidating opposition to the Imperium, quietly building the coalition that will become <span class="tl-gld">PAPI</span>. The Imperium continues fortifying Delve, and MINC maintains industrial and combat operations as tensions across New Eden build toward open war. The calm is the last the corp will see for several years.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2020</span>
+                        <p><span class="tl-gld">World War Bee 2</span> erupts across New Eden as the Imperium faces <span class="tl-gld">PAPI</span> (PandaFam, Legacy Coalition, and others), a massive coalition assembled with one goal: destroy <span class="tl-gld">Goonswarm Federation</span>.</p>
+                        <p>Following the loss of their home system in Fountain, MINC leadership chooses not to simply absorb into large Imperium fleet blobs. Instead, they form a SIG (Special Interest Group), a volunteer specialist strike force, with the goal of making a disproportionate impact with limited numbers. Identifying <span class="tl-gld">TEST Alliance</span>'s home region of Esoteria as critically vulnerable, TEST having stripped its defenses to concentrate forces in Delve, MINC deploys to Stain, NPC space on Esoteria's border.</p>
+                        <p>Establishing operations in Stain requires diplomacy as much as firepower. On arrival, MINC's jump freighters are immediately bubbled by <span class="tl-gld">Stain Rus</span>, the Russian-speaking coalition that fiercely guards the region as their homeland. After negotiating access to a station and citadel, MINC sets up a forward base and begins cultivating what becomes an indispensable operational partnership with Stain Rus.</p>
+                        <p>MINC's opening strategy is alarm fatigue. Small groups, sometimes just two or three pilots in bombers, reinforce TEST structures to below 95% shields, triggering automated alert pings to TEST members across the entire game regardless of where they are fighting. To sustain round-the-clock pressure without requiring a Fleet Commander on every operation, MINC implements a PAP link tracking system that credits pilots for unsupervised harassment sorties. At peak, pilots ping fifty or more structures per day, creating a relentless noise floor of alerts for TEST's membership.</p>
+                        <p>As TEST grows desensitized to the pings, MINC escalates. They anchor an Astrahus in HT4K, establishing a deep forward operating base in Esoteria that dramatically reduces travel time and extends their reach across the region via Black Ops bridges. They begin fully destroying structures, including abandoned ones whose contents spill into space, generating ISK and a corrosive propaganda narrative. They then push further, reinforcing IHUBs and TCUs. Destroying IHUBs strips ratting anomalies from TEST's most lucrative systems and eliminates the jump gate infrastructure critical to TEST's logistics between regions.</p>
+                        <p>The partnership with <span class="tl-gld">Stain Rus</span> deepens into a genuine operational alliance. MINC performs the objective work, entosing nodes and setting timers, while Stain Rus brings large Tornado fleets to destroy the TEST response forces. To cement the relationship, MINC constructs thirty Dreadnoughts for Stain Rus, providing the capital firepower needed to engage at scale. The result is extraordinary force multiplication. Just eight to fifteen MINC pilots, many dual or triple boxing, routinely pull one-hundred-and-fifty-man TEST fleets away from the main front in Delve. The Imperium's Meta Show capitalizes on this, publicly questioning why TEST leadership is trapped defending their backfield instead of leading the war effort.</p>
+                        <p>The campaign's single greatest military achievement is the destruction of the IHUB in DTEKF, a supercapital production system deep in Esoteria. The kill pauses the construction of at least two Titans mid-build. The ISK recovered funds the remainder of MINC's campaign and enables them to produce their own capitals in theater.</p>
+                        <p><span class="tl-gld">The Initiative</span> briefly deploys jump clones to HT4K to assist with EU timezone timers, arriving with a fleet of two hundred and fifty-five pilots. TEST counters by resetting their IHUB and sovereignty timers to a window outside The Initiative's active hours, neutralizing the reinforcement. The Initiative subsequently rotates to Catch, where timezone coverage is more favorable, and does significant damage there.</p>
+                        <p><span class="tl-red">MINC's forward base in HT4K eventually falls</span> after TEST mounts repeated assault attempts. On the final timer, TEST bypasses MINC's defensive bubble perimeter by jumping through a public cyno beacon owned by Stain Rus in an adjacent system, its access list not having been updated in time. With minutes remaining on the timer, MINC cannot recover the position.</p>
+                        <p>The loss of HT4K does not end MINC's presence in Esoteria. Additional Fortizars are anchored across the region, and as SOV upgrades accumulate, Ansiblex Jump Gates come online, providing rapid transit between key systems and cementing MINC's ability to sustain long-range operations far from home.</p>
+                        <p>Throughout the campaign, MINC operates with a small, mobile strike force and methodically burns through TEST's undefended systems. They destroy the most expensive Sotiyo ever killed at the time and extract approximately <span class="tl-gld">400 billion ISK</span> worth of structures and assets from systems TEST assumed were secure. What begins as a SIG of roughly thirty pilots grows into a full alliance deployment, with MINC recognized as the longest forward-deployed Imperium group of the entire war.</p>
+                        <span class="battle-tag">Fury at FWST-8</span>
+                        <p>In October 2020, PAPI attempts to anchor a Keepstar in <span class="tl-hi">FWST-8</span> as part of their offensive into Imperium space. The Imperium successfully repels multiple anchoring attempts, destroying PAPI Keepstars before they can online. On October 5, 2020, PAPI deploys a controversial tactic: bubble wrapping the anchoring Keepstar by surrounding it with their own ships and warp disruption bubbles, preventing the Imperium from targeting it. This tactic, previously considered an exploit or against accepted rules of engagement, allows the Keepstar to complete its anchoring timer. The Imperium forms a massive fleet to contest it anyway. Over 8,800 pilots enter the system, shattering all previous records and earning a Guinness World Record for the largest PvP battle in gaming history. The server struggles under the load, entering 10% time dilation for most of the fight. The battle lasts over 14 hours with losses exceeding <span class="tl-red">23 trillion ISK</span>.</p>
+                        <p>MINC deploys subcapitals, carriers, and a dreadnought throughout the engagement.</p>
+                        <div class="roster-grid">
+                            <div class="roster-card"><img src="assets/portraits/belegvaethor.jpeg" alt="" class="roster-portrait"><span class="roster-name">Belegvaethor</span><div class="roster-ships"><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Rokh.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Nidhoggur.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Sacrilege.jpg" alt="" class="roster-ship"></div><span class="roster-ship-name"> Harpy / Rokh <br>Nidhoggur / Sacrilege</span></div>
+                            <div class="roster-card"><img src="assets/portraits/pendu-padecain.jpeg" alt="" class="roster-portrait"><span class="roster-name">Pendu Padecain</span><img src="assets/ship-icons/256px-Myrmidon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Myrmidon</span></div>
+                            <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><img src="assets/ship-icons/256px-Naglfar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naglfar</span></div>
+                            <div class="roster-card"><img src="assets/portraits/draco-beleren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Draco Beleren</span><div class="roster-ships"><img src="assets/ship-icons/256px-Rokh.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Muninn.jpg" alt="" class="roster-ship"></div><span class="roster-ship-name">Rokh / Muninn</span></div>
+                            <div class="roster-card"><img src="assets/portraits/mystic-siren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mystic Siren</span><img src="assets/ship-icons/256px-Revelation.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Revelation</span></div>
+                        </div>
+                        <span class="battle-tag">Massacre at M2-XFE</span>
+                        <p>The night before the battle, a small MINC strike team spends five hours chasing TEST FC Billy across node after node in DTEX8, exhausting him through relentless pursuit. Billy's fatigue from the ordeal is later credited as a contributing factor to the decision-making that leads to PAPI's catastrophe the following day.</p>
+                        <p>On December 30, 2020, PAPI attempts to destroy an Imperium Keepstar in <span class="tl-hi">M2-XFE</span>. The Imperium baits PAPI into committing their entire titan fleet, then brings their own supercapital armada. A server error causes hundreds of PAPI titans to load into the system late, trapping them without support. The Imperium begins a methodical slaughter. Over the following month, PAPI mounts multiple extraction attempts to save their trapped supercapital fleet, each resulting in further losses. Across the entire M2-XFE campaign, the Imperium destroys <span class="tl-red">257 titans</span>, making it the most destructive series of engagements in EVE history. Total losses exceed <span class="tl-red">13 trillion ISK</span>. The defeat effectively breaks PAPI's offensive momentum and marks the beginning of the end for their invasion.</p>
+                        <p>MINC deploys supercarriers and a titan across multiple battles during the M2-XFE campaign.</p>
+                        <div class="roster-grid">
+                            <div class="roster-card"><img src="assets/portraits/mystic-siren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mystic Siren</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                            <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><img src="assets/ship-icons/256px-Hel.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Hel</span></div>
+                            <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Vixen Nyssa</span><img src="assets/ship-icons/256px-Avatar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Avatar</span></div>
+                            <div class="roster-card"><img src="assets/portraits/karl-mason.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karl Mason</span><img src="assets/ship-icons/256px-Muninn.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Muninn</span></div>
+                            <div class="roster-card"><img src="assets/portraits/draco-beleren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Draco Beleren</span><img src="assets/ship-icons/256px-Cerberus.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Cerberus</span></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2021</span>
+                        <p>PAPI's invasion of Delve collapses following the M2 disaster. The coalition withdraws, and World War Bee 2 ends with the Imperium victorious but bloodied. MINC participates in the cleanup operations and the slow process of rebuilding infrastructure damaged during the year-long siege.</p>
+                        <p><span class="tl-gld">primus buck</span> steps down as CEO, appointing <span class="tl-gld">Khronos Thellere</span>.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2022</span>
+                        <p>MINC leaves The Bastion and joins <span class="tl-gld">Goonswarm Federation</span> directly, finally making the move the directorship had contemplated back in 2016. After years of fighting alongside Goonswarm, the corp finds a home in the alliance it helped defend.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2023</span>
+                        <p>Operations continue in Delve as part of Goonswarm Federation. The Imperium focuses on infrastructure development and smaller-scale conflicts following the massive losses of World War Bee 2. MINC maintains its position as a reliable combat corp within the alliance.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2024</span>
+                        <p><span class="tl-gld">Khronos Thellere</span> steps down as CEO, appointing <span class="tl-gld">RVAMitchell</span>. As operations expand, MINC anchors a Fortizar in ZTS named <span class="tl-gld">De Ja Vu</span>, a quiet tribute to the station conquered in Geminate over a decade prior.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2025</span>
+                        <p>MINC makes a strategic move, relocating to be closer to Pandemic Horde's territory. The positioning proves prescient. Shortly after, Pandemic Horde suffers an internal collapse, imploding in dramatic fashion. The power vacuum left by one of nullsec's largest coalitions reshapes the political landscape of New Eden, creating opportunities and chaos in equal measure.</p>
+                        <p>As a tribute to MINC's roots, the corporation anchors a faction Fortizar in <span class="tl-hi">RNF-YH (Catch)</span>, the same system where MINC Delirium once stood, naming it <span class="tl-gld">MINC Delirium</span> in honor of the corp's first home.</p>
+                        <p><strong>[NOTE: Need more details about the move to RNF and subsequent relocation]</strong></p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-year">2026</span>
+                        <p>War erupts between the Imperium and Fraternity (FRT). MINC participates in a daring operation: the headshot of Fraternity's staging Keepstar. The attack succeeds, marking the first time in EVE history that a nullsec power bloc successfully destroys another bloc's primary staging citadel in a direct assault. The operation demonstrates a shift in nullsec warfare doctrine and cements MINC's reputation for participating in history-making engagements.</p>
+                        <p><strong>[NOTE: Need more details about the FRT keepstar headshot operation]</strong></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="centeredmedia">
+        <img src="assets/netscape.gif" alt="Best viewed in Netscape">&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/IE.gif" alt="Best viewed in Internet Explorer"><br><br>
+        <img src="assets/rorqy.png" width="auto" height="300" alt="Rorqual"><br><br><br>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Mercurialis Inc. All rights reserved. <br>Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transactions was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it. EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.
+        </p>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
