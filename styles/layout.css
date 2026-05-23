@@ -564,6 +564,46 @@ marquee {
     line-height: 1.7;
 }
  
+.battle-box {
+    border: 1px solid #576b84;
+    margin: 16px 0;
+}
+
+.battle-box .battle-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.battle-box-content {
+    padding: 10px 14px 6px 14px;
+}
+
+.battle-header {
+    margin: 20px 0 10px 0;
+    padding: 8px 14px;
+    background: rgba(87, 107, 132, 0.25);
+    border-left: 4px solid #d4b800;
+}
+
+.battle-header-name {
+    display: block;
+    color: #d4b800;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.battle-header-date {
+    display: block;
+    color: #576b84;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    margin-top: 3px;
+    letter-spacing: 1px;
+}
+
 .battle-tag {
     display: block;
     color: #fefe5d;
