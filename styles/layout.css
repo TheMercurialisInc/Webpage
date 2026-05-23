@@ -212,12 +212,12 @@ font-size: 20px;
 
 }
 .video-section {
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 15px;
     width: 80%;
     border: 2px solid #FFD700;
     background: rgba(0, 0, 0, 0.7);
-    text-align: center;
+    text-align: left;
 }
 
 .video-title {
@@ -430,6 +430,69 @@ marquee {
     pointer-events: none;
 }
 
+.roster-ship-wrap.ship-lost::after {
+    content: '✕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff3333;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 3px #000, 0 0 1px #000;
+    pointer-events: none;
+    z-index: 2;
+    line-height: 1;
+}
+
+.roster-faction-header {
+    font-size: 11px;
+    color: #576b84;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 8px 0 4px 0;
+    display: block;
+}
+
+.battle-thumbnails {
+    display: flex;
+    gap: 6px;
+    margin: 8px 0 12px 0;
+    flex-wrap: wrap;
+}
+
+.battle-thumb {
+    display: block;
+    border: 1px solid #576b84;
+    flex-shrink: 0;
+}
+
+.battle-thumb img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+}
+
+.battle-thumb:hover {
+    border-color: #d4b800;
+}
+
+.roster-ship-wrap.ship-at {
+    outline: 2px solid #d4b800;
+    box-shadow: 0 0 8px #d4b800;
+}
+
+.ship-count {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+    align-self: center;
+    margin-right: 4px;
+}
+
 /* Belegvaethor inline name+ships layout */
 .roster-card-nameship {
     grid-template-columns: 50px auto;
@@ -526,4 +589,5 @@ marquee {
  
 .tl-hi  { color: #49ce5a; }
 .tl-gld { color: #fefe5d; }
-.tl-red { color: #ff5555; }
+.tl-red { color: #ff8c42; }
+.tl-blue { color: #7ab3e0; }
