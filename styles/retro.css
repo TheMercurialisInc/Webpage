@@ -1,0 +1,485 @@
+/* ================================================================
+   MINC RETRO STYLE — Gunmetal Silver base, Red + Gold accents
+   Colors: Black #000  |  Gunmetal #141414  |  Dark-red #4c0000
+           Gold  #d4b800  |  Yellow #fefe5d  |  Steel-blue #576b84
+           Silver-text #c0c0c0  |  Green #49ce5a
+   ================================================================ */
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #c8c8c8;
+    background-color: #000;
+    background-image: url(../assets/JWSTPIX.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 1300px;
+    background-position: top right -200px;
+}
+
+/* ----------------------------------------------------------------
+   Page wrapper
+   ---------------------------------------------------------------- */
+.r-page {
+    width: 748px;
+    margin: 8px auto 0 auto;
+}
+
+/* ----------------------------------------------------------------
+   Outer container — gunmetal silver shell
+   ---------------------------------------------------------------- */
+.r-outer {
+    width: 748px;
+    background: linear-gradient(180deg,
+        #202020 0%,
+        #181818 4%,
+        #141414 50%,
+        #181818 96%,
+        #202020 100%);
+    border: 1px solid #3a3a3a;
+    border-top: 1px solid #444;
+}
+
+/* ================================================================
+   HEADER SECTION — CSS Grid
+   col 1 (175px, rowspan 2) | col 2 (60px) | col 3 (1fr) | col 4 (112px)
+   row 2 cols 2-4 = nav bar
+   ================================================================ */
+.r-header-section {
+    display: grid;
+    grid-template-columns: 175px 60px 1fr 112px;
+    grid-template-rows: 77px 26px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Logo — spans both header rows */
+.r-logo-cell {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: #0a0a0a;
+    border-right: 1px solid #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    overflow: hidden;
+}
+.r-logo-cell img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* Corner decoration — matches main header */
+.r-topleft-cell {
+    grid-area: 1 / 2 / 2 / 3;
+    background: linear-gradient(180deg,
+        #0a0a0a 0%,
+        #180000 20%,
+        #4c0000 50%,
+        #180000 80%,
+        #0a0a0a 100%);
+}
+
+/* Main header — dark red atmospheric gradient */
+.r-header-main-cell {
+    grid-area: 1 / 3 / 2 / 4;
+    background: linear-gradient(180deg,
+        #0a0a0a 0%,
+        #180000 20%,
+        #4c0000 50%,
+        #180000 80%,
+        #0a0a0a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-right: 1px solid #2a2a2a;
+}
+
+.r-site-title {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fefe5d;
+    text-shadow: 0 0 14px rgba(212,184,0,0.5), 1px 1px 0 #000;
+    margin: 0 0 4px 0;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.r-site-subtitle {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-style: italic;
+    color: #576b84;
+    margin: 0;
+    text-align: center;
+}
+
+/* Right badge cell */
+.r-flash-cell {
+    grid-area: 1 / 4 / 2 / 5;
+    background-color: #0a0a0a;
+    border-left: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    text-align: center;
+    color: #555;
+}
+.r-flash-cell img {
+    display: block;
+    max-width: 50px;
+}
+
+/* ================================================================
+   NAV BAR — flat dark, gold accent underline
+   ================================================================ */
+.r-nav {
+    grid-area: 2 / 2 / 3 / 5;
+    background: #0f0f0f;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #8b6914;
+    display: flex;
+    align-items: stretch;
+}
+
+.r-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0 9px;
+    color: #b89800;
+    text-decoration: none;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    border-right: 1px solid #222;
+}
+
+.r-nav a:first-child {
+    border-left: 1px solid #222;
+}
+
+.r-nav a:hover {
+    background: #1a0000;
+    color: #fefe5d;
+    text-decoration: none;
+}
+
+.r-nav a.r-active {
+    background: #2a0000;
+    color: #fefe5d;
+    border-bottom: 2px solid #d4b800;
+    text-decoration: none;
+}
+
+/* ================================================================
+   BANNER ROW
+   ================================================================ */
+.r-banner-row {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #3a3a3a;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.r-banner-text {
+    color: #d4b800;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 6px 20px;
+    background: linear-gradient(90deg,
+        #141414 0%, #1a0000 20%, #3a0000 50%, #1a0000 80%, #141414 100%);
+    border-top: 1px solid #3a0000;
+    border-bottom: 1px solid #3a0000;
+    width: 728px;
+    text-align: center;
+}
+
+/* ================================================================
+   CONTENT AREA
+   ================================================================ */
+.r-content-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 8px;
+}
+
+/* Legacy spacer divs — gap: 8px on the row replaces them */
+.r-content-gap { display: none; }
+
+/* ----------------------------------------------------------------
+   Box component
+   ---------------------------------------------------------------- */
+.r-box {
+    background: linear-gradient(180deg,
+        #161616 0%,
+        #111111 8%,
+        #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+}
+
+/* Stacked boxes — suppress the doubled top border */
+.r-box + .r-box {
+    border-top: none;
+}
+
+.r-sidebar-box {
+    width: 155px;
+    flex-shrink: 0;
+}
+
+.r-main-box {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Dark red header bar */
+.r-box-header {
+    background: linear-gradient(180deg,
+        #6a0000 0%,
+        #4c0000 30%,
+        #2a0000 65%,
+        #4c0000 100%);
+    text-align: center;
+    padding: 5px 6px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fefe5d;
+    border-bottom: 1px solid #8b6914;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(212,184,0,0.35);
+}
+
+/* Main box uses deep steel-blue header */
+.r-main-box .r-box-header {
+    background: linear-gradient(180deg,
+        #2a3d54 0%,
+        #1e2e42 30%,
+        #111e2e 65%,
+        #1e2e42 100%);
+    border-bottom: 1px solid #3a5070;
+    color: #d4b800;
+    text-shadow: 0 0 8px rgba(212,184,0,0.3);
+}
+
+/* Box body */
+.r-box-body {
+    padding: 6px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #c0c0c0;
+    line-height: 1.6;
+}
+
+.r-box-body p {
+    margin: 0 0 6px 0;
+    line-height: 1.6;
+}
+
+.r-box-body ol {
+    padding-left: 20px;
+    margin: 4px 0 8px 0;
+}
+
+.r-box-body ul {
+    padding-left: 16px;
+    margin: 3px 0 6px 0;
+    list-style-type: square;
+}
+
+.r-box-body li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+/* Section sub-heading inside a box */
+.r-content-heading {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    display: block;
+    margin: 8px 0 4px 0;
+    color: #d4b800;
+}
+
+.r-content-heading:first-child {
+    margin-top: 2px;
+}
+
+/* ----------------------------------------------------------------
+   Three-column staff layout
+   ---------------------------------------------------------------- */
+.r-cols-3 {
+    display: flex;
+    border-bottom: 1px solid #1e1e1e;
+    margin-bottom: 6px;
+}
+
+.r-col {
+    flex: 1;
+    padding: 6px 4px;
+    text-align: center;
+    border-right: 1px solid #1e1e1e;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1.8;
+    color: #c0c0c0;
+}
+
+.r-col:last-child {
+    border-right: none;
+}
+
+/* Portrait images */
+.r-portrait {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    display: block;
+    margin: 4px auto;
+    border: 1px solid #2e2e2e;
+}
+
+.r-portrait-sm {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    display: block;
+    margin: 3px auto;
+    border: 1px solid #2e2e2e;
+}
+
+/* ----------------------------------------------------------------
+   Sidebar stats table
+   ---------------------------------------------------------------- */
+.r-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    color: #c0c0c0;
+}
+
+.r-stats-table td {
+    padding: 2px 3px;
+    border-bottom: 1px solid #1e1e1e;
+    vertical-align: top;
+}
+
+.r-stats-table td:first-child {
+    font-weight: bold;
+    width: 55px;
+    color: #d4b800;
+}
+
+/* ----------------------------------------------------------------
+   News items
+   ---------------------------------------------------------------- */
+.r-news-item {
+    border-bottom: 1px solid #1e1e1e;
+    padding: 5px 0;
+    margin-bottom: 4px;
+}
+
+.r-news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.r-news-date {
+    font-weight: bold;
+    font-style: italic;
+    color: #576b84;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 9px;
+}
+
+.r-news-title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    color: #d4b800;
+}
+
+/* ----------------------------------------------------------------
+   Status indicators
+   ---------------------------------------------------------------- */
+.r-status-open   { color: #49ce5a; font-weight: bold; }
+.r-status-closed { color: #cc3333; font-weight: bold; }
+
+/* ----------------------------------------------------------------
+   Spacer row
+   ---------------------------------------------------------------- */
+.r-spacer-row {
+    height: 12px;
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.r-footer {
+    width: 748px;
+    margin: 0 auto 10px auto;
+    border: 1px solid #3a3a3a;
+    border-top: none;
+}
+
+.r-footer-inner {
+    background: linear-gradient(180deg, #2a0000 0%, #1a0000 100%);
+    text-align: center;
+    padding: 7px 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    color: #888;
+    line-height: 2;
+    border-top: 1px solid #4c0000;
+}
+
+/* ================================================================
+   GLOBAL LINK STYLES
+   ================================================================ */
+a:link, a:visited {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #b89800;
+    text-decoration: underline;
+}
+
+a:hover {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #fefe5d;
+    text-decoration: none;
+}
+
+a:active {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #fefe5d;
+    text-decoration: underline;
+}

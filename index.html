@@ -1,121 +1,336 @@
-<!DOCTYPE html>
-<html lang="en"> <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercurialis Inc.</title>
-    <link rel="stylesheet" href="styles/layout.css">
-</head> <body>
-    <div class="header">
-        <img src="https://image.eveonline.com/Corporation/144534752_128.png" width="250" alt="Mercurialis Inc." class="corp-logo">
-        <h1>Mercurialis Inc.</h1><br>
-        <marquee behavior="scroll" direction="left" scrollamount="3">"When reality can't keep up - dare to dream."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ MINC IS RECRUITING ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JOIN MINC BAR IN GAME  </marquee>
-        <h3>Est. Oct 28, 2002</h3>
-        <img src="assets/evelogo.png" width="250" alt="Eve Online" class="corp-logo">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Mercurialis Inc. - Home</title>
+<link href="styles/retro.css" rel="stylesheet" type="text/css">
+<meta name="keywords" content="mercurialis, MINC, eve online, corporation, nullsec, goonswarm, pvp, oldest corp">
+<meta name="description" content="Mercurialis Inc. - The oldest active corporation in EVE Online. Est. Oct 28, 2002. Nullsec PvP, capital warfare, and 20+ years of history.">
+<style>
+/* Design B — HeaderBG spans cols 2-3 seamlessly via section bg; LOGOBG on logo + flash cells */
+.r-header-section {
+    background: url('assets/HeaderBG.png') 175px 0/461px 77px no-repeat;
+}
+.r-logo-cell {
+    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
+    
+}
+.r-topleft-cell {
+    background: transparent !important;
+}
+.r-header-main-cell {
+    background: transparent !important;
+    border-right: none;
+}
+.r-flash-cell {
+    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
+    border-left: none;
+}
+.r-nav {
+    background: #080808;
+    border-top: 2px solid #1a0000;
+    border-bottom: 1px solid #8b6914;
+}
+.r-nav a {
+    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-nav a:hover {
+    box-shadow:
+        inset 1px 1px 0 rgba(255,220,100,0.55),
+        inset -1px -1px 0 rgba(0,0,0,0.75);
+    filter: brightness(1.2);
+}
+.r-nav a:active {
+    box-shadow:
+        inset 1px 1px 0 rgba(0,0,0,0.75),
+        inset -1px -1px 0 rgba(255,220,100,0.4);
+    filter: brightness(0.9);
+}
+.r-nav a.r-active {
+    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-logo-cell img,
+.r-flash-cell img {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.18)) drop-shadow(0 0 2px rgba(255,255,255,0.24));
+}
+.r-site-subtitle {
+    color: #e8d080;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+}
+</style>
+</head>
+<body>
+
+<div class="r-page">
+
+  <!-- ============================================================
+       OUTER CONTAINER
+       ============================================================ -->
+  <div class="r-outer">
+
+    <!-- HEADER GRID (logo | corner | header | badge / nav bar) -->
+    <div class="r-header-section">
+
+      <!-- Logo — spans both header rows -->
+      <div class="r-logo-cell">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+      </div>
+
+      <!-- Green corner decoration -->
+      <div class="r-topleft-cell"></div>
+
+      <!-- Main header -->
+      <div class="r-header-main-cell">
+        <p class="r-site-title">Mercurialis Inc.</p>
+        <p class="r-site-subtitle">"When reality can't keep up &mdash; dare to dream."</p>
+      </div>
+
+      <!-- Right badge cell -->
+      <div class="r-flash-cell">
+        <img src="assets/logos/condi.png" alt="Goonswarm Federation" width="50" height="50">
+        <img src="assets/logos/imperium.png" alt="Goonswarm Federation" width="50" height="50">
+      </div>
+
+      <!-- Navigation bar (spans cols 2-4) -->
+      <nav class="r-nav">
+        <a href="index.html" class="r-active">&#177; Home</a>
+        <a href="index.html#news">News</a>
+        <a href="history.html">Corp History</a>
+        <a href="media.html">Media</a>
+        <a href="https://seat.mercurialisinc.com">SeAT</a>
+        <a href="staff.html">Staff</a>
+        <a href="rules.html">Recruitment</a>
+      </nav>
+
+    </div><!-- /r-header-section -->
+
+    <!-- BANNER ROW -->
+    <div class="r-banner-row">
+      <div class="r-banner-text">
+        &nbsp;&#9733;&nbsp;
+        Oldest Active Corporation in New Eden &nbsp;&#9733;&nbsp;<br>&nbsp;&#9733;&nbsp;
+        Est. Oct 28, 2002 &nbsp;&#9733;
+      </div>
     </div>
 
-    <div class="centeredmedia">
-        <audio id="audioPlayer" controls volume="0.45">
-        <source src="Map10 - The Demon's Dead.mp3" type="audio/mpeg">
-        </audio><br>
-        Hit play for vibes.
-<div id="nav-container"></div>
+    <!-- CONTENT ROW -->
+    <div class="r-content-row">
 
-    <script>
-        fetch('nav.html')
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('nav-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navigation:', error));
-    </script>
+      <!-- Left spacer -->
+      <div class="r-content-gap"></div>
 
+      <!-- ========================================================
+           SIDEBAR
+           ======================================================== -->
+      <div class="r-sidebar-box r-box">
 
-        <div class="info-section">
-            <div class="margin-column"></div>
-            <div class="fixed-column">
-                <div class="cyno"><img src="assets/covertcyno.gif" width="150" height="150" alt="Cyno"></div>
-                <br><br><br><br><br><br>
-                <img src="assets/pixelnagleft.png" width="150" height="auto" alt="Nag">
-            </div>
-            <div class="main-info-column">
-                <div class="main-info">
-                    <div class="welcome-title">
-                        <h3>Welcome to Mercurialis Inc.</h3>
-                    </div>
-                <div class="centerbox1">
-                <p>Established in 2002 during EVE Online's beta, MINC is the oldest active corporation in New Eden with over two decades of good times and good fights. We have been present for every major conflict the game has seen. From the chaos of Asakai, to the Bloodbath of B-R5RB, through the Casino War, the Siege of 9-4RP2, the titan graveyard at X47L-Q, and into the record-breaking Fury at FWST-8 and the Massacre at M2-XFE .</p>
-                <p>Our playstyles range from wormhole exploration to capital production, small BLOPs gangs to large scale fleet fights.</p>
-                <p>MINC is home to players from all over the world, across time zones and backgrounds. Our community is multicultural and inclusive, and that diversity is a genuine strength and makes for great conversation and environment where every member's unique perspective and contribution is valued.</p>
-                <p>Whether you're a seasoned veteran or new to the game, MINC offers something most corporations can't: a genuine community with real history behind it, and plenty of content ahead of it.</p>
-                </div>
-                <div class="item-title">
-                    <h3>Joining the ranks of Mercurialis Inc.</div>
-                <div class="recruitment">
-                    <p>Recruitment Status:<font color="#49CE5A"> Open</font></p> </h3></div>
-
-                <div class="centerbox2">
-                    <p>If you're interested in joining, here's how the process works:</p>
-                    <ol>
-                        <li>Join our Discord or slip into our in-game channel "MINC BAR".</li>
-                        <li>Introduce yourself to a recruiter or director</li>
-                        <li>Prepare to move to while awaiting for the recruiters response. <br><i>*Bribes are accepted to expedite approval</i></li>
-                    </ol>
-                    <p>For a limited time, all recruitment fees and permits are 50% off!
-                    <br>Don't miss your chance to join the ranks of spacefaring legends.</p>
-                </div>
-                <div class="side-by-side-images-main">
-</div>
-<div class="item-title">
-      <h3>The Leadership Team.</div>
-      <div class="centerbox1">
-<div class="centeredmedia">
-	      <p><h2>CEO</p><br>RVAMitchell
-         <br> <img src="assets/portraits/rvamitchell.jpeg" width="300" alt="RVA">
-         <br><br> The Directorate <br>
-         <br> &nbsp;&nbsp;
-         Matt Falahe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Mugatto Otomeya
-          <br> <img src="assets/portraits/matt-falahe.jpeg" width="200" alt="Matt">&nbsp;&nbsp;&nbsp;<img src="assets/portraits/mugatto-otomeya.jpeg" width="200" alt="Ozzy">
-          <br> Almalexia Vivekosia &nbsp;&nbsp;
-               Springfellow Hawke
-           <br> <img src="assets/portraits/almalexia-vivekosia.jpeg" width="200" alt="Ozzy">&nbsp;&nbsp;&nbsp;<img src="assets/portraits/springfellow-hawke.jpeg" width="200" alt="Mystic">
-<h2></div>
-      </div><br>
-                </div>
-                <div class="centerbox2">
-    <p>
-        <a href="https://riftforeve.online/" target="_blank">
-            <img src="assets/RIFTICON.png" alt="Eve Rift Intel Fusion Tool" class="tool-image" style="display: block; margin: 10px auto; max-width: 450px;">
-        </a>
-    </p><p>
-        Mercurialis Inc. has officially adopted the <strong>Eve Rift Intel Fusion Tool (RIFT)</strong>, as our intel tool of choice. It was built by <strong>Nohus</strong>, a MINC member, and does an incredible amount of things, and gives anyone using it an edge.<br>
-    </p>
-    <p>
-        <ul>
-            <li>Runs natively on Windows, Linux, and macOS</li>
-            <li>No backend—RIFT is a fully standalone application with no server component required.</li>
-            <li>Open-source: The source code repository is hosted on <a href="https://gitlab.com/rift-intel-fusion-tool/rift-intel-fusion-tool" target="_blank">GitLab</a>.</li>
-        </ul>
-    </p>
-
-</div>
-            </div>
-
-            <div class="fixed-column covertcyno-container">
-                <div class="cyno"><img src="assets/cyno.gif" width="150" height="150" alt="Covert Cyno"></div> <br><br><br><br><br><br>
-                <img src="assets/pixelnagright.png" width="150" height="auto" alt="Nag">
-            </div>
-            <div class="margin-column"></div>
+        <!-- EVE Logo -->
+        <div class="r-box-body" style="text-align:center; padding:6px 4px 4px 4px;">
+          <img src="assets/evelogo.png" alt="EVE Online" style="max-width:100%; display:block; margin:0 auto;">
         </div>
-    <div class="centeredmedia">
-        <img src="assets/netscape.gif" alt="Best viewed in Netscape">&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/IE.gif" alt="Best viewed in Internet Explorer"><br><br>
-  		<img src="assets/rorqy.png" width="auto" height="300" alt="Rorqy"><br><br><br>
-    </div>
-    <div class="footer">
-    <p>&copy; 2024 Mercurialis Inc. All rights reserved. <br>Disclaimer:  Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transations was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it.EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.
 
-    </p>
-</div> <script src="scripts/main.js"></script> </body> </html>
+        <!-- Corp Info -->
+        <div class="r-box-header">&#177; Corp Info</div>
+        <div class="r-box-body">
+          <table class="r-stats-table">
+            <tr>
+              <td>Founded:</td>
+              <td>Oct 28, 2002</td>
+            </tr>
+            <tr>
+              <td>CEO:</td>
+              <td>RVAMitchell</td>
+            </tr>
+            <tr>
+              <td>Alliance:</td>
+              <td>Goonswarm Federation</td>
+            </tr>
+            <tr>
+              <td>Region:</td>
+              <td>Insmother</td>
+            </tr>
+            <tr>
+              <td>Focus:</td>
+              <td>Industry & PvP</td>
+            </tr>
+            <tr>
+              <td>TZ:</td>
+              <td>EUTZ / USTZ</td>
+            </tr>
+            <tr>
+              <td>Discord:</td>
+              <td>Click Here to Auth</td>
+            </tr>
+            <tr>
+              <td>In-game:</td>
+              <td>MINC BAR</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Recruitment Status -->
+        <div class="r-box-header">&#177; Recruitment</div>
+        <div class="r-box-body">
+          Status:&nbsp;&nbsp;<span class="r-status-open">&#9632; OPEN</span>
+          <br><br>
+          All timezones welcome. If you are interested? Read our
+          <a href="rules.html">recruitment page</a>
+          or join <strong>MINC BAR</strong> in-game.
+        </div>
+
+        <!-- Quick Links -->
+        <div class="r-box-header">&#177; Quick Links</div>
+        <div class="r-box-body">
+          <ul style="padding-left:14px; margin:0; list-style-type:square;">
+            <li><a href="staff.html">SeAT</a></li>
+            <li><a href="rules.html">Imperium Auth</a></li>
+            <li><a href="history.html">MINC ZKillboard</a></li>
+            <li><a href="media.html">GoonPraisal</a></li>
+            <li><a href="https://seat.mercurialisinc.com">SeAT Auth</a></li>
+            <li><a href="staff.html">RIFT</a></li>
+            <li><a href="https://www.eveonline.com" target="_blank">Dotlan</a></li>
+          </ul>
+        </div>
+
+        <!-- Cyno & Nag -->
+        <div class="r-box-header"></div>
+        <div class="r-box-body" style="text-align:center; padding:6px 4px;">
+          <img src="assets/cyno-pingpong.gif" width="110" height="110" alt="Cyno"
+               style="-webkit-mask-image: radial-gradient(ellipse 48% 48% at 50% 50%, black 42%, transparent 76%);
+                      mask-image: radial-gradient(ellipse 48% 48% at 50% 50%, black 42%, transparent 76%);
+                      display:block; margin:0 auto 4px auto;">
+          <img src="assets/pixelnagleft.png" alt="Naglfar"
+               style="max-width:100%; display:block; margin:0 auto; image-rendering:pixelated;">
+        </div>
+
+      </div><!-- /sidebar -->
+
+      <div class="r-content-gap"></div>
+
+      <!-- ========================================================
+           MAIN CONTENT
+           ======================================================== -->
+      <div class="r-main-box r-box">
+
+        <!-- Welcome -->
+        <div class="r-box-header">&#177; Welcome to Mercurialis Inc.</div>
+        <div class="r-box-body">
+          <span class="r-content-heading">About MINC</span>
+
+               <p>Founded on October 28, 2002 during the beta of EVE Online, Mercurialis Inc. (MINC) is the oldest active corporation in New Eden. For more than two decades, MINC has adapted through every era of EVE, from the early days of nullsec warfare, through the age of supercapital battles, and into the modern era of alliance warfare.<br>
+              <br> Our pilots have fought in some of the game's defining conflicts, including Asakai, B-R5RB, the Casino War, X47L-Q, FWST-8, and M2-XFE. From massive coalition battles to small-gang fights, MINC has always found a place on the battlefield.<br>
+              <br> Beyond combat, MINC has built a lasting community around exploration, industry, capital production, and the friendships formed along the way. Our members come from around the world, bringing together veterans with decades of experience and new pilots writing their first chapters.<br>
+              <br>More than twenty years later, MINC remains active because of the people who continue to shape its story.And there is still history to be written.</p>
+          <div style="text-align:center; padding:8px 0;">
+            <img src="assets/Hel.png" width="300"  alt="Hel">
+          </div>
+        </div>
+
+        <!-- Latest News -->
+        <a name="news"></a>
+        <div class="r-box-header">&#177; Latest News</div>
+        <div class="r-box-body">
+
+          <div class="r-news-item">
+            <span class="r-news-date">Jun 13, 2026</span>
+            <span class="r-news-title">MINC Launches Redesigned Website</span>
+            <p>The redesigned Mercurialis Inc. website is now live. Browse the <a href="history.html">Corp History</a>
+            page for a full account of MINC's two-plus decades in New Eden, battles, alliances, drama, and all.
+            The leadership roster, recruitment policy, media archive, and SeAT auth links are all updated and waiting
+            for you. If you spot an error, find a director in <strong>MINC BAR</strong>.</p>
+          </div>
+
+          <div class="r-news-item">
+            <span class="r-news-date">May 28, 2026</span>
+            <span class="r-news-title">The War Is Over, Winter Co. Keepstar Destroyed</span>
+            <p>Asher has announced the end of the campaign. After weeks of sustained operations, the war was a
+            success, Winter Co.'s staging Keepstar has been destroyed. Well done to everyone who showed up,
+            and GFs to Winter Co. With the war concluded, MINC's closed recruitment status has been lifted.
+            We are actively recruiting again across all time zones. See the
+            <a href="rules.html">recruitment page</a> for details. Bribes are still accepted and appreciated.</p>
+          </div>
+
+          <div class="r-news-item">
+            <span class="r-news-date">Apr 15, 2026</span>
+            <span class="r-news-title">Double SRP Active for Fleet Operations</span>
+            <p>Mercurialis Inc. is offering <strong>Double Ship Replacement Program (SRP)</strong> payouts for the
+            opening weeks of the war. Loss mails from pinged fleets will be reimbursed at 200%.
+            Get in fleet, get on grid, and have good fights. Check Discord for the current doctrine fits and
+            fleet schedules.</p>
+          </div>
+
+          <div class="r-news-item">
+            <span class="r-news-date">Mar 02, 2026</span>
+            <span class="r-news-title">Placeholder News Entry</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula felis at nulla
+            fermentum, vel tincidunt enim gravida. Praesent euismod sapien vel orci tincidunt, nec
+            sollicitudin nisi faucibus. Pellentesque habitant morbi tristique senectus et netus.</p>
+          </div>
+
+          <div class="r-news-item">
+            <span class="r-news-date">Jan 20, 2026</span>
+            <span class="r-news-title">Placeholder News Entry</span>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+            sed quia consequuntur magni dolores eos qui ratione sequi nesciunt.</p>
+          </div>
+
+        </div>
+
+        <!-- Screenshot gallery strip -->
+        <div class="r-box-header"><!--Header here if needed --></div>
+        <div class="r-box-body">
+          <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center; padding:4px 0;">
+            <img src="assets/20201230_M2 Battle.png"
+                 style="width:148px; height:100px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="M2 Battle">
+            <img src="assets/20201005_FRT_Keepstar_in_FWST.jpg"
+                 style="width:148px; height:100px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="FRT Keepstar">
+            <img src="assets/20210204_Bastion Leshak Fleet.png"
+                 style="width:148px; height:100px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="Leshak Fleet">
+            <img src="assets/2021-02-19_Sotiyo_Kill.jpg"
+                 style="width:148px; height:100px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="Sotiyo Kill">
+          </div>
+          <p style="text-align:center; font-size:9px; color:#555; margin-top:4px;">
+            <a href="history.html">Full corp history &amp; battle reports &raquo;</a>
+          </p>
+        </div>
+
+      </div><!-- /main box -->
+
+      <!-- Right spacer -->
+      <div class="r-content-gap"></div>
+
+    </div><!-- /r-content-row -->
+
+    <div class="r-spacer-row"></div>
+
+  </div><!-- /r-outer -->
+
+  <!-- FOOTER -->
+  <div class="r-footer">
+    <div class="r-footer-inner">
+      | <a href="#top">&#177; Top</a>
+      | <a href="staff.html">Staff</a>
+      | <a href="rules.html">Recruitment</a>
+      | <a href="https://seat.mercurialisinc.com">SeAT</a>
+      |<br>
+      &copy; 2002 - 2026 Mercurialis Inc. All rights reserved.<br>
+      Disclaimer: Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transactions was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it.
+      EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.<br><br>
+      <img src="assets/netscape.gif" alt="Best viewed in Netscape">
+      &nbsp;
+      <img src="assets/IE.gif" alt="Best viewed in IE">
+      &nbsp;
+      <span style="font-size:8px; color:#555;">Best Viewed 1024x768</span>
+    </div>
+  </div>
+
+</div><!-- /r-page -->
+
+</body>
+</html>

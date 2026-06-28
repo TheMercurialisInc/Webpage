@@ -1,88 +1,1510 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercurialis Inc. - Corp History</title>
-    <link rel="stylesheet" href="styles/layout.css">
-    <style>
-        body {
-            background-image: url(assets/constructionbackground.png);
-            background-repeat: repeat;
-            background-attachment: scroll;
-            background-size: 150% auto;
-        }
-        .construction-wrap {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .construction-wrap h2 {
-            font-size: 36px;
-            color: #d4b800;
-            font-family: 'Courier New', monospace;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-        }
-        .construction-wrap p {
-            color: #fff;
-            font-size: 16px;
-            font-family: 'Lucida Console', monospace;
-            margin: 8px 0;
-        }
-        .construction-chan {
-            margin: 20px auto;
-            display: block;
-            width: 400px;
-            max-width: 90%;
-        }
-        .construction-link {
-            display: inline-block;
-            margin-top: 24px;
-            color: #d4b800;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-decoration: none;
-            border: 1px solid #d4b800;
-            padding: 6px 18px;
-        }
-        .construction-link:hover {
-            background-color: #d4b800;
-            color: #000;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Mercurialis Inc. - Corp History</title>
+<link href="styles/retro.css" rel="stylesheet" type="text/css">
+<style>
+/* ── Design B header ─────────────────────────────────────── */
+.r-header-section {
+    background: url('assets/HeaderBG.png') 175px 0/461px 77px no-repeat;
+}
+.r-logo-cell {
+    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
+    
+}
+.r-topleft-cell {
+    background: transparent !important;
+}
+.r-header-main-cell {
+    background: transparent !important;
+    border-right: none;
+}
+.r-flash-cell {
+    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
+    border-left: none;
+}
+.r-nav {
+    background: #080808;
+    border-top: 2px solid #1a0000;
+    border-bottom: 1px solid #8b6914;
+}
+.r-nav a {
+    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-nav a:hover {
+    box-shadow:
+        inset 1px 1px 0 rgba(255,220,100,0.55),
+        inset -1px -1px 0 rgba(0,0,0,0.75);
+    filter: brightness(1.2);
+}
+.r-nav a:active {
+    box-shadow:
+        inset 1px 1px 0 rgba(0,0,0,0.75),
+        inset -1px -1px 0 rgba(255,220,100,0.4);
+    filter: brightness(0.9);
+}
+.r-nav a.r-active {
+    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-logo-cell img,
+.r-flash-cell img {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.18)) drop-shadow(0 0 2px rgba(255,255,255,0.24));
+}
+.r-site-subtitle {
+    color: #e8d080;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+}
+/* ── Year Index Box ───────────────────────────────────────── */
+.r-yindex-section {
+    border-bottom: 1px solid #3a3a3a;
+}
+.r-yindex-body {
+    background: #0f0f0f;
+    border-top: 1px solid #2a2a2a;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.r-ylink {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 9px;
+    font-size: 9px;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    color: #b89800;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    border-right: 1px solid #222;
+}
+.r-ylink:first-child {
+    border-left: 1px solid #222;
+}
+.r-ylink:hover {
+    background: #1a0000;
+    color: #fefe5d;
+    text-decoration: none;
+}
+
+/* ── CEO Horizontal Timeline ──────────────────────────────── */
+.ceo-timeline {
+    width: 100%;
+    overflow-x: auto;
+    margin: 6px 0 20px 0;
+    padding: 6px 0;
+}
+.ceo-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 0 6px;
+}
+.ceo-track::before {
+    content: '';
+    position: absolute;
+    top: 65px;
+    left: 0; right: 0;
+    height: 1px;
+    background: #2e2e2e;
+    z-index: 0;
+}
+.ceo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 90px;
+    max-width: 110px;
+    position: relative;
+    z-index: 1;
+}
+.ceo-portrait-wrap {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #2e2e2e;
+    overflow: hidden;
+    background: #111;
+    flex-shrink: 0;
+}
+.ceo-portrait {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.ceo-dot {
+    width: 7px; height: 7px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    margin: 6px 0 4px 0;
+    flex-shrink: 0;
+}
+.ceo-card.ceo-current .ceo-dot {
+    background: #49ce5a;
+    box-shadow: 0 0 5px #49ce5a;
+}
+.ceo-card.ceo-current .ceo-portrait-wrap {
+    border-color: #49ce5a;
+    box-shadow: 0 0 6px #49ce5a33;
+}
+.ceo-name {
+    color: #c0c0c0;
+    font-size: 9px;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    display: block;
+    line-height: 1.3;
+}
+.ceo-years {
+    color: #555;
+    font-size: 8px;
+    display: block;
+    margin-top: 1px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* ── Timeline ─────────────────────────────────────────────── */
+.timeline {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.timeline-entry {
+    border-top: 1px solid #1e1e1e;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+.timeline-entry:first-child {
+    border-top: none;
+}
+.timeline-year {
+    display: block;
+    background: linear-gradient(180deg,
+        #2a3d54 0%,
+        #1e2e42 50%,
+        #111e2e 100%);
+    color: #d4b800;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px 10px;
+    border-top: 1px solid #3a5070;
+    border-bottom: 1px solid #0a1520;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(212,184,0,0.3);
+}
+.timeline-entry p {
+    margin: 0 0 5px 4px;
+    color: #c0c0c0;
+    font-size: 10px;
+    line-height: 1.6;
+    font-family: Verdana, Arial, sans-serif;
+}
+.timeline-note {
+    display: block;
+    margin: 6px 4px 8px 4px;
+    padding: 5px 8px;
+    background: #2a1a00;
+    border-left: 3px solid #d4a800;
+    color: #e8c84a;
+    font-size: 10px;
+    font-family: "Courier New", monospace;
+    font-style: italic;
+}
+
+/* ── Battle Box ───────────────────────────────────────────── */
+.battle-box {
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+    margin: 8px 4px;
+}
+.battle-header {
+    background: linear-gradient(180deg,
+        #6a0000 0%, #4c0000 30%, #2a0000 65%, #4c0000 100%);
+    padding: 4px 8px;
+    border-bottom: 1px solid #8b6914;
+    margin: 0;
+}
+.battle-box .battle-header { margin: 0; }
+.battle-header-name {
+    display: block;
+    color: #fefe5d;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(212,184,0,0.35);
+}
+.battle-header-date {
+    display: block;
+    color: #8a7000;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 9px;
+    margin-top: 1px;
+}
+.battle-box-content {
+    padding: 6px 8px 4px 8px;
+    background: linear-gradient(180deg, #111111 0%, #0e0e0e 100%);
+}
+.battle-box-content p {
+    margin: 0 0 5px 0;
+    color: #c0c0c0;
+    font-size: 10px;
+    line-height: 1.6;
+    font-family: Verdana, Arial, sans-serif;
+}
+.battle-tag {
+    display: block;
+    color: #d4b800;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 8px 4px 3px 4px;
+    font-family: Verdana, Arial, sans-serif;
+    text-decoration: underline;
+}
+
+/* ── Roster Grid ──────────────────────────────────────────── */
+.roster-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 6px 4px;
+}
+.roster-card {
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-areas:
+        "portrait ship"
+        "pname    pname"
+        "sname    sname";
+    column-gap: 3px;
+    row-gap: 1px;
+    background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    padding: 3px;
+    align-items: start;
+}
+.roster-portrait {
+    grid-area: portrait;
+    width: 40px; height: 40px;
+    object-fit: cover;
+    display: block;
+}
+.roster-ship {
+    grid-area: ship;
+    width: 34px; height: 34px;
+    object-fit: contain;
+    display: block;
+}
+.roster-ships {
+    grid-area: ship;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.roster-ships .roster-ship { grid-area: unset; }
+.roster-ship-wrap {
+    position: relative;
+    display: inline-block;
+    width: 34px; height: 34px;
+    grid-area: ship;
+    flex-shrink: 0;
+}
+.roster-ship-wrap .roster-ship {
+    grid-area: unset;
+    width: 100%; height: 100%;
+}
+.roster-ships .roster-ship-wrap { grid-area: unset; }
+.ship-tier-badge {
+    position: absolute;
+    top: 0; left: 0;
+    width: 11px;
+    height: auto;
+    pointer-events: none;
+}
+.roster-ship-wrap.ship-lost::after {
+    content: '\2715';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cc3333;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000;
+    pointer-events: none;
+    z-index: 2;
+    line-height: 1;
+}
+.roster-ship-wrap.ship-at {
+    outline: 1px solid #8b6914;
+    box-shadow: 0 0 5px #d4b80044;
+}
+.ship-count {
+    color: #555;
+    font-size: 9px;
+    font-family: Verdana, Arial, sans-serif;
+    font-style: italic;
+    align-self: center;
+    margin-right: 2px;
+}
+.roster-name {
+    grid-area: pname;
+    font-size: 9px;
+    color: #c0c0c0;
+    font-family: Verdana, Arial, sans-serif;
+    display: block;
+    line-height: 1.3;
+}
+.roster-ship-name {
+    grid-area: sname;
+    font-size: 9px;
+    color: #555;
+    font-family: Verdana, Arial, sans-serif;
+    display: block;
+    line-height: 1.3;
+}
+.roster-faction-header {
+    font-size: 9px;
+    color: #555;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 6px 4px 3px 4px;
+    display: block;
+}
+
+/* ── Battle thumbnails ────────────────────────────────────── */
+.battle-thumbnails {
+    display: flex;
+    gap: 4px;
+    margin: 5px 4px 8px 4px;
+    flex-wrap: wrap;
+}
+.battle-thumb {
+    display: block;
+    border: 1px solid #2e2e2e;
+    flex-shrink: 0;
+}
+.battle-thumb img {
+    width: 80px; height: 55px;
+    object-fit: cover;
+    display: block;
+}
+.battle-thumb:hover { border-color: #8b6914; }
+
+/* ── Stats callout ────────────────────────────────────────── */
+.tl-stats {
+    margin: 6px 4px;
+    padding: 5px 8px;
+    background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+    color: #c0c0c0;
+    font-size: 9px;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.6;
+}
+.tl-hi  { color: #49ce5a; font-weight: bold; }
+.tl-gld { color: #d4b800; font-weight: bold; }
+.tl-red { color: #cc3333; font-weight: bold; }
+.tl-blue { color: #576b84; font-weight: bold; }
+
+/* ── 10 Year Club ─────────────────────────────────────────── */
+.veteran-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 5px 4px 14px 4px;
+    justify-content: center;
+}
+#ten-year-club .roster-faction-header { text-align: center; }
+.veteran-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 88px;
+    background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+    padding: 6px 4px;
+}
+.veteran-card.current {
+    border-color: #49ce5a;
+    border-top-color: #49ce5a;
+    box-shadow: 0 0 6px rgba(73,206,90,0.10);
+}
+.veteran-portrait-wrap {
+    width: 64px; height: 64px;
+    border: 1px solid #2e2e2e;
+    overflow: hidden;
+    background: #111;
+    flex-shrink: 0;
+}
+.veteran-card.current .veteran-portrait-wrap {
+    border-color: #49ce5a;
+    box-shadow: 0 0 5px rgba(73,206,90,0.2);
+}
+.veteran-portrait {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.veteran-dot {
+    width: 6px; height: 6px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    margin: 5px 0 4px 0;
+    flex-shrink: 0;
+}
+.veteran-card.current .veteran-dot {
+    background: #49ce5a;
+    box-shadow: 0 0 4px #49ce5a;
+}
+.veteran-name {
+    color: #c0c0c0;
+    font-size: 9px;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    display: block;
+    line-height: 1.3;
+    margin-bottom: 2px;
+}
+.veteran-joined {
+    color: #555;
+    font-size: 8px;
+    display: block;
+    font-family: Verdana, Arial, sans-serif;
+    margin-bottom: 3px;
+}
+.veteran-tenure {
+    color: #555;
+    font-size: 9px;
+    display: block;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+}
+.veteran-tenure.ticking { color: #49ce5a; }
+.veteran-stints {
+    color: #333;
+    font-size: 8px;
+    display: block;
+    font-family: Verdana, Arial, sans-serif;
+    margin-top: 2px;
+}
+.veteran-card.memorial {
+    border-color: #4a3800;
+    border-top-color: #6a5200;
+    box-shadow: 0 0 5px rgba(212,184,0,0.08);
+}
+.veteran-card.memorial .veteran-portrait-wrap {
+    border-color: #4a3800;
+    filter: grayscale(40%);
+}
+.veteran-card.memorial .veteran-dot {
+    background: #8b6914;
+    box-shadow: 0 0 3px #8b691455;
+}
+.veteran-card.memorial .veteran-tenure { color: #8b6914; }
+</style>
 </head>
 <body>
-    <div class="header">
-        <img src="https://image.eveonline.com/Corporation/144534752_128.png" width="250" alt="Mercurialis Inc." class="corp-logo">
-        <h1>Mercurialis Inc.</h1>
-        <marquee behavior="scroll" direction="left" scrollamount="3">"When reality can't keep up - dare to dream."</marquee>
-        <h3>Est. Oct 28, 2002</h3>
+
+<div class="r-page">
+
+  <div class="r-outer">
+
+    <!-- HEADER -->
+    <div class="r-header-section">
+
+      <div class="r-logo-cell">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+      </div>
+
+      <div class="r-topleft-cell"></div>
+
+      <div class="r-header-main-cell">
+        <p class="r-site-title">Mercurialis Inc.</p>
+        <p class="r-site-subtitle">"When reality can't keep up - dare to dream."</p>
+      </div>
+
+      <div class="r-flash-cell">
+        <img src="assets/logos/condi.png" alt="Goonswarm Federation" width="50" height="50">
+        <img src="assets/logos/imperium.png" alt="Imperium" width="50" height="50">
+      </div>
+
+      <nav class="r-nav">
+        <a href="index.html">&#177; Home</a>
+        <a href="index.html#news">News</a>
+        <a href="history.html" class="r-active">Corp History</a>
+        <a href="media.html">Media</a>
+        <a href="https://seat.mercurialisinc.com">SeAT</a>
+        <a href="staff.html">Staff</a>
+        <a href="rules.html">Recruitment</a>
+      </nav>
+
+    </div><!-- /r-header-section -->
+
+    <!-- BANNER -->
+    <div class="r-banner-row">
+      <div class="r-banner-text">
+        &#9733;&nbsp; The History of Mercurialis Inc. &nbsp;&#9733;
+      </div>
     </div>
 
-    <div id="nav-container"></div>
-    <script>
-        fetch('nav.html')
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('nav-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navigation:', error));
-    </script>
-
-    <div class="construction-wrap">
-        <h2>&#x26A0; Under Construction &#x26A0;</h2>
-        <p>The corp history archive is being compiled.</p>
-        <p>Check back soon.</p>
-        <img src="assets/constructionchan.png" alt="Under Construction" class="construction-chan">
+    <!-- YEAR INDEX BOX -->
+    <div class="r-yindex-section">
+      <div class="r-box-header">&#177; Year Index</div>
+      <div class="r-yindex-body">
+        <a href="#y2002" class="r-ylink">2002</a>
+        <a href="#y2003" class="r-ylink">2003</a>
+        <a href="#y2004" class="r-ylink">2004</a>
+        <a href="#y2005" class="r-ylink">2005</a>
+        <a href="#y2007" class="r-ylink">2007</a>
+        <a href="#y2008" class="r-ylink">2008</a>
+        <a href="#y2009" class="r-ylink">2009</a>
+        <a href="#y2010" class="r-ylink">2010</a>
+        <a href="#y2011" class="r-ylink">2011</a>
+        <a href="#y2012" class="r-ylink">2012</a>
+        <a href="#y2013" class="r-ylink">2013</a>
+        <a href="#y2014" class="r-ylink">2014</a>
+        <a href="#y2015" class="r-ylink">2015</a>
+        <a href="#y2016" class="r-ylink">2016</a>
+        <a href="#y2017" class="r-ylink">2017</a>
+        <a href="#y2018" class="r-ylink">2018</a>
+        <a href="#y2019" class="r-ylink">2019</a>
+        <a href="#y2020" class="r-ylink">2020</a>
+        <a href="#y2021" class="r-ylink">2021</a>
+        <a href="#y2022" class="r-ylink">2022</a>
+        <a href="#y2023" class="r-ylink">2023</a>
+        <a href="#y2024" class="r-ylink">2024</a>
+        <a href="#y2025" class="r-ylink">2025</a>
+        <a href="#y2026" class="r-ylink">2026</a>
+        <a href="#ten-year-club" class="r-ylink">10yr&#160;Club</a>
+      </div>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2024 Mercurialis Inc. All rights reserved. <br>Disclaimer: Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transations was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it. EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.</p>
+    <!-- CONTENT -->
+    <div class="r-content-row">
+
+      <div class="r-content-gap"></div>
+
+      <div class="r-main-box r-box">
+
+        <div class="r-box-header">&#177; MINC Through The Years</div>
+        <div class="r-box-body">
+
+          <!-- CEO Portraits Timeline -->
+          <div class="ceo-timeline">
+            <div class="ceo-track">
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/portraits/Isayo-Arkindra.jpeg" alt="Isayo Arkindra" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">Isayo Arkindra</span>
+                <span class="ceo-years">2002 &ndash; 2010</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/portraits/xMillz.jpeg" alt="xMillz" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">xMillz</span>
+                <span class="ceo-years">2010 &ndash; 2012</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/portraits/Nairb-Ecrep.jpeg" alt="Nairb Ecrep" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">Nairb Ecrep</span>
+                <span class="ceo-years">2012 &ndash; 2015</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/portraits/marley-cortez.jpeg" alt="marly cortez" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">marly cortez</span>
+                <span class="ceo-years">2015 &ndash; 2018</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/portraits/primus-buck.jpeg" alt="primus buck" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">primus buck</span>
+                <span class="ceo-years">2018 &ndash; 2021</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/portraits/khronos-thellere.jpeg" alt="Khronos Thellere" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">Khronos Thellere</span>
+                <span class="ceo-years">2021 &ndash; 2024</span>
+              </div>
+
+              <div class="ceo-card ceo-current">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/portraits/rvamitchell.jpeg" alt="RVAMitchell" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">RVAMitchell</span>
+                <span class="ceo-years">2024 &ndash; present</span>
+              </div>
+
+            </div>
+          </div><!-- /ceo-timeline -->
+
+          <!-- Alliance Timeline -->
+          <div class="ceo-timeline alliance-theme">
+            <div class="ceo-track">
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/logos/staralliance.png" alt="Star Alliance" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">Star Alliance</span>
+                <span class="ceo-years">2004 &ndash; 2005</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/logos/iac.png" alt="Interstellar Alcohol Conglomerate" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">Interstellar Alcohol Conglomerate</span>
+                <span class="ceo-years">2005 &ndash; 2008</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/logos/wi.png" alt="Wildly Inappropriate" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">Wildly Inappropriate</span>
+                <span class="ceo-years">2008 &ndash; 2010</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/logos/rzr.png" alt="RAZOR Alliance" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">RAZOR Alliance</span>
+                <span class="ceo-years">2010 &ndash; 2016</span>
+              </div>
+
+              <div class="ceo-card">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/logos/bastn.png" alt="The Bastion" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">The Bastion</span>
+                <span class="ceo-years">2016 &ndash; 2022</span>
+              </div>
+
+              <div class="ceo-card ceo-current">
+                <div class="ceo-portrait-wrap">
+                  <img src="assets/logos/condi.png" alt="Goonswarm Federation" class="ceo-portrait">
+                </div>
+                <div class="ceo-dot"></div>
+                <span class="ceo-name">Goonswarm Federation</span>
+                <span class="ceo-years">2022 &ndash; present</span>
+              </div>
+
+            </div>
+          </div><!-- /alliance-theme -->
+
+          <!-- ====================================================
+               YEAR TIMELINE
+               ==================================================== -->
+          <div class="timeline">
+
+            <div class="timeline-entry" id="y2002">
+              <span class="timeline-year">2002</span>
+              <p>Mercurialis Inc. was founded by Isayo Arkindra during EVE Online's closed beta period as a player-run corporation. In its earliest form, the corporation began building its identity, leadership structure, and member base within the small and experimental pre-launch community.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2003">
+              <span class="timeline-year">2003</span>
+              <p>EVE Online officially launched on May 6, 2003, ending the beta period
+              in which MINC was founded. The launch came with a full wipe. all
+              assets, ISK, and progress from the beta were reset. Every corporation,
+              including Mercurialis Inc., started over on equal footing alongside the
+              rest of New Eden.<br>
+              <br>MINC rebuilt and continued, carrying forward the name and identity
+              established in 2002 into the live game.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2004">
+              <span class="timeline-year">2004</span>
+              <p>Before the introduction of formal in-game alliance mechanics, much of EVE Online's early political landscape was recorded inconsistently, and surviving details from this period are often drawn from forum archives rather than persistent in-game systems. During this time, MINC was part of Star Alliance, a player-organized agreement between corporations operating outside formal game structures. On October 26th, CEO Isayo Arkindra announced MINC's departure from Star Alliance via the EVE Online forums, marking the end of its involvement in one of the early pre-mechanics political groupings within New Eden.</p>
+              <img src="assets/EveForum-MINC-Leaves-Star-Alliance20041026.png" alt="EVE Forums - MINC leaves Star Alliance, Oct 26 2004" style="max-width:65%; border:1px solid #576b84;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://eve-search.com/thread/119095-0/page/1#6" target="_blank">EVE Online forums, Oct 26 2004</a></p>
+            </div>
+
+            <div class="timeline-entry" id="y2005">
+              <span class="timeline-year">2005</span>
+              <p>MINC joins its first official in game alliance, Interstellar Alcohol Conglomerate (IAC), and establishes operations in Catch.<br>
+              <br> The alliance brought together European and American players with a strong shared culture, and MINC became part of one of the early nullsec communities. At the time, the corporation consisted of roughly twenty active pilots.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2007">
+              <span class="timeline-year">2007</span>
+              <p>Life in IAC continued to thrive. With hostile staging systems nearby in Querious, roaming and small-scale engagements were a regular part of life, though often more about creating fights than fighting major wars.<br>
+              <br>One memorable engagement became legendary for its absurdity: after spending an extended period provoking an enemy station, MINC and its allies eventually turned the situation into a conga line when the opposition finally undocked.</p>
+              <div class="video-section" style="border:none; background:none; padding:0; margin:8px 0; width:auto;">
+                <a href="https://youtu.be/_Owbxn_Re3s" target="_blank" style="position:relative; display:inline-block;">
+                  <img src="assets/2007CongoLine.png" alt="The Conga Line - watch on YouTube" style="max-width:100%; display:block; width:50vw; max-width:450px;">
+                  <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                    <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                  </span>
+                </a>
+                <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://youtu.be/_Owbxn_Re3s" target="_blank">Ha Chu on YouTube</a></p>
+              </div>
+              <p>The year also saw MINC members attend Fanfest in Iceland. Isayo Arkindra, Thundirr, Mannakin, and other MINC pilots made the trip, sharing a table with members of the Goons, who were political rivals in-game but friendly out of game. The IAC identity was proudly represented, including its famous logo: a cat made from empty beer bottles.</p>
+              <div class="battle-thumbnails">
+                <a href="assets/2007Fanfest.jpg" target="_blank" class="battle-thumb"><img src="assets/2007Fanfest.jpg" alt="Fanfest 2007" style="width:auto; height:120px; object-fit:unset;"></a>
+                <a href="assets/2007FanfestDrinks.jpg" target="_blank" class="battle-thumb"><img src="assets/2007FanfestDrinks.jpg" alt="Fanfest 2007 drinks" style="width:auto; height:120px; object-fit:unset;"></a>
+              </div>
+              <div class="roster-grid">
+                <div class="roster-card"><img src="assets/portraits/Isayo-Arkindra.jpeg" alt="" class="roster-portrait"><span class="roster-name">Isayo Arkindra</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">CEO</span></div>
+                <div class="roster-card"><img src="assets/portraits/thundirr.jpeg" alt="" class="roster-portrait"><span class="roster-name">Thundirr</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">MINC</span></div>
+                <div class="roster-card"><img src="assets/portraits/mannakin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mannakin</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">MINC</span></div>
+                <div class="roster-card"><img src="assets/portraits/ha-chu.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ha Chu</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">MINC</span></div>
+              </div>
+            </div>
+
+            <div class="timeline-entry" id="y2008">
+              <span class="timeline-year">2008</span>
+              <p>MINC builds its first outpost, MINC Delirium, in RNF-YH (Catch). <br></p>
+              <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">
+                <img src="assets/DOTLAN-Event-MINC-Delirium.png" alt="MINC Delirium  DOTLAN EveMaps" style="max-width:65%; border:1px solid #d4b800;">
+              </a>
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">DOTLAN EveMaps</a></p><br>
+              
+              <P>The political environment soon shifted as Against All Authorities (AAA) used its larger numbers to push IAC out of the region. During the conflict, valuable MINC assets were lost, including two motherships and the corporation's Ragnarok.<BR>
+              <br> Following the collapse of IAC's position in Catch, MINC departed the alliance and joined Wildly Inappropriate.</P>
+            </div>
+
+            <div class="timeline-entry" id="y2009">mnbv
+              <span class="timeline-year">2009</span>
+              <p>MINC continued building its presence in nullsec, constructing its second station, MINC Aberration, in C-4ZOS, Branch.</p>
+              <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">
+                <img src="assets/DOTLAN-Event-MINC-Aberration.png" alt="MINC Aberration - DOTLAN EveMaps" style="max-width:65%; border:1px solid #d4b800;">
+              </a>
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">DOTLAN EveMaps</a></p>
+               <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Capital Defense - K25-XD</span>
+                  <span class="battle-header-date">June 2009</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>In June 2009, Solar Fleet launched a major assault against K25-XD, the station system at the center of Wildly Inappropriate's Geminate holdings and MINC's home territory.<br>
+                  <br> The battle escalated into one of the major capital engagements of its era, with Wildly Inappropriate, The Initiative, and Majesta Empire defending against a large-scale offensive. After initial doomsday strikes and capital deployments, reinforcements arrived and the fight became a massive clash between opposing capital fleets.<br>
+                  <br>MINC fought alongside its alliance partners in defense of its home region during one of the defining battles of its early history.</p>
+                  <p><a href="https://zkillboard.com/related/30002464/200906102000/" target="_blank" style="font-size:11px; color:#576b84; font-family:'Courier New',monospace;">zkillboard &#8599;</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-entry" id="y2010">
+              <span class="timeline-year">2010</span>
+              <p>MINC's presence in Aberration came to an end following its defeat by Looney Toons, marking the close of its involvement in Wildly Inappropriate and the conclusion of a prolonged period of regional conflict. </p>
+              
+              <p>Following this loss, the corporation shifted its strategic direction and joined Razor Alliance. This began a six-year association that would become one of the most significant and stable relationships in MINC's history, shaping its operations and long-term positioning within nullsec politics.</p>
+              <p>During this broader transition , long-time CEO Isayo Arkindra stepped down after years of guiding the corporation, appointing xMillz as his successor and initiating a new leadership era for MINC.</p>
+            </div>
+            <div class="timeline-entry" id="y2011">
+              <span class="timeline-year">2011</span>
+              <p>MINC entered 2011 as part of Razor Alliance during one of the most intense periods of nullsec warfare in EVE history.</p>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Battle of Uemon</span>
+                  <span class="battle-header-date">February 14, 2011</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>On February 14th, the Battle of Uemon became one of the largest supercapital engagements of its era. The Northern Coalition committed a massive fleet against an opposing force assembled from several major alliances, resulting in one of the most destructive titan battles the game had seen at that point.<br>
+                  <br>The Northern Coalition, including Razor Alliance, commits 18 titans, 45 supercarriers, and 121 capital ships against a combined Eastern bloc force of Red Alliance, White Noise, Solar Fleet, Raiden, and Legion of xXDeathXx fielding 14 titans, 85 supercarriers, and 38 capital ships. By the end, 12 titans are destroyed, tying a record that stands until B-R5RB three years later.</p>
+                  <p><a href="https://web.archive.org/web/20150917153729/https://eve-kill.net/?a=kill_related&kll_id=8892113" target="_blank" style="font-size:9px; color:#576b84;">battle report &#8599;</a></p>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/jacob-warden.jpeg" alt="" class="roster-portrait"><span class="roster-name">Jacob Warden</span><img src="assets/ship-icons/256px-Wyvern.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Wyvern</span></div>
+                    <div class="roster-card"><img src="assets/portraits/grico3.jpeg" alt="" class="roster-portrait"><span class="roster-name">Grico3</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                    <div class="roster-card"><img src="assets/portraits/grumber1.jpeg" alt="" class="roster-portrait"><span class="roster-name">Grumber1</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                    <div class="roster-card"><img src="assets/portraits/yitzy.jpeg" alt="" class="roster-portrait"><span class="roster-name">yitzy</span><img src="assets/ship-icons/256px-Naglfar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naglfar</span></div>
+                    <div class="roster-card"><img src="assets/portraits/voloses.jpeg" alt="" class="roster-portrait"><span class="roster-name">Voloses</span><img src="assets/ship-icons/256px-Archon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Archon</span></div>
+                  </div>
+                </div>
+              </div>
+              <p>Only weeks later, Rich DK lost his Nyx supercarrier in Sendaya after being caught during a return trip from an operation. Rather than discouraging capital warfare, the loss became an example of the willingness among northern alliances to commit their most valuable assets.</p>
+              <p><a href="https://zkillboard.com/kill/17173306/" target="_blank" style="font-size:9px; color:#576b84;">zkillboard &#8599;</a></p>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Battle of O2O</span>
+                  <span class="battle-header-date">March 17&ndash;20, 2011</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>In March, the Battle of O2O-2X followed, again bringing enormous supercapital fleets into conflict. Together, Uemon and O2O represented the height of Northern Coalition power before the political structure holding the north together began to collapse.<br>
+                  <br> Twelve titans are destroyed, matching Uemon's record. The two battles together represent the peak of Northern Coalition supercapital power before the collapse begins.</p>
+                  <p>
+                    <a href="https://zkillboard.com/related/30002499/201103172300/" target="_blank" style="font-size:9px; color:#576b84;">battle report Mar 17 &#8599;</a>
+                    &nbsp;&nbsp;
+                    <a href="https://zkillboard.com/related/30002499/201103180000/" target="_blank" style="font-size:9px; color:#576b84;">battle report Mar 18 &#8599;</a>
+                    &nbsp;&nbsp;
+                    <a href="https://zkillboard.com/related/30002499/201103201100/" target="_blank" style="font-size:9px; color:#576b84;">battle report Mar 20 &#8599;</a>
+                  </p>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/jacob-warden.jpeg" alt="" class="roster-portrait"><span class="roster-name">Jacob Warden</span><img src="assets/ship-icons/256px-Wyvern.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Wyvern</span></div>
+                    <div class="roster-card"><img src="assets/portraits/danbar-roth.jpeg" alt="" class="roster-portrait"><span class="roster-name">Danbar Roth</span><img src="assets/ship-icons/256px-Armageddon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Armageddon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/fenix-rebirth.jpeg" alt="" class="roster-portrait"><span class="roster-name">Fenix Rebirth</span><img src="assets/ship-icons/256px-Maelstrom.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Maelstrom</span></div>
+                    <div class="roster-card"><img src="assets/portraits/Sovox.jpeg" alt="" class="roster-portrait"><span class="roster-name">Sovox</span><img src="assets/ship-icons/256px-Maelstrom.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Maelstrom</span></div>
+                    <div class="roster-card"><img src="assets/portraits/heljareldur.jpeg" alt="" class="roster-portrait"><span class="roster-name">Heljareldur</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Purifier.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Purifier</span></div>
+                    <div class="roster-card"><img src="assets/portraits/qicia.jpeg" alt="" class="roster-portrait"><span class="roster-name">Qicia</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Ares.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Ares</span></div>
+                    <div class="roster-card"><img src="assets/portraits/voloses.jpeg" alt="" class="roster-portrait"><span class="roster-name">Voloses</span><img src="assets/ship-icons/256px-Archon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Archon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/kieselguhr-kid.jpeg" alt="" class="roster-portrait"><span class="roster-name">Kieselguhr Kid</span><img src="assets/ship-icons/256px-Archon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Archon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/yitzy.jpeg" alt="" class="roster-portrait"><span class="roster-name">yitzy</span><img src="assets/ship-icons/256px-Naglfar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naglfar</span></div>
+                    <div class="roster-card"><img src="assets/portraits/corithar.jpeg" alt="" class="roster-portrait"><span class="roster-name">Corithar</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                    <div class="roster-card"><img src="assets/portraits/grico3.jpeg" alt="" class="roster-portrait"><span class="roster-name">Grico3</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                    <div class="roster-card"><img src="assets/portraits/flatliner-111.jpeg" alt="" class="roster-portrait"><span class="roster-name">flatliner 111</span><img src="assets/ship-icons/256px-Maelstrom.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Maelstrom</span></div>
+                    <div class="roster-card"><img src="assets/portraits/drakus.jpeg" alt="" class="roster-portrait"><span class="roster-name">Drakus</span><img src="assets/ship-icons/256px-Maelstrom.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Maelstrom</span></div>
+                    <div class="roster-card"><img src="assets/portraits/danbar-roth.jpeg" alt="" class="roster-portrait"><span class="roster-name">Danbar Roth</span><img src="assets/ship-icons/256px-Harbinger.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Harbinger</span></div>
+                    <div class="roster-card"><img src="assets/portraits/piglett.jpeg" alt="" class="roster-portrait"><span class="roster-name">Piglett</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Onyx.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Onyx</span></div>
+                    <div class="roster-card"><img src="assets/portraits/duncan007.jpeg" alt="" class="roster-portrait"><span class="roster-name">Duncan007</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Scimitar.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Scimitar</span></div>
+                  </div>
+                </div>
+              </div>
+              <p>By June, the Drone Russian Federation offensive had broken through the Northern Coalition's defenses. Jump bridge networks fell, alliances began losing their territories, and the northern regions became increasingly unstable. Razor Alliance eventually withdrew from the north, ending a period of warfare that had seen MINC participate in some of the largest capital battles in EVE history.<br>
+              <br> During this era, MINC also contributed to the wider EVE community by hosting a Titans and Supercarriers class for EVE University, sharing knowledge about capital mechanics and fleet operation</p>
+            </div>
+
+            <div class="timeline-entry" id="y2012">
+              <span class="timeline-year">2012</span>
+              <p>xMillz leaves the game and passes the CEO title to Nairb Ecrep but retains his corporation shares.
+
+              During the RAZOR period, MINC conquers the outpost in P-E (Geminate), naming it De Ja Vu. The corp continues operations in the northern regions as part of RAZOR.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2013">
+              <span class="timeline-year">2013</span>
+              <p>MINC continued expanding its industrial capabilities during this period, including opening a public capital ship production program. Run by Tiberu Stundrif, the program sold carrier hulls directly to the EVE market, producing ships for pilots across New Eden and demonstrating the corporation's growing industrial strength. an early sign of the industrial capacity MINC would continue to build on.<br><br>
+              <img src="assets/2013CapitalProductionProgram.png" alt="MINC Capital Ship Shop - EVE Forums, July 2013" style="max-width:40%; border:1px solid #576b84; display:block;">
+              <p style="font-size:9px; color:#576b84; margin:4px 0 8px 0;">EVE Online forums, July 12 2013</p>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Battle of Asakai</span>
+                  <span class="battle-header-date">January 27, 2013</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>At the Battle of Asakai in January 2013, a single mistake involving a titan jump escalated into a massive engagement between the CFC and HoneyBadger Coalition. Thousands of pilots joined the fight, creating one of the first supercapital battles to gain widespread attention outside the EVE community.<br>
+                  <br> The battle drew over 3,000 players and lasted nearly six hours, with losses exceeding 700 billion ISK. It became one of the first massive supercapital brawls to capture mainstream gaming media attention.</p>
+                  <p>MINC deployed supercarriers, battleships, and interdictors to the engagement.</p>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/Dobriy.jpeg" alt="" class="roster-portrait"><span class="roster-name">Dobriy</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/wifi.jpeg" alt="" class="roster-portrait"><span class="roster-name">wifi</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/nimkando-hapkido.jpeg" alt="" class="roster-portrait"><span class="roster-name">Nimkando Hapkido</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/death-vixxen.jpeg" alt="" class="roster-portrait"><span class="roster-name">Death Vixxen</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                    <div class="roster-card"><img src="assets/portraits/rancid-bunny.jpeg" alt="" class="roster-portrait"><span class="roster-name">Rancid Bunny</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                    <div class="roster-card"><img src="assets/portraits/menaiya-zamayid.jpeg" alt="" class="roster-portrait"><span class="roster-name">Menaiya Zamayid</span><img src="assets/ship-icons/256px-Rokh.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Rokh</span></div>
+                    <div class="roster-card"><img src="assets/portraits/scabrunner.jpeg" alt="" class="roster-portrait"><span class="roster-name">ScabRunner</span><img src="assets/ship-icons/256px-Tornado.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Tornado</span></div>
+                    <div class="roster-card"><img src="assets/portraits/flatliner-111.jpeg" alt="" class="roster-portrait"><span class="roster-name">Flatliner 111</span><img src="assets/ship-icons/256px-Tornado.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Tornado</span></div>
+                    <div class="roster-card"><img src="assets/portraits/Morphius1280.jpeg" alt="" class="roster-portrait"><span class="roster-name">Morphius1280</span><img src="assets/ship-icons/256px-Naga.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naga</span></div>
+                    <div class="roster-card"><img src="assets/portraits/treyah.jpeg" alt="" class="roster-portrait"><span class="roster-name">Treyah</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-entry" id="y2014">
+              <span class="timeline-year">2014</span>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Bloodbath of B-R5RB</span>
+                  <span class="battle-header-date">January 27, 2014</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>On January 27, 2014, exactly one year after Asakai, the sovereignty bill for B-R5RB in Immensea went unpaid. The system became vulnerable, and N3/PL moved to reinforce it. The CFC and Russian coalitions responded in force. What followed was the largest and most destructive battle in gaming history at the time: over 7,500 players, 21 hours of continuous fighting, and 75 titans destroyed along with dozens of supercarriers. Total losses exceeded 11 trillion ISK, roughly $300,000 USD in real-world value. The battle made international news and cemented EVE's reputation for epic-scale warfare.</p>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/adaram-kori'nh.jpeg" alt="" class="roster-portrait"><span class="roster-name">Adaram Kori'nh</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/admiral-brian.jpeg" alt="" class="roster-portrait"><span class="roster-name">Admiral Brian</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/aleph-gideon.jpeg" alt="" class="roster-portrait"><span class="roster-name">Aleph Gideon</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/arbalesttom.jpeg" alt="" class="roster-portrait"><span class="roster-name">Arbalesttom</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                    <div class="roster-card"><img src="assets/portraits/auldare.jpeg" alt="" class="roster-portrait"><span class="roster-name">Auldare</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/ben-mcrock.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ben McRock</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/billa-clack.jpeg" alt="" class="roster-portrait"><span class="roster-name">Billa Clack</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Claw.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Claw</span></div>
+                    <div class="roster-card"><img src="assets/portraits/borakh-tieberius.jpeg" alt="" class="roster-portrait"><span class="roster-name">Borakh Tieberius</span><img src="assets/ship-icons/256px-Aeon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Aeon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/bratan-juzik.jpeg" alt="" class="roster-portrait"><span class="roster-name">Bratan Juzik</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/bruce-mcfoster.jpeg" alt="" class="roster-portrait"><span class="roster-name">Bruce McFoster</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Crow.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crow</span></div>
+                    <div class="roster-card"><img src="assets/portraits/byteman.jpeg" alt="" class="roster-portrait"><span class="roster-name">ByteMan</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/chaosstation.jpeg" alt="" class="roster-portrait"><span class="roster-name">Chaosstation</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/jade-ro.jpeg" alt="" class="roster-portrait"><span class="roster-name">Jade Ro</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/karl-mason.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karl Mason</span><img src="assets/ship-icons/256px-Moros.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Moros</span></div>
+                    <div class="roster-card"><img src="assets/portraits/kostya-semer.jpeg" alt="" class="roster-portrait"><span class="roster-name">Kostya Semer</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/Mantrox.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mantrox</span><img src="assets/ship-icons/256px-Naglfar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naglfar</span></div>
+                    <div class="roster-card"><img src="assets/portraits/marley-cortez.jpeg" alt="" class="roster-portrait"><span class="roster-name">marly cortez</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/psyentific.jpeg" alt="" class="roster-portrait"><span class="roster-name">Psyentific</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/purpleshadez.jpeg" alt="" class="roster-portrait"><span class="roster-name">Purpleshadez</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/roel-yento.jpeg" alt="" class="roster-portrait"><span class="roster-name">Roel Yento</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Crow.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crow</span></div>
+                    <div class="roster-card"><img src="assets/portraits/sollit-dude.jpeg" alt="" class="roster-portrait"><span class="roster-name">sollit dude</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                    <div class="roster-card"><img src="assets/portraits/tromin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Tromin</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Taranis.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Taranis</span></div>
+                    <div class="roster-card"><img src="assets/portraits/waldemar-wexler.jpeg" alt="" class="roster-portrait"><span class="roster-name">Waldemar Wexler</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/agaetis-byrjun-endalaust.jpeg" alt="" class="roster-portrait"><span class="roster-name">Agaetis Byrjun Endalaust</span><img src="assets/ship-icons/256px-Dominix.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Dominix</span></div>
+                
+                  </div>
+                </div>
+              </div> <p>MINC pilots once again participated in the largest conflicts of the era, continuing a pattern that had defined the corporation for years: surviving by adapting alongside the major powers of nullsec.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2015">
+              <span class="timeline-year">2015</span>
+              <p>After years of growth within Razor Alliance, MINC entered 2015 facing an unexpected internal crisis.<br>
+              <br>CEO Nairb Ecrep became inactive, leaving the corporation without active leadership while the future of MINC was uncertain. The directorship began preparing for a transition, but the corporation's ownership structure created a major obstacle: former CEO xMillz still controlled the shares required to appoint a new leader. <br>
+              <br>Those shares represented more than a title. They controlled access to the corporation itself, including years of accumulated wealth from moon mining, industrial expansion, and the assets MINC had built across its history. Among those assets were the corporation's collection of supercapital production blueprints, representing years of investment and one of the most valuable pieces of MINC's legacy.<br>
+              <br> When contacted about transferring control, xMillz chose not to simply return the shares. Instead, he demanded a ransom for the corporation's future: the contents of MINC's wallet and the corporation's entire collection of supercapital BPOs held in his alt corporation.<br>
+              <br> The directorship was forced to make an impossible choice. Losing the assets would cripple the corporation; refusing the demand risked losing control of MINC entirely.<br>
+              <br> Reluctantly, the terms were accepted. <br>
+              <br> marly cortez took over as CEO and immediately began the work of rebuilding. What could have been the end of MINC instead became another defining moment in the corporation's history. With support from Razor Alliance leadership, including Rich DK, MINC recovered from the brink and continued forward. <br>
+              <br>The event became a defining example of MINC's history showing that we are not a corporation that collapses, but one that repeatedly survives evnets that would end most other corporations.</p>
+              </div>
+
+            <div class="timeline-entry" id="y2016">
+              <span class="timeline-year">2016</span>
+              <span class="timeline-note">&#9888; NOTE: Add context for why MINC left RAZOR Alliance</span>
+              <p>As the decision is made to leave RAZOR, the directorship discusses options. Goonswarm Federation seems like a viable choice, but the consensus is that it represents an endgame move. The concern is that Goonswarm's stability and security, while appealing, might lead to complacency and a slow fade into irrelevance.</p>
+              <p>Instead, the corporation chose to join The Bastion, a newer Imperium alliance that offered both security and room to continue growing.</p>
+              <p>Shortly after, Casino War erupts.</p>
+              <p> A coalition of Imperium enemies, bankrolled by wealthy EVE gambling site operators, assembles the largest military mobilization the game has seen in years. The Moneybadgers Coalition drives the Imperium out of the north, system by system. MINC fights through the entire campaign, participating in the evacuation and the long retreat south to Delve.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2017">
+              <span class="timeline-year">2017</span>
+              <p>After the Casino War, the Imperium began rebuilding in Delve.<br>
+              <br>MINC became part of that recovery effort as The Bastion established infrastructure and rebuilt its position in the south. The year was defined less by major battles and more by preparation, organization, and laying the groundwork for future conflicts.<span class="timeline-note">&#9888; NOTE: Add pictures of 7UTB</span></p>
+            </div>
+
+            <div class="timeline-entry" id="y2018">
+              <span class="timeline-year">2018</span>
+              <p>In 2018, marly cortez stepped down as CEO, appointing Primus Buck as his successor.</p>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Battle of X47L-Q</span>
+                  <span class="battle-header-date">August 8, 2018</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>On August 8, 2018, the Imperial Legacy coalition launches an assault on a Northern Coalition Keepstar in X47L-Q, Pure Blind. The engagement draws 6,270 pilots, surpassing the famous B-R5RB battle in player count, though not total ISK destroyed. Both sides commit unprecedented supercapital forces: over 540 titans and 510 supercarriers enter the grid, marking a historic escalation in supercapital warfare.</p>
+                  <p>The battle rages for hours as both fleets trade fire in heavy time dilation. The attackers successfully destroy the Keepstar's armor layer, with total losses reaching approximately 10 trillion ISK. The engagement demonstrates that the supercapital arms race has reached new heights, with both coalitions now fielding titan fleets that dwarf the forces seen at B-R5RB four years earlier.</p>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/rox-evechan.jpeg" alt="" class="roster-portrait"><span class="roster-name">Rox Evechan</span><img src="assets/ship-icons/256px-Hel.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Hel</span></div>
+                    <div class="roster-card"><img src="assets/portraits/karl-mason.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karl Mason</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                    <div class="roster-card"><img src="assets/portraits/mannakin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mannakin</span><img src="assets/ship-icons/256px-Megathron.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Megathron</span></div>
+                    <div class="roster-card"><img src="assets/portraits/qicia.jpeg" alt="" class="roster-portrait"><span class="roster-name">Qicia</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Legion.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT3h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Legion</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <span class="battle-tag">December 2018: ZTS-4D</span>
+              <p>In December, MINC began an experiment in independence by relocating to ZTS-4D in Fountain. Rather than relying entirely on the protection of a large supercapital umbrella, the corporation tested its ability to sustain industrial and capital operations on its own.</p>
+              <span class="roster-faction-header">Moving into ZTS-4D</span>
+              <div class="battle-thumbnails">
+                <a href="assets/2018_Move_Op_To_ZTS.jpg" target="_blank" class="battle-thumb"><img src="assets/2018_Move_Op_To_ZTS.jpg" alt="Move op to ZTS-4D, 2018"></a>
+              </div>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Spanked by Inner Hell - ZTS-4D</span>
+                  <span class="battle-header-date">December 2018</span>
+                </div>
+                <div class="battle-box-content">
+                  <p style="color:#576b84; font-style:italic; margin-bottom:6px;">"That's a lot of Leshaks."</p>
+                  <p>During the operation, a wormhole spawned in system. On comms the call went out, "plus one," followed shortly by some misplaced confidence that we could take them, but then the boogiemen came. Inner Hell executed a textbook rage rolling ambush, dropping seven Leshaks alongside a fleet of Lokis, Bhaalgorns, and an Alliance Tournament prize ship, the Fiend. Three Rorquals, two Chimeras, and a Nidhoggur were lost, though a FAX and the subcapital fleet were successfully extracted. MINC recovered quickly, and the lessons learned shaped how the corporation approached capital operations going forward.</p>
+                  <p><a href="https://zkillboard.com/related/30004660/201812231700/" target="_blank" style="font-size:9px; color:#576b84;">zkillboard &#8599;</a></p>
+                  <div class="battle-thumbnails">
+                    <a href="assets/ZTS_1_30_seconds_before_theres_someone_in_local.jpg" target="_blank" class="battle-thumb"><img src="assets/ZTS_1_30_seconds_before_theres_someone_in_local.jpg" alt="ZTS-4D - 30 seconds before local spike"></a>
+                    <a href="assets/ZTS_2_30_After_somoene_in_local.jpg" target="_blank" class="battle-thumb"><img src="assets/ZTS_2_30_After_somoene_in_local.jpg" alt="ZTS-4D - 30s after local spike"></a>
+                    <a href="assets/ZTS_3_10min_after_somoene_in_local.jpg" target="_blank" class="battle-thumb"><img src="assets/ZTS_3_10min_after_somoene_in_local.jpg" alt="ZTS-4D - 10min after local spike"></a>
+                  </div>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">MINC</span><div class="roster-ships"><div class="roster-ship-wrap ship-lost"><img src="assets/ship-icons/256px-Chimera.jpg" alt="" class="roster-ship"></div><div class="roster-ship-wrap ship-lost"><img src="assets/ship-icons/256px-Chimera.jpg" alt="" class="roster-ship"></div><div class="roster-ship-wrap ship-lost"><img src="assets/ship-icons/256px-Nidhoggur.jpg" alt="" class="roster-ship"></div><div class="roster-ship-wrap ship-lost"><img src="assets/ship-icons/256px-Rorqual.jpg" alt="" class="roster-ship"></div><div class="roster-ship-wrap ship-lost"><img src="assets/ship-icons/256px-Rorqual.jpg" alt="" class="roster-ship"></div><div class="roster-ship-wrap ship-lost"><img src="assets/ship-icons/256px-Rorqual.jpg" alt="" class="roster-ship"></div></div></div>
+                    <div class="roster-card"><img src="assets/logos/innerhell.png" alt="" class="roster-portrait"><span class="roster-name">Inner Hell</span><div class="roster-ships"><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Bhaalgorn.jpg" alt="" class="roster-ship"></div><span class="ship-count">&times;2</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Leshak.jpg" alt="" class="roster-ship"></div><span class="ship-count">&times;7</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Loki.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT3h.png" alt="" class="ship-tier-badge"></div><span class="ship-count">&times;21</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="ship-count">&times;5</span><div class="roster-ship-wrap ship-at"><img src="assets/ship-icons/256px-Fiend.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerTFh.png" alt="" class="ship-tier-badge"></div></div></div>
+                  </div>
+                </div>
+                <p>The move produced valuable lessons. A major engagement with Inner Hell resulted in significant losses, including multiple capital ships, but the experience strengthened MINC's understanding of risk management, response doctrines, and independent operations.</p>
+              </div>
+              <span class="roster-faction-header">ZTS-4D RVAMitchell's Hel</span>
+              <div class="battle-thumbnails">
+                <a href="assets/20190228_ZTS_RVAMitchell_Super_Ratting.jpg" target="_blank" class="battle-thumb"><img src="assets/20190228_ZTS_RVAMitchell_Super_Ratting.jpg" alt="RVAMitchell - Hel ratting, ZTS-4D, Feb 2019"></a>
+                <a href="assets/20190307_ZTS-4d_RVAMitchell_Hel.jpg" target="_blank" class="battle-thumb"><img src="assets/20190307_ZTS-4d_RVAMitchell_Hel.jpg" alt="RVAMitchell - Hel, ZTS-4D, Mar 2019"></a>
+              </div>
+              <span class="roster-faction-header">ZTS-4D Moon Ops - Feb 2019</span>
+              <div class="battle-thumbnails">
+                <a href="assets/2019_Feb_ZTS-4D_Moon_op.jpg" target="_blank" class="battle-thumb"><img src="assets/2019_Feb_ZTS-4D_Moon_op.jpg" alt="ZTS-4D moon op, Feb 2019"></a>
+                <a href="assets/2019_Feb_ZTS-4D_Moon_op_2.jpg" target="_blank" class="battle-thumb"><img src="assets/2019_Feb_ZTS-4D_Moon_op_2.jpg" alt="ZTS-4D moon op, Feb 2019"></a>
+                <a href="assets/2019_Feb_ZTS-4D_Moon_op_3.jpg" target="_blank" class="battle-thumb"><img src="assets/2019_Feb_ZTS-4D_Moon_op_3.jpg" alt="ZTS-4D moon op, Feb 2019"></a>
+                <a href="assets/2019_Feb_ZTS-4D_Moon_op_4.jpg" target="_blank" class="battle-thumb"><img src="assets/2019_Feb_ZTS-4D_Moon_op_4.jpg" alt="ZTS-4D moon op, Feb 2019"></a>
+              </div>
+              <span class="roster-faction-header">ZTS-4D Last Mining Op - Mar 23 2019</span>
+              <div class="battle-thumbnails">
+                <a href="assets/20190323_ZTS_Last_Moon_ops.jpg" target="_blank" class="battle-thumb"><img src="assets/20190323_ZTS_Last_Moon_ops.jpg" alt="ZTS-4D - last moon op, Mar 23 2019"></a>
+                <a href="assets/20190323_ZTS_Last_Moon_ops_2.jpg" target="_blank" class="battle-thumb"><img src="assets/20190323_ZTS_Last_Moon_ops_2.jpg" alt="ZTS-4D - last moon op, Mar 23 2019"></a>
+                <a href="assets/20190323_ZTS_Last_Moon_ops_3.jpg" target="_blank" class="battle-thumb"><img src="assets/20190323_ZTS_Last_Moon_ops_3.jpg" alt="ZTS-4D - last moon op, Mar 23 2019"></a>
+              </div>
+              <p>MINC concluded operations in ZTS-4D in early 2019, having proven that the corporation could support itself outside of its traditional safety net.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2019">
+              <span class="timeline-year">2019</span>
+              
+              <p>MINC was deployed with Imperium forces outside Fountain when reports emerged that a large-scale coalition attack was being prepared against the Imperium. The deployment was cut short, and forces were recalled to defend Fountain as initial hostilities began to form across nullsec.</p>
+              
+              <p>As the situation escalated further, MINC withdrew from Fountain alongside Imperium forces and returned to 1DQ in Delve, consolidating ships, assets, and pilots in preparation for the full-scale conflict that would become World War Bee 2.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2020">
+              <span class="timeline-year">2020</span>
+              
+              <p>World War Bee 2 erupts across New Eden as the Imperium faces PAPI (PandaFam, Legacy Coalition, and others), a massive coalition assembled with one goal: destroy Goonswarm Federation.</p>
+              
+              <p>Following the loss of their home system in Fountain, MINC leadership chooses not to simply absorb into large Imperium fleet blobs. Instead, they form a SIG (Special Interest Group), a volunteer specialist strike force, with the goal of making a disproportionate impact with limited numbers. Identifying TEST Alliance's home region of Esoteria as critically vulnerable, TEST having stripped its defenses to concentrate forces in Delve, MINC deploys to Stain, NPC space on Esoteria's border.</p>
+              <div class="battle-thumbnails">
+                <a href="assets/20201105_Delta%20target.jpg" target="_blank" class="battle-thumb"><img src="assets/20201105_Delta%20target.jpg" alt="Remember Fountain - Delta Squad, November 2020" style="height:180px; width:auto; object-fit:unset;"></a>
+              </div>
+              <span class="battle-tag">Esoteria Operations, 2020&ndash;2021</span>
+              <p>MINC's Esoteria deployment began as a forward operation built around disruption, diplomacy, and sustained pressure. As the primary coordinators for the effort within The Bastion, MINC organized the campaign structure, developed operational systems, and coordinated the wider effort with Imperium allies. After arriving in the region, MINC negotiated access with Stain Rus, the Russian-speaking coalition that controlled Esoteria, establishing a forward base and building a partnership that became central to the campaign.</p>
+              <p>The opening strategy focused on creating constant pressure against TEST's infrastructure. Rather than relying only on large fleet engagements, MINC developed a system of coordinated harassment operations designed to keep TEST responding across the region. Small strike groups, independent pilots, and shared operational tracking allowed pressure to continue around the clock without requiring a full fleet deployment for every objective.</p>
+              <div class="battle-thumbnails">
+                <a href="assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" target="_blank" class="battle-thumb"><img src="assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" alt="Multi-boxing cynobeacon runs in Esoteria, Aug 26 2020" style="width:auto; height:160px; object-fit:unset;"></a>
+              </div>
+              <p>As TEST adapted, MINC escalated the campaign. A forward staging base was established in HT4K, expanding operational reach across Esoteria and allowing attacks to move beyond harassment into direct infrastructure warfare. MINC coordinated structure operations, sovereignty pressure, and regional objectives while allied forces provided additional support and larger fleet capabilities when needed.</p>
+              <div class="battle-thumbnails">
+                <a href="assets/2020.10.26.02.59.17_HT4K_Fortizar_Anchor.png" target="_blank" class="battle-thumb"><img src="assets/2020.10.26.02.59.17_HT4K_Fortizar_Anchor.png" alt="HT4K Fortizar Anchor"></a>
+              </div>
+              <p>The campaign grew into a combined effort between MINC, The Bastion, Stain Rus, and other regional partners. MINC served as the operational hub, identifying targets, organizing objectives, and maintaining pressure, while allied groups contributed the manpower and firepower needed to capitalize on those opportunities. This cooperation created significant force multiplication, allowing smaller MINC-led operations to repeatedly pull large TEST fleets away from the main war effort in Delve.</p>
+              <p>One of the campaign's defining successes came with the destruction of the IHUB in DTEKF, a major TEST industrial system. The loss disrupted strategic infrastructure and provided resources that helped sustain continued operations in the region.</p>
+              <div class="battle-thumbnails">
+                <a href="assets/20210121_unknown-92.png" target="_blank" class="battle-thumb"><img src="assets/20210121_unknown-92.png" alt="Esoteria campaign - structure kill, Jan 2021"></a>
+              </div>
+              <div class="battle-thumbnails">
+                <a href="assets/2021-02-19_Sotiyo_Kill.jpg" target="_blank" class="battle-thumb"><img src="assets/2021-02-19_Sotiyo_Kill.jpg" alt="Sotiyo Kill - Feb 19 2021"></a>
+              </div>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Fury at FWST-8</span>
+                  <span class="battle-header-date">October 5, 2020</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>In October 2020, PAPI attempts to anchor a Keepstar in FWST-8 as part of their offensive into Imperium space. The Imperium successfully repels multiple anchoring attempts, destroying PAPI Keepstars before they can online. On October 5, 2020, PAPI deploys a controversial tactic: bubble wrapping the anchoring Keepstar by surrounding it with their own ships and warp disruption bubbles, preventing the Imperium from targeting it. This allows the Keepstar to complete its anchoring timer. The Imperium forms a massive fleet to contest it anyway. Over 8,800 pilots enter the system, shattering all previous records and earning a Guinness World Record for the largest PvP battle in gaming history. The server struggles under the load, entering 10% time dilation for most of the fight. The battle lasts over 14 hours with losses exceeding 23 trillion ISK.</p>
+                  <p>MINC deploys subcapitals, carriers, and a dreadnought throughout the engagement.</p>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/belegvaethor.jpeg" alt="" class="roster-portrait"><span class="roster-name">Belegvaethor</span><div class="roster-ships"><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Rokh.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Nidhoggur.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Sacrilege.jpg" alt="" class="roster-ship"></div><span class="roster-ship-name">Harpy / Rokh / Nidhoggur / Sacrilege</span></div>
+                    <div class="roster-card"><img src="assets/portraits/pendu-padecain.jpeg" alt="" class="roster-portrait"><span class="roster-name">Pendu Padecain</span><img src="assets/ship-icons/256px-Myrmidon.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Myrmidon</span></div>
+                    <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><img src="assets/ship-icons/256px-Naglfar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Naglfar</span></div>
+                    <div class="roster-card"><img src="assets/portraits/draco-beleren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Draco Beleren</span><div class="roster-ships"><img src="assets/ship-icons/256px-Rokh.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/256px-Muninn.jpg" alt="" class="roster-ship"></div><span class="roster-ship-name">Rokh / Muninn</span></div>
+                    <div class="roster-card"><img src="assets/portraits/mystic-siren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mystic Siren</span><img src="assets/ship-icons/256px-Revelation.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Revelation</span></div>
+                  </div>
+                  <div class="battle-thumbnails">
+                    <a href="assets/20201005_FWST.png" target="_blank" class="battle-thumb"><img src="assets/20201005_FWST.png" alt="FWST-8 battle"></a>
+                    <a href="assets/20201005_FWST_2.png" target="_blank" class="battle-thumb"><img src="assets/20201005_FWST_2.png" alt="FWST-8 battle 2"></a>
+                    <a href="assets/20201005_FWST_3_Dread.png" target="_blank" class="battle-thumb"><img src="assets/20201005_FWST_3_Dread.png" alt="FWST-8 - Dread"></a>
+                    <a href="assets/20201005_FWST_4_System_TIDI.png" target="_blank" class="battle-thumb"><img src="assets/20201005_FWST_4_System_TIDI.png" alt="FWST-8 - System TIDI"></a>
+                    <a href="assets/20201005_FRT_Keepstar_in_FWST.jpg" target="_blank" class="battle-thumb"><img src="assets/20201005_FRT_Keepstar_in_FWST.jpg" alt="FRT Keepstar in FWST-8"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Massacre at M2-XFE</span>
+                  <span class="battle-header-date">December 30, 2020 &ndash; January 2021</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>The night before the battle, a MINC lead interceptor fleet spends five hours chasing PAPI's head FC Villy across node after node in DTEX8, exhausting him while trying to chase down our very mobile fleet in an entosis fight. Villy's fatigue from the ordeal is later credited as a contributing factor to the decision-making that leads to PAPI's catastrophe the following day.</p>
+                  <p>On December 30, 2020, PAPI attempts to destroy an Imperium Keepstar in M2-XFE. The Imperium baits PAPI into committing their entire titan fleet, then brings their own supercapital armada. A server error causes hundreds of PAPI titans to load into the system late, trapping them without support. The Imperium begins a methodical slaughter. Over the following month, PAPI mounts multiple extraction attempts to save their trapped supercapital fleet, each resulting in further losses. Across the entire M2-XFE campaign, the Imperium destroys 257 titans, making it the most destructive series of engagements in EVE history. Total losses exceed 13 trillion ISK. The defeat effectively breaks PAPI's offensive momentum and marks the beginning of the end for their invasion.</p>
+                  <p>MINC deploys supercarriers and a titan across multiple battles during the M2-XFE campaign.</p>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/mystic-siren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mystic Siren</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
+                    <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><img src="assets/ship-icons/256px-Hel.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Hel</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Vixen Nyssa</span><img src="assets/ship-icons/256px-Avatar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Avatar</span></div>
+                    <div class="roster-card"><img src="assets/portraits/karl-mason.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karl Mason</span><img src="assets/ship-icons/256px-Muninn.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Muninn</span></div>
+                    <div class="roster-card"><img src="assets/portraits/draco-beleren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Draco Beleren</span><img src="assets/ship-icons/256px-Cerberus.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Cerberus</span></div>
+                  </div>
+                  <div class="battle-thumbnails">
+                    <a href="assets/20201230_M2%20Battle.png" target="_blank" class="battle-thumb"><img src="assets/20201230_M2%20Battle.png" alt="M2-XFE - Dec 30 2020"></a>
+                    <a href="assets/20210131_Blops%20MINC.jpg" target="_blank" class="battle-thumb"><img src="assets/20210131_Blops%20MINC.jpg" alt="Black Ops deployment - Jan 31 2021"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-entry" id="y2021">
+              <span class="timeline-year">2021</span>
+              <p>The deployment continued into 2021 despite setbacks. TEST eventually succeeded in destroying MINC's primary HT4K staging Fortizar after repeated attempts to break the forward position. However, the loss of the original base did not end the campaign. MINC established additional forward positions throughout Esoteria and continued coordinating operations across the region.</p>
+              <p>As the campaign progressed, MINC maintained a highly mobile operational style, targeting vulnerable systems and extracting significant value from TEST-held space. Recovered assets and abandoned infrastructure helped make the deployment increasingly self-sustaining, allowing MINC and its allies to maintain pressure far from home.</p>
+              <div class="battle-thumbnails">
+                <a href="https://youtu.be/I1q87gvZ8So" target="_blank" class="battle-thumb" style="position:relative; display:inline-block;">
+                  <img src="https://img.youtube.com/vi/I1q87gvZ8So/hqdefault.jpg" alt="Qicia's Leshak Fleet - watch on YouTube" style="height:120px; width:auto;">
+                  <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                    <span style="display:block; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-left:14px solid #fff; margin-left:3px;"></span>
+                  </span>
+                </a>
+                <a href="assets/20210204_Bastion%20Leshak%20Fleet.png" target="_blank" class="battle-thumb"><img src="assets/20210204_Bastion%20Leshak%20Fleet.png" alt="Leshak Fleet, Feb 4 2021"></a>
+                <a href="assets/20210403_Esoteria%20Entosis.png" target="_blank" class="battle-thumb"><img src="assets/20210403_Esoteria%20Entosis.png" alt="Esoteria entosis ops, Apr 3 2021"></a>
+              </div>
+              <p>By early 2021, the operation had grown far beyond its original scale. What began as a small SIG had become a sustained alliance-level deployment, requiring continued coordination between MINC leadership, The Bastion, Imperium allies, and regional partners. As the wider war shifted, MINC began consolidating forward assets while continuing to support broader Imperium operations.</p>
+              <p>The Esoteria deployment continued through the summer of 2021, with the final forward positions eventually being abandoned as the wider war changed direction. The campaign officially concluded in August as PAPI's invasion of Delve collapsed and World War Bee 2 ended with an Imperium victory.</p>
+              <p>The Esoteria campaign became MINC's defining operation of World War Bee 2, transforming the group from a small SIG into a full alliance deployment and earning recognition as the longest forward deployment by an Imperium member group during the war.</p>
+              <p>None of this would have been possible without the support and commitment of MINC's allies across The Bastion, the Imperium, and the regional partners who helped make the campaign successful.</p>
+              <p>Following the conclusion of the campaign, Primus Buck stepped down as CEO, appointing Khronos Thellere as his successor.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2022">
+              <span class="timeline-year">2022</span>
+              <p>MINC leaves The Bastion and joins Goonswarm Federation directly, finally making the move the directorship had contemplated back in 2016. After years of fighting alongside Goonswarm, the corp finds a home in the alliance it helped defend.</p>
+            
+              <p>In March, the corporation identified the lowsec system Efa as a strategically valuable location due to its position between highsec and nullsec, as well as its access to infrastructure and moon resources. Following initial assessment, MINC leadership made the decision to establish control over the system rather than simply defend it. </p>
+            
+             <p>Over the following years, Efa became a sustained operational focus for the corporation. Moon mining operations provided steady income, while industrial and logistics pilots developed internal production chains to support ongoing activity. The system saw repeated periods of conflict, with structures being lost and replaced multiple times during engagements involving entities such as TEST Alliance and PanFam. Despite these setbacks, MINC repeatedly re-established its presence and rebuilt its infrastructure within the system.
+            
+             </p>Across this period of continuous activity, Efa developed into a long-term staging and industrial hub for the corporation. It functioned as a stable internal base of operations outside of major nullsec power centers, supporting both economic activity and small-scale combat operations while reinforcing MINC's ability to sustain independent infrastructure under pressure.
+            </div>
+
+            <div class="timeline-entry" id="y2023">
+              <span class="timeline-year">2023</span>
+              <span class="timeline-note">&#9888; NOTE: What did we do this year?!?!!?1!?!?!?</span>
+            </div>
+
+            <div class="timeline-entry" id="y2024">
+              <span class="timeline-year">2024</span>
+              <p>Khronos Thellere steps down as CEO, appointing RVAMitchell.</p>
+            </div>
+
+            <div class="timeline-entry" id="y2025">
+              <span class="timeline-year">2025</span>
+              <p>When GSF declares the migration to Catch and Immensea, the directorate judges the realignment necessary. EFA is seeded back to the wild. The territory that had been mined, defended, glassed, and rebuilt across four exceptional years is quietly released, and the corp turns to face its next chapter. Pilots still make the trip back from time to time, not to reclaim anything, but to walk the empty belts and hear the old ghosts.</p>
+              <p>The Imperium repositions closer to Pandemic Horde's territory. MINC marks the move by anchoring a faction Fortizar in RNF-YH (Catch), the same system where MINC Delirium once stood, naming it in honor of the corporation's first Outpost. The tribute proves short-lived; within six months, operations shift and MINC moves on.</p>
+              <p>A second repositioning brings MINC deeper into Horde's sphere. Shortly after, Pandemic Horde suffers a catastrophic internal collapse, imploding and leaving a massive power vacuum where one of nullsec's largest alliances had stood.</p>
+              <span class="timeline-note">&#9888; NOTE: Placeholder for the waterboarding of Horde</span>
+            </div>
+
+            <div class="timeline-entry" id="y2026">
+              <span class="timeline-year">2026</span>
+              <p>War erupts between the Imperium and Fraternity (FRT). MINC participates in a daring operation: the headshot of Fraternity's staging Keepstar. The attack succeeds, marking the first time in EVE history that a nullsec power bloc successfully destroys another bloc's primary staging citadel in a direct assault. The operation demonstrates a shift in nullsec warfare doctrine and cements MINC's reputation for participating in history-making engagements.</p>
+              <span class="timeline-note">&#9888; NOTE: Need more details about the FRT keepstar headshot operation</span>
+            </div>
+
+            <div class="timeline-entry" id="ten-year-club">
+              <span class="timeline-year">The 10 Year Club</span>
+              <p>These pilots have given ten or more cumulative years of service to Mercurialis Inc. during the best and worst of times. Tenure is calculated from total time in corp across all stints.</p>
+
+              <span class="roster-faction-header">Current Members</span>
+              <div class="veteran-grid">
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/qicia.jpeg" alt="Qicia" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Qicia</span>
+                  <span class="veteran-joined">Since 2007</span>
+                  <span class="veteran-tenure ticking" data-past-days="4789" data-stint-start="2020-06-27T19:22:00">--</span>
+                  <span class="veteran-stints">2 stints</span>
+                </div>
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/crethan.jpeg" alt="Crethan" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Crethan</span>
+                  <span class="veteran-joined">Since 2007</span>
+                  <span class="veteran-tenure ticking" data-past-days="4644" data-stint-start="2020-06-30T17:16:00">--</span>
+                  <span class="veteran-stints">2 stints</span>
+                </div>
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/mycia.jpeg" alt="Mycia" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Mycia</span>
+                  <span class="veteran-joined">Since 2008</span>
+                  <span class="veteran-tenure ticking" data-past-days="4483" data-stint-start="2020-07-02T00:46:00">--</span>
+                  <span class="veteran-stints">2 stints</span>
+                </div>
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/primus-buck.jpeg" alt="primus buck" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">primus buck</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure ticking" data-past-days="0" data-stint-start="2009-07-11T19:43:00">--</span>
+                </div>
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/vixen-nyssa.jpeg" alt="Vixen Nyssa" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Vixen Nyssa</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure ticking" data-past-days="713" data-stint-start="2012-04-11T12:38:00">--</span>
+                  <span class="veteran-stints">2 stints</span>
+                </div>
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/sako-howa.jpeg" alt="sako howa" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">sako howa</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure ticking" data-past-days="848" data-stint-start="2014-05-10T21:39:00">--</span>
+                  <span class="veteran-stints">4 stints</span>
+                </div>
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/acnes.jpeg" alt="Acnes" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Acnes</span>
+                  <span class="veteran-joined">Since 2012</span>
+                  <span class="veteran-tenure ticking" data-past-days="3069" data-stint-start="2020-06-30T09:36:00">--</span>
+                  <span class="veteran-stints">3 stints</span>
+                </div>
+
+                <div class="veteran-card current">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/mystic-siren.jpeg" alt="Mystic Siren" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Mystic Siren</span>
+                  <span class="veteran-joined">Since 2013</span>
+                  <span class="veteran-tenure ticking" data-past-days="1454" data-stint-start="2019-02-18T08:49:00">--</span>
+                  <span class="veteran-stints">2 stints</span>
+                </div>
+
+              </div>
+
+              <span class="roster-faction-header">Alumni</span>
+              <div class="veteran-grid">
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/scabrunner.jpeg" alt="ScabRunner" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">ScabRunner</span>
+                  <span class="veteran-joined">Since 2004</span>
+                  <span class="veteran-tenure">16 yrs 6 mo</span>
+                  <span class="veteran-stints">8 stints</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/yurito.jpeg" alt="Yurito" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Yurito</span>
+                  <span class="veteran-joined">Since 2004</span>
+                  <span class="veteran-tenure">15 yrs 0 mo</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/norikio.jpeg" alt="Norikio" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Norikio</span>
+                  <span class="veteran-joined">Since 2005</span>
+                  <span class="veteran-tenure">14 yrs 11 mo</span>
+                  <span class="veteran-stints">8 stints</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/karl-mason.jpeg" alt="Karl Mason" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Karl Mason</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure">13 yrs 5 mo</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/kittengirl.jpeg" alt="Kittengirl" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Kittengirl</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure">13 yrs 4 mo</span>
+                  <span class="veteran-stints">4 stints</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/singlularity.jpeg" alt="Singlularity" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Singlularity</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure">12 yrs 2 mo</span>
+                  <span class="veteran-stints">5 stints</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/Isayo-Arkindra.jpeg" alt="Isayo Arkindra" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Isayo Arkindra</span>
+                  <span class="veteran-joined">Since 2003</span>
+                  <span class="veteran-tenure">11 yrs 11 mo</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/ms-young.jpeg" alt="Ms young" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Ms young</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure">11 yrs 7 mo</span>
+                  <span class="veteran-stints">6 stints</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/karen-arder.jpeg" alt="karen arder" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">karen arder</span>
+                  <span class="veteran-joined">Since 2009</span>
+                  <span class="veteran-tenure">11 yrs 7 mo</span>
+                  <span class="veteran-stints">5 stints</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/bonehead.jpeg" alt="Bonehead" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Bonehead</span>
+                  <span class="veteran-joined">Since 2004</span>
+                  <span class="veteran-tenure">11 yrs 3 mo</span>
+                  <span class="veteran-stints">3 stints</span>
+                </div>
+
+                <div class="veteran-card">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/marley-cortez.jpeg" alt="marly cortez" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">marly cortez</span>
+                  <span class="veteran-joined">Since 2010</span>
+                  <span class="veteran-tenure">10 yrs 0 mo</span>
+                </div>
+
+              </div>
+
+              <span class="roster-faction-header">In Memoriam</span>
+              <div class="veteran-grid">
+
+                <div class="veteran-card memorial">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/hao-wu.jpeg" alt="Hao Wu" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Hao Wu</span>
+                  <span class="veteran-joined">Since 2010</span>
+                  <span class="veteran-tenure">16 yrs 1 mo</span>
+                </div>
+
+                <div class="veteran-card memorial">
+                  <div class="veteran-portrait-wrap">
+                    <img src="assets/portraits/thundirr.jpeg" alt="Thundirr" class="veteran-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'">
+                  </div>
+                  <div class="veteran-dot"></div>
+                  <span class="veteran-name">Thundirr</span>
+                  <span class="veteran-joined">Since 2004</span>
+                  <span class="veteran-tenure">11 yrs 0 mo</span>
+                  <span class="veteran-stints">3 stints</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- /timeline -->
+
+        </div><!-- /r-box-body -->
+
+      </div><!-- /r-main-box -->
+
+      <div class="r-content-gap"></div>
+
+    </div><!-- /r-content-row -->
+
+    <div class="r-spacer-row"></div>
+
+  </div><!-- /r-outer -->
+
+  <!-- FOOTER -->
+  <div class="r-footer">
+    <div class="r-footer-inner">
+      | <a href="#top">&#177; Top</a>
+      | <a href="index.html">Home</a>
+      | <a href="staff.html">Staff</a>
+      | <a href="rules.html">Recruitment</a>
+      | <a href="https://seat.mercurialisinc.com">SeAT</a>
+      |<br>
+      &copy; 2002&ndash;2026 Mercurialis Inc. All rights reserved.<br>
+      Disclaimer: Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transactions was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it.
+      EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.<br><br>
+      <img src="assets/netscape.gif" alt="Best viewed in Netscape">
+      &nbsp;
+      <img src="assets/IE.gif" alt="Best viewed in IE">
+      &nbsp;
+      <span style="font-size:8px; color:#555;">Best Viewed 1024x768</span>
     </div>
+  </div>
+
+</div><!-- /r-page -->
+
+<script>
+function updateVeteranCounters() {
+    document.querySelectorAll('.veteran-tenure.ticking').forEach(function(el) {
+        var pastDays = parseInt(el.dataset.pastDays, 10);
+        var stintStart = new Date(el.dataset.stintStart);
+        var now = new Date();
+        var currentDays = Math.floor((now - stintStart) / 86400000);
+        var totalDays = pastDays + currentDays;
+        var years = Math.floor(totalDays / 365.25);
+        var remaining = totalDays - Math.floor(years * 365.25);
+        var months = Math.floor(remaining / 30.44);
+        el.textContent = years + ' yrs ' + months + ' mo';
+    });
+}
+updateVeteranCounters();
+setInterval(updateVeteranCounters, 60000);
+</script>
+
 </body>
 </html>

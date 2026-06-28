@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Mercurialis Inc. - Template</title>
+<style>
+/* ================================================================
+   MINC RETRO TEMPLATE — Silver/Gunmetal base, Red + Gold accents
+   ================================================================ */
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #c8c8c8;
+    background-color: #000;
+    background-image: url(assets/JWSTPIX.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 1300px;
+    background-position: top right -200px;
+}
+
+/* ── Page wrapper ─────────────────────────────────────────── */
+.r-page {
+    width: 748px;
+    margin: 8px auto 0 auto;
+}
+
+/* ── Outer container — gunmetal silver ────────────────────── */
+.r-outer {
+    width: 748px;
+    /* Subtle vertical gradient: slightly lighter top/bottom edge */
+    background: linear-gradient(180deg,
+        #202020 0%,
+        #181818 4%,
+        #141414 50%,
+        #181818 96%,
+        #202020 100%);
+    border: 1px solid #3a3a3a;
+    border-top: 1px solid #444;
+}
+
+/* ================================================================
+   HEADER — CSS Grid
+   col 1 (175px, rowspan 2) | col 2 (60px) | col 3 (1fr) | col 4 (99px)
+   ================================================================ */
+.r-header-section {
+    display: grid;
+    grid-template-columns: 175px 60px 1fr 99px;
+    grid-template-rows: 77px 26px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.r-logo-cell {
+    grid-area: 1 / 1 / 3 / 2;
+    background: #0a0a0a;
+    border-right: 1px solid #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    overflow: hidden;
+}
+.r-logo-cell img {
+    display: block;
+    width: 112px;
+    height: 112px;
+    object-fit: contain;
+}
+
+/* Corner: gold-to-red diagonal — the one strong accent */
+.r-topleft-cell {
+    grid-area: 1 / 2 / 2 / 3;
+    background: linear-gradient(135deg,
+        #d4b800 0%,
+        #8a7000 35%,
+        #4c0000 75%,
+        #2a0000 100%);
+}
+
+/* Main header: dark red fade gives the EVE atmosphere */
+.r-header-main-cell {
+    grid-area: 1 / 3 / 2 / 4;
+    background: linear-gradient(180deg,
+        #0a0a0a 0%,
+        #180000 20%,
+        #4c0000 50%,
+        #180000 80%,
+        #0a0a0a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-left: 1px solid #2a2a2a;
+    border-right: 1px solid #2a2a2a;
+}
+
+.r-site-title {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fefe5d;
+    text-shadow: 0 0 14px rgba(212,184,0,0.5), 1px 1px 0 #000;
+    margin: 0 0 4px 0;
+    text-align: center;
+    line-height: 1.1;
+}
+.r-site-subtitle {
+    font-size: 9px;
+    font-style: italic;
+    color: #576b84;
+    margin: 0;
+    text-align: center;
+}
+
+.r-flash-cell {
+    grid-area: 1 / 4 / 2 / 5;
+    background: #0a0a0a;
+    border-left: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+    font-size: 8px;
+    text-align: center;
+    color: #555;
+}
+.r-flash-cell img { display: block; max-width: 60px; }
+
+/* ── Nav bar — flat dark with gold accent line ────────────── */
+.r-nav {
+    grid-area: 2 / 2 / 3 / 5;
+    background: #0f0f0f;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #8b6914;  /* dark gold underline */
+    display: flex;
+    align-items: stretch;
+}
+.r-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0 9px;
+    color: #b89800;               /* muted gold — readable on dark */
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    border-right: 1px solid #222;
+}
+.r-nav a:first-child { border-left: 1px solid #222; }
+.r-nav a:hover {
+    background: #1a0000;
+    color: #fefe5d;
+    text-decoration: none;
+}
+.r-nav a.r-active {
+    background: #2a0000;
+    color: #fefe5d;
+    border-bottom: 2px solid #d4b800;
+    text-decoration: none;
+}
+
+/* ── Banner ───────────────────────────────────────────────── */
+.r-banner-row {
+    background: #0a0a0a;
+    border-bottom: 1px solid #3a3a3a;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.r-banner-text {
+    color: #d4b800;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 6px 20px;
+    background: linear-gradient(90deg,
+        #141414 0%, #1a0000 20%, #3a0000 50%, #1a0000 80%, #141414 100%);
+    border-top: 1px solid #3a0000;
+    border-bottom: 1px solid #3a0000;
+    width: 728px;
+    text-align: center;
+}
+
+/* ── Content row ──────────────────────────────────────────── */
+.r-content-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 8px;
+    background: transparent;
+}
+
+/* ── Box component ────────────────────────────────────────── */
+/* Silver-gunmetal panel with a subtle inset feel */
+.r-box {
+    background: linear-gradient(180deg,
+        #161616 0%,
+        #111111 8%,
+        #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+}
+
+.r-sidebar-box { width: 155px; flex-shrink: 0; }
+.r-main-box    { flex: 1; min-width: 0; }
+
+/* Box header: dark red gradient — primary accent color */
+.r-box-header {
+    background: linear-gradient(180deg,
+        #6a0000 0%,
+        #4c0000 30%,
+        #2a0000 65%,
+        #4c0000 100%);
+    text-align: center;
+    padding: 5px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fefe5d;
+    border-bottom: 1px solid #8b6914;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(212,184,0,0.35);
+}
+
+/* Main box uses steel-blue header for visual separation */
+.r-main-box .r-box-header {
+    background: linear-gradient(180deg,
+        #2a3d54 0%,
+        #1e2e42 30%,
+        #111e2e 65%,
+        #1e2e42 100%);
+    border-bottom: 1px solid #3a5070;
+    color: #d4b800;
+    text-shadow: 0 0 8px rgba(212,184,0,0.3);
+}
+
+/* Box body */
+.r-box-body {
+    padding: 6px;
+    font-size: 10px;
+    color: #c0c0c0;
+    line-height: 1.6;
+}
+.r-box-body p { margin: 0 0 6px 0; line-height: 1.6; }
+.r-box-body ul {
+    padding-left: 16px;
+    margin: 3px 0 6px 0;
+    list-style-type: square;
+}
+.r-box-body li { margin-bottom: 4px; }
+
+/* Content sub-heading */
+.r-content-heading {
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    display: block;
+    margin: 8px 0 4px 0;
+    color: #d4b800;
+}
+.r-content-heading:first-child { margin-top: 2px; }
+
+/* Separator between stacked boxes */
+.r-box + .r-box { border-top: none; }
+
+/* ── Stats table ──────────────────────────────────────────── */
+.r-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9px;
+    color: #c0c0c0;
+}
+.r-stats-table td {
+    padding: 2px 3px;
+    border-bottom: 1px solid #1e1e1e;
+    vertical-align: top;
+}
+.r-stats-table td:first-child {
+    font-weight: bold;
+    width: 55px;
+    color: #d4b800;
+}
+
+/* ── News ─────────────────────────────────────────────────── */
+.r-news-item {
+    border-bottom: 1px solid #1e1e1e;
+    padding: 5px 0;
+    margin-bottom: 4px;
+}
+.r-news-item:last-child { border-bottom: none; margin-bottom: 0; }
+.r-news-date {
+    font-weight: bold;
+    font-style: italic;
+    color: #576b84;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 9px;
+}
+.r-news-title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    color: #d4b800;
+}
+
+/* ── Status indicators ────────────────────────────────────── */
+.r-status-open   { color: #49ce5a; font-weight: bold; }
+.r-status-closed { color: #cc3333; font-weight: bold; }
+
+/* ── Spacer row ───────────────────────────────────────────── */
+.r-spacer-row { height: 12px; }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.r-footer {
+    width: 748px;
+    margin: 0 auto 10px auto;
+    border: 1px solid #3a3a3a;
+    border-top: none;
+}
+.r-footer-inner {
+    background: linear-gradient(180deg, #2a0000 0%, #1a0000 100%);
+    text-align: center;
+    padding: 7px 10px;
+    font-size: 9px;
+    color: #888;
+    line-height: 2;
+    border-top: 1px solid #4c0000;
+}
+
+/* ── Global links ─────────────────────────────────────────── */
+a:link, a:visited  { color: #b89800; text-decoration: underline; }
+a:hover            { color: #fefe5d; text-decoration: none; }
+a:active           { color: #fefe5d; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="r-page">
+  <div class="r-outer">
+
+    <!-- HEADER -->
+    <div class="r-header-section">
+      <div class="r-logo-cell">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+      </div>
+      <div class="r-topleft-cell"></div>
+      <div class="r-header-main-cell">
+        <p class="r-site-title">Mercurialis Inc.</p>
+        <p class="r-site-subtitle">"When reality can't keep up &mdash; dare to dream."</p>
+      </div>
+      <div class="r-flash-cell">
+        <img src="assets/netscape.gif" alt="Best viewed in Netscape">
+        <img src="assets/IE.gif" alt="Best viewed in IE">
+        <span>Best Viewed<br>1024x768</span>
+      </div>
+      <nav class="r-nav">
+        <a href="#" class="r-active">&#177; Home</a>
+        <a href="#">News</a>
+        <a href="#">Corp History</a>
+        <a href="#">Media</a>
+        <a href="#">SeAT</a>
+        <a href="#">Staff</a>
+        <a href="#">Recruitment</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <!-- BANNER -->
+    <div class="r-banner-row">
+      <div class="r-banner-text">
+        &#9733;&nbsp; MERCURIALIS INC. IS RECRUITING &nbsp;&#9733;&nbsp;
+        Oldest Active Corporation in New Eden &nbsp;&#9733;&nbsp;
+        Est. Oct 28, 2002 &nbsp;&#9733;
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="r-content-row">
+
+      <!-- SIDEBAR -->
+      <div class="r-sidebar-box r-box">
+        <div class="r-box-header">&#177; Corp Info</div>
+        <div class="r-box-body">
+          <table class="r-stats-table">
+            <tr><td>Founded:</td><td>Oct 28, 2002</td></tr>
+            <tr><td>CEO:</td><td>RVAMitchell</td></tr>
+            <tr><td>Alliance:</td><td>Goonswarm</td></tr>
+            <tr><td>Region:</td><td>Delve</td></tr>
+            <tr><td>Focus:</td><td>PvP, Capitals</td></tr>
+            <tr><td>TZ:</td><td>All TZ</td></tr>
+          </table>
+        </div>
+
+        <div class="r-box-header">&#177; Recruitment</div>
+        <div class="r-box-body">
+          Status:<br>
+          <span class="r-status-open">&#9632; OPEN</span>
+          <br><br>
+          All timezones.<br>No minimum SP.
+        </div>
+
+        <div class="r-box-header">&#177; Quick Links</div>
+        <div class="r-box-body">
+          <ul>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Recruitment</a></li>
+            <li><a href="#">Corp History</a></li>
+            <li><a href="#">SeAT Auth</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+      <div class="r-main-box r-box">
+
+        <div class="r-box-header">&#177; Welcome to Mercurialis Inc.</div>
+        <div class="r-box-body">
+          <span class="r-content-heading">About MINC</span>
+          <p>Established in <strong>October 2002</strong> during EVE Online's closed beta,
+          Mercurialis Inc. holds the distinction of being the <strong>oldest continuously active
+          corporation</strong> in New Eden. Over two decades of history, hard fights, and
+          good times bind this community together.</p>
+          <p>Our playstyles range from wormhole exploration to capital production, small
+          BLOPs gangs to large-scale titan brawls. MINC is home to players from every time
+          zone and background.</p>
+        </div>
+
+        <div class="r-box-header">&#177; Latest News</div>
+        <div class="r-box-body">
+          <div class="r-news-item">
+            <span class="r-news-date">Jun 10, 2026</span>
+            <span class="r-news-title">MINC Celebrates 23+ Years in New Eden</span>
+            <p>This October marks the 23rd anniversary of Mercurialis Inc. Festivities
+            will be held in-game &mdash; details forthcoming in corp mail.</p>
+          </div>
+          <div class="r-news-item">
+            <span class="r-news-date">Apr 15, 2026</span>
+            <span class="r-news-title">RIFT Intel Tool Adopted as Corp Standard</span>
+            <p>Mercurialis Inc. has officially adopted the <strong>Eve Rift Intel Fusion
+            Tool (RIFT)</strong> as our intel tool of choice, built by MINC member
+            <strong>Nohus</strong>.</p>
+          </div>
+        </div>
+
+      </div><!-- /main box -->
+
+    </div><!-- /r-content-row -->
+
+    <div class="r-spacer-row"></div>
+  </div><!-- /r-outer -->
+
+  <!-- FOOTER -->
+  <div class="r-footer">
+    <div class="r-footer-inner">
+      | <a href="#">&#177; Top</a>
+      | <a href="#">Home</a>
+      | <a href="#">Staff</a>
+      | <a href="#">Recruitment</a>
+      | <a href="#">Contact</a>
+      |<br>
+      &copy; 2002&ndash;2026 Mercurialis Inc. All rights reserved.
+      EVE Online &trade; CCP Games.
+    </div>
+  </div>
+
+</div><!-- /r-page -->
+
+</body>
+</html>

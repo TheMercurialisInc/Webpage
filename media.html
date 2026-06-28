@@ -1,80 +1,275 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercurialis Inc.</title>
-    <link rel="stylesheet" href="styles/layout.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Mercurialis Inc. - Media</title>
+<link href="styles/retro.css" rel="stylesheet" type="text/css">
+<style>
+.r-header-section {
+    background: url('assets/HeaderBG.png') 175px 0/461px 77px no-repeat;
+}
+.r-logo-cell {
+    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
+    
+}
+.r-topleft-cell {
+    background: transparent !important;
+}
+.r-header-main-cell {
+    background: transparent !important;
+    border-right: none;
+}
+.r-flash-cell {
+    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
+    border-left: none;
+}
+.r-nav {
+    background: #080808;
+    border-top: 2px solid #1a0000;
+    border-bottom: 1px solid #8b6914;
+}
+.r-nav a {
+    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-nav a:hover {
+    box-shadow:
+        inset 1px 1px 0 rgba(255,220,100,0.55),
+        inset -1px -1px 0 rgba(0,0,0,0.75);
+    filter: brightness(1.2);
+}
+.r-nav a:active {
+    box-shadow:
+        inset 1px 1px 0 rgba(0,0,0,0.75),
+        inset -1px -1px 0 rgba(255,220,100,0.4);
+    filter: brightness(0.9);
+}
+.r-nav a.r-active {
+    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-logo-cell img,
+.r-flash-cell img {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.18)) drop-shadow(0 0 2px rgba(255,255,255,0.24));
+}
+.r-site-subtitle {
+    color: #e8d080;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+}
+</style>
 </head>
 <body>
-    <div class="header">
-        <img src="https://image.eveonline.com/Corporation/144534752_128.png" width="250" alt="Mercurialis Inc." class="corp-logo">
-        <h1>Mercurialis Inc.</h1><br>
-        <h2>"When reality can't keep up - dare to dream."</h2>
-        <h3>Est. Oct 28, 2002</h3>
+
+<div class="r-page">
+
+  <div class="r-outer">
+
+    <!-- HEADER -->
+    <div class="r-header-section">
+
+      <div class="r-logo-cell">
+        <img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="Mercurialis Inc.">
+      </div>
+
+      <div class="r-topleft-cell"></div>
+
+      <div class="r-header-main-cell">
+        <p class="r-site-title">Mercurialis Inc.</p>
+        <p class="r-site-subtitle">"When reality can't keep up &mdash; dare to dream."</p>
+      </div>
+
+      <div class="r-flash-cell">
+        <img src="assets/logos/condi.png" alt="Goonswarm Federation" width="50" height="50">
+        <img src="assets/logos/imperium.png" alt="Imperium" width="50" height="50">
+      </div>
+
+      <nav class="r-nav">
+        <a href="index.html">&#177; Home</a>
+        <a href="index.html#news">News</a>
+        <a href="history.html">Corp History</a>
+        <a href="media.html" class="r-active">Media</a>
+        <a href="https://seat.mercurialisinc.com">SeAT</a>
+        <a href="staff.html">Staff</a>
+        <a href="rules.html">Recruitment</a>
+      </nav>
+
+    </div><!-- /r-header-section -->
+
+    <!-- BANNER -->
+    <div class="r-banner-row">
+      <div class="r-banner-text">
+        &#9733;&nbsp; MINC MEDIA &nbsp;&#9733;&nbsp;
+        &nbsp;&#9733;&nbsp;
+        Est. Oct 28, 2002 &nbsp;&#9733;
+      </div>
     </div>
-<div id="nav-container"></div>
 
-    <script>
-        fetch('nav.html')
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('nav-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navigation:', error));
-    </script>
+    <!-- CONTENT -->
+    <div class="r-content-row">
 
-    <div class="info-section">
-        <div class="margin-column"></div>
-        <div class="fixed-column"></div>
-        <div class="main-info-column">
-            <div class="main-info">
-                <div class="welcome-title video-title">
-                    <h3><a href="https://www.youtube.com/@MercurialisInc."> YouTube</a></h3>
-                </div>
-                <div class="centerbox1">
-                    <h3 class="video-title">The Recruitment Video</h3>
-                    <iframe width="500" height="275" src="https://www.youtube.com/embed/ysjtK4ictI4" title="Promotional Video" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <br><div class="centerbox2">
-                    <h3 class="video-title">The Boys</h3>
-                    <iframe width="500" height="275" src="https://www.youtube.com/embed/ylF8e94zhtg" title="Ops with Friends" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <br><div class="centerbox1">
-                    <h3 class="video-title">The War of Interesting Times</h3>
-                    <iframe width="500" height="275" src="https://www.youtube.com/embed/_N3V80yPFEc" title="The Good ole Times" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <br><div class="centerbox2">
-                    <h3 class="video-title">WWB2 Soityo Kill</h3>
-                    <iframe width="500" height="275" src="https://www.youtube.com/embed/wc9KkmcGrGI" title="The Bastion" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <br><div class="centerbox1">
-                    <h3 class="video-title">WWB2 Black Ops Fun</h3>
-                    <iframe width="500" height="275" src="https://www.youtube.com/embed/dAxCGjbGtRY" title="Epic Battles" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <br><div class="centerbox2">
-                    <h3 class="video-title">Frost Ees OP - Guest Appearance</h3>
-                    <iframe width="500" height="275" src="https://www.youtube.com/embed/6yCIII5-YHo" title="Fleet Formations" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <br>
-            </div>
+      <div class="r-content-gap"></div>
+
+      <!-- ========================================================
+           SIDEBAR
+           ======================================================== -->
+      <div class="r-sidebar-box r-box">
+
+        <div class="r-box-header">&#177; MINC Channels</div>
+        <div class="r-box-body">
+          <ul style="padding-left:14px; margin:0; list-style-type:square; line-height:2;">
+            <li><a href="https://www.youtube.com/@MercurialisInc." target="_blank">MINC YouTube</a></li>
+          </ul>
         </div>
-        <div class="fixed-column covertcyno-container"></div>
-        <div class="margin-column"></div>
-    </div>
 
-    <div class="centeredmedia">
-        <img src="assets/covertcyno.gif" width="auto" height="150" alt="cyno"><br><br><br>
-    </div>
+        <div class="r-box-header">&#177; Friends &amp; Allies</div>
+        <div class="r-box-body">
+          <ul style="padding-left:14px; margin:0; list-style-type:square; line-height:2;">
+            <li><a href="https://www.youtube.com/@EVEOnline" target="_blank">EVE Online</a></li>
+            <li><a href="https://www.youtube.com/@thebastiondeltasquad8716" target="_blank">The Bastion Delta Squad</a></li>
+            <li><a href="https://www.youtube.com/@deepspaceanglers" target="_blank">Shinyo</a></li>
+            <li><a href="https://www.youtube.com/@BaggerandtheADFUCrew" target="_blank">Bagger &amp; the ADFU Crew</a></li>
+            <li><a href="https://www.youtube.com/@ImperiumNews" target="_blank">Imperium News</a></li>
+            <li><a href="https://www.youtube.com/@EVE-Files" target="_blank">EVE Files by Cribba</a></li>
+          </ul>
+        </div>
 
-    <div class="footer">
-        <p>&copy; 2024 Mercurialis Inc. All rights reserved. <br>Disclaimer: All money lost, stolen, scammed, misplaced, laundered, or used to buy questionable spaceship upgrades was done so voluntarily and with a complete lack of judgment on the part of the user. We take no responsibility for the consequences of your space adventures. Please fly responsibly. <br>
-            <br>EVE Online is the intellectual property of CCP Games in Reykjavik, Iceland. The use of any trademark or copyright material is not intended to infringe on the rights of CCP Games. Mercurialis Inc. is an independent entity and is not affiliated with or endorsed by CCP Games. Any references to in-game entities, characters, locations, or events are purely fictional and do not represent real-world entities or events. By accessing or using our website, you agree to abide by the terms and conditions set forth herein.
-        </p>
+      </div><!-- /sidebar -->
+
+      <div class="r-content-gap"></div>
+
+      <!-- ========================================================
+           MAIN CONTENT
+           ======================================================== -->
+      <div class="r-main-box r-box">
+
+        <div class="r-box-header">&#177; MINC on YouTube</div>
+        <div class="r-box-body">
+          <span class="r-content-heading">Official Channel</span>
+          <p>Our YouTube channel hosts recruitment videos, fleet action recordings, and historical footage from two decades of operations. Subscribe to stay up to date on new uploads.</p>
+          <p style="text-align:center;">
+            <a href="https://www.youtube.com/@MercurialisInc." target="_blank" style="font-weight:bold;">&#9658; youtube.com/@MercurialisInc.</a>
+          </p>
+        </div>
+
+        <!-- Videos -->
+        <div class="r-box-header">&#177; Featured Videos</div>
+        <div class="r-box-body">
+
+          <span class="r-content-heading">The Recruitment Video</span>
+          <div style="text-align:center; margin-bottom:10px;">
+            <iframe width="520" height="293" src="https://www.youtube.com/embed/ysjtK4ictI4"
+                    title="The Recruitment Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border:1px solid #2e2e2e; display:inline-block;"></iframe>
+          </div>
+
+          <span class="r-content-heading">The Boys</span>
+          <div style="text-align:center; margin-bottom:10px;">
+            <iframe width="520" height="293" src="https://www.youtube.com/embed/ylF8e94zhtg"
+                    title="The Boys" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border:1px solid #2e2e2e; display:inline-block;"></iframe>
+          </div>
+
+          <span class="r-content-heading">The War of Interesting Times</span>
+          <div style="text-align:center; margin-bottom:10px;">
+            <iframe width="520" height="293" src="https://www.youtube.com/embed/_N3V80yPFEc"
+                    title="The War of Interesting Times" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border:1px solid #2e2e2e; display:inline-block;"></iframe>
+          </div>
+
+          <span class="r-content-heading">WWB2 &mdash; Sotiyo Kill</span>
+          <div style="text-align:center; margin-bottom:10px;">
+            <iframe width="520" height="293" src="https://www.youtube.com/embed/wc9KkmcGrGI"
+                    title="WWB2 Sotiyo Kill" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border:1px solid #2e2e2e; display:inline-block;"></iframe>
+          </div>
+
+          <span class="r-content-heading">WWB2 &mdash; Black Ops Fun</span>
+          <div style="text-align:center; margin-bottom:10px;">
+            <iframe width="520" height="293" src="https://www.youtube.com/embed/dAxCGjbGtRY"
+                    title="WWB2 Black Ops Fun" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border:1px solid #2e2e2e; display:inline-block;"></iframe>
+          </div>
+
+          <span class="r-content-heading">Frost Ees OP &mdash; Guest Appearance</span>
+          <div style="text-align:center; margin-bottom:4px;">
+            <iframe width="520" height="293" src="https://www.youtube.com/embed/6yCIII5-YHo"
+                    title="Frost Ees OP - Guest Appearance" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border:1px solid #2e2e2e; display:inline-block;"></iframe>
+          </div>
+
+        </div>
+
+        <!-- Screenshots -->
+        <div class="r-box-header">&#177; Screenshots</div>
+        <div class="r-box-body">
+          <span class="r-content-heading">From the Front Lines</span>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center; padding:4px 0;">
+            <img src="assets/20201230_M2 Battle.png"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="M2-XFE Battle">
+            <img src="assets/20201005_FRT_Keepstar_in_FWST.jpg"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="FRT Keepstar in FWST-8">
+            <img src="assets/20210204_Bastion Leshak Fleet.png"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="Leshak Fleet">
+            <img src="assets/2021-02-19_Sotiyo_Kill.jpg"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="Sotiyo Kill">
+            <img src="assets/20201005_FWST.png"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="FWST-8">
+            <img src="assets/20201005_FWST_2.png"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="FWST-8 2">
+            <img src="assets/2007Fanfest.jpg"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="EVE Fanfest 2007">
+            <img src="assets/2007FanfestDrinks.jpg"
+                 style="width:165px; height:110px; object-fit:cover; border:1px solid #888; display:block;"
+                 alt="Fanfest 2007 Drinks">
+          </div>
+          <p style="text-align:center; font-size:9px; color:#555; margin-top:6px;">
+            <a href="history.html">More screenshots and battle reports in the Corp History &raquo;</a>
+          </p>
+        </div>
+
+      </div><!-- /main box -->
+
+      <div class="r-content-gap"></div>
+
+    </div><!-- /r-content-row -->
+
+    <div class="r-spacer-row"></div>
+
+  </div><!-- /r-outer -->
+
+  <!-- FOOTER -->
+  <div class="r-footer">
+    <div class="r-footer-inner">
+      | <a href="#top">&#177; Top</a>
+      | <a href="index.html">Home</a>
+      | <a href="staff.html">Staff</a>
+      | <a href="rules.html">Recruitment</a>
+      | <a href="https://seat.mercurialisinc.com">SeAT</a>
+      |<br>
+      &copy; 2002&ndash;2026 Mercurialis Inc. All rights reserved.<br>
+      Disclaimer: Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transactions was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it.
+      EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.<br><br>
+      <img src="assets/netscape.gif" alt="Best viewed in Netscape">
+      &nbsp;
+      <img src="assets/IE.gif" alt="Best viewed in IE">
+      &nbsp;
+      <span style="font-size:8px; color:#555;">Best Viewed 1024x768</span>
     </div>
-    <script src="scripts/main.js"></script>
+  </div>
+
+</div><!-- /r-page -->
+
 </body>
 </html>
