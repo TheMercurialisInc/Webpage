@@ -393,11 +393,11 @@
 .battle-thumb {
     display: block;
     border: 1px solid #2e2e2e;
-    flex-shrink: 0;
+    width: calc(25% - 3px);
 }
 .battle-thumb img {
-    width: 80px; height: 55px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
     display: block;
 }
 .battle-thumb:hover { border-color: #8b6914; }
@@ -516,6 +516,24 @@
     box-shadow: 0 0 3px #8b691455;
 }
 .veteran-card.memorial .veteran-tenure { color: #8b6914; }
+#r-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+#r-lightbox.open { display: flex; }
+#r-lightbox img {
+    max-width: 92vw;
+    max-height: 88vh;
+    border: 1px solid #8b6914;
+    box-shadow: 0 0 40px rgba(0,0,0,0.9);
+    cursor: default;
+}
 </style>
 </head>
 <body>
@@ -784,8 +802,8 @@
               </div>
               <p>The year also saw MINC members attend Fanfest in Iceland. Isayo Arkindra, Thundirr, Mannakin, and other MINC pilots made the trip, sharing a table with members of the Goons, who were political rivals in-game but friendly out of game. The IAC identity was proudly represented, including its famous logo: a cat made from empty beer bottles.</p>
               <div class="battle-thumbnails">
-                <a href="assets/2007Fanfest.jpg" target="_blank" class="battle-thumb"><img src="assets/2007Fanfest.jpg" alt="Fanfest 2007" style="width:auto; height:120px; object-fit:unset;"></a>
-                <a href="assets/2007FanfestDrinks.jpg" target="_blank" class="battle-thumb"><img src="assets/2007FanfestDrinks.jpg" alt="Fanfest 2007 drinks" style="width:auto; height:120px; object-fit:unset;"></a>
+                <a href="assets/2007Fanfest.jpg" target="_blank" class="battle-thumb"><img src="assets/2007Fanfest.jpg" alt="Fanfest 2007"></a>
+                <a href="assets/2007FanfestDrinks.jpg" target="_blank" class="battle-thumb"><img src="assets/2007FanfestDrinks.jpg" alt="Fanfest 2007 drinks"></a>
               </div>
               <div class="roster-grid">
                 <div class="roster-card"><img src="assets/portraits/Isayo-Arkindra.jpeg" alt="" class="roster-portrait"><span class="roster-name">Isayo Arkindra</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">CEO</span></div>
@@ -970,11 +988,11 @@
 
                   </div>
                   <div class="battle-thumbnails">
-                    <a href="assets/BloodbathOfB-R.jpg" target="_blank" class="battle-thumb"><img src="assets/BloodbathOfB-R.jpg" alt="Bloodbath of B-R5RB — January 27, 2014"></a>
+                    <a href="assets/BloodbathOfB-R.jpg" class="battle-thumb"><img src="assets/BloodbathOfB-R.jpg" alt="Bloodbath of B-R5RB — January 27, 2014"></a>
                   </div>
                 </div>
               </div>
-              <p>MINC pilots once again participated in the largest conflicts of the era, continuing a pattern that had defined the corporation for years: surviving by adapting alongside the major powers of nullsec.</p>
+              
             </div>
 
             <div class="timeline-entry" id="y2015">
@@ -1013,7 +1031,7 @@
 
             <div class="timeline-entry" id="y2018">
               <span class="timeline-year">2018</span>
-              <p>In 2018, marly cortez stepped down as CEO, appointing Primus Buck as his successor.</p>
+              <p>In 2018, marly cortez stepped down as CEO, appointing Primus Buck as his successor. MINC participates in Imperium deployments through the year.</p>
               <div class="battle-box">
                 <div class="battle-header">
                   <span class="battle-header-name">Battle of X47L-Q</span>
@@ -1031,8 +1049,8 @@
                 </div>
               </div>
 
-              <span class="battle-tag">December 2018: ZTS-4D</span>
-              <p>In December, MINC began an experiment in independence by relocating to ZTS-4D in Fountain. Rather than relying entirely on the protection of a large supercapital umbrella, the corporation tested its ability to sustain industrial and capital operations on its own.</p>
+              <span class="battle-tag">November 2018: ZTS-4D</span>
+              <p>In November, MINC anchors its own Fortizar and Athanors in ZTS-4D, standing up a private mining-and-industry pocket rather than simply living out of alliance staging. It is the first time the corp holds its own space rather than living under a super capital umbrella, the earliest draft of the pattern that later defines EFA, RNF, and other system. The experiment is a test of whether MINC can sustain itself outside the safety net.</p>
               <span class="roster-faction-header">Moving into ZTS-4D</span>
               <div class="battle-thumbnails">
                 <a href="assets/2018_Move_Op_To_ZTS.jpg" target="_blank" class="battle-thumb"><img src="assets/2018_Move_Op_To_ZTS.jpg" alt="Move op to ZTS-4D, 2018"></a>
@@ -1081,26 +1099,25 @@
 
             <div class="timeline-entry" id="y2019">
               <span class="timeline-year">2019</span>
-              
-              <p>MINC was deployed with Imperium forces outside Fountain when reports emerged that a large-scale coalition attack was being prepared against the Imperium. The deployment was cut short, and forces were recalled to defend Fountain as initial hostilities began to form across nullsec.</p>
-              
-              <p>As the situation escalated further, MINC withdrew from Fountain alongside Imperium forces and returned to 1DQ in Delve, consolidating ships, assets, and pilots in preparation for the full-scale conflict that would become World War Bee 2.</p>
+              <p>The ZTS pocket is cut short when The Bastion relocates to Fountain in the system of O-PNSN in early 2019, The corp is barred from renting it from the alliance and MINC follows The Bastion into O-P where the alliance builds a new home.</p>
+              <p>A mid-year war deployment sours morale significantly enough that one director unsubs over it. The corp flips flops it's staging system between O-PNSN and 7UTB. The back half of 2019 is a genuine growth period despite the friction, more corps engaging, real response fleets forming, a wormhole operation standing up, and running BLOPS harassment campaigns into the north.</p>
+              <p>Late 2019 sees the first serious internal discussion of leaving The Bastion. The activity of the alliance feels more like a retirement home, or second class citizens in the Imperium. The point is raised, examined, and leaving is ultimately shelved.</p>
             </div>
 
             <div class="timeline-entry" id="y2020">
               <span class="timeline-year">2020</span>
               
-              <p>World War Bee 2 erupts across New Eden as the Imperium faces PAPI (PandaFam, Legacy Coalition, and others), a massive coalition assembled with one goal: destroy Goonswarm Federation.</p>
-              
-              <p>Following the loss of their home system in Fountain, MINC leadership chooses not to simply absorb into large Imperium fleet blobs. Instead, they form a SIG (Special Interest Group), a volunteer specialist strike force, with the goal of making a disproportionate impact with limited numbers. Identifying TEST Alliance's home region of Esoteria as critically vulnerable, TEST having stripped its defenses to concentrate forces in Delve, MINC deploys to Stain, NPC space on Esoteria's border.</p>
+              <p>World War Bee 2 erupts across New Eden as the Imperium faces PAPI, PandaFam, Legacy Coalition, and a coalition of enemies assembled with one goal: destroy Goonswarm Federation. As the war kicks off mid-year, MINC evacuates Fountain. Leadership judges it an indefensible floodplain and declares an end to the endless shuffle between regions. They fall back to Delve and 1DQ.</p>
+              <p>Defending Imperium space breeds real frustration. By October, leadership is floating the idea of joining Goonswarm directly, partly for war-time SRP access, partly as a longer-term stability. The discussion is shelved for now, but it marks another time it is seriously considered leaving. </p>
+              <p>Rather than absorbing into Imperium fleet blobs, MINC leadership chooses a different path. Instead, they form a Special Interest Group, a volunteer group, with the goal of making a disproportionate impact with limited numbers. Identifying TEST Alliance's home region of Esoteria as critically vulnerable as their best pvp pilots are now concentrate in Delve, MINC deploys to Stain, NPC space on Esoteria's border.</p>
               <div class="battle-thumbnails">
-                <a href="assets/20201105_Delta%20target.jpg" target="_blank" class="battle-thumb"><img src="assets/20201105_Delta%20target.jpg" alt="Remember Fountain - Delta Squad, November 2020" style="height:180px; width:auto; object-fit:unset;"></a>
+                <a href="assets/20201105_Delta%20target.jpg" target="_blank" class="battle-thumb"><img src="assets/20201105_Delta%20target.jpg" alt="Remember Fountain - Delta Squad, November 2020"></a>
               </div>
               <span class="battle-tag">Esoteria Operations, 2020&ndash;2021</span>
               <p>MINC's Esoteria deployment began as a forward operation built around disruption, diplomacy, and sustained pressure. As the primary coordinators for the effort within The Bastion, MINC organized the campaign structure, developed operational systems, and coordinated the wider effort with Imperium allies. After arriving in the region, MINC negotiated access with Stain Rus, the Russian-speaking coalition that controlled Esoteria, establishing a forward base and building a partnership that became central to the campaign.</p>
               <p>The opening strategy focused on creating constant pressure against TEST's infrastructure. Rather than relying only on large fleet engagements, MINC developed a system of coordinated harassment operations designed to keep TEST responding across the region. Small strike groups, independent pilots, and shared operational tracking allowed pressure to continue around the clock without requiring a full fleet deployment for every objective.</p>
               <div class="battle-thumbnails">
-                <a href="assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" target="_blank" class="battle-thumb"><img src="assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" alt="Multi-boxing cynobeacon runs in Esoteria, Aug 26 2020" style="width:auto; height:160px; object-fit:unset;"></a>
+                <a href="assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" target="_blank" class="battle-thumb"><img src="assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" alt="Multi-boxing cynobeacon runs in Esoteria, Aug 26 2020"></a>
               </div>
               <p>As TEST adapted, MINC escalated the campaign. A forward staging base was established in HT4K, expanding operational reach across Esoteria and allowing attacks to move beyond harassment into direct infrastructure warfare. MINC coordinated structure operations, sovereignty pressure, and regional objectives while allied forces provided additional support and larger fleet capabilities when needed.</p>
               <div class="battle-thumbnails">
@@ -1176,46 +1193,113 @@
                 <a href="assets/20210204_Bastion%20Leshak%20Fleet.png" target="_blank" class="battle-thumb"><img src="assets/20210204_Bastion%20Leshak%20Fleet.png" alt="Leshak Fleet, Feb 4 2021"></a>
                 <a href="assets/20210403_Esoteria%20Entosis.png" target="_blank" class="battle-thumb"><img src="assets/20210403_Esoteria%20Entosis.png" alt="Esoteria entosis ops, Apr 3 2021"></a>
               </div>
-              <p>By early 2021, the operation had grown far beyond its original scale. What began as a small SIG had become a sustained alliance-level deployment, requiring continued coordination between MINC leadership, The Bastion, Imperium allies, and regional partners. As the wider war shifted, MINC began consolidating forward assets while continuing to support broader Imperium operations.</p>
-              <p>The Esoteria deployment continued through the summer of 2021, with the final forward positions eventually being abandoned as the wider war changed direction. The campaign officially concluded in August as PAPI's invasion of Delve collapsed and World War Bee 2 ended with an Imperium victory.</p>
-              <p>The Esoteria campaign became MINC's defining operation of World War Bee 2, transforming the group from a small SIG into a full alliance deployment and earning recognition as the longest forward deployment by an Imperium member group during the war.</p>
-              <p>None of this would have been possible without the support and commitment of MINC's allies across The Bastion, the Imperium, and the regional partners who helped make the campaign successful.</p>
-              <p>Following the conclusion of the campaign, Primus Buck stepped down as CEO, appointing Khronos Thellere as his successor.</p>
+              <p>The war concludes in August with an Imperium victory. PAPI's invasion collapses, and MINC's Esoteria campaign, the longest sustained forward deployment by any Imperium member group during the war, ends. Primus Buck steps down as CEO, appointing Khronos Thellere.</p>
+              <p>The back half of 2021 is marked by post-war malaise. CCP's scarcity era has thinned the economy, and a broader sense of resentment settles in: the corps that did the most during the war received the least recognition for it. The corp pivots toward Pochven for content while leadership figures it out.</p>
+              <p>From late August, a forward hunting operation called Delta Squad runs small-gang fleets in search of kills across the region. The appetite is there even if the numbers aren't yet.</p>
+              <p>In late December, MINC absorbs X-Alpha (XALFA) in a friendly arrangement that brings new pilots into the corp and elevates Matt Falahe and Almalexia Vivekosia to the directorate. By the end of the year, the corp has the people and the income, it just needs the direction.</p>
             </div>
 
             <div class="timeline-entry" id="y2022">
               <span class="timeline-year">2022</span>
-              <p>MINC leaves The Bastion and joins Goonswarm Federation directly, finally making the move the directorship had contemplated back in 2016. After years of fighting alongside Goonswarm, the corp finds a home in the alliance it helped defend.</p>
-            
-              <p>In March, the corporation identified the lowsec system Efa as a strategically valuable location due to its position between highsec and nullsec, as well as its access to infrastructure and moon resources. Following initial assessment, MINC leadership made the decision to establish control over the system rather than simply defend it. </p>
-            
-             <p>Over the following years, Efa became a sustained operational focus for the corporation. Moon mining operations provided steady income, while industrial and logistics pilots developed internal production chains to support ongoing activity. The system saw repeated periods of conflict, with structures being lost and replaced multiple times during engagements involving entities such as TEST Alliance and PanFam. Despite these setbacks, MINC repeatedly re-established its presence and rebuilt its infrastructure within the system.
-            
-             </p>Across this period of continuous activity, Efa developed into a long-term staging and industrial hub for the corporation. It functioned as a stable internal base of operations outside of major nullsec power centers, supporting both economic activity and small-scale combat operations while reinforcing MINC's ability to sustain independent infrastructure under pressure.
+              <p>On February 4, Bastion Delta Squad deployment is called off. The hunting deployment had run since late December, sending small-gang fleets out to track and kill enemy ships across the region — Delta Squad videos and all. Participation never reached what leadership had hoped for, and those who kept it running were recognized as the deployment wound down. Short-lived, but it proved the appetite was there.</p>
+              <p>The directorate turns its attention to a larger move, unhappy with the culture and personailty issues within The Bastion, MINC is the first corporation to leave the alliance, despite the pride of the last two years of beign the primary pvp coordinators for the alliance. This being a chain reaction exodus is across The Bastion and our friends  UVIM, ADFU, REVI, EDF, begin to find new new homes. In March, MINC formally proposes a merger to DIBLE's leader Shinyo: both corps leave The Bastion and head sepearte ways but shortly thereafter DIBLE leadership desides to sunset the corp, and the memebership who wishes to remain with GSF joing MINC</p>
+              <p>On April 20, MINC joins Goonswarm Federation directly, finally making the move the directorship had contemplated back in 2016. After years of fighting alongside Goonswarm, the corp finds a home in the alliance it helped defend.</p>
+              <p>In March, a lowsec system called EFA comes onto the radar a corporation member anchors infastructure in a lowsec system that just had it's infastrucutre blown up and turns it over to the corp as the moons tend to be pretty profible, Efa sits between highsec and nullsec, a natural gateway for industry and moon income, and the constellation around it is ripe for the taking. The decision is made to make this our primary moon and industry system.</p>
+              <p>What follows is four years of MINC at its most self-sufficient. Moon pulls sustain the wallet. Industrialists find purpose filling the production chains. Small gang pilots find content at the front door. EFA is glassed at least three times. Each time, the corp returns and rebuilds, partly from sheer stubbornness, and partly from an abundant supply of structures seized from TEST and PanFam during the war. The cycle of destruction and reconstruction becomes part of what EFA is.</p>
             </div>
 
             <div class="timeline-entry" id="y2023">
               <span class="timeline-year">2023</span>
-              <span class="timeline-note">&#9888; NOTE: What did we do this year?!?!!?1!?!?!?</span>
+              <p>2023 is a lull. The momentum from the post-war rebuild and the move into Goonswarm carries the corp into the year, but it bleeds off quickly. Leadership goes quiet. For much of the year there is a real sense that no one is actively steering the ship, and the corp begins to drift. A spring Imperium war deployment pulls members away from home and leaves MINC's own Khanid moon holdings exposed in the process. By autumn, leadership is openly weighing whether MINC can continue on its own at all, or whether the path forward is a merger into a larger group, or quietly closing a chapter.</p>
+              <p>The defining tension of the year is over leadership itself. RVAMitchell, increasingly frustrated by the drift, pushes hard for Khronos Thellere to hand over the corporation. The disagreement is difficult and personal, and it nearly costs the two long-serving leaders their relationship. The matter comes to a head in March. Khronos remains CEO for the time being, but the underlying problem, that MINC needs someone actively at the helm, goes unresolved and carries straight into the following year.</p>
             </div>
 
             <div class="timeline-entry" id="y2024">
               <span class="timeline-year">2024</span>
-              <p>Khronos Thellere steps down as CEO, appointing RVAMitchell.</p>
+              <p>In January, Khronos Thellere steps down as CEO and RVAMitchell takes over, resolving the leadership question that had hung over the corp for the better part of a year. Khronos leaves EVE for good, liquidating his skill points and assets and distributing them among friends and the corp, including a substantial ISK injection into the wallets to fund what comes next. It is a generous exit from someone who had carried the corp through its post-war years.</p>
+              <p>RVAMitchell is given the role of CEO.</p>
             </div>
 
             <div class="timeline-entry" id="y2025">
               <span class="timeline-year">2025</span>
-              <p>When GSF declares the migration to Catch and Immensea, the directorate judges the realignment necessary. EFA is seeded back to the wild. The territory that had been mined, defended, glassed, and rebuilt across four exceptional years is quietly released, and the corp turns to face its next chapter. Pilots still make the trip back from time to time, not to reclaim anything, but to walk the empty belts and hear the old ghosts.</p>
+              <p>When GSF declares the migration to Catch and Immensea, the directorate judges the realignment necessary. Efa is returned back to the wild.</p>
               <p>The Imperium repositions closer to Pandemic Horde's territory. MINC marks the move by anchoring a faction Fortizar in RNF-YH (Catch), the same system where MINC Delirium once stood, naming it in honor of the corporation's first Outpost. The tribute proves short-lived; within six months, operations shift and MINC moves on.</p>
               <p>A second repositioning brings MINC deeper into Horde's sphere. Shortly after, Pandemic Horde suffers a catastrophic internal collapse, imploding and leaving a massive power vacuum where one of nullsec's largest alliances had stood.</p>
-              <span class="timeline-note">&#9888; NOTE: Placeholder for the waterboarding of Horde</span>
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">The Waterboarding of Horde</span>
+                  <span class="battle-header-date">November 2025</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>On November 5th, Gobbins announces that Pandemic Horde is abandoning the PanFam coalition and the Dronelands, then steps down as leader. Line members and allies learn of it alongside everyone else, while Horde's leadership has already moved its own wealth to safety. The relocation is cover for an evacuation that leaves the rank and file stranded, and the Imperium refuses to let them slip away unanswered.</p>
+                  <p>MINC races up to be there for yet another defining moment in New Eden's history, putting members on grid in HICs and dictors to ensure nothing escapes. Across a five-day hellcamp of the Horde staging Keepstar in R-AG7W, MINC pilots hold the bubbles in rotation while Horde's titans sit docked and its supers never commit. The structure dies, thousands lose everything to asset safety, and a peak of nearly fifty thousand members collapses within weeks. PanFam ceases to exist, and one of nullsec's largest powers ends without a final stand — with MINC on the grid to see it through.</p>
+                  <p><a href="https://zkillboard.com/kill/131126432/" target="_blank" style="font-size:9px; color:#576b84;">zkillboard &#8599;</a></p>
+                  <div class="battle-thumbnails">
+                    <a href="assets/20251106%20CorpPingtoKillHordeKeepstar.png" target="_blank" class="battle-thumb"><img src="assets/20251106%20CorpPingtoKillHordeKeepstar.png" alt="Corp ping to kill Horde Keepstar, Nov 6 2025"></a>
+                    <a href="assets/20251106%20MoveOP%20to%20kill%20HordeKeepstar.png" target="_blank" class="battle-thumb"><img src="assets/20251106%20MoveOP%20to%20kill%20HordeKeepstar.png" alt="Move op to Horde Keepstar, Nov 6 2025"></a>
+                    <a href="assets/20251109%20Ping%20for%20KeepstarKilltimer.png" target="_blank" class="battle-thumb"><img src="assets/20251109%20Ping%20for%20KeepstarKilltimer.png" alt="Ping for Keepstar kill timer, Nov 9 2025"></a>
+                    <a href="assets/hordebeenstarcamping.png" target="_blank" class="battle-thumb"><img src="assets/hordebeenstarcamping.png" alt="Hellcamp of Horde Keepstar"></a>
+                    <a href="assets/Hordebeenstartimer.png" target="_blank" class="battle-thumb"><img src="assets/Hordebeenstartimer.png" alt="Horde Keepstar final timer"></a>
+                    <a href="assets/HordeKeepstarBlowsUp.png" target="_blank" class="battle-thumb"><img src="assets/HordeKeepstarBlowsUp.png" alt="Horde Keepstar destroyed"></a>
+                  </div>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><img src="https://images.evetech.net/types/671/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Leviathan</span></div>
+                    <div class="roster-card"><img src="assets/portraits/almalexia-vivekosia.jpeg" alt="" class="roster-portrait"><span class="roster-name">Almalexia Vivekosia</span><img src="assets/ship-icons/256px-Hel.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Hel</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">NeoPsyco</span><img src="assets/ship-icons/256px-Revelation.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Revelation</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">outlaw1968</span><img src="https://images.evetech.net/types/17636/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Raven Navy Issue</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Youhao Pingguo nongmin</span><img src="assets/ship-icons/256px-Broadsword.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Broadsword</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Tachi ArikHamoru</span><img src="https://images.evetech.net/types/11985/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Basilisk</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Karnf Stargazer</span><img src="https://images.evetech.net/types/11985/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Basilisk</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Dark Oldcrow</span><img src="https://images.evetech.net/types/16231/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Cyclone Fleet Issue</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">The Calvary</span><img src="https://images.evetech.net/types/11184/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Lachesis</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Ashley Quinn-T'soni</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Yalena Yaardeen</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Lord Goochland</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Takashi Shiroganee</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/matt-falahe.jpeg" alt="" class="roster-portrait"><span class="roster-name">Matt Falahe</span><img src="https://images.evetech.net/types/11200/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Keres</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">TankGirl</span><img src="https://images.evetech.net/types/11200/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Keres</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Mohtceppat</span><img src="https://images.evetech.net/types/2175/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Impairor</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Tokyo Haggar</span><img src="https://images.evetech.net/types/590/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Slasher</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Ryan Kehlani</span><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Harpy</span></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="timeline-entry" id="y2026">
               <span class="timeline-year">2026</span>
-              <p>War erupts between the Imperium and Fraternity (FRT). MINC participates in a daring operation: the headshot of Fraternity's staging Keepstar. The attack succeeds, marking the first time in EVE history that a nullsec power bloc successfully destroys another bloc's primary staging citadel in a direct assault. The operation demonstrates a shift in nullsec warfare doctrine and cements MINC's reputation for participating in history-making engagements.</p>
+              <p>War erupts between the Imperium and Winter Coalition. MINC participates in a daring operation: the headshot of Fraternity's staging Keepstar. The attack succeeds, marking the first time in EVE history that a nullsec power bloc successfully destroys another bloc's primary staging citadel in a direct assault.</p>
+              <div class="battle-thumbnails">
+                <a href="assets/FRT%20KeepstarHeadshot.png" class="battle-thumb"><img src="assets/FRT%20KeepstarHeadshot.png" alt="FRT Keepstar headshot"></a>
+              </div>
               <span class="timeline-note">&#9888; NOTE: Need more details about the FRT keepstar headshot operation</span>
+
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Battle of Atioth</span>
+                  <span class="battle-header-date">April 2026</span>
+                </div>
+                <div class="battle-box-content">
+                  <p>The Imperium opens its campaign against Winter Coalition by dropping a Keepstar in Atioth, Geminate. The response is immediate. Both sides pour in until over ten thousand pilots fill a single system — the largest gathering in the game's history. MINC is on grid at form-up.</p>
+                  <p>Minutes before the Keepstar can online, the node collapses under the load. The core is never installed. Pilots knocked offline cannot log back in, while WinterCo reinforcements jump in freely and work through the field unopposed. The Keepstar dies. Roughly thirty Imperium titans are destroyed alongside close to ten trillion ISK. MINC takes the loss with the rest of the Imperium and stays in the war.</p>
+                  <span class="timeline-note">&#9888; NOTE: Roster still being compiled</span>
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/purpleshadez.jpeg" alt="" class="roster-portrait"><span class="roster-name">Purpleshadez</span><img src="https://images.evetech.net/types/16231/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Cyclone Fleet Issue</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">hedloc</span><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Svipul</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Rus Killgore</span><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Svipul</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Richi Rich</span><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Svipul</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Blooded Heromy</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Green Leaner</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Monti Xonicstar</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Cornpone</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Knight Acos</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Dark Oldcrow</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Slappy McPewpew</span><img src="https://images.evetech.net/types/22442/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Claymore</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Yamoni</span><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Harpy</span></div>
+                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Tal'Rashas feine Kleidung</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="timeline-entry" id="ten-year-club">
@@ -1515,6 +1599,35 @@ function updateVeteranCounters() {
 }
 updateVeteranCounters();
 setInterval(updateVeteranCounters, 60000);
+</script>
+
+<div id="r-lightbox" onclick="this.classList.remove('open')">
+  <img id="r-lightbox-img" src="" alt="">
+</div>
+<script>
+function openLightbox(src, alt) {
+    var lb = document.getElementById('r-lightbox');
+    document.getElementById('r-lightbox-img').src = src;
+    document.getElementById('r-lightbox-img').alt = alt || '';
+    lb.classList.add('open');
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') document.getElementById('r-lightbox').classList.remove('open');
+});
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a.battle-thumb').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if (!href || href.charAt(0) === '#') return;
+        if (/^https?:\/\//i.test(href)) return;
+        var img = a.querySelector('img');
+        var alt = img ? img.getAttribute('alt') : '';
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+            openLightbox(href, alt);
+        });
+        a.removeAttribute('target');
+    });
+});
 </script>
 
 </body>
