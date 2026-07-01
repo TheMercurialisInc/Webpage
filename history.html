@@ -282,14 +282,14 @@
     grid-template-columns: 40px auto;
     grid-template-areas:
         "portrait ship"
-        "pname    pname"
-        "sname    sname";
+        "pname    pname";
     column-gap: 3px;
     row-gap: 1px;
     background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
     border: 1px solid #2e2e2e;
     padding: 3px;
     align-items: start;
+    position: relative;
 }
 .roster-portrait {
     grid-area: portrait;
@@ -364,13 +364,20 @@
     display: block;
     line-height: 1.3;
 }
-.roster-ship-name {
-    grid-area: sname;
+.roster-ship-name { display: none; }
+#ship-tip {
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    background: rgba(10,10,10,0.95);
+    border: 1px solid #8b6914;
+    color: #d4b86a;
     font-size: 9px;
-    color: #555;
-    font-family: Verdana, Arial, sans-serif;
-    display: block;
-    line-height: 1.3;
+    font-family: "Courier New", monospace;
+    padding: 2px 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    line-height: 1.6;
 }
 .roster-faction-header {
     font-size: 9px;
@@ -397,7 +404,9 @@
 }
 .battle-thumb img {
     width: 100%;
-    height: auto;
+    height: 110px;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 .battle-thumb:hover { border-color: #8b6914; }
@@ -527,12 +536,29 @@
     cursor: zoom-out;
 }
 #r-lightbox.open { display: flex; }
-#r-lightbox img {
+#r-lightbox-wrap {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
     max-width: 92vw;
-    max-height: 88vh;
+}
+#r-lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
     border: 1px solid #8b6914;
     box-shadow: 0 0 40px rgba(0,0,0,0.9);
-    cursor: default;
+}
+#r-lightbox-caption {
+    padding: 6px 10px;
+    background: rgba(0,0,0,0.75);
+    color: #d4b86a;
+    font-size: 10px;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    border: 1px solid #8b6914;
+    border-top: none;
+    pointer-events: none;
 }
 </style>
 </head>
@@ -775,6 +801,9 @@
               <span class="timeline-year">2005</span>
               
               <p>MINC joins its first official in-game alliance, Interstellar Alcohol Conglomerate (IAC), and establishes operations in Catch. IAC brought together European and American players under a strong shared culture, and MINC became part of one of nullsec's early communities. At the time, the corp ran roughly twenty active pilots.</p>
+
+              <img src="assets/DOTLAN_2005-10-01_ALLIANCE_JOINS_IAC.png" alt="DOTLAN record: MINC joins IAC, Oct 1 2005" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
             </div>
 
             <div class="timeline-entry" id="y2007">
@@ -800,10 +829,10 @@
                 <a href="assets/2007FanfestDrinks.jpg" target="_blank" class="battle-thumb"><img src="assets/2007FanfestDrinks.jpg" alt="Fanfest 2007 drinks"></a>
               </div>
               <div class="roster-grid">
-                <div class="roster-card"><img src="assets/portraits/Isayo-Arkindra.jpeg" alt="" class="roster-portrait"><span class="roster-name">Isayo Arkindra</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">CEO</span></div>
-                <div class="roster-card"><img src="assets/portraits/thundirr.jpeg" alt="" class="roster-portrait"><span class="roster-name">Thundirr</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">MINC</span></div>
-                <div class="roster-card"><img src="assets/portraits/mannakin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mannakin</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">MINC</span></div>
-                <div class="roster-card"><img src="assets/portraits/ha-chu.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ha Chu</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">MINC</span></div>
+                <div class="roster-card"><img src="assets/portraits/Isayo-Arkindra.jpeg" alt="" class="roster-portrait"><span class="roster-name">Isayo Arkindra</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">Tuborg</span></div>
+                <div class="roster-card"><img src="assets/portraits/thundirr.jpeg" alt="" class="roster-portrait"><span class="roster-name">Thundirr</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">Tuborg</span></div>
+                <div class="roster-card"><img src="assets/portraits/mannakin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mannakin</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">Tuborg</span></div>
+                <div class="roster-card"><img src="assets/portraits/ha-chu.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ha Chu</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">Tuborg</span></div>
               </div>
             </div>
 
@@ -811,12 +840,18 @@
               <span class="timeline-year">2008</span>
               <p>MINC builds its first outpost, MINC Delirium, in RNF-YH (Catch). <br></p>
               <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">
-                <img src="assets/DOTLAN-Event-MINC-Delirium.png" alt="MINC Delirium  DOTLAN EveMaps" style="max-width:65%; border:1px solid #d4b800;">
+                <img src="assets/DOTLAN-Event-MINC-Delirium.png" alt="MINC Delirium  DOTLAN EveMaps" style="max-width:39%; border:1px solid #d4b800;">
               </a>
               <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">DOTLAN EveMaps</a></p><br>
               
+              <img src="assets/DOTLAN_2008-09-30_ALLIANCE_Left_IAC.png" alt="DOTLAN record: MINC leaves IAC, Sep 30 2008" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 8px 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
+
               <P>Against All Authorities (AAA) soon brought superior numbers to bear and pushed IAC out of the region. MINC took real losses in the fighting; two motherships and the corp's Ragnarok.</P>
               <P> With IAC's hold on Catch broken, MINC left the alliance and joined Wildly Inappropriate.</P>
+
+              <img src="assets/DOTLAN_2008-12-30_ALLIANCE_Join_Wildly-Inappropriate.png" alt="DOTLAN record: MINC joins Wildly Inappropriate, Dec 30 2008" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
             </div>
 
             <div class="timeline-entry" id="y2009">mnbv
@@ -825,7 +860,7 @@
               <p>MINC keeps expanding in nullsec, building its second station, MINC Aberration, in C-4ZOS, Branch.</p>
 
               <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">
-                <img src="assets/DOTLAN-Event-MINC-Aberration.png" alt="MINC Aberration - DOTLAN EveMaps" style="max-width:65%; border:1px solid #d4b800;">
+                <img src="assets/DOTLAN-Event-MINC-Aberration.png" alt="MINC Aberration - DOTLAN EveMaps" style="max-width:39%; border:1px solid #d4b800;">
               </a>
               <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">DOTLAN EveMaps</a></p>
                <div class="battle-box">
@@ -851,6 +886,9 @@
               <p>MINC then joined Razor Alliance, which became home for the next six years. After years of regional churn, Razor offered stability and put MINC alongside some of the largest northern coalitions of the era. </p>
 
               <p>Around the same time, the founding CEO Isayo Arkindra stepped down and named xMillz as his successor.</p>
+
+              <img src="assets/DOTLAN_2010-09-06_CEO_Isayo_xMillz.png" alt="DOTLAN record: CEO Isayo Arkindra to xMillz, Sep 6 2010" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
             </div>
             <div class="timeline-entry" id="y2011">
@@ -929,6 +967,9 @@
             </div>
             <div class="timeline-entry" id="y2012">
               <span class="timeline-year">2012</span>
+
+              <img src="assets/DOTLAN_2012-09-26_CEO_xMillz_Nairb.png" alt="DOTLAN record: CEO xMillz to Nairb Ecrep, Sep 26 2012" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 8px 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <p>xMillz leaves the game and hands the CEO title to Nairb Ecrep, but keeps his corporation shares. During the Razor period, MINC takes the outpost in P-E (Geminate) and names it De Ja Vu. The corp keeps operating in the northern regions as part of Razor.</p>
 
@@ -1026,12 +1067,21 @@
               <p>It's an impossible choice. Losing the assets would cripple the corp; refusing would risk losing MINC entirely. Reluctantly, the directorate pays.</p> 
               
               <p>marly cortez takes over as CEO and immediately starts rebuilding. With backing from Razor leadership, including Rich DK, MINC claws its way back from the brink. It's one of the clearest examples of what MINC is not a corp that collapses, but one that keeps surviving things that would end most others.</p>
+
+              <img src="assets/DOTLAN_2015-01-16_CEO_NAIRB_MARLY.png" alt="DOTLAN record: CEO Nairb Ecrep to marly cortez, Jan 16 2015" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
               </div>
 
             <div class="timeline-entry" id="y2016">
               <span class="timeline-year">2016</span>
               <span class="timeline-note">&#9888; NOTE: Add context for why MINC left RAZOR Alliance</span>
               
+              <div class="battle-thumbnails">
+                <a href="assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" class="battle-thumb"><img src="assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" alt="DOTLAN record: MINC leaves RAZOR Alliance, Mar 25 2016" style="height:auto;object-fit:contain;"></a>
+                <a href="assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" class="battle-thumb"><img src="assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" alt="DOTLAN record: MINC joins The Bastion, Mar 26 2016" style="height:auto;object-fit:contain;"></a>
+              </div>
+              <p style="font-size:11px; color:#576b84; margin:4px 0 8px 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
+
               <p>As the decision lands to leave Razor, the directorate weighs its options. Goonswarm Federation looks viable, but the read is that it's an endgame move, that Goonswarm's stability and safety, appealing as they are, might breed complacency and a slow fade into irrelevance.</p>
 
               <p>Instead, the corp joins The Bastion, a newer Imperium alliance that offers security and still has room to grow.</p>
@@ -1203,7 +1253,7 @@
                   <div class="roster-grid">
                     <div class="roster-card"><img src="assets/portraits/mystic-siren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mystic Siren</span><img src="assets/ship-icons/256px-Nyx.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Nyx</span></div>
                     <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><img src="assets/ship-icons/256px-Hel.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Hel</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Vixen Nyssa</span><img src="assets/ship-icons/256px-Avatar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Avatar</span></div>
+                    <div class="roster-card"><img src="assets/portraits/vixen-nyssa.jpeg" alt="" class="roster-portrait"><span class="roster-name">Vixen Nyssa</span><img src="assets/ship-icons/256px-Avatar.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Avatar</span></div>
                     <div class="roster-card"><img src="assets/portraits/karl-mason.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karl Mason</span><img src="assets/ship-icons/256px-Muninn.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Muninn</span></div>
                     <div class="roster-card"><img src="assets/portraits/draco-beleren.jpeg" alt="" class="roster-portrait"><span class="roster-name">Draco Beleren</span><img src="assets/ship-icons/256px-Cerberus.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Cerberus</span></div>
                   </div>
@@ -1234,6 +1284,9 @@
               
               <p>The war ends in August with an Imperium victory. PAPI's invasion collapses, and MINC's Esoteria campaign, the longest sustained forward deployment by any Imperium member group in the war, wraps up with it. Primus Buck steps down as CEO and hands off to Khronos Thellere.</p>
 
+              <img src="assets/DOTLAN_2021-08-19_CEO_PRIMUS_KHRONOS.png" alt="DOTLAN record: CEO Primus Buck to Khronos Thellere, Aug 19 2021" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 8px 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
+
               <p>The back half of 2021 sinks into post-war malaise. CCP's scarcity era has thinned the economy, and a real resentment settles in: the corps that did the most during the war got the least recognition for it. The corp pivots to Pochven for content while leadership figures things out.</p>
               
               <p>From late August, a forward hunting op called Delta Squad runs small-gang fleets looking for kills across the region. The appetite is there, even if the numbers aren't yet.</p>
@@ -1246,9 +1299,24 @@
 
               <p>In February, the Bastion Delta Squad deployment is called off. The hunting op had run since late December; participation never hit what leadership hoped for, and the people who kept it going were recognized as it wound down. Short-lived, but it proved the appetite was there.</p>
 
+              <span class="battle-tag">Delta Squad Deployment, Early 2022</span>
+              <div class="battle-thumbnails">
+                <a href="assets/2022%20Delta%20Staging%20Astra.png" target="_blank" class="battle-thumb"><img src="assets/2022%20Delta%20Staging%20Astra.png" alt="Delta Squad staging Astrahus, 2022"></a>
+                <a href="assets/2022%20Delta%20Deployment%20Staging%20Astra%20Defense.png" target="_blank" class="battle-thumb"><img src="assets/2022%20Delta%20Deployment%20Staging%20Astra%20Defense.png" alt="Delta Squad staging Astrahus under attack, 2022"></a>
+                <a href="assets/2022%20Delta%20Squad%20HotDrop.png" target="_blank" class="battle-thumb"><img src="assets/2022%20Delta%20Squad%20HotDrop.png" alt="Delta Squad hot drop, 2022"></a>
+                <a href="assets/2022%20Delta%20Nid%20Kill.png" target="_blank" class="battle-thumb"><img src="assets/2022%20Delta%20Nid%20Kill.png" alt="Delta Squad Nidhoggur kill, 2022"></a>
+                <a href="assets/2022%20Delta%20Nid%20Kill%20Sin.png" target="_blank" class="battle-thumb"><img src="assets/2022%20Delta%20Nid%20Kill%20Sin.png" alt="Delta Squad Nidhoggur kill - Sin, 2022"></a>
+              </div>
+
               <p>The directorate turns to a bigger move. Fed up with the culture and personality issues inside The Bastion, MINC becomes the first corp to leave the alliance, despite the years of pride in being its primary PvP coordinators. It sets off a chain-reaction exodus: our friends in UVIM, ADFU, REVI, and EDF all start looking for new homes.</p>
 
               <p>On April 20, MINC joins Goonswarm Federation directly, finally making the move the directorate had weighed back in 2016. After years of fighting alongside Goonswarm, the corp settles into the alliance it helped defend.</p>
+
+              <div class="battle-thumbnails">
+                <a href="assets/DOTLAN_2022-03-21_ALLIANCE_Left_Bastion.png" class="battle-thumb"><img src="assets/DOTLAN_2022-03-21_ALLIANCE_Left_Bastion.png" alt="DOTLAN record: MINC leaves The Bastion, Mar 21 2022" style="height:auto;object-fit:contain;"></a>
+                <a href="assets/DOTLAN_2022-03-22_ALLIANCE_Joined_GSF.png" class="battle-thumb"><img src="assets/DOTLAN_2022-03-22_ALLIANCE_Joined_GSF.png" alt="DOTLAN record: MINC joins Goonswarm Federation, Mar 22 2022" style="height:auto;object-fit:contain;"></a>
+              </div>
+              <p style="font-size:11px; color:#576b84; margin:4px 0 8px 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <p>In March, aa lowsec system called Efa comes onto the radar. A corp member anchors infrastructure in a system that had just had its own structures blown up, then hands it over to the corp, the moons tend to be pretty profitable. Efa sits between highsec and nullsec, a natural gateway for industry and moon income, with a constellation around it ripe for the taking. We decide to make it our primary moon and industry system.</p>
 
@@ -1266,6 +1334,9 @@
             <div class="timeline-entry" id="y2024">
               <span class="timeline-year">2024</span>
               <p>In January, Khronos Thellere steps down as CEO and RVAMitchell takes over, resolving the leadership question that had hung over the corp for the better part of a year. Khronos leaves EVE for good, liquidating his skill points and assets and distributing them among friends and the corp, including a substantial ISK injection into the wallets to fund what comes next. It's a generous exit from someone who carried the corp through its post-war years.</p>
+
+              <img src="assets/Dotlan_2024-01-25_CEO_KHRONOS_RVAMITCHELL.png" alt="DOTLAN record: CEO Khronos Thellere to RVAMitchell, Jan 25 2024" style="max-width:36%; border:1px solid #576b84; display:block;">
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
             </div>
 
             <div class="timeline-entry" id="y2025">
@@ -1299,22 +1370,22 @@
                   <div class="roster-grid">
                     <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><img src="https://images.evetech.net/types/671/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Leviathan</span></div>
                     <div class="roster-card"><img src="assets/portraits/almalexia-vivekosia.jpeg" alt="" class="roster-portrait"><span class="roster-name">Almalexia Vivekosia</span><img src="assets/ship-icons/256px-Hel.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Hel</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">NeoPsyco</span><img src="assets/ship-icons/256px-Revelation.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Revelation</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">outlaw1968</span><img src="https://images.evetech.net/types/17636/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Raven Navy Issue</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Youhao Pingguo nongmin</span><img src="assets/ship-icons/256px-Broadsword.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Broadsword</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Tachi ArikHamoru</span><img src="https://images.evetech.net/types/11985/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Basilisk</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Karnf Stargazer</span><img src="https://images.evetech.net/types/11985/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Basilisk</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Dark Oldcrow</span><img src="https://images.evetech.net/types/16231/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Cyclone Fleet Issue</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">The Calvary</span><img src="https://images.evetech.net/types/11184/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Lachesis</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Ashley Quinn-T'soni</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Yalena Yaardeen</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Lord Goochland</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Takashi Shiroganee</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
-                    <div class="roster-card"><img src="assets/portraits/matt-falahe.jpeg" alt="" class="roster-portrait"><span class="roster-name">Matt Falahe</span><img src="https://images.evetech.net/types/11200/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Keres</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">TankGirl</span><img src="https://images.evetech.net/types/11200/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Keres</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Mohtceppat</span><img src="https://images.evetech.net/types/2175/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Impairor</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Tokyo Haggar</span><img src="https://images.evetech.net/types/590/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Slasher</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Corporation/144534752_128.png" alt="" class="roster-portrait"><span class="roster-name">Ryan Kehlani</span><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Harpy</span></div>
+                    <div class="roster-card"><img src="assets/portraits/neopsyco.jpeg" alt="" class="roster-portrait"><span class="roster-name">NeoPsyco</span><img src="assets/ship-icons/256px-Revelation.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Revelation</span></div>
+                    <div class="roster-card"><img src="assets/portraits/outlaw1968.jpeg" alt="" class="roster-portrait"><span class="roster-name">outlaw1968</span><img src="https://images.evetech.net/types/17636/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Raven Navy Issue</span></div>
+                    <div class="roster-card"><img src="assets/portraits/youhao-pingguo-nongmin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Youhao Pingguo nongmin</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Broadsword.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Broadsword</span></div>
+                    <div class="roster-card"><img src="assets/portraits/tachi-arikhamoru.jpeg" alt="" class="roster-portrait"><span class="roster-name">Tachi ArikHamoru</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11985/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Basilisk</span></div>
+                    <div class="roster-card"><img src="assets/portraits/karnf-stargazer.jpeg" alt="" class="roster-portrait"><span class="roster-name">Karnf Stargazer</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11985/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Basilisk</span></div>
+                    <div class="roster-card"><img src="assets/portraits/dark-oldcrow.jpeg" alt="" class="roster-portrait"><span class="roster-name">Dark Oldcrow</span><img src="https://images.evetech.net/types/16231/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Cyclone Fleet Issue</span></div>
+                    <div class="roster-card"><img src="assets/portraits/the-calvary.jpeg" alt="" class="roster-portrait"><span class="roster-name">The Calvary</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11184/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Lachesis</span></div>
+                    <div class="roster-card"><img src="assets/portraits/ashley-quinn-t'soni.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ashley Quinn-T'soni</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/yalena-yaardeen.jpeg" alt="" class="roster-portrait"><span class="roster-name">Yalena Yaardeen</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/lord-goochland.jpeg" alt="" class="roster-portrait"><span class="roster-name">Lord Goochland</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/takashi-shiroganee.jpeg" alt="" class="roster-portrait"><span class="roster-name">Takashi Shiroganee</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/matt-falahe.jpeg" alt="" class="roster-portrait"><span class="roster-name">Matt Falahe</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11200/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Keres</span></div>
+                    <div class="roster-card"><img src="assets/portraits/tankgirl.jpeg" alt="" class="roster-portrait"><span class="roster-name">TankGirl</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11200/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Keres</span></div>
+                    <div class="roster-card"><img src="assets/portraits/mohtceppat.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mohtceppat</span><img src="https://images.evetech.net/types/2175/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Impairor</span></div>
+                    <div class="roster-card"><img src="assets/portraits/tokyo-haggar.jpeg" alt="" class="roster-portrait"><span class="roster-name">Tokyo Haggar</span><img src="https://images.evetech.net/types/590/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Slasher</span></div>
+                    <div class="roster-card"><img src="assets/portraits/ryan-kehlani.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ryan Kehlani</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Harpy</span></div>
                   </div>
                 </div>
               </div>
@@ -1341,18 +1412,18 @@
                   <span class="timeline-note">&#9888; NOTE: Roster still being compiled</span>
                   <div class="roster-grid">
                     <div class="roster-card"><img src="assets/portraits/purpleshadez.jpeg" alt="" class="roster-portrait"><span class="roster-name">Purpleshadez</span><img src="https://images.evetech.net/types/16231/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Cyclone Fleet Issue</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">hedloc</span><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Svipul</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Rus Killgore</span><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Svipul</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Richi Rich</span><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Svipul</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Blooded Heromy</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Green Leaner</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Monti Xonicstar</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Cornpone</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Knight Acos</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Dark Oldcrow</span><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Crusader</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Slappy McPewpew</span><img src="https://images.evetech.net/types/22442/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Claymore</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Yamoni</span><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Harpy</span></div>
-                    <div class="roster-card"><img src="https://image.eveonline.com/Character/1/portrait?size=64" alt="" class="roster-portrait" onerror="this.src='https://image.eveonline.com/Corporation/144534752_128.png'"><span class="roster-name">Tal'Rashas feine Kleidung</span><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><span class="roster-ship-name">Sabre</span></div>
+                    <div class="roster-card"><img src="assets/portraits/hedloc.jpeg" alt="" class="roster-portrait"><span class="roster-name">hedloc</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT3h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Svipul</span></div>
+                    <div class="roster-card"><img src="assets/portraits/rus-killgore.jpeg" alt="" class="roster-portrait"><span class="roster-name">Rus Killgore</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT3h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Svipul</span></div>
+                    <div class="roster-card"><img src="assets/portraits/richi-rich.jpeg" alt="" class="roster-portrait"><span class="roster-name">Richi Rich</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/34562/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT3h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Svipul</span></div>
+                    <div class="roster-card"><img src="assets/portraits/blooded-heromy.jpeg" alt="" class="roster-portrait"><span class="roster-name">Blooded Heromy</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="assets/portraits/green-leaner.jpeg" alt="" class="roster-portrait"><span class="roster-name">Green Leaner</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="assets/portraits/monti-xonicstar.jpeg" alt="" class="roster-portrait"><span class="roster-name">Monti Xonicstar</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="assets/portraits/cornpone.jpeg" alt="" class="roster-portrait"><span class="roster-name">Cornpone</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="assets/portraits/knight-acos.jpeg" alt="" class="roster-portrait"><span class="roster-name">Knight Acos</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="assets/portraits/dark-oldcrow.jpeg" alt="" class="roster-portrait"><span class="roster-name">Dark Oldcrow</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/11176/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Crusader</span></div>
+                    <div class="roster-card"><img src="assets/portraits/slappy-mcpewpew.jpeg" alt="" class="roster-portrait"><span class="roster-name">Slappy McPewpew</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/22442/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Claymore</span></div>
+                    <div class="roster-card"><img src="assets/portraits/yamoni.jpeg" alt="" class="roster-portrait"><span class="roster-name">Yamoni</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Harpy</span></div>
+                    <div class="roster-card"><img src="assets/portraits/tal'rashas-feine-kleidung.jpeg" alt="" class="roster-portrait"><span class="roster-name">Tal'Rashas feine Kleidung</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
                   </div>
                 </div>
               </div>
@@ -1657,31 +1728,108 @@ updateVeteranCounters();
 setInterval(updateVeteranCounters, 60000);
 </script>
 
+<div id="ship-tip"></div>
+<script>
+(function() {
+    var tip = document.getElementById('ship-tip');
+    var tipTimer = null;
+    var pendingText = '';
+    function shipNameFromEl(el) {
+        // Try adjacent roster-ship-name sibling first
+        var nameEl = el.nextElementSibling;
+        while (nameEl && !nameEl.classList.contains('roster-ship-name')) nameEl = nameEl.nextElementSibling;
+        if (nameEl) return nameEl.textContent;
+        // Fallback: parse ship name from the img src filename (e.g. 256px-Bhaalgorn.jpg)
+        var img = el.classList.contains('roster-ship') ? el : el.querySelector('img.roster-ship');
+        if (img) {
+            var m = (img.getAttribute('src') || '').match(/256px-([^./]+)/i);
+            if (m) return m[1].replace(/-/g, ' ');
+        }
+        return '';
+    }
+    function showTip(el, e) {
+        var text = shipNameFromEl(el);
+        if (!text) return;
+        pendingText = text;
+        clearTimeout(tipTimer);
+        tipTimer = setTimeout(function() {
+            tip.textContent = pendingText;
+            tip.style.display = 'block';
+        }, 1000);
+        tip.style.left = (e.clientX + 14) + 'px';
+        tip.style.top  = (e.clientY + 10) + 'px';
+    }
+    function resolveShipEl(el) {
+        if (el.classList.contains('roster-ship-wrap') || el.classList.contains('roster-ships')) return el;
+        if (el.classList.contains('roster-ship') || el.classList.contains('ship-tier-badge')) {
+            var wrap = el.closest && el.closest('.roster-ship-wrap, .roster-ships');
+            return wrap || el;
+        }
+        return null;
+    }
+    document.addEventListener('mouseover', function(e) {
+        var target = resolveShipEl(e.target);
+        if (target) showTip(target, e);
+    });
+    document.addEventListener('mousemove', function(e) {
+        if (tip.style.display !== 'none') {
+            tip.style.left = (e.clientX + 14) + 'px';
+            tip.style.top  = (e.clientY + 10) + 'px';
+        }
+    });
+    document.addEventListener('mouseout', function(e) {
+        if (resolveShipEl(e.target)) {
+            clearTimeout(tipTimer);
+            tip.style.display = 'none';
+        }
+    });
+})();
+</script>
+
 <div id="r-lightbox" onclick="this.classList.remove('open')">
-  <img id="r-lightbox-img" src="" alt="">
+  <div id="r-lightbox-wrap">
+    <img id="r-lightbox-img" src="" alt="">
+    <div id="r-lightbox-caption"></div>
+  </div>
 </div>
 <script>
 function openLightbox(src, alt) {
     var lb = document.getElementById('r-lightbox');
     document.getElementById('r-lightbox-img').src = src;
     document.getElementById('r-lightbox-img').alt = alt || '';
+    var cap = document.getElementById('r-lightbox-caption');
+    cap.textContent = alt || '';
+    cap.style.display = alt ? 'block' : 'none';
     lb.classList.add('open');
 }
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') document.getElementById('r-lightbox').classList.remove('open');
 });
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a.battle-thumb').forEach(function(a) {
-        var href = a.getAttribute('href');
-        if (!href || href.charAt(0) === '#') return;
-        if (/^https?:\/\//i.test(href)) return;
-        var img = a.querySelector('img');
-        var alt = img ? img.getAttribute('alt') : '';
-        a.addEventListener('click', function(e) {
-            e.preventDefault();
-            openLightbox(href, alt);
-        });
-        a.removeAttribute('target');
+    var SKIP = ['roster-portrait','roster-ship','ship-tier-badge','ceo-portrait','veteran-portrait'];
+    function excluded(img) {
+        var c = img.className || '';
+        return SKIP.some(function(s) { return c.indexOf(s) !== -1; });
+    }
+    document.querySelectorAll('.timeline-entry img, .battle-box img').forEach(function(img) {
+        if (excluded(img)) return;
+        var src = img.getAttribute('src') || '';
+        if (/^https?:\/\//i.test(src)) return; // skip external (YouTube, EVE API, etc.)
+        var alt = img.getAttribute('alt') || '';
+        var parent = img.parentElement;
+        if (parent && parent.tagName === 'A') {
+            parent.style.cursor = 'pointer';
+            parent.addEventListener('click', function(e) {
+                e.preventDefault();
+                openLightbox(src, alt);
+            });
+            parent.removeAttribute('target');
+        } else {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                openLightbox(src, alt);
+            });
+        }
     });
 });
 </script>
