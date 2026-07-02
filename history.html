@@ -560,6 +560,88 @@
     border-top: none;
     pointer-events: none;
 }
+/* Video grid */
+.video-grid { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
+.video-tile {
+    display:inline-flex; flex-direction:column;
+    width:172px; text-decoration:none;
+    border:1px solid #2e2e2e; overflow:hidden;
+}
+.video-tile:hover { border-color:#8b6914; }
+.video-tile-img { position:relative; }
+.video-tile-img img { width:100%; height:97px; object-fit:cover; display:block; }
+.vplay {
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:36px; height:36px;
+    background:rgba(0,0,0,0.65); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    pointer-events:none;
+}
+.vplay > span {
+    display:block; width:0; height:0;
+    border-top:6px solid transparent;
+    border-bottom:6px solid transparent;
+    border-left:11px solid #fff;
+    margin-left:2px;
+}
+.video-label {
+    background:rgba(12,12,12,0.92); color:#d4b86a;
+    font-size:9px; font-family:"Courier New",monospace;
+    padding:3px 5px; display:block;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.video-date { color:#576b84; }
+/* Reddit member posts */
+.reddit-box {
+    border: 1px solid #333333;
+    border-top: 1px solid #606060;
+    margin: 8px 4px;
+}
+.reddit-header {
+    background: linear-gradient(180deg, #282828 0%, #1a1a1a 30%, #101010 65%, #1a1a1a 100%);
+    padding: 4px 8px;
+    border-bottom: 1px solid #505050;
+}
+.reddit-header-title {
+    display: block;
+    color: #d0d0d0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(200,200,200,0.12);
+}
+.reddit-header-meta {
+    display: block;
+    color: #606060;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 9px;
+    margin-top: 1px;
+}
+.reddit-box-content {
+    padding: 6px 8px 4px 8px;
+    background: linear-gradient(180deg, #181818 0%, #151515 100%);
+}
+.reddit-box-content p {
+    margin: 0 0 5px 0;
+    color: #b4b4b4;
+    font-size: 10px;
+    line-height: 1.6;
+    font-family: Verdana, Arial, sans-serif;
+}
+.reddit-expand > summary {
+    list-style: none;
+    cursor: pointer;
+    color: #585858;
+    font-size: 9px;
+    font-family: "Courier New", monospace;
+    padding: 4px 0 2px 0;
+    display: block;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 2px;
+}
+.reddit-expand > summary::-webkit-details-marker { display: none; }
 </style>
 </head>
 <body>
@@ -610,6 +692,7 @@
         <a href="#y2003" class="r-ylink">2003</a>
         <a href="#y2004" class="r-ylink">2004</a>
         <a href="#y2005" class="r-ylink">2005</a>
+        <a href="#y2006" class="r-ylink">2006</a>
         <a href="#y2007" class="r-ylink">2007</a>
         <a href="#y2008" class="r-ylink">2008</a>
         <a href="#y2009" class="r-ylink">2009</a>
@@ -806,6 +889,71 @@
               <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
             </div>
 
+            <div class="timeline-entry" id="y2006">
+              <span class="timeline-year">2006</span>
+
+              <p>MINC settles into life in Catch under IAC. Roaming ops, small gang fights, and the day-to-day grind of early nullsec fill the corp's logs. MINC was also produced short videos throughout the year documenting fleet operations, one-on-one tourneys, and life in IAC space.</p>
+
+              <div class="battle-thumbnails">
+                <div class="battle-thumb">
+                  <img src="assets/2006.11.27.10.43.11_Screenshot.jpg" alt="Nov 27, 2006 — Catch operations">
+                </div>
+                <div class="battle-thumb">
+                  <img src="assets/2006.11.27.18.05.49_Screenshot.jpg" alt="Nov 27, 2006 — IAC space roam">
+                </div>
+                <div class="battle-thumb">
+                  <img src="assets/2006.12.05.21.01.03_Screenshot.jpg" alt="Dec 5, 2006 — Catch nullsec">
+                </div>
+                <div class="battle-thumb">
+                  <img src="assets/2006.12.05.21.01.13_Screenshot.jpg" alt="Dec 5, 2006 — Catch nullsec">
+                </div>
+                <div class="battle-thumb">
+                  <img src="assets/2006.12.05.21.01.26_Screenshot.jpg" alt="Dec 5, 2006 — Catch nullsec">
+                </div>
+              </div>
+              <p style="font-size:11px; color:#576b84; margin:4px 0 10px 0;">Screenshots courtesy of <a href="https://www.eve-files.com" target="_blank">Eve-Files</a> by Cribba.</p>
+
+              <div class="video-grid">
+                <a href="https://www.youtube.com/watch?v=jLl_JUaYWco" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/jLl_JUaYWco/mqdefault.jpg" alt="rapebus"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">rapebus <span class="video-date">· Sep 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=5uZgWPGxIYM" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/5uZgWPGxIYM/mqdefault.jpg" alt="EVE LV outpost blob"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">EVE LV outpost blob <span class="video-date">· Sep 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=Mmd-sOMaR4w" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/Mmd-sOMaR4w/mqdefault.jpg" alt="see it burn"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">see it burn <span class="video-date">· Oct 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=y8ziBw4qs1A" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/y8ziBw4qs1A/mqdefault.jpg" alt="cruiser1v1tourny"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">cruiser1v1tourny <span class="video-date">· Nov 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=6mwxkgaccVM" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/6mwxkgaccVM/mqdefault.jpg" alt="mincpromod"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">mincpromod <span class="video-date">· Dec 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=Hj1ZzO99p5s" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/Hj1ZzO99p5s/mqdefault.jpg" alt="mincpromol"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">mincpromol <span class="video-date">· Dec 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=ksm4jEE4rlo" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/ksm4jEE4rlo/mqdefault.jpg" alt="iacpromotry1"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">iacpromotry1 <span class="video-date">· Dec 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=tnZGwu1EI_o" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/tnZGwu1EI_o/mqdefault.jpg" alt="iacpromotry2"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">iacpromotry2 <span class="video-date">· Dec 2006</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=z4eULRqT7nQ" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/z4eULRqT7nQ/mqdefault.jpg" alt="dayiniac"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">dayiniac <span class="video-date">· Dec 2006</span></span>
+                </a>
+              </div>
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Videos originally hosted on <a href="https://www.eve-files.com" target="_blank">Eve-Files</a> by Cribba. Archived on YouTube.</p>
+            </div>
+
             <div class="timeline-entry" id="y2007">
               <span class="timeline-year">2007</span>
               
@@ -834,6 +982,42 @@
                 <div class="roster-card"><img src="assets/portraits/mannakin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Mannakin</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">Tuborg</span></div>
                 <div class="roster-card"><img src="assets/portraits/ha-chu.jpeg" alt="" class="roster-portrait"><span class="roster-name">Ha Chu</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">Tuborg</span></div>
               </div>
+
+              <div class="video-grid" style="margin-top:12px;">
+                <a href="https://www.youtube.com/watch?v=2-D9SerxX3w" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/2-D9SerxX3w/mqdefault.jpg" alt="posyawn"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">posyawn <span class="video-date">· Jan 2007</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=t9LYqTWS2iw" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/t9LYqTWS2iw/mqdefault.jpg" alt="npcvspvp"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">npcvspvp <span class="video-date">· Jan 2007</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=KWW0X9G6mQM" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/KWW0X9G6mQM/mqdefault.jpg" alt="hereisbob"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">hereisbob <span class="video-date">· Feb 2007</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=KG5hPyIYQGE" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/KG5hPyIYQGE/mqdefault.jpg" alt="liquorfront"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">liquorfront <span class="video-date">· Mar 2007</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=OsBo765Irns" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/OsBo765Irns/mqdefault.jpg" alt="mincshort1"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">mincshort1 <span class="video-date">· Aug 2007</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=ddPglCtmPA4" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/ddPglCtmPA4/mqdefault.jpg" alt="mincshort2"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">mincshort2 <span class="video-date">· Sep 2007</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=iUxjLQshi-I" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/iUxjLQshi-I/mqdefault.jpg" alt="obandthem"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">obandthem <span class="video-date">· Sep 2007</span></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=GH6NjYB3eXc" target="_blank" class="video-tile">
+                  <div class="video-tile-img"><img src="https://img.youtube.com/vi/GH6NjYB3eXc/mqdefault.jpg" alt="mincshort3 d1"><span class="vplay"><span></span></span></div>
+                  <span class="video-label">mincshort3 d1 <span class="video-date">· Dec 2007</span></span>
+                </a>
+              </div>
+              <p style="font-size:11px; color:#576b84; margin:4px 0 0 0;">Videos originally hosted on <a href="https://www.eve-files.com" target="_blank">Eve-Files</a> by Cribba. Archived on YouTube.</p>
             </div>
 
             <div class="timeline-entry" id="y2008">
@@ -1187,6 +1371,48 @@
               <p>A mid-year war deployment sours morale badly enough that one director unsubs over it, and the corp flip-flops its staging between O-PNSN and 7UTB. Even so, the back half of 2019 is a genuine growth stretch: more corps engaging, real response fleets forming, a wormhole operation standing up, and BLOPS harassment campaigns running into the north.</p>
 
               <p>Late 2019 brings the first serious talk of leaving The Bastion. The alliance feels less like a fighting outfit and more like a retirement home, like being second-class citizens in the Imperium. The idea gets raised, kicked around, and ultimately shelved.</p>
+
+              <div class="reddit-box">
+                <div class="reddit-header">
+                  <span class="reddit-header-title">AAR: 15W-GC — Baltec Fleet vs NC./PanFam</span>
+                  <span class="reddit-header-meta">u/CaptnDavo (Mystic Siren) · r/Eve · January 16, 2019</span>
+                </div>
+                <div class="reddit-box-content">
+                    <p style="color:#4a7096; font-style:italic; margin-bottom:6px;">This is a Personal after action account of the battle of 15w-GC. Its all wrong. Hate mail can be sent to Draco Beleren in game.</p>
+                    <p>It's a beautiful Sunday. The Wife kisses me goodbye. She heads off to work while I sit at home in my underwear and play video games. I cop a feel and send her on her way. Lumbering over to my chair, I fire up the ol' battle station. It's time to play some internet spaceships!</p>
+                    <p>Ping! Let's shoot some structures ladies. I've got some glassing to do and you are just the scrubs to do it. Form up in Baltecs and let's do this thing. (Obviously not named after the disastrous Russian Battleship fleet summarily destroyed by the Japanese in 1905). I grab the most expensive megathron on contracts and join the fleet sucksass. Newish FC, sounds excited to be reffing some reffable rubbish.</p>
+                  <details class="reddit-expand">
+                    <summary>▶ Read full post</summary>
+                    <p>I remove some extra cap boosters for more t1 ammo… because why not. Who needs those anyway? More Pew is better Pew I always say. NCdock hasn't show up for a week why would they do so today?</p>
+                    <p>Bridge to the first objective and start to Bash the fash. Top Kek they say. Honk for the Honk God. It's boring, super boring and takes about 25-30 minutes.</p>
+                    <p>Warp to the next objective. About 6 minutes in at about 23:10 we start to see a scrubby little bastard warping around and giving the fast tackle something to play with.</p>
+                    <p>3 Minutes Later FC crackles over the VOX: Vigilance Brothers. Tend to your weapons. Clear your guns and Load Fury. The Enemy Approaches!</p>
+                    <p>Caldari Navy Loaded. Local Begins to Spike. At 23:15 The first Munnin Fleet arrives on Grid. Fucking finally… then ships begin to die. At 23:15, on the Holy day of Battle, Evota Hero tackler of the imperium drops a bubble on the munnins and gets melted.</p>
+                    <p>At 23:16 – The Baltec Fleet and NC munnins begin to trade ship for ship.</p>
+                    <p>FC: Lock up Lady Aella… and Fire…. My battle station beeps and the Munnin flashes out of existence. Lock targets 2 3 and 4. Wait for it… full broadside. Check ammo, check Range… we're ping ponging all over the place within a minute it's a mad Brawl.</p>
+                    <p>At 23:20, Our fearless leader, Chapter Master and Hero Primus Buck falls in a hail of gun fire and fortizar Bombs. Not before single handedly ravaging the Pandemic Legion battle line, claiming the Heavy assault cruisers Kazi Kugisa, Deros, and Bert Macklin1.</p>
+                    <p>New Pings are flying through the Imperium. The Crab shudders. The Cry of battle has been heard and hundreds shall answer! Harpies and more Baltecs are Forming and ready to join. The Rumble of Titans can be heard as more warriors ready themselves to be thrust into battle.</p>
+                    <p>THERE WAS A FIRE FIGHT!!!!! For the Next 10 minutes the Baltec Fleet was caught between a Fortizar and 2 Munnin Fleets. We were furiously smashing Logistics cruisers. Losing many battleships in the process. Never give up! Never surrender!</p>
+                    <p>I take a quick sip from my Shirley temple and wipe the sweat from my brow. I change ammo. 30 KM. wait next target is 85km. Ha, Blapped the Lachesis. Shit Stags Leap just went down. Boom another Munnin dies.</p>
+                    <p>At 23:28 all hope seeming lost, a shudder through the fleet, our champion has fallen. Carneros Leader and legend of the Bastion. His Bhaalgorn engulfed in flames explodes. Will the line break? Who among us can stand against such violence? Where is the Megathron and the Pilot? Where is the Ping that was calling? So much Death. What can men do against such reckless hate?</p>
+                    <p>At 2330 another Cyno goes up… What fresh hell is this… wait its blue! The first of the Calvary has arrived. Primus has returned brought friends! More battleships and assault frigates fly into system. We've drawn even. Still outnumbered and outgunned, but we're holding.</p>
+                    <p>More battleships die. More Logi and heavy assault cruisers Die. We're working our way into the Command structure now. 2 Horde Claymores are popped. We lose another Bhaalghorn.</p>
+                    <p>Another sip. Fuck they're at 23 km now. There is a malediction within spitting distance. Fuck it launch drones. Bombs be damned.</p>
+                    <p>Another Cyno goes up. Shit I'm out of cap boosters.</p>
+                    <p>Team speak Beeps madly. RVAMITCHELL: Mystic where the fuck are you going, get back to the fleet!</p>
+                    <p>Shit… I'm 70 km from our FC caressing the undercarriage of the NC/Pan Fleet….overheat prop mod on back to the blue blob. Pray for me Brothers.</p>
+                    <p>I hit the need armor button. Yellow Boxes everywhere. Boom. I take a Fort bomb to the face MWD blaring, it tastes salty.</p>
+                    <p>Ship Alarms blaring. 10% Armor. Fuck, I'm going to die. I'm so dead… I'm so fucking dead. I kiss my exotic dancer goodbye and watch as my drones kill the malediction. What's this? Is that a FAX? My Armor blasts to 100% back to 20%, back to 100%. I'm being hit and that big beautiful broken ass FAX just saved my damn life.</p>
+                    <p>My drones kill a random neutral Sunesis. Screw that guy. Boom another Lachesis. Shit Bombers. Where did my drones go?</p>
+                    <p>More imperium harpies arrive. More exploding ships. The Emperor Protects.</p>
+                    <p>For the next 10 minutes we smash their remaining Logi, many whelps. More DPS!</p>
+                    <p>At 23:50 NC. And PANFAM begin to break and run. Another Claymore Dies. The munnins warp out and leave their logi train to die.</p>
+                    <p>We finishing Reinforcing the Fort. The Imperium has held the objective at great cost, but it was glorious. On the way home, my Shirley Temple empty… our spirits lifted by battle, we catch a few stragglers. We smash a Loki and the Pandamic Horde FC in a Monitor on the out gate.</p>
+                    <p>51 kills later, I dock up and get ready for the next fleet.</p>
+                    <p><a href="https://www.reddit.com/r/Eve/comments/btwj1w/after_action_report_15wgc/" target="_blank" style="font-size:9px; color:#576b84;">reddit &#8599;</a></p>
+                  </details>
+                </div>
+              </div>
             </div>
 
             <div class="timeline-entry" id="y2020">
@@ -1199,6 +1425,52 @@
 
               <p>Instead of melting into the Imperium fleet blobs, MINC takes a different path: it forms a Special Interest Group, a volunteer outfit built to do disproportionate damage with small numbers. With TEST Alliance's home region of Esoteria left thin, the majority of their pilots now concentrated in Delve, MINC deploys to Stain, the NPC space on Esoteria's border.</p>
 
+              <div class="reddit-box">
+                <div class="reddit-header">
+                  <span class="reddit-header-title">AAR: R1O-GN — First Ragnarok Kill</span>
+                  <span class="reddit-header-meta">u/CaptnDavo (Mystic Siren) · r/Eve · May 20, 2020</span>
+                </div>
+                <div class="reddit-box-content">
+                    <p>Ugh… I've been sitting in this chair since 8:00am. I've already done 3 fleets today and we just had a big fight. Maybe I'll just go lay down before the kids come home… Ping... Jackdaws… uuurrrrggggghhhhh. Peacetime? Fuck all that noise I'm going to get a cookie.</p>
+                    <p>Some rando in alliance chat: For anyone deployed we need more ships. Sounds like were gonna get a fight.</p>
+                    <p>You son of a bitch I'm In. What's one more fleet? The Wifey isn't home yet. These fleets are pretty quick. Maybe I'll get to shoot something.</p>
+                    <p>FC calls for undock and we're off… to sit outside the station. 15 minutes go by and FC is still kicking drakes out of the fleet. Couple more minutes and we're finally flying through space.</p>
+                  <details class="reddit-expand">
+                    <summary>▶ Read full post</summary>
+                    <p>FC crackles over comms: (He sounds so young. Like Jack from Neverland Pirates.) "Ok guys and girls let me drop some ground rules. We're going to unfamiliar space. I don't actually know where we're going, but it'll be kind of fun."</p>
+                    <p>We're flying through lowsec, we're flying through high sec, I think we took a wormhole? I don't know, I'm not really paying attention. This kpop is bangin and Tzu-yu is best girl as usual. Where the hell are we going?</p>
+                    <p>We arrive in R1O-GN and warp around looking for trash. There is a distinct smell of garbage in this region. We pop a Nereus almost immediately. Was he even awake?</p>
+                    <p>FC: (Voice Cracking) "Lets shoot the jump bridge and see if these guys wanna fight"</p>
+                    <p>The fleet engages the Jump bridge. Bait taken we start to see Caracals, Caracals everywhere. And a Cave troll, I mean a Nagalfar. (It was a revelation)</p>
+                    <p>FC: Target the Nagalfar. We had yet to engage the Caracals, but we were happy to chew on the Nag… HAW Rev, for a bit while we waited.</p>
+                    <p>Finally the Caracals jump in. They jump in at 100km. Against Jackdaws. So anyway we started blasting. After losing 8 – 9 Caracals without even making being able to target us they break off. The HAW dread blaps an executioner. More caracals join the fight. Now they have Logi, interceptors, more trash.</p>
+                    <p>Now it's a fight. Land. Anchor. Primary. Take warp. Land. Anchor. Take Warp. Land Anchor Take warp. Lose a couple Jackdaws. Kill a Talwar, kill one of their Jackdaws… and on and on. We're flying around like Mad.</p>
+                    <p>We would land. They would land. We would warp. They would bubble themselves. We would shit talk in local. It was an experience.</p>
+                    <p>Wife: Honey I'm home. Can you help me bring in the groceries?</p>
+                    <p>Me: Fuck.</p>
+                    <p>Wife: Later dear. I need your help.</p>
+                    <p>Me: What?</p>
+                    <p>Wife: oh? Are you playing your spread sheets game. Are you losing again?</p>
+                    <p>At about 5:45 game time FC decides to break off. "We're not out of the fight until we're combat ineffective. I need to piss, so we're going to take a breather."</p>
+                    <p>We warp off and out of the system. 8 minutes later we're back in system harassing the garbage. Most of the caracals are back on the keep star. The HAW dreads look like they are multiplying. Well this is a mess. We take some pot shots at the dreads. FC looks like he wants to take the express way home.</p>
+                    <p>And then… then something interesting happens. What's that Ragnarok doing? Oh, it wants to go sit by the HAW dreads and shoot at the stupid jackdaw fleet.</p>
+                    <p>What's that? Cloaked Dictors? Ragnorok is Tackled?!</p>
+                    <p>FC: "All DPS on the RAG!!!!" (Me thinking: ok I love your enthusiasm, but we have 25 Jackdaws and a handful of dictors wtf are we going to do?)</p>
+                    <p>Falcon de-cloaks. Surprise. Cyno is lit. We are lit. Dreads arrive. Siege Green.</p>
+                    <p>(I shouldn't try thinking anymore)</p>
+                    <p>Kill the Nestor!!! Boom. Kill the… FC Dies. Keep shooting!!! Primary is the Rag. The shields start to melt.</p>
+                    <p>An Erebus warps over to consider dying, decides against it and warps off.</p>
+                    <p>Maybe the Rag is Armor fit? … Nope and boom the Rag is dead. *cheering over comms*</p>
+                    <p>I jump out of my Jackdaw and give it to the FC. I watch him fly off and die again. God Speed little buddy.</p>
+                    <p>Dread bomb doesn't look like it's going to escape. Boom they kill a hostile Dread.</p>
+                    <p>Is that a Hel? It was a Hel, boom!!!</p>
+                    <p>Battle Rorq joins the game!!! And Dies.</p>
+                    <p>The Screen goes white. Is this Heaven? Feels like Heaven.</p>
+                    <p><a href="https://www.reddit.com/r/Eve/comments/gn8m8e/aar_r1ogn_the_kalevala_expanse_20200520_0600_my/" target="_blank" style="font-size:9px; color:#576b84;">reddit &#8599;</a></p>
+                  </details>
+                </div>
+              </div>
+
               <div class="battle-thumbnails">
                 <a href="assets/20201105_Delta%20target.jpg" target="_blank" class="battle-thumb"><img src="assets/20201105_Delta%20target.jpg" alt="Remember Fountain - Delta Squad, November 2020"></a>
               </div>
@@ -1210,6 +1482,31 @@
                 <a href="assets/20210121_unknown-92.png" target="_blank" class="battle-thumb"><img src="assets/20210121_unknown-92.png" alt="Esoteria campaign - structure kill, Jan 2021"></a>
                 <a href="assets/2021-02-19_Sotiyo_Kill.jpg" target="_blank" class="battle-thumb"><img src="assets/2021-02-19_Sotiyo_Kill.jpg" alt="Sotiyo Kill - Feb 19 2021"></a>
               </div>
+              <div class="reddit-box">
+                <div class="reddit-header">
+                  <span class="reddit-header-title">AAR: 49-U — Battle Brawl Super Spectacular</span>
+                  <span class="reddit-header-meta">u/CaptnDavo (Mystic Siren) · r/Eve · September 2020</span>
+                </div>
+                <div class="reddit-box-content">
+                    <p>It's 3am the night before. I'm exhausted from a night of grinding isk for our master Mittens al gul. Spikey McFireface task master, has had us working hard in the forges of delve. I lay in my bed eagerly awaiting the battle. I had received no less than 20 pings and 15 pongs about 49-u. #Bossbabe had even called me personally to tell me to be there.</p>
+                    <p>7:30 Am rolls around and I'm sitting in my sweaty chair ready for another zoom meeting. It's awful as usual, but I'm getting pretty good at duel boxing Eve and triple boxing comms. I'm really hoping it was the Trig discord that heard me flush and not my work.</p>
+                  <details class="reddit-expand">
+                    <summary>▶ Read full post</summary>
+                    <p>4:30ish rolls around and I'm sitting in the same position, with the same poorly brewed cup of coffee, staring at the same computer screens. The door rings and a man in a suit is standing outside with a carrier Pigeon. I knock over a mound of snack wrappers and make my way to the door. The man hands me a piece of paper. I break the wax seal on the delicately embossed parchment. He takes out a small silver bell and "pings" it as I open and begin to read. Carneros, the classiest Imperium leader, has called us to action. The battle for 49-u will begin soon. I nod at the man. He leaves without a word.</p>
+                    <p>I run to the refrigerator and restock my supplies. It's 4 steps up to the kitchen. I find myself winded and nearly out of breath with excitement. To the disgust of my loving wife and the disappointment of my adoring children, I inform them I will be busy this fine evening.</p>
+                    <p>My Two Battle beers and a helping of the finest leftovers at the ready.</p>
+                    <p>It's time to fornicate.</p>
+                    <p>I watch a clip of Snek from My Hero Academia getting smacked by Saitama. This puts me at half-mast while we form BBs and Dreads. (BS is the incorrect terminology and if you disagree with me you can fight my waifu Nagato. Azure lane x eve collab when?)</p>
+                    <p>I have the option between Baltec or Supertrain. I choose Baltec but I regret that choice as Supertrains have better skins for potato mode. For capitals, I have a choice between Nyx, Rev or Thanny. I picked Rev and that was the biggest mistake of my life. Sorry Honey, you're still number 2. Ugh… my hanger queen lives another day.</p>
+                    <p>Dreads are waiting at a midpoint. Baltecs and Super trains are bridging onto the fort. We create a couple of battle balls to defend against a strong thrust from Snek. Little did I know this would mean we would be bashing balls against each other, Dreads and HACS against our Battleships. Snek defiantly has more subs than us but I think we brought more Doms.</p>
+                    <p>The fight was a tidi cluster and I don't really remember much. Eve if I didn't love you, I would hate you. I do remember targeting a claymore Detective miller and killing that guy. Yeah… totally dunked on that guy.</p>
+                    <p>How would I describe the fight? Well, I was shooting eve bad guys in my megathron and I had time to take the kids to karate in between module activation. It was amazing. I felt like a kid with a blindfold trying to hit bubbles with a stick. Did you see the Vendetta guy? What an absolute hero. I barely managed to lose my mega. Not so lucky with the dread. Did you know that the goon standard fit Coercer has exactly enough HP to survive a single hit from a fort PDS?</p>
+                    <p>I can't wait to do this again. Good Fight Snek but also Suck my Baltecs you filthy space nerds.</p>
+                    <p><a href="https://www.reddit.com/r/Eve/comments/iyv3hk/bastion_line_member_49u_braarp_battle_brawl_super/" target="_blank" style="font-size:9px; color:#576b84;">reddit &#8599;</a></p>
+                  </details>
+                </div>
+              </div>
+
               <div class="battle-box">
                 <div class="battle-header">
                   <span class="battle-header-name">Fury at FWST-8</span>
@@ -1237,6 +1534,84 @@
                   </div>
                 </div>
               </div>
+
+              <div class="reddit-box">
+                <div class="reddit-header">
+                  <span class="reddit-header-title">AAR: FWST-8 — After Action Hangover Report</span>
+                  <span class="reddit-header-meta">u/CaptnDavo (Mystic Siren) · r/Eve · October 2020</span>
+                </div>
+                <div class="reddit-box-content">
+                    <p>So how about that that fight space nerds? Assume -9 GMT time zones. (DT is at 3am.) I name drop people who I've never talked to and think I'm an idiot. No Hamsters were harmed in the writing of this report.</p>
+                    <p>On Sunday night, after about 8 hours of bitching about my high sec trig rewards again, I decide it's time to log out for the evening… even though I was at 2.98 the night before we got our rewards…. No warning!</p>
+                    <p>My wife gives me the look. It's about Midnight. I think I'm about to get lucky, even get a good night sleep for the first night in a week. I was Wrong! Wrong on all accounts!!!</p>
+                    <p>I woke up too early. I missed all the pings for the first fight. I had an existential crisis while watching my coffee machine screech and hiss at me like a raccoon. Didn't get laid, wife made fun of me because my favorite metal song is about a papaya fruit.</p>
+                  <details class="reddit-expand">
+                    <summary>▶ Read full post</summary>
+                    <p>I log in and everyone in the imperium is buzzing about the fight. I frantically join fleets, whatever I can do. I try to sort out the comms and ignore the soul crushing zoom meeting with the bureaucrats I work with.</p>
+                    <p>The Nyx is fueled, my Baltec is lubed. Panties unbunched. I'm ready. And… stand down… goddamn it.</p>
+                    <p>But wait there's hope! Wish.com alliance, Snek coalition's Android bankers!</p>
+                    <p>They dropped a second Keepstar! Bless those Pandaren gold farmers. I may actually get some content today. Once again, wrong on all accounts.</p>
+                    <p>A full day to prepare and hours of trolling reddit. I buy a new dread. I listen to some podcasts. Fountain Frank has me questioning the existence of delve. This is all a conspiracy to sell more Trit Stocks folks. I simp for Dawn 'Furiosa' Rhea.</p>
+                    <p>I hear tiny silver bells in the distance. Pings from the heavens, reminding me not to miss the fight tomorrow.</p>
+                    <p>4:30pm rolls around and my raccoon coffee has turned rancid. Kinda like drinking the slurry at the bottom of your outdoor trashcan. I don't think I've physically moved in hours, eyes lazily wandering from one screen to the other. I can't wait to do this in 10% tidi.</p>
+                    <p>7:00am I awaken to the death star alarm blaring from my phone. I hear, "Have a good day a work Honey". Work indeed.</p>
+                    <p>I grab a cup of filth from the coffee machine, a bowl of sugary non-sense heading for the computer.</p>
+                    <p>My corp is buzzing with excitement, everyone is ready to do their part. We are the oldest PVP corp in the game after all.</p>
+                    <p>"Q and RVA are you two ready for the fight?"</p>
+                    <p>Q: "The fight? Oh, screw all that noise, I'm throwing a bonfire. Enjoy your tidi suckfest.</p>
+                    <p>RVA: "Do you have 200 entosis links we can borrow?"</p>
+                    <p>Champions and Heroes of the Imperium both of them.</p>
+                    <p>7,8 and 9 fleets form. They're mustering the krabs? Vexors and Myrms to the front. "Oh what a Day, what a lovely day!"</p>
+                    <p>I join Supertrains and Dreads. Crank up the music to 11. Su-Metal is a goddess and easily metal best girl.</p>
+                    <p>100%.</p>
+                    <p>Supertrains trebuchet into F-Swat. Clearly it's the superior siege weapon.</p>
+                    <p>Immortan Chillback calls for the first dread fleet. The battle begins.</p>
+                    <p>Keepstar timer pauses at 11:41</p>
+                    <p>The tidi is crushing, but the server holds.</p>
+                    <p>83% repair timer is 8:01</p>
+                    <p>We execute a hamfisted warp in with the Rokhs and begin to fire at the citadel. Initiative, heroes all, warp in beautifully behind us.</p>
+                    <p>I begin to take damage, hit the MJD. My call time hits 3 minutes before the module activates, I'm in 27% structure before I warp out.</p>
+                    <p>The Keepstar unpauses. The repair time counts to 5:59</p>
+                    <p>I sit next to other flaming BB's on an Athanor repping up before we warp back. I repeat this process 3 times before I'm caught by an interceptor.</p>
+                    <p>56%</p>
+                    <p>I kill that bastard and continue to fight. The harpy lives for 4 more hours. Before it too dies. I reship to a munnin and head back. It too dies orbiting the gates of the citadel.</p>
+                    <p>"I live, I die. I LIVE AGAIN!"</p>
+                    <p>31%</p>
+                    <p>LR revelations x up. "He looked at me. He looked right at me." "I am awaited. I am awaited in Valhalla!"</p>
+                    <p>We align to the keepstar. Comms crackle. "Go see what's agitatin' Dad!" 2 dreads leap into battle. Then 2 more, 30 tidi seconds later. This continues uninterrupted, until this is interrupted…</p>
+                    <p>26%</p>
+                    <p>Papi subs arrive on the fortizar and bubble the dreads. Carriers jump in and cover us. Nightmares and munnins die. Heavy interdictors burn.</p>
+                    <p>17%</p>
+                    <p>The Keepstar unpauses, Panik. The repair timer drops to 2:26. If the timer unpauses again, we lose. Not lose a little, mind you. 15 hours of work for nothing and a trillion isk in the blender. Crestfallen disaster lose.</p>
+                    <p>Over the Comms: "Those who pay the blood price should be rewarded. Return my space to me and I myself will carry you to the gates of Valhalla."</p>
+                    <p>Yeah... feels like hope.</p>
+                    <p>Preheat your guns, Lock Keepstar as you land. Activate energizer, activate siege, and then fire guns.</p>
+                    <p>Bubbles cleared. Boosts up. Heat on. Warp engaged.</p>
+                    <p>I pick some coffee grounds from between my teeth.</p>
+                    <p>Comms: "You will ride eternal, shiny and chrome."</p>
+                    <p>2%</p>
+                    <p>I land on the keepstar minutes later. Lock. Activate. Activate. Fire.</p>
+                    <p>Cycle 1. Delicious wrecking damage.</p>
+                    <p>Cycle,</p>
+                    <p>Cycle 3. Shields gone. Damage coming from Titans, Fighters and Battleships.</p>
+                    <p>Burst.</p>
+                    <p>Cycle. Wrecking.</p>
+                    <p>Cycle.</p>
+                    <p>50% armor.</p>
+                    <p>Cycle.</p>
+                    <p>Cycle.</p>
+                    <p>10% armor.</p>
+                    <p>Cycle.</p>
+                    <p>50% hull</p>
+                    <p>Cycle</p>
+                    <p>"Witness Me!"</p>
+                    <p>Cycle. Dread explodes. The Keepstar dies.</p>
+                    <p>I never thought I'd do something as shine as that.</p>
+                    <p><a href="https://www.reddit.com/r/Eve/comments/j78gqf/after_action_hangover_report_fwst_8_random/" target="_blank" style="font-size:9px; color:#576b84;">reddit &#8599;</a></p>
+                  </details>
+                </div>
+              </div>
+
               <div class="battle-box">
                 <div class="battle-header">
                   <span class="battle-header-name">Massacre at M2-XFE</span>
@@ -1261,6 +1636,91 @@
                     <a href="assets/20201230_M2%20Battle.png" target="_blank" class="battle-thumb"><img src="assets/20201230_M2%20Battle.png" alt="M2-XFE - Dec 30 2020"></a>
                     <a href="assets/20210131_Blops%20MINC.jpg" target="_blank" class="battle-thumb"><img src="assets/20210131_Blops%20MINC.jpg" alt="Black Ops deployment - Jan 31 2021"></a>
                   </div>
+                </div>
+              </div>
+
+              <div class="reddit-box">
+                <div class="reddit-header">
+                  <span class="reddit-header-title">AAR: M2-XFE — Hull &amp; Armor Timers</span>
+                  <span class="reddit-header-meta">u/CaptnDavo (Mystic Siren) · r/Eve · January 2021</span>
+                </div>
+                <div class="reddit-box-content">
+                    <p><strong style="color:#7ab0d4;">Preamble:</strong> I've been playing this game since 2007. I've been able to kill a couple titans in my time. I was in the fight at KVN, I was in the fight on every Keepstar in Fountain. We defended our home and Lost. I was there, losing dreads trying to kill keepstars in NPC delve. In the last 3 days, I have witnessed more destruction than I thought possible. I wrote my first AAR about killing a single titan in May. It was exciting. This… woah boy. I should also warn you this isn't a neutral post. Assume -9 GMT time zones. (DT is at 3am.) I name drop people who I've never talked to. No Hamsters were harmed in the writing of this report.</p>
+                    <p>It's Wednesday. I'm in the same zoom meeting I've been in since April. I'm drinking the same stale coffee and if the temperature outside gets any colder it won't matter if its freedom units or Communist propaganda units.</p>
+                  <details class="reddit-expand">
+                    <summary>▶ Read full post</summary>
+                    <p>Let me just log into my eve accounts for a second. Check the pings. See what people are up to before the New Year. Short little adventure in and out in 20 minutes. Back to work in no time.</p>
+                    <p>Ping, ping. Ping. Fuck… Titans, Supers, Peasant capitals get in fleet. Let's go fight some nerds on one of our space castles.</p>
+                    <p>What time is it? I'm still technically at work…. Well, its government work… I'm probably going to sit on tether and not do anything. Eh, we might not even jump in. Passpi probably won't even show up.</p>
+                    <p>Wife: Hey honey, let me know when you get off work so we can go skating with… *puts on headphones* yes dear, love you… *moving mouth* *pointing at things* Yes of course honey. I trust your judgement. Love you.</p>
+                    <p>Check Fuel. Check fighters. Check underwear. Okay. Let's jump.</p>
+                    <p>We jump in and we're sitting on grid. We're on a keepstar. Why are we... oh shit. I'm in my baby. Like I have children, but I built my Nyx from scratch. I put a load of minerals in and watched her being born! I raised her, she has a name and I know her birthday.</p>
+                    <p>There's a Titan being killed in bubbles. Man we killed a Titan! 1 titan is a huge deal! Isk positive baby!</p>
+                    <p>Well whatever, we're not… The comms hum to life:</p>
+                    <p>"The Keepstar is taken, it is over."</p>
+                    <p>"You said these Keepstars would never fall while your Imperium defends them! They still defend them. They have died defending them!"</p>
+                    <p>Is there no other way for the Krabs and carebears to get out of the system?</p>
+                    <p>"They will not get far, the Horde is too many."</p>
+                    <p>"So much death, what can goons do against such reckless pubbies?"</p>
+                    <p>"Ride out with me! Charge your Doomsdays and meet them."</p>
+                    <p>"For Death and Glory, For the Imperium, For our People"</p>
+                    <p>*daughter humming loud enough in the background to hear it through my headphones*</p>
+                    <p>*Yes… The Horn of Goondor will sound in the deep, one last time.*</p>
+                    <p>Asher Elias: I hope you're ready because its time.</p>
+                    <p>*Now for wrath. Now for ruin. And the red dawn!!!* Primaries are up Doomsdays Free.</p>
+                    <p>Doomsdays light up the sky. Lasers, Guns and Missiles streak through space at opposing titans.</p>
+                    <p>And then… Titans begin to die.</p>
+                    <p>My screen starts to flash and flash and… ARGGGGGHHHHH My EYES!!!!!!</p>
+                    <p>There's no way I'm going back to work.</p>
+                    <p>Hours Pass and we're still killing things. My fighters are killing their fighters. My single flight of SS fighters are mulching anything they can catch.</p>
+                    <p>Comms: Supers do not engage the dreads.</p>
+                    <p>Hmmm what dreads? Dread ball warps in 35km away. I'm untethered. My SS fighters are way out. Shiiiiiiittttt.</p>
+                    <p>A lancing light from heaven reached out and plucked them from existence. I love the smell of Doomsdays in the morning. A couple lances cut them down like leaves in the wind.</p>
+                    <p>Comms: Supers, kill all the remaining dreads. Fighters leap and the remaining dreads die.</p>
+                    <p>Tick, Tick. Tick. Downtime is coming.</p>
+                    <p>Heavies head toward titans. We shoot titans until my fighters are gone.</p>
+                    <p>Tick. Tick. Tick. And Downtime.</p>
+                    <p>Comms: Jubilation, excitement and endless sperg. We just fought the Greatest fight in eve history and came out shiny and chrome.</p>
+                    <p>Log back in. We kill a few faxes we murder a couple nightmares. But the enemy supers don't come back. We're done. I jump home. And log off feeling great.</p>
+                    <p>The whole house is dark and I don't even know where I am. Lights are off. Its 3am. I was at work? Shit, I still have work tomorrow. I have work in 4 hours.</p>
+                    <p>The Twisted Teastar has been reffed. The hull timer is coming. Fishtank Frank, Asher Enho-face and fishsticks McMittens warn us not to be complacent.</p>
+                    <p>PGL's Wrath will be terrible, his retribution swift. The battle for the armor timer is over. The battle for Delve is about to begin.</p>
+                    <p>Mittens has a Beta fish he keeps in a tank that you can buy warbonds to name. It's 1 billion per Warbond, but I really want Villy immortalized as a Beta.</p>
+                    <p>Two days pass. Fighters have been restocked. Guns reloaded. A fresh pair of panties were purchased. There is a frenzy about the imperium. There is an anticipation and excitement I've never seen before. Round 1 was spectacular. Round 2 was shaping up to be something else.</p>
+                    <p>Carneros, Bastion's Leader, my Leader and coalition wine steward… rallies the Alliance with an inspirational black tie event over Teamspeak. He has up-shipped from his phoenix to a Leviathan.</p>
+                    <p>Qicia: [Redacted]</p>
+                    <p>Khronos: The Beacons are lit! well not Test's beacons or Jump Bridges, but you get the idea.</p>
+                    <p>RVA: [Redacted]</p>
+                    <p>Darius: Everyone is moving their Titans to delve.</p>
+                    <p>Brendan: No you can't bring an ikitursa, just get down here.</p>
+                    <p>Fleets start forming 4-5 hours before the timer. My Super is ready. I love her and tonight I took out a life insurance policy on her eventual death.</p>
+                    <p>Pings: Arise Fighters of the Imperium. Arise! Lances will be shaken, Shields shall be splintered. A Gun Day, A red Day ere the sun rises! Dire Deeds Awake, Dark it is eastward. Let the Titan be Bridled, Horn be Sounded!</p>
+                    <p>A corpie sends me a DM. Don't worry man I got my fax on you. Stay with me. I'll look after you.</p>
+                    <p>Jump Now! Jump Now for Delve's Ending!</p>
+                    <p>Death! Death! Death! Forth Imperium!</p>
+                    <p>The Imperium is ready. Asses oiled. Snacks restocked. It's going to be a bloodbath.</p>
+                    <p>Grid is spicy. We have a giant toilet seat of titans with the keepstar hovering just above ready for the Snek jailbreak to happen. Soon the shit will fly.</p>
+                    <p>Comms: Supers Launch fighters and move them to the top of the keepstar.</p>
+                    <p>Ok let's do this… Oh God. Onyx's. Mortal enemy of the supercarrier.</p>
+                    <p>Cynos. Suddenly Titans!</p>
+                    <p>Wait… did they jump 200 titans into 1500 angry anti-cap fighters…? they jumped onto the grid within facefucking range? There's 5500 people in system, its laggy and at 10% tidi before the jumped in.</p>
+                    <p>They couldn't possibly be this stupid. It would be like eating a really hot pepper and being surprised when the titans face tank angry anti-cap fighters without anyway to shoot back.</p>
+                    <p>Fighters start wrecking. I'm killing titans with every volley. It's a feeding frenzy. We're almost killing titans as fast as reddit can posts about tidi.</p>
+                    <p>Fussing in stations rages as they don't understand login/jump mechanics.</p>
+                    <p>SmugNN is struggling not to orgasm on stream.</p>
+                    <p>I do love this stupid space game. There are complicated and tedious economics. It's literally unplayable garbage when the lag really hits. And yet… nothing I do in life produces this amount of cackling stupidity.</p>
+                    <p>Comms: Free fire on titans.</p>
+                    <p>I'm sorry, what? That's not a thing that is said in eveonline. You don't free fire on the largest deadliest ships in the game.</p>
+                    <p>The Fat drips into the fire and every papi titan sizzles.</p>
+                    <p>I kill a Nyx and have a moment of grief thinking about my baby. I am reminded that this game is wonderful and brutal in equal measure.</p>
+                    <p>Asher: "What is best in Eve?"</p>
+                    <p>Mittens: "To crush your enemies, to see them driven before you, and to hear the lamentations of their reddit posters."</p>
+                    <p>We spend a few hours mopping up the remains. The field is a burning ruin of Papi's fleet. We lose nothing but the bravest amongst us. The fast tackle and bubblers. Heroes of the Imperium. You bow to no one.</p>
+                    <p>The Hell camp continues.</p>
+                    <p>I enjoyed Killing your Titan's Test. Get fucked you invidious invading scum.</p>
+                    <p>Happy New Year Eve Online</p>
+                    <p><a href="https://www.reddit.com/r/Eve/comments/kq6dbg/aar_m2xfe_enho_face_ghost_titan_floodgate/" target="_blank" style="font-size:9px; color:#576b84;">reddit &#8599;</a></p>
+                  </details>
                 </div>
               </div>
             </div>
