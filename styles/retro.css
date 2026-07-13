@@ -10,8 +10,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
     color: #c8c8c8;
     background-color: #000;
     background-image: url(../assets/JWSTPIX.png);
@@ -25,7 +25,7 @@ body {
    Page wrapper
    ---------------------------------------------------------------- */
 .r-page {
-    width: 748px;
+    width: 860px;
     margin: 8px auto 0 auto;
 }
 
@@ -33,7 +33,7 @@ body {
    Outer container — gunmetal silver shell
    ---------------------------------------------------------------- */
 .r-outer {
-    width: 748px;
+    width: 860px;
     background: linear-gradient(180deg,
         #202020 0%,
         #181818 4%,
@@ -46,13 +46,13 @@ body {
 
 /* ================================================================
    HEADER SECTION — CSS Grid
-   col 1 (175px, rowspan 2) | col 2 (60px) | col 3 (1fr) | col 4 (112px)
+   col 1 (201px, rowspan 2) | col 2 (69px) | col 3 (1fr) | col 4 (129px)
    row 2 cols 2-4 = nav bar
    ================================================================ */
 .r-header-section {
     display: grid;
-    grid-template-columns: 175px 60px 1fr 112px;
-    grid-template-rows: 77px 26px;
+    grid-template-columns: 201px 69px 1fr 129px;
+    grid-template-rows: 77px 34px;
     border-bottom: 1px solid #3a3a3a;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .r-site-title {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
     font-size: 22px;
     font-weight: bold;
     font-style: italic;
@@ -115,8 +115,8 @@ body {
 }
 
 .r-site-subtitle {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 9px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 14px;
     font-style: italic;
     color: #576b84;
     margin: 0;
@@ -134,8 +134,8 @@ body {
     justify-content: center;
     gap: 4px;
     padding: 4px;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 8px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 12px;
     text-align: center;
     color: #555;
 }
@@ -162,8 +162,8 @@ body {
     padding: 0 9px;
     color: #b89800;
     text-decoration: none;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
     font-weight: bold;
     white-space: nowrap;
     letter-spacing: 0.3px;
@@ -202,8 +202,8 @@ body {
 
 .r-banner-text {
     color: #d4b800;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
     font-weight: bold;
     letter-spacing: 2px;
     padding: 6px 20px;
@@ -211,7 +211,7 @@ body {
         #141414 0%, #1a0000 20%, #3a0000 50%, #1a0000 80%, #141414 100%);
     border-top: 1px solid #3a0000;
     border-bottom: 1px solid #3a0000;
-    width: 728px;
+    width: 840px;
     text-align: center;
 }
 
@@ -246,8 +246,16 @@ body {
 }
 
 .r-sidebar-box {
-    width: 155px;
+    width: 178px;
     flex-shrink: 0;
+}
+
+.r-sidebar-box .r-box-body {
+    font-size: 13px;
+}
+
+.r-sidebar-box .r-stats-table {
+    font-size: 12px;
 }
 
 .r-main-box {
@@ -264,8 +272,8 @@ body {
         #4c0000 100%);
     text-align: center;
     padding: 5px 6px;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
     font-weight: bold;
     font-style: italic;
     color: #fefe5d;
@@ -289,8 +297,8 @@ body {
 /* Box body */
 .r-box-body {
     padding: 6px;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
     color: #c0c0c0;
     line-height: 1.6;
 }
@@ -318,8 +326,8 @@ body {
 
 /* Section sub-heading inside a box */
 .r-content-heading {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
@@ -346,8 +354,8 @@ body {
     padding: 6px 4px;
     text-align: center;
     border-right: 1px solid #1e1e1e;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
     line-height: 1.8;
     color: #c0c0c0;
 }
@@ -381,8 +389,8 @@ body {
 .r-stats-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 9px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 14px;
     color: #c0c0c0;
 }
 
@@ -418,14 +426,14 @@ body {
     color: #576b84;
     display: block;
     margin-bottom: 2px;
-    font-size: 9px;
+    font-size: 14px;
 }
 
 .r-news-title {
     font-weight: bold;
     display: block;
     margin-bottom: 3px;
-    font-size: 10px;
+    font-size: 15px;
     color: #d4b800;
 }
 
@@ -446,7 +454,7 @@ body {
    FOOTER
    ================================================================ */
 .r-footer {
-    width: 748px;
+    width: 860px;
     margin: 0 auto 10px auto;
     border: 1px solid #3a3a3a;
     border-top: none;
@@ -456,30 +464,171 @@ body {
     background: linear-gradient(180deg, #2a0000 0%, #1a0000 100%);
     text-align: center;
     padding: 7px 10px;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 9px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 14px;
     color: #888;
     line-height: 2;
     border-top: 1px solid #4c0000;
 }
 
 /* ================================================================
+   DESIGN B — SITE HEADER SKIN (HeaderBG + LOGOBG)
+   Shared by all pages — banner spans logo-col-edge to flash-cell-edge
+   ================================================================ */
+.r-header-section {
+    background: url('../assets/HeaderBG.png') 201px 0/530px 77px no-repeat;
+}
+.r-logo-cell {
+    background: url('../assets/LOGOBG.png') center/100% 100% no-repeat !important;
+}
+.r-topleft-cell {
+    background: transparent !important;
+}
+.r-header-main-cell {
+    background: transparent !important;
+    border-right: none;
+}
+.r-flash-cell {
+    background: url('../assets/LOGOBG.png') center/100% 100% no-repeat !important;
+    border-left: none;
+}
+.r-logo-cell img,
+.r-flash-cell img {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.18)) drop-shadow(0 0 2px rgba(255,255,255,0.24));
+}
+.r-nav {
+    background: #080808;
+    border-top: 2px solid #1a0000;
+    border-bottom: 1px solid #8b6914;
+}
+.r-nav a {
+    background: url('../assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-nav a:hover {
+    box-shadow:
+        inset 1px 1px 0 rgba(255,220,100,0.55),
+        inset -1px -1px 0 rgba(0,0,0,0.75);
+    filter: brightness(1.2);
+}
+.r-nav a:active {
+    box-shadow:
+        inset 1px 1px 0 rgba(0,0,0,0.75),
+        inset -1px -1px 0 rgba(255,220,100,0.4);
+    filter: brightness(0.9);
+}
+.r-nav a.r-active {
+    background: url('../assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-site-subtitle {
+    color: #e8d080;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+}
+
+/* ----------------------------------------------------------------
+   Retro sidebar audio player
+   ---------------------------------------------------------------- */
+.retro-player {
+    background: linear-gradient(180deg, #181818 0%, #101010 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+    padding: 5px 6px 6px 6px;
+    margin-top: 6px;
+}
+.rp-track {
+    color: #49ce5a;
+    font-size: 11px;
+    font-family: "Courier New", monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    text-shadow: 0 0 7px rgba(73,206,90,0.55);
+    letter-spacing: 0.3px;
+}
+.rp-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.rp-btn {
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 1px solid #444;
+    border-bottom-color: #222;
+    color: #d4b800;
+    font-size: 11px;
+    width: 22px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    line-height: 1;
+}
+.rp-btn:hover {
+    background: linear-gradient(180deg, #2a1800 0%, #1a1000 100%);
+    border-color: #d4b800;
+    color: #fefe5d;
+}
+.rp-btn:active {
+    background: linear-gradient(180deg, #111 0%, #222 100%);
+    border-top-color: #222;
+    border-bottom-color: #444;
+}
+.rp-progress-wrap {
+    flex: 1;
+    height: 8px;
+    background: #060606;
+    border: 1px solid #2a2a2a;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.rp-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #6a0000 0%, #b80000 55%, #d4b800 100%);
+}
+.rp-time {
+    color: #576b84;
+    font-size: 10px;
+    font-family: "Courier New", monospace;
+    margin-top: 4px;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
+
+/* ----------------------------------------------------------------
+   Utility text classes
+   ---------------------------------------------------------------- */
+.r-caption {
+    font-size: 12px;
+    color: #555;
+}
+
+.r-footer-badge {
+    font-size: 8px;
+    color: #555;
+}
+
+/* ================================================================
    GLOBAL LINK STYLES
    ================================================================ */
 a:link, a:visited {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
     color: #b89800;
     text-decoration: underline;
 }
 
 a:hover {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
     color: #fefe5d;
     text-decoration: none;
 }
 
 a:active {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
     color: #fefe5d;
     text-decoration: underline;
 }

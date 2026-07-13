@@ -7,58 +7,6 @@
 <link href="styles/retro.css" rel="stylesheet" type="text/css">
 <meta name="keywords" content="mercurialis, MINC, eve online, corporation, nullsec, goonswarm, pvp, oldest corp">
 <meta name="description" content="Mercurialis Inc. - The oldest active corporation in EVE Online. Est. Oct 28, 2002. Nullsec PvP, capital warfare, and 20+ years of history.">
-<style>
-/* Design B — HeaderBG spans cols 2-3 seamlessly via section bg; LOGOBG on logo + flash cells */
-.r-header-section {
-    background: url('assets/HeaderBG.png') 175px 0/461px 77px no-repeat;
-}
-.r-logo-cell {
-    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
-    
-}
-.r-topleft-cell {
-    background: transparent !important;
-}
-.r-header-main-cell {
-    background: transparent !important;
-    border-right: none;
-}
-.r-flash-cell {
-    background: url('assets/LOGOBG.png') center/100% 100% no-repeat !important;
-    border-left: none;
-}
-.r-nav {
-    background: #080808;
-    border-top: 2px solid #1a0000;
-    border-bottom: 1px solid #8b6914;
-}
-.r-nav a {
-    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
-}
-.r-nav a:hover {
-    box-shadow:
-        inset 1px 1px 0 rgba(255,220,100,0.55),
-        inset -1px -1px 0 rgba(0,0,0,0.75);
-    filter: brightness(1.2);
-}
-.r-nav a:active {
-    box-shadow:
-        inset 1px 1px 0 rgba(0,0,0,0.75),
-        inset -1px -1px 0 rgba(255,220,100,0.4);
-    filter: brightness(0.9);
-}
-.r-nav a.r-active {
-    background: url('assets/HeaderBG.png') center/100% 100% no-repeat;
-}
-.r-logo-cell img,
-.r-flash-cell img {
-    filter: drop-shadow(0 0 5px rgba(255,255,255,0.18)) drop-shadow(0 0 2px rgba(255,255,255,0.24));
-}
-.r-site-subtitle {
-    color: #e8d080;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
-}
-</style>
 </head>
 <body>
 
@@ -128,6 +76,43 @@
         <!-- EVE Logo -->
         <div class="r-box-body" style="text-align:center; padding:6px 4px 4px 4px;">
           <img src="assets/evelogo.png" alt="EVE Online" style="max-width:100%; display:block; margin:0 auto;">
+          <div class="retro-player">
+            <audio id="rp-audio">
+              <source src="Map10 - The Demon's Dead.mp3" type="audio/mpeg">
+            </audio>
+            <div class="rp-track">&#9834; The Demon's Dead</div>
+            <div class="rp-controls">
+              <button class="rp-btn" id="rp-play" title="Play / Pause">&#9654;</button>
+              <div class="rp-progress-wrap" id="rp-bar">
+                <div class="rp-progress-fill" id="rp-fill"></div>
+              </div>
+            </div>
+            <div class="rp-time" id="rp-time">0:00</div>
+          </div>
+          <script>
+          (function(){
+            var a  = document.getElementById('rp-audio');
+            var btn = document.getElementById('rp-play');
+            var fill = document.getElementById('rp-fill');
+            var bar  = document.getElementById('rp-bar');
+            var time = document.getElementById('rp-time');
+            function fmt(s){ var m=Math.floor(s/60),r=Math.floor(s%60); return m+':'+(r<10?'0':'')+r; }
+            btn.addEventListener('click', function(){
+              if(a.paused){ a.play(); btn.innerHTML='&#9646;&#9646;'; }
+              else { a.pause(); btn.innerHTML='&#9654;'; }
+            });
+            a.addEventListener('timeupdate', function(){
+              if(!a.duration) return;
+              fill.style.width = (a.currentTime/a.duration*100)+'%';
+              time.textContent = fmt(a.currentTime)+' / '+fmt(a.duration);
+            });
+            bar.addEventListener('click', function(e){
+              var r=bar.getBoundingClientRect();
+              a.currentTime = ((e.clientX-r.left)/r.width)*a.duration;
+            });
+            a.addEventListener('ended', function(){ btn.innerHTML='&#9654;'; fill.style.width='0%'; time.textContent='0:00'; });
+          })();
+          </script>
         </div>
 
         <!-- Corp Info -->
@@ -278,7 +263,7 @@
                  style="width:148px; height:100px; object-fit:cover; border:1px solid #888; display:block;"
                  alt="Sotiyo Kill">
           </div>
-          <p style="text-align:center; font-size:9px; color:#555; margin-top:4px;">
+          <p class="r-caption" style="text-align:center; margin-top:4px">
             <a href="history.html">Full corp history &amp; battle reports &raquo;</a>
           </p>
         </div>
@@ -309,7 +294,7 @@
       &nbsp;
       <img src="assets/IE.gif" alt="Best viewed in IE">
       &nbsp;
-      <span style="font-size:8px; color:#555;">Best Viewed 1024x768</span>
+      <span class="r-footer-badge">Best Viewed 1024x768</span>
     </div>
   </div>
 
