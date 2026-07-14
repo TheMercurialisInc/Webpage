@@ -11,32 +11,33 @@
     border-bottom: 1px solid #3a3a3a;
 }
 .r-yindex-body {
-    background: #0f0f0f;
+    background: linear-gradient(180deg, #0f0f0f 0%, #090909 100%);
     border-top: 1px solid #2a2a2a;
-    padding: 0;
+    padding: 7px 6px;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
 .r-ylink {
     display: inline-flex;
     align-items: center;
-    padding: 4px 9px;
-    font-size: 14px;
+    padding: 4px 10px;
+    font-size: 13px;
     font-family: Tahoma, Verdana, Arial, sans-serif;
     font-weight: bold;
-    color: #b89800;
+    font-style: italic;
+    color: #d4b800;
     text-decoration: none;
     white-space: nowrap;
-    letter-spacing: 0.3px;
-    border-right: 1px solid #222;
-}
-.r-ylink:first-child {
-    border-left: 1px solid #222;
+    letter-spacing: 0.4px;
+    border: 1px solid #201c0e;
+    transition: color 0.12s ease, text-shadow 0.12s ease, border-color 0.12s ease;
 }
 .r-ylink:hover {
-    background: #1a0000;
     color: #fefe5d;
     text-decoration: none;
+    border-color: #4a3d10;
+    text-shadow: 0 0 6px rgba(212,184,0,0.5);
 }
 
 /* ── CEO Horizontal Timeline ──────────────────────────────── */
@@ -56,7 +57,7 @@
 .ceo-track::before {
     content: '';
     position: absolute;
-    top: 65px;
+    top: 83px;
     left: 0; right: 0;
     height: 1px;
     background: #2e2e2e;
@@ -68,14 +69,14 @@
     align-items: center;
     text-align: center;
     flex: 1;
-    min-width: 90px;
-    max-width: 110px;
+    min-width: 118px;
+    max-width: 144px;
     position: relative;
     z-index: 1;
 }
 .ceo-portrait-wrap {
-    width: 56px;
-    height: 56px;
+    width: 74px;
+    height: 74px;
     border: 1px solid #2e2e2e;
     overflow: hidden;
     background: #111;
@@ -229,7 +230,7 @@
 }
 .roster-card {
     display: grid;
-    grid-template-columns: 40px auto;
+    grid-template-columns: 50px auto;
     grid-template-areas:
         "portrait ship"
         "pname    pname";
@@ -243,13 +244,13 @@
 }
 .roster-portrait {
     grid-area: portrait;
-    width: 40px; height: 40px;
+    width: 50px; height: 50px;
     object-fit: cover;
     display: block;
 }
 .roster-ship {
     grid-area: ship;
-    width: 34px; height: 34px;
+    width: 43px; height: 43px;
     object-fit: contain;
     display: block;
 }
@@ -265,7 +266,7 @@
 .roster-ship-wrap {
     position: relative;
     display: inline-block;
-    width: 34px; height: 34px;
+    width: 43px; height: 43px;
     grid-area: ship;
     flex-shrink: 0;
 }
@@ -277,7 +278,7 @@
 .ship-tier-badge {
     position: absolute;
     top: 0; left: 0;
-    width: 11px;
+    width: 14px;
     height: auto;
     pointer-events: none;
 }
@@ -897,7 +898,7 @@ a.tl-ref {
               
               <p>Alliances weren't a formal game feature yet, so most of this is reconstructed from old forum posts. During this time, MINC was part of Star Alliance, a player-organized agreement between corporations operating outside formal game structures. On October 26th, CEO Isayo Arkindra announced MINC's departure from Star Alliance via the EVE Online forums.</p>
               
-              <img src="timeline-assets/EveForum-MINC-Leaves-Star-Alliance20041026.png" alt="EVE Forums - MINC leaves Star Alliance, Oct 26 2004" style="max-width:65%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/EveForum-MINC-Leaves-Star-Alliance20041026.png" alt="EVE Forums - MINC leaves Star Alliance, Oct 26 2004" style="max-width:97.5%; border:1px solid #576b84; display:block">
               <p class="tl-source">Source: <a href="https://eve-search.com/thread/119095-0/page/1#6" target="_blank">EVE Online forums, Oct 26 2004</a></p>
             </div>
 
@@ -906,7 +907,7 @@ a.tl-ref {
               
               <p>MINC joins its first official in-game alliance, Interstellar Alcohol Conglomerate (IAC), and establishes operations in Catch. IAC brought together European and American players under a strong shared culture, and MINC became part of one of nullsec's early communities. At the time, the corp ran roughly twenty active pilots.</p>
 
-              <img src="timeline-assets/DOTLAN_2005-10-01_ALLIANCE_JOINS_IAC.png" alt="DOTLAN record: MINC joins IAC, Oct 1 2005" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/DOTLAN_2005-10-01_ALLIANCE_JOINS_IAC.png" alt="DOTLAN record: MINC joins IAC, Oct 1 2005" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
             </div>
 
@@ -934,7 +935,7 @@ a.tl-ref {
               </div>
               <p class="tl-source" style="margin-bottom:10px">Screenshots courtesy of <a href="https://www.eve-files.com" target="_blank">Eve-Files</a> by Cribba.</p>
 
-              <div class="video-grid">
+              <div class="video-grid" style="display:grid; grid-template-columns:repeat(3, 172px); justify-content:center;">
                 <a href="https://www.youtube.com/watch?v=jLl_JUaYWco" target="_blank" class="video-tile">
                   <div class="video-tile-img"><img src="https://img.youtube.com/vi/jLl_JUaYWco/mqdefault.jpg" alt="rapebus"><span class="vplay"><span></span></span></div>
                   <span class="video-label">rapebus <span class="video-date">· Sep 2006</span></span>
@@ -998,9 +999,9 @@ a.tl-ref {
                 </div>
                 <div class="battle-box-content">
                   <p>That year, several MINC members made the trip to Fanfest in Iceland. Isayo Arkindra, Thundirr, Mannakin, and others shared a table with the Goons and in-game rivals, but friendly in person. IAC was proudly repped, beer-bottle-cat logo and all.</p>
-                  <div class="battle-thumbnails">
-                    <a href="timeline-assets/2007Fanfest.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2007Fanfest.jpg" alt="Fanfest 2007"></a>
-                    <a href="timeline-assets/2007FanfestDrinks.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2007FanfestDrinks.jpg" alt="Fanfest 2007 drinks"></a>
+                  <div class="battle-thumbnails" style="justify-content:flex-start;">
+                    <a href="timeline-assets/2007Fanfest.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2007Fanfest.jpg" alt="Fanfest 2007" style="height:auto;object-fit:contain;"></a>
+                    <a href="timeline-assets/2007FanfestDrinks.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2007FanfestDrinks.jpg" alt="Fanfest 2007 drinks" style="height:auto;object-fit:contain;"></a>
                   </div>
                   <div class="roster-grid">
                     <div class="roster-card"><img src="assets/portraits/Isayo-Arkindra.jpeg" alt="" class="roster-portrait"><span class="roster-name">Isayo Arkindra</span><img src="assets/BeerPlaceholder.png" alt="" class="roster-ship"><span class="roster-ship-name">Tuborg</span></div>
@@ -1011,7 +1012,7 @@ a.tl-ref {
                 </div>
               </div>
 
-              <div class="video-grid" style="margin-top:12px;">
+              <div class="video-grid" style="margin-top:12px; display:grid; grid-template-columns:repeat(4, 172px); justify-content:center;">
                 <a href="https://www.youtube.com/watch?v=2-D9SerxX3w" target="_blank" class="video-tile">
                   <div class="video-tile-img"><img src="https://img.youtube.com/vi/2-D9SerxX3w/mqdefault.jpg" alt="posyawn"><span class="vplay"><span></span></span></div>
                   <span class="video-label">posyawn <span class="video-date">· Jan 2007</span></span>
@@ -1052,17 +1053,17 @@ a.tl-ref {
               <span class="timeline-year">2008</span>
               <p>MINC builds its first outpost, MINC Delirium, in RNF-YH (Catch). <br></p>
               <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">
-                <img src="timeline-assets/DOTLAN-Event-MINC-Delirium.png" alt="MINC Delirium  DOTLAN EveMaps" style="max-width:39%; border:1px solid #d4b800; display:block">
+                <img src="timeline-assets/DOTLAN-Event-MINC-Delirium.png" alt="MINC Delirium  DOTLAN EveMaps" style="max-width:58.5%; border:1px solid #d4b800; display:block">
               </a>
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net/ticker/104307" target="_blank">DOTLAN EveMaps</a></p><br>
               
-              <img src="timeline-assets/DOTLAN_2008-09-30_ALLIANCE_Left_IAC.png" alt="DOTLAN record: MINC leaves IAC, Sep 30 2008" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/DOTLAN_2008-09-30_ALLIANCE_Left_IAC.png" alt="DOTLAN record: MINC leaves IAC, Sep 30 2008" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source" style="margin-bottom:8px">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <P>Against All Authorities (AAA) soon brought superior numbers to bear and pushed IAC out of the region. MINC took real losses in the fighting; two motherships and the corp's Ragnarok.</P>
               <P> With IAC's hold on Catch broken, MINC left the alliance and joined Wildly Inappropriate.</P>
 
-              <img src="timeline-assets/DOTLAN_2008-12-30_ALLIANCE_Join_Wildly-Inappropriate.png" alt="DOTLAN record: MINC joins Wildly Inappropriate, Dec 30 2008" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/DOTLAN_2008-12-30_ALLIANCE_Join_Wildly-Inappropriate.png" alt="DOTLAN record: MINC joins Wildly Inappropriate, Dec 30 2008" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
             </div>
 
@@ -1072,7 +1073,7 @@ a.tl-ref {
               <p>MINC keeps expanding in nullsec, building its second station, MINC Aberration, in C-4ZOS, Branch.</p>
 
               <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">
-                <img src="timeline-assets/DOTLAN-Event-MINC-Aberration.png" alt="MINC Aberration - DOTLAN EveMaps" style="max-width:39%; border:1px solid #d4b800; display:block">
+                <img src="timeline-assets/DOTLAN-Event-MINC-Aberration.png" alt="MINC Aberration - DOTLAN EveMaps" style="max-width:58.5%; border:1px solid #d4b800; display:block">
               </a>
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net/ticker/105303" target="_blank">DOTLAN EveMaps</a></p>
                <div class="battle-box">
@@ -1103,7 +1104,7 @@ a.tl-ref {
 
               <p>Around the same time, the founding CEO Isayo Arkindra stepped down and named xMillz as his successor.</p>
 
-              <img src="timeline-assets/DOTLAN_2010-09-06_CEO_Isayo_xMillz.png" alt="DOTLAN record: CEO Isayo Arkindra to xMillz, Sep 6 2010" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/DOTLAN_2010-09-06_CEO_Isayo_xMillz.png" alt="DOTLAN record: CEO Isayo Arkindra to xMillz, Sep 6 2010" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
             </div>
@@ -1184,7 +1185,7 @@ a.tl-ref {
             <div class="timeline-entry" id="y2012">
               <span class="timeline-year">2012</span>
 
-              <img src="timeline-assets/DOTLAN_2012-09-26_CEO_xMillz_Nairb.png" alt="DOTLAN record: CEO xMillz to Nairb Ecrep, Sep 26 2012" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/DOTLAN_2012-09-26_CEO_xMillz_Nairb.png" alt="DOTLAN record: CEO xMillz to Nairb Ecrep, Sep 26 2012" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source" style="margin-bottom:8px">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <p>xMillz leaves the game and hands the CEO title to Nairb Ecrep, but keeps his corporation shares. During the Razor period, MINC takes the outpost in P-E (Geminate) and names it De Ja Vu. The corp keeps operating in the northern regions as part of Razor.</p>
@@ -1195,7 +1196,7 @@ a.tl-ref {
 
               <p>In 2013, MINC keeps building out its industrial side, including a public capital ship production program. Run by Tiberu Stundrif, it sold carrier hulls straight to the open market, an early version of the industrial base MINC leaned on later.</p>
 
-              <img src="timeline-assets/2013CapitalProductionProgram.png" alt="MINC Capital Ship Shop - EVE Forums, July 2013" style="max-width:40%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/2013CapitalProductionProgram.png" alt="MINC Capital Ship Shop - EVE Forums, July 2013" style="max-width:50%; border:1px solid #576b84; display:block">
               <p class="tl-source" style="margin-bottom:8px">EVE Online forums, July 12 2013</p>
               <div class="battle-box">
                 <div class="battle-header">
@@ -1264,7 +1265,7 @@ a.tl-ref {
 
                   </div>
                   <div class="battle-thumbnails">
-                    <a href="timeline-assets/BloodbathOfB-R.jpg" class="battle-thumb"><img src="timeline-assets/BloodbathOfB-R.jpg" alt="Bloodbath of B-R5RB - January 27, 2014"></a>
+                    <a href="timeline-assets/BloodbathOfB-R.jpg" class="battle-thumb" style="width:calc(66.66% - 3px);"><img src="timeline-assets/BloodbathOfB-R.jpg" alt="Bloodbath of B-R5RB - January 27, 2014" style="height:290px;"></a>
                   </div>
                 </div>
               </div>
@@ -1284,7 +1285,7 @@ a.tl-ref {
               
               <p>marly cortez takes over as CEO and immediately starts rebuilding. With backing from Razor leadership, including Rich DK, MINC claws its way back from the brink. It's one of the clearest examples of what MINC is not a corp that collapses, but one that keeps surviving things that would end most others.</p>
 
-              <img src="timeline-assets/DOTLAN_2015-01-16_CEO_NAIRB_MARLY.png" alt="DOTLAN record: CEO Nairb Ecrep to marly cortez, Jan 16 2015" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/DOTLAN_2015-01-16_CEO_NAIRB_MARLY.png" alt="DOTLAN record: CEO Nairb Ecrep to marly cortez, Jan 16 2015" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
               </div>
 
@@ -1293,8 +1294,8 @@ a.tl-ref {
               <span class="timeline-note">&#9888; NOTE: Add context for why MINC left RAZOR Alliance</span>
               
               <div class="battle-thumbnails" style="justify-content:flex-start;">
-                <a href="timeline-assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" class="battle-thumb"><img src="timeline-assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" alt="DOTLAN record: MINC leaves RAZOR Alliance, Mar 25 2016" style="height:auto;object-fit:contain;"></a>
-                <a href="timeline-assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" class="battle-thumb"><img src="timeline-assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" alt="DOTLAN record: MINC joins The Bastion, Mar 26 2016" style="height:auto;object-fit:contain;"></a>
+                <a href="timeline-assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" class="battle-thumb" style="width:calc(50% - 3px);"><img src="timeline-assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" alt="DOTLAN record: MINC leaves RAZOR Alliance, Mar 25 2016" style="height:auto;object-fit:contain;"></a>
+                <a href="timeline-assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" class="battle-thumb" style="width:calc(50% - 3px);"><img src="timeline-assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" alt="DOTLAN record: MINC joins The Bastion, Mar 26 2016" style="height:auto;object-fit:contain;"></a>
               </div>
               <p class="tl-source" style="margin-bottom:8px">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
@@ -1305,7 +1306,7 @@ a.tl-ref {
               <p>Shortly after, the Casino War erupts. A coalition of Imperium enemies, bankrolled by wealthy EVE gambling-site operators, assembles the largest military mobilization the game has seen in years. The Moneybadger Coalition drives the Imperium out of the north, system by system. MINC fights the whole campaign, the evacuation and the long retreat south to Delve.</p>
 
               <p>During the Bastion period, Belegvaethor posts a recruitment call on the EVE Online forums.</p>
-              <img src="timeline-assets/20160929 Forum Post Belegvaethor Recruitement post.png" alt="EVE Forums - Belegvaethor recruitment post, Sep 29 2016" style="max-width:65%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/20160929 Forum Post Belegvaethor Recruitement post.png" alt="EVE Forums - Belegvaethor recruitment post, Sep 29 2016" style="max-width:81.25%; border:1px solid #576b84; display:block">
               <p class="tl-source">Source: EVE Online forums, Sep 29 2016</p>
             </div>
 
@@ -1315,7 +1316,7 @@ a.tl-ref {
               <p>After the Casino War, the Imperium rebuilds in Delve. MINC settles into 7UTB and makes itself at home. This is the height of the Rorqual mining age, fleets of Rorquals blanket the anoms, super-ratting in ring sanctums is routine, and the industrial pipeline runs at full tilt. At its peak the corp has multiple titans and supercarriers in production at once. The kind of wealth that quietly funds everything that comes next.</p>
 
               <p>Marley Cortez weighs in on the citadel era on the EVE Online forums.</p>
-              <img src="timeline-assets/20170204 Forums Post marley cortez on citadels.png" alt="EVE Forums - Marley Cortez on citadels, Feb 4 2017" style="max-width:65%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/20170204 Forums Post marley cortez on citadels.png" alt="EVE Forums - Marley Cortez on citadels, Feb 4 2017" style="max-width:81.25%; border:1px solid #576b84; display:block">
               <p class="tl-source" style="margin-bottom:8px">Source: EVE Online forums, Feb 4 2017</p>
               
               <span class="battle-tag">7UTB Industrial Operations</span>
@@ -1357,9 +1358,9 @@ a.tl-ref {
               
               <p>In November, MINC anchors its own Fortizar and Athanors in ZTS-4D, standing up a private mining-and-industry pocket outside the Imperium supercapital umbrella, and starting a pattern it later repeats in Efa, RNF, and elsewhere.</p>
 
-              <span class="roster-faction-header">Moving into ZTS-4D</span>
+              <span class="roster-faction-header" style="text-align:center;">Moving into ZTS-4D</span>
               <div class="battle-thumbnails">
-                <a href="timeline-assets/2018_Move_Op_To_ZTS.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2018_Move_Op_To_ZTS.jpg" alt="Move op to ZTS-4D, 2018"></a>
+                <a href="timeline-assets/2018_Move_Op_To_ZTS.jpg" target="_blank" class="battle-thumb" style="width:calc(41.66% - 3px);"><img src="timeline-assets/2018_Move_Op_To_ZTS.jpg" alt="Move op to ZTS-4D, 2018" style="height:181px;"></a>
               </div>
               <div class="battle-box">
                 <div class="battle-header">
@@ -1813,7 +1814,7 @@ a.tl-ref {
 
               <p>The war ends in August with an Imperium victory. PAPI's invasion collapses. The corp returns to Delve, and attention turns back to Fountain. Primus Buck steps down as CEO and hands off to Khronos Thellere.</p>
 
-              <img src="timeline-assets/DOTLAN_2021-08-19_CEO_PRIMUS_KHRONOS.png" alt="DOTLAN record: CEO Primus Buck to Khronos Thellere, Aug 19 2021" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/DOTLAN_2021-08-19_CEO_PRIMUS_KHRONOS.png" alt="DOTLAN record: CEO Primus Buck to Khronos Thellere, Aug 19 2021" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source" style="margin-bottom:8px">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <p>The back half of 2021 sinks into post-war malaise. CCP's scarcity era has thinned the economy, and a real resentment settles in: the corps that did the most during the war got the least recognition for it. The Pochven SIG, already running since April, accelerates as the main outlet for content while leadership figures out what comes next.</p>
@@ -1851,13 +1852,13 @@ a.tl-ref {
 
               <p>Then MINC was accused of harboring spies by alliance leadership, which we took as an final straw given our history. On March 21st the corp left, first one out. Within days UVIM, ADFU, REVI, and EDF followed. That spring, The Bastion closed its doors.</p>
                <div class="battle-thumbnails">
-                <a href="assets/20220320 Khronos Leaving Bastion ping.png" target="_blank" class="battle-thumb"><img src="assets/20220320 Khronos Leaving Bastion ping.png" alt="Khronos announces MINC leaving The Bastion, Mar 20 2022" style="height:auto;object-fit:contain;"></a></div>
+                <a href="assets/20220320 Khronos Leaving Bastion ping.png" target="_blank" class="battle-thumb" style="width:calc(62.5% - 3px);"><img src="assets/20220320 Khronos Leaving Bastion ping.png" alt="Khronos announces MINC leaving The Bastion, Mar 20 2022" style="height:auto;object-fit:contain;"></a></div>
 
               <p>Leaving was one of the hardest calls MINC ever made. Six years of friendships were built under that banner, and some of the corp's proudest moments happened there. But history alone can't sustain a community; when a handful of corps treat it as a resource and a conflict-averse leader never stops them, eventually the only responsible move is to go.</p>
               
               <div class="battle-thumbnails">
-                <a href="timeline-assets/DOTLAN_2022-03-21_ALLIANCE_Left_Bastion.png" class="battle-thumb"><img src="timeline-assets/DOTLAN_2022-03-21_ALLIANCE_Left_Bastion.png" alt="DOTLAN record: MINC leaves The Bastion, Mar 21 2022" style="height:auto;object-fit:contain;"></a>
-                <a href="timeline-assets/DOTLAN_2022-03-22_ALLIANCE_Joined_GSF.png" class="battle-thumb"><img src="timeline-assets/DOTLAN_2022-03-22_ALLIANCE_Joined_GSF.png" alt="DOTLAN record: MINC joins Goonswarm Federation, Mar 22 2022" style="height:auto;object-fit:contain;"></a>
+                <a href="timeline-assets/DOTLAN_2022-03-21_ALLIANCE_Left_Bastion.png" class="battle-thumb" style="width:calc(50% - 3px);"><img src="timeline-assets/DOTLAN_2022-03-21_ALLIANCE_Left_Bastion.png" alt="DOTLAN record: MINC leaves The Bastion, Mar 21 2022" style="height:auto;object-fit:contain;"></a>
+                <a href="timeline-assets/DOTLAN_2022-03-22_ALLIANCE_Joined_GSF.png" class="battle-thumb" style="width:calc(50% - 3px);"><img src="timeline-assets/DOTLAN_2022-03-22_ALLIANCE_Joined_GSF.png" alt="DOTLAN record: MINC joins Goonswarm Federation, Mar 22 2022" style="height:auto;object-fit:contain;"></a>
               </div>
               <p class="tl-source" style="margin-bottom:8px">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
@@ -1878,7 +1879,7 @@ a.tl-ref {
               <span class="timeline-year">2024</span>
               <p>In January, Khronos Thellere steps down as CEO and RVAMitchell takes over, resolving the leadership question that had hung over the corp for the better part of a year. Khronos leaves EVE for good, liquidating his skill points and assets and distributing them among friends and the corp, including a substantial ISK injection into the wallets to fund what comes next. It's a generous exit from someone who carried the corp through its post-war years.</p>
 
-              <img src="timeline-assets/Dotlan_2024-01-25_CEO_KHRONOS_RVAMITCHELL.png" alt="DOTLAN record: CEO Khronos Thellere to RVAMitchell, Jan 25 2024" style="max-width:36%; border:1px solid #576b84; display:block">
+              <img src="timeline-assets/Dotlan_2024-01-25_CEO_KHRONOS_RVAMITCHELL.png" alt="DOTLAN record: CEO Khronos Thellere to RVAMitchell, Jan 25 2024" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <p>On December 6, MINC re-anchors Delirium in RNF-YH (Catch), the same system where the corp's first outpost once stood. It's meant to be a fresh start: drop structures, get industry rolling again, rebuild momentum.</p>
@@ -2248,9 +2249,9 @@ a.tl-ref {
       | <a href="rules.html">Recruitment</a>
       | <a href="https://seat.mercurialisinc.com">SeAT</a>
       |<br>
-      &copy; 2002 - 2026 Mercurialis Inc. All rights reserved.<br>
+      <span style="font-size:8pt;">&copy; 2002 - 2026 Mercurialis Inc. All rights reserved.<br>
       Disclaimer: Any ISK lost, stolen, scammed, misplaced, laundered, or spent on questionable transactions was done entirely of your own free will. We accept no responsibility for the consequences of your decisions in New Eden. Fly responsibly. By accessing this website, you acknowledge that your visit has been logged and your name added to the list. You don't need to know which list. You're on it.
-      EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.<br><br>
+      EVE Online is the intellectual property of CCP Games. Mercurialis Inc. is an independent player organization and is not affiliated with or endorsed by CCP Games. All in-game entities and events referenced on this site are fictional.</span><br><br>
       <img src="assets/netscape.gif" alt="Best viewed in Netscape">
       &nbsp;
       <img src="assets/IE.gif" alt="Best viewed in IE">
