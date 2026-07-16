@@ -365,6 +365,9 @@
 
 /* ── Embedded videos ──────────────────────────────────────── */
 .video-embed-title {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48%;
     font-size: 13px;
     font-weight: bold;
     color: #d4b800;
@@ -376,7 +379,7 @@
 }
 .video-wrap {
     position: relative;
-    width: 96%;
+    width: 48%;
     margin: 2px 4px 10px 4px;
     display: block;
 }
@@ -891,7 +894,18 @@ a.tl-ref {
               <span class="timeline-year">2003</span>
               
               <p>EVE Online officially launched on May 6, 2003. The launch came with a full server wipe and all assets, ISK, and progress from the beta were reset.</p>
-            
+
+              <p>That same year, MINC earns a mention in the official Prima strategy guide for EVE Online, one of the corp's first pieces of real-world print coverage.</p>
+
+              <div class="battle-thumbnails">
+                <a href="assets/20200823 Primae Strat Guide Cover.jpg" target="_blank" class="battle-thumb" style="width:calc(33.33% - 3px);"><img src="assets/20200823 Primae Strat Guide Cover.jpg" alt="Prima strategy guide, cover" style="height:auto;object-fit:contain;"></a>
+              </div>
+              <div class="battle-thumbnails">
+                <a href="assets/20200823 Primae Strat Guide Pg1.jpg" target="_blank" class="battle-thumb"><img src="assets/20200823 Primae Strat Guide Pg1.jpg" alt="Prima strategy guide, page 1"></a>
+                <a href="assets/20200823 Primae Strat Guide Pg2.jpg" target="_blank" class="battle-thumb"><img src="assets/20200823 Primae Strat Guide Pg2.jpg" alt="Prima strategy guide, page 2"></a>
+                <a href="assets/20200823 Primae Strat Guide Pg3.jpg" target="_blank" class="battle-thumb"><img src="assets/20200823 Primae Strat Guide Pg3.jpg" alt="Prima strategy guide, page 3"></a>
+              </div>
+
             </div>
             <div class="timeline-entry" id="y2004">
               <span class="timeline-year">2004</span>
@@ -982,15 +996,14 @@ a.tl-ref {
               <p>Life in IAC was good. With hostile staging nearby in Querious, roaming and small-scale fights were a regular thing and usually more about making content than winning wars.<br>
               <br>One engagement became legendary for being completely absurd: after a long stretch of provoking an enemy station, MINC and its allies turned the whole thing into a conga line the moment the opposition finally undocked.</p>
               
-              <div class="video-section" style="border:none; background:none; padding:0; margin:8px 0; width:auto;">
-                <a href="https://youtu.be/_Owbxn_Re3s" target="_blank" style="position:relative; display:inline-block;">
-                  <img src="timeline-assets/2007CongoLine.png" alt="The Conga Line - watch on YouTube" style="max-width:100%; display:block; width:50vw; max-width:450px;">
-                  <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
-                    <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
-                  </span>
-                </a>
-                <p class="tl-source">Source: <a href="https://youtu.be/_Owbxn_Re3s" target="_blank">Ha Chu on YouTube</a></p>
-              </div>
+              <p class="video-embed-title">The Conga Line, 2007</p>
+              <a href="https://www.youtube.com/watch?v=_Owbxn_Re3s" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/_Owbxn_Re3s/hqdefault.jpg" alt="The Conga Line - watch on YouTube">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">MINC and its allies break into an impromptu conga line the moment the enemy fleet finally undocks. Footage courtesy of Ha Chu.</p>
               
               <div class="battle-box">
                 <div class="battle-header">
@@ -1545,6 +1558,7 @@ a.tl-ref {
               <div class="battle-thumbnails">
                 <a href="timeline-assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" alt="Multi-boxing cynobeacon runs in Esoteria, Aug 26 2020"></a>
                 <a href="timeline-assets/2020.10.26.02.59.17_HT4K_Fortizar_Anchor.png" target="_blank" class="battle-thumb"><img src="timeline-assets/2020.10.26.02.59.17_HT4K_Fortizar_Anchor.png" alt="HT4K Fortizar Anchor"></a>
+                <a href="assets/20201026_Screenshot Discord Qicia Battle Victory Ping.jpg" target="_blank" class="battle-thumb"><img src="assets/20201026_Screenshot Discord Qicia Battle Victory Ping.jpg" alt="Qicia's Discord battle victory ping, Oct 26 2020"></a>
                 <a href="timeline-assets/20210121_unknown-92.png" target="_blank" class="battle-thumb"><img src="timeline-assets/20210121_unknown-92.png" alt="Esoteria campaign - structure kill, Jan 2021"></a>
                 <a href="timeline-assets/2021-02-19_Sotiyo_Kill.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2021-02-19_Sotiyo_Kill.jpg" alt="Sotiyo Kill - Feb 19 2021"></a>
               </div>
@@ -1712,7 +1726,7 @@ a.tl-ref {
                   </div>
                   <div class="battle-thumbnails">
                     <a href="timeline-assets/20201230_M2%20Battle.png" target="_blank" class="battle-thumb"><img src="timeline-assets/20201230_M2%20Battle.png" alt="M2-XFE - Dec 30 2020"></a>
-                    <a href="timeline-assets/20210131_Blops%20MINC.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/20210131_Blops%20MINC.jpg" alt="Black Ops deployment - Jan 31 2021"></a>
+                    
                   </div>
                 </div>
               </div>
@@ -1801,6 +1815,7 @@ a.tl-ref {
                   </details>
                 </div>
               </div>
+              <a href="timeline-assets/20210131_Blops%20MINC.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/20210131_Blops%20MINC.jpg" alt="Black Ops staging - Jan 31 2021"></a>
             </div>
 
             <div class="timeline-entry" id="y2021">
@@ -1813,21 +1828,35 @@ a.tl-ref {
 
               <p>January through March 2021 is the campaign's peak. The timer board runs nightly: Ansiblex gates, Fortizars, Tataras, and IHUBs across Esoteria cycle through the target list. The crown jewels land in late January and February: a 364B ISK Sotiyo in D-FVI7 and an 80B ISK Sotiyo in VL7-60, the biggest kills of the entire deployment.</p>
 
+              <p class="video-embed-title">Sotiyo Kill - D-FVI7, Esoteria Campaign</p>
+              <a href="https://www.youtube.com/watch?v=3k4MXwZYmU0" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/3k4MXwZYmU0/hqdefault.jpg" alt="Sotiyo Kill - D-FVI7, Esoteria Campaign">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">The 364B ISK Sotiyo goes down in D-FVI7, the biggest single kill of the Esoteria deployment.</p>
+
+              <p class="video-embed-title">Qicia's Leshak Fleet - Esoteria Campaign</p>
+              <a href="https://youtu.be/I1q87gvZ8So" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/I1q87gvZ8So/hqdefault.jpg" alt="Qicia's Leshak Fleet - watch on YouTube">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">Qicia's Leshak fleet on operation during the Esoteria campaign.</p>
+
               <div class="battle-thumbnails">
-                <a href="https://youtu.be/I1q87gvZ8So" target="_blank" class="battle-thumb" style="position:relative; display:inline-block;">
-                  <img src="https://img.youtube.com/vi/I1q87gvZ8So/hqdefault.jpg" alt="Qicia's Leshak Fleet - watch on YouTube" style="height:120px; width:auto;">
-                  <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
-                    <span style="display:block; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-left:14px solid #fff; margin-left:3px;"></span>
-                  </span>
-                </a>
                 <a href="timeline-assets/20210204_Bastion%20Leshak%20Fleet.png" target="_blank" class="battle-thumb"><img src="timeline-assets/20210204_Bastion%20Leshak%20Fleet.png" alt="Leshak Fleet, Feb 4 2021"></a>
                 <a href="timeline-assets/20210403_Esoteria%20Entosis.png" target="_blank" class="battle-thumb"><img src="timeline-assets/20210403_Esoteria%20Entosis.png" alt="Esoteria entosis ops, Apr 3 2021"></a>
               </div>
-              <p class="video-embed-title">CR-0E5 Skirmish - Interdictor POV, February 19, 2021</p>
-              <div class="video-wrap">
-                <img src="assets/SkirmishDictor-thumb.jpg" alt="CR-0E5 Skirmish — thumbnail placeholder">
-                <div class="video-todo-badge">!</div>
-              </div>
+              <p class="video-embed-title">CR-0E5 Skirmish - Interdictor POV, 2021 02 19</p>
+              <a href="https://www.youtube.com/watch?v=9YBSn-TYuQU" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/9YBSn-TYuQU/hqdefault.jpg" alt="CR-0E5 Skirmish - Interdictor POV, February 19, 2021">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
               <p class="r-caption" style="margin:-6px 4px 10px 4px;">Interdictor pilot POV from a live skirmish in CR-0E5 (Esoteria), February 19, 2021. This was deep in the campaign's peak period; the timer board was running nightly and Delta Squad was regularly forcing TEST to pull defense fleets off the main front. The interdictor role was central to Delta Squad's small-gang doctrine: bubble the target, hold tackle, and let the strike package land.</p>
 
               <p>In April, mid-war, the Pochven SIG stands up. Mining rules, intel tools, and corp spreadsheets all go out; the pivot to Pochven begins here, not after the war.</p>
@@ -1905,12 +1934,14 @@ a.tl-ref {
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <p>On December 6, MINC re-anchors Delirium in RNF-YH (Catch), the same system where the corp's first outpost once stood. It's meant to be a fresh start: drop structures, get industry rolling again, rebuild momentum.</p>
-              <p class="video-embed-title">Delirium Keepstar; Coming Online, RNF-YH, December 6, 2024</p>
-              <div class="video-wrap">
-                <img src="assets/Delirium-thumb.jpg" alt="Delirium Keepstar — thumbnail placeholder">
-                <div class="video-todo-badge">!</div>
-              </div>
-              <p class="r-caption" style="margin:-6px 4px 10px 4px;">MINC's new Keepstar anchors and comes online in RNF-YH (Catch), December 6, 2024. The name is deliberate: Delirium was also the name of MINC's first player-built outpost, constructed in the same system back in 2008. Dropping a Keepstar here was both a practical staging decision and a callback to some of the corp's deepest roots in nullsec.</p>
+              <p class="video-embed-title">Warping to MINC Delirium, RNF-YH, December 6, 2024</p>
+              <a href="https://youtu.be/t79BM6nRwd8" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/t79BM6nRwd8/hqdefault.jpg" alt="Warping to MINC Delirium - watch on YouTube">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">Warping in on MINC's new faction fort in RNF-YH (Catch), December 6, 2024. The name is deliberate: Delirium was also the name of MINC's first player-built outpost, constructed in the same system back in 2008. Dropping a structure here was both a practical staging decision and a callback to some of the corp's deepest roots in nullsec.</p>
             </div>
 
             <div class="timeline-entry" id="y2025">
@@ -1967,11 +1998,10 @@ a.tl-ref {
 
             <div class="timeline-entry" id="y2026">
               <span class="timeline-year">2026</span>
-              <p>War erupts between the Imperium and Winter Coalition. MINC takes part in a daring operation: the headshot of Fraternity's staging Keepstar. The attack lands, marking the first time in EVE history that a nullsec power bloc destroys another bloc's primary staging citadel in a direct assault.</p>
-              <div class="battle-thumbnails">
-                <a href="timeline-assets/FRT%20KeepstarHeadshot.png" class="battle-thumb"><img src="timeline-assets/FRT%20KeepstarHeadshot.png" alt="FRT Keepstar headshot"></a>
-              </div>
-            
+              
+              <p>War erupts between the Imperium and Winter Coalition. The Imperium wants the fight. It pushes north, establishes a beachhead, and starts pressing into Winter Coalition space.</p>
+
+
               <div class="battle-box">
                 <div class="battle-header">
                   <span class="battle-header-name">Battle of Atioth</span>
@@ -1998,6 +2028,39 @@ a.tl-ref {
                     <div class="roster-card"><img src="assets/portraits/slappy-mcpewpew.jpeg" alt="" class="roster-portrait"><span class="roster-name">Slappy McPewpew</span><div class="roster-ship-wrap"><img src="https://images.evetech.net/types/22442/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Claymore</span></div>
                     <div class="roster-card"><img src="assets/portraits/yamoni.jpeg" alt="" class="roster-portrait"><span class="roster-name">Yamoni</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Harpy.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Harpy</span></div>
                     <div class="roster-card"><img src="assets/portraits/tal'rashas-feine-kleidung.jpeg" alt="" class="roster-portrait"><span class="roster-name">Tal'Rashas feine Kleidung</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Sabre.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Sabre</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <p>As the Imperium pushes forward, Winter Coalition decides to cheese it. Instead of standing for a real fight, they throw a swarm of Vexors at an Imperium structure and grind it down. It's a tactic the Imperium dropped a long time ago because it isn't much fun; supercapitals are what large structure fights are for. If WinterCo wants to play it that way, the Imperium is happy to hit their staging the same way.</p>
+
+              <div class="battle-box">
+                <div class="battle-header">
+                  <span class="battle-header-name">Battle of 4-HWWF</span>
+                  <span class="battle-header-date">April 28, 2026</span>
+                </div>
+                <div class="battle-box-content">
+
+                  <p>The Initiative lands the first hit, reinforcing Fraternity's staging Keepstar in 4-HWWF. MINC comes back with the rest of the Imperium to finish the armor and hull timers. It's the first time in EVE history that one power bloc headshots another bloc's primary staging citadel in a direct assault, and MINC pilots are on the killmail.</p>
+
+                  <p>The final fight draws 2,516 characters across 459 corporations and 28 alliances. Fraternity and its 17 allied alliances put up 1,657 kills for 114 losses, a 92% efficiency. Goonswarm Federation and its 14 allies take the other side of that ledger. Across both sides, 2,183 ships go down and 112.23 billion ISK burns.</p>
+
+
+                  <p><a href="https://eve-kill.com/battle/737196" target="_blank" class="tl-ref">battle report &#8599;</a></p>
+
+                  <div class="battle-thumbnails">
+                    <a href="timeline-assets/FRT%20KeepstarHeadshot.png" class="battle-thumb"><img src="timeline-assets/FRT%20KeepstarHeadshot.png" alt="Fraternity's staging Keepstar dies in 4-HWWF"></a>
+                  </div>
+                  <p class="r-caption" style="margin:-6px 4px 10px 4px;">Fraternity's staging Keepstar goes down in 4-HWWF.</p>
+
+                  <div class="roster-grid">
+                    <div class="roster-card"><img src="assets/portraits/rvamitchell.jpeg" alt="" class="roster-portrait"><span class="roster-name">RVAMitchell</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Purifier.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Purifier</span></div>
+                    <div class="roster-card"><img src="assets/portraits/saki-ishigaki.jpeg" alt="" class="roster-portrait" onerror="this.src='assets/logos/minc.png'"><span class="roster-name">Saki Ishigaki</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Purifier.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Purifier</span></div>
+                    <div class="roster-card"><img src="assets/portraits/youhao-pingguo-nongmin.jpeg" alt="" class="roster-portrait"><span class="roster-name">Youaho Pinguo nongmin</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Purifier.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Purifier</span></div>
+                    <div class="roster-card"><img src="assets/portraits/purpleshadez.jpeg" alt="" class="roster-portrait"><span class="roster-name">Purpleshades</span><div class="roster-ship-wrap"><img src="assets/ship-icons/256px-Purifier.jpg" alt="" class="roster-ship"><img src="assets/ship-icons/CornerT2h.png" alt="" class="ship-tier-badge"></div><span class="roster-ship-name">Purifier</span></div>
+                    <div class="roster-card"><img src="assets/portraits/dark-he4rt.jpeg" alt="" class="roster-portrait" onerror="this.src='assets/logos/minc.png'"><span class="roster-name">Dark He4rt</span><img src="https://images.evetech.net/types/626/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Vexor</span></div>
+                    <div class="roster-card"><img src="assets/portraits/dark-mancer.jpeg" alt="" class="roster-portrait" onerror="this.src='assets/logos/minc.png'"><span class="roster-name">Dark Mancer</span><img src="https://images.evetech.net/types/626/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Vexor</span></div>
+                    <div class="roster-card"><img src="assets/portraits/dark-oldcrow.jpeg" alt="" class="roster-portrait"><span class="roster-name">Dark Oldcrow</span><img src="https://images.evetech.net/types/626/render?size=64" alt="" class="roster-ship" onerror="this.style.display='none'"><span class="roster-ship-name">Vexor</span></div>
                   </div>
                 </div>
               </div>
