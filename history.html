@@ -347,7 +347,7 @@
     gap: 4px;
     margin: 5px 4px 8px 4px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .battle-thumb {
     display: block;
@@ -897,13 +897,13 @@ a.tl-ref {
 
               <p>That same year, MINC earns a mention in the official Prima strategy guide for EVE Online, one of the corp's first pieces of real-world print coverage.</p>
 
-              <div class="battle-thumbnails">
-                <a href="assets/20200823 Primae Strat Guide Cover.jpg" target="_blank" class="battle-thumb" style="width:calc(33.33% - 3px);"><img src="assets/20200823 Primae Strat Guide Cover.jpg" alt="Prima strategy guide, cover" style="height:auto;object-fit:contain;"></a>
-              </div>
-              <div class="battle-thumbnails">
-                <a href="assets/20200823 Primae Strat Guide Pg1.jpg" target="_blank" class="battle-thumb"><img src="assets/20200823 Primae Strat Guide Pg1.jpg" alt="Prima strategy guide, page 1"></a>
-                <a href="assets/20200823 Primae Strat Guide Pg2.jpg" target="_blank" class="battle-thumb"><img src="assets/20200823 Primae Strat Guide Pg2.jpg" alt="Prima strategy guide, page 2"></a>
-                <a href="assets/20200823 Primae Strat Guide Pg3.jpg" target="_blank" class="battle-thumb"><img src="assets/20200823 Primae Strat Guide Pg3.jpg" alt="Prima strategy guide, page 3"></a>
+              <div class="battle-thumbnails" style="align-items:flex-start;">
+                <a href="assets/20200823 Primae Strat Guide Cover.jpg" target="_blank" class="battle-thumb" style="width:auto;"><img src="assets/20200823 Primae Strat Guide Cover.jpg" alt="Prima strategy guide, cover" style="width:auto;height:368px;object-fit:contain;"></a>
+                <div style="display:flex; flex-direction:column; gap:4px;">
+                  <a href="assets/20200823 Primae Strat Guide Pg3.jpg" target="_blank" class="battle-thumb" style="width:auto;"><img src="assets/20200823 Primae Strat Guide Pg3.jpg" alt="Prima strategy guide, page 3" style="width:auto;height:120px;object-fit:contain;"></a>
+                  <a href="assets/20200823 Primae Strat Guide Pg2.jpg" target="_blank" class="battle-thumb" style="width:auto;"><img src="assets/20200823 Primae Strat Guide Pg2.jpg" alt="Prima strategy guide, page 2" style="width:auto;height:120px;object-fit:contain;"></a>
+                  <a href="assets/20200823 Primae Strat Guide Pg1.jpg" target="_blank" class="battle-thumb" style="width:auto;"><img src="assets/20200823 Primae Strat Guide Pg1.jpg" alt="Prima strategy guide, page 1" style="width:auto;height:120px;object-fit:contain;"></a>
+                </div>
               </div>
 
             </div>
@@ -935,7 +935,7 @@ a.tl-ref {
                   <img src="timeline-assets/2006.11.27.10.43.11_Screenshot.jpg" alt="Nov 27, 2006 — Catch operations">
                 </div>
                 <div class="battle-thumb">
-                  <img src="timeline-assets/2006.11.27.18.05.49_Screenshot.jpg" alt="Nov 27, 2006 — IAC space roam">
+                  <img src="timeline-assets/2006.11.27.18.05.49_Screenshot.jpg" alt="Nov 27, 2006 — Isayo's dead carrier">
                 </div>
                 <div class="battle-thumb">
                   <img src="timeline-assets/2006.12.05.21.01.03_Screenshot.jpg" alt="Dec 5, 2006 — Catch nullsec">
@@ -949,7 +949,7 @@ a.tl-ref {
               </div>
               <p class="tl-source" style="margin-bottom:10px">Screenshots courtesy of <a href="https://www.eve-files.com" target="_blank">Eve-Files</a> by Cribba.</p>
 
-              <div class="video-grid" style="display:grid; grid-template-columns:repeat(3, 172px); justify-content:center;">
+              <div class="video-grid" style="display:grid; grid-template-columns:repeat(3, 172px); justify-content:flex-start;">
                 <a href="https://www.youtube.com/watch?v=jLl_JUaYWco" target="_blank" class="video-tile">
                   <div class="video-tile-img"><img src="https://img.youtube.com/vi/jLl_JUaYWco/mqdefault.jpg" alt="rapebus"><span class="vplay"><span></span></span></div>
                   <span class="video-label">rapebus <span class="video-date">· Sep 2006</span></span>
@@ -1012,7 +1012,7 @@ a.tl-ref {
                 </div>
                 <div class="battle-box-content">
                   <p>That year, several MINC members made the trip to Fanfest in Iceland. Isayo Arkindra, Thundirr, Mannakin, and others shared a table with the Goons and in-game rivals, but friendly in person. IAC was proudly repped, beer-bottle-cat logo and all.</p>
-                  <div class="battle-thumbnails" style="justify-content:flex-start;">
+                  <div class="battle-thumbnails">
                     <a href="timeline-assets/2007Fanfest.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2007Fanfest.jpg" alt="Fanfest 2007" style="height:auto;object-fit:contain;"></a>
                     <a href="timeline-assets/2007FanfestDrinks.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2007FanfestDrinks.jpg" alt="Fanfest 2007 drinks" style="height:auto;object-fit:contain;"></a>
                   </div>
@@ -1025,7 +1025,7 @@ a.tl-ref {
                 </div>
               </div>
 
-              <div class="video-grid" style="margin-top:12px; display:grid; grid-template-columns:repeat(4, 172px); justify-content:center;">
+              <div class="video-grid" style="margin-top:12px; display:grid; grid-template-columns:repeat(4, 172px); justify-content:flex-start;">
                 <a href="https://www.youtube.com/watch?v=2-D9SerxX3w" target="_blank" class="video-tile">
                   <div class="video-tile-img"><img src="https://img.youtube.com/vi/2-D9SerxX3w/mqdefault.jpg" alt="posyawn"><span class="vplay"><span></span></span></div>
                   <span class="video-label">posyawn <span class="video-date">· Jan 2007</span></span>
@@ -1067,7 +1067,7 @@ a.tl-ref {
 
               <p>MINC's longevity earns it a spot in the Guinness World Records Gamer's Edition 2008, listed as EVE Online's Oldest Player Corporation:</p>
               <p style="font-style:italic; color:#a0a0a0;">"Oldest Player Corporation<br>Mercurialis Inc. was established on 28 October 2002, prior to the game's release. As of September 2007 it had 51 members, with the player Isay Arkindra acting as leader or CEO. It is currently a member of the Interstellar Alcohol Conglomerate Alliance."</p>
-              <div class="battle-thumbnails" style="justify-content:flex-start;">
+              <div class="battle-thumbnails">
                 <a href="assets/2008 Guinessbookofworldrecords.jpg" target="_blank" class="battle-thumb"><img src="assets/2008 Guinessbookofworldrecords.jpg" alt="Guinness World Records Gamer's Edition 2008" style="height:auto;aspect-ratio:1111/824;object-fit:cover;"></a>
                 <a href="assets/2008 World Record Mention.png" target="_blank" class="battle-thumb"><img src="assets/2008 World Record Mention.png" alt="MINC's Guinness World Records Gamer's Edition 2008 entry" style="height:auto;object-fit:contain;"></a>
               </div>
@@ -1336,7 +1336,7 @@ a.tl-ref {
               <span class="timeline-year">2016</span>
               <span class="timeline-note">&#9888; NOTE: Add context for why MINC left RAZOR Alliance</span>
               
-              <div class="battle-thumbnails" style="justify-content:flex-start;">
+              <div class="battle-thumbnails">
                 <a href="timeline-assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" class="battle-thumb" style="width:calc(50% - 3px);"><img src="timeline-assets/DOTLAN_2016-03-25_ALLIANCE_Left_Razor.png" alt="DOTLAN record: MINC leaves RAZOR Alliance, Mar 25 2016" style="height:auto;object-fit:contain;"></a>
                 <a href="timeline-assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" class="battle-thumb" style="width:calc(50% - 3px);"><img src="timeline-assets/DOTLAN_2016-03-26_ALLIANCE_Joined_Bastion.png" alt="DOTLAN record: MINC joins The Bastion, Mar 26 2016" style="height:auto;object-fit:contain;"></a>
               </div>
@@ -1501,7 +1501,17 @@ a.tl-ref {
             <div class="timeline-entry" id="y2020">
               <span class="timeline-year">2020</span>
 
-              <p>On May 11, MINC formally deploys with the Goon Expeditionary Force (GEF), putting the corp on a war footing two months before WWB2 officially opens.</p>
+              <p>On May 11, MINC formally deploys with the Goon Expeditionary Force (GEF), putting the corp on a war footing two months before WWB2 officially opens. Weeks later, on June 10, GEF gets a preview of what's coming: a massive dread brawl at Nennamial. Only two MINC pilots are on the field, but one of them doesn't come home.</p>
+
+              <div class="battle-thumbnails">
+                <a href="assets/20200709_RVA_Dreadloss_Nennam.gif" class="battle-thumb" style="position:relative;" onclick="event.preventDefault(); this.querySelector('img').src='assets/20200709_RVA_Dreadloss_Nennam.gif'; this.querySelector('.vplay').style.display='none';">
+                  <img src="assets/20200709_RVA_Dreadloss_Nennam_poster.jpg" alt="RVAMitchell's dread dies at Nennamial" class="gif-poster" style="height:auto;object-fit:contain;">
+                  <span class="vplay"><span></span></span>
+                </a>
+              </div>
+              <p><a href="https://zkillboard.com/related/30045344/202006101300/" target="_blank" class="tl-ref">battle report &#8599;</a></p>
+
+              <p>On June 29, with war imminent, leadership sends the order: pull everything out of forward space. Cap pilots, get your titans, supers, dreads, and FAXes staged and ready.</p>
 
               <p>World War Bee 2 erupts across New Eden as the Imperium faces PAPI, PandaFam, Legacy Coalition, a coalition of enemies assembled with one goal: destroy Goonswarm Federation. As the war kicks off mid-year, MINC evacuates Fountain. Leadership calls it an indefensible floodplain and ends the endless shuffle between regions for good. They fall back to Delve and 1DQ.</p>
 
@@ -1555,14 +1565,13 @@ a.tl-ref {
                 </div>
               </div>
 
-              <p>On June 29, with war imminent, leadership sends the order: pull everything out of forward space. Cap pilots, get your titans, supers, dreads, and FAXes staged and ready.</p>
-
-              <div class="battle-thumbnails" style="justify-content:center;">
+              <div class="battle-thumbnails">
                 <a href="timeline-assets/20201105_Delta%20target.jpg" target="_blank" class="battle-thumb" style="width:32.5%;"><img src="timeline-assets/20201105_Delta%20target.jpg" alt="Remember Fountain - Delta Squad, November 2020" style="height:auto; object-fit:unset;"></a>
               </div>
               <span class="battle-tag">Esoteria / Delta Squad Operations, 2020–2021</span>
               <p>The Bastion moves early. By the first week of August the alliance isn't raiding; it's building behind enemy lines. The Imperium floods northern Esoteria with structures, a deliberate beachhead of citadels planted across TEST's home region. The timing matters: this happens right before CCP introduces structure cores, a mechanic that would have made that kind of mass fortification far more costly. A deal with the Stain locals provides staging; HT4K becomes the forward base.</p>
               <p>On September 5, Delta Squad is formally stood up. Led by Qicia, RVAMitchell, and Khronos, the doctrine is asymmetric: no FC required, 24/7 entosis and structure pings, forcing TEST to constantly pull fleets off the front to defend Esoteria. Every ping answered in the south is one fewer defender at 1DQ. The DTEKF IHUB kill froze two titan builds in their Sotiyo, and the Sotiyo itself would follow.</p>
+              <p>Esoteria is the main effort, but it isn't the only one. Not everyone can make the deep behind-enemy-lines ops, and plenty of people just like being in the big fights, so MINC keeps feeding pilots into Imperium mainline fleets back home the whole time. Most do both. The bulk of the corp's energy goes south to Esoteria, but when the Imperium forms for the war-defining fights in Delve, MINC is on those grids too.</p>
               <div class="battle-thumbnails">
                 <a href="timeline-assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/20200826%20Esoteria%20Shooting%20Cynobeacons.jpg" alt="Multi-boxing cynobeacon runs in Esoteria, Aug 26 2020"></a>
                 <a href="timeline-assets/2020.10.26.02.59.17_HT4K_Fortizar_Anchor.png" target="_blank" class="battle-thumb"><img src="timeline-assets/2020.10.26.02.59.17_HT4K_Fortizar_Anchor.png" alt="HT4K Fortizar Anchor"></a>
@@ -1570,17 +1579,21 @@ a.tl-ref {
                 <a href="timeline-assets/20210121_unknown-92.png" target="_blank" class="battle-thumb"><img src="timeline-assets/20210121_unknown-92.png" alt="Esoteria campaign - structure kill, Jan 2021"></a>
                 <a href="timeline-assets/2021-02-19_Sotiyo_Kill.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/2021-02-19_Sotiyo_Kill.jpg" alt="Sotiyo Kill - Feb 19 2021"></a>
               </div>
-              <p class="video-embed-title">Bastion Black Ops Strike - Esoteria, December 29, 2020</p>
-              <div class="video-wrap">
-                <img src="assets/BastionBLOPS-thumb.jpg" alt="Bastion Black Ops Strike — thumbnail placeholder">
-                <div class="video-todo-badge">!</div>
-              </div>
-              <p class="r-caption" style="margin:-6px 4px 10px 4px;">Delta Squad BLOPS fleet running covert bridge strikes across Esoteria. With TEST's home region thinly defended and most of their pilots committed to Delve, Delta Squad used black ops battleships to hunt ratters, kill assets, and keep TEST constantly reacting to threats in their own backyard. This footage is from the December 29 op; one day before M2-XFE turned the war.</p>
-              <p class="video-embed-title">Delta Squad Carrier Drop - Esoteria, December 30, 2020</p>
-              <div class="video-wrap">
-                <img src="assets/DeltaCarrierDrop-thumb.jpg" alt="Delta Carrier Drop — thumbnail placeholder">
-                <div class="video-todo-badge">!</div>
-              </div>
+              <p class="video-embed-title">The Bastion - Carrier and Mining Fleet Drop</p>
+              <a href="https://www.youtube.com/watch?v=oPwBSlbO6sA" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/oPwBSlbO6sA/hqdefault.jpg" alt="The Bastion - Carrier and Mining Fleet Drop">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">Delta Squad drops carriers on an Esoteria mining fleet. With TEST's home region thinly defended and most of their pilots committed to Delve, Delta Squad kept hunting ratters and miners to keep TEST constantly reacting to threats in their own backyard.</p>
+              <p class="video-embed-title">Delta Squad Carrier Drop - Esoteria, 2020-12-30</p>
+              <a href="https://www.youtube.com/watch?v=-yy31yx9EcU" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/-yy31yx9EcU/hqdefault.jpg" alt="Delta Squad Carrier Drop - Esoteria, December 30, 2020">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
               <p class="r-caption" style="margin:-6px 4px 10px 4px;">Forward carrier deployment in Esoteria on December 30, 2020; the same day M2-XFE was erupting in Delve. While the largest battle in gaming history was unfolding a few regions over, Delta Squad was still running ops in TEST's backyard. Carriers provided heavy strike capability and on-grid support for structure operations throughout the campaign.</p>
               <div class="reddit-box">
                 <div class="reddit-header">
@@ -1715,7 +1728,7 @@ a.tl-ref {
               <div class="battle-box">
                 <div class="battle-header">
                   <span class="battle-header-name">Massacre at M2-XFE</span>
-                  <span class="battle-header-date">December 30, 2020 -January 2021</span>
+                  <span class="battle-header-date">2020 12 30 -January 2021</span>
                 </div>
                 <div class="battle-box-content">
                   
@@ -1823,12 +1836,23 @@ a.tl-ref {
                   </details>
                 </div>
               </div>
-              <a href="timeline-assets/20210131_Blops%20MINC.jpg" target="_blank" class="battle-thumb"><img src="timeline-assets/20210131_Blops%20MINC.jpg" alt="Black Ops staging - Jan 31 2021"></a>
+              <p class="video-embed-title">Carrier Drop - 2021-01-31</p>
+              <a href="https://www.youtube.com/watch?v=aDxwjnm2oAc" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/aDxwjnm2oAc/hqdefault.jpg" alt="Carrier Drop - January 31, 2021">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">Delta Squad carrier drop staged out of black ops, January 31, 2021.</p>
             </div>
 
             <div class="timeline-entry" id="y2021">
               <span class="timeline-year">2021</span>
-              <p>On January 21, Minc-chan, the corp mascot, is introduced to the membership. <em style="color:#576b84; font-size:12px;">[Screenshots to be added]</em></p>
+              <p>On January 21, Minc-chan, the corp mascot, is introduced to the membership.</p>
+              <div class="battle-thumbnails">
+                <a href="assets/20210121_MINCCHAN.png" target="_blank" class="battle-thumb" style="width:calc(33.33% - 3px);"><img src="assets/20210121_MINCCHAN.png" alt="Minc-chan, Jan 21 2021" style="height:145px;object-fit:contain;"></a>
+                <a href="assets/20210521_MINCCHAN_Leshak.png" target="_blank" class="battle-thumb" style="width:calc(33.33% - 3px);"><img src="assets/20210521_MINCCHAN_Leshak.png" alt="Minc-chan Leshak, May 21 2021" style="height:145px;object-fit:contain;"></a>
+              </div>
 
               <p>The deployment carries into 2021. After repeated tries, TEST finally kills MINC's HT4K staging Fortizar, but losing the base doesn't end the campaign. MINC just sets up new forward positions across Esoteria and keeps going.</p>
 
@@ -1858,25 +1882,36 @@ a.tl-ref {
                 <a href="timeline-assets/20210204_Bastion%20Leshak%20Fleet.png" target="_blank" class="battle-thumb"><img src="timeline-assets/20210204_Bastion%20Leshak%20Fleet.png" alt="Leshak Fleet, Feb 4 2021"></a>
                 <a href="timeline-assets/20210403_Esoteria%20Entosis.png" target="_blank" class="battle-thumb"><img src="timeline-assets/20210403_Esoteria%20Entosis.png" alt="Esoteria entosis ops, Apr 3 2021"></a>
               </div>
-              <p class="video-embed-title">CR-0E5 Skirmish - Interdictor POV, 2021 02 19</p>
+              <p class="video-embed-title">CR-0E5 Skirmish - Interdictor POV, 2021-02-19</p>
               <a href="https://www.youtube.com/watch?v=9YBSn-TYuQU" target="_blank" class="video-wrap" style="position:relative;">
                 <img src="https://img.youtube.com/vi/9YBSn-TYuQU/hqdefault.jpg" alt="CR-0E5 Skirmish - Interdictor POV, February 19, 2021">
                 <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
                   <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
                 </span>
               </a>
-              <p class="r-caption" style="margin:-6px 4px 10px 4px;">Interdictor pilot POV from a live skirmish in CR-0E5 (Esoteria), February 19, 2021. This was deep in the campaign's peak period; the timer board was running nightly and Delta Squad was regularly forcing TEST to pull defense fleets off the main front. The interdictor role was central to Delta Squad's small-gang doctrine: bubble the target, hold tackle, and let the strike package land.</p>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">Interdictor pilot POV from a skirmish in CR-0E5, fleets were run frequently and Delta Squad was regularly forcing TEST to pull defense fleets off the main front. </p>
 
-              <p>In April, mid-war, the Pochven SIG stands up. Mining rules, intel tools, and corp spreadsheets all go out; the pivot to Pochven begins here, not after the war.</p>
+              <p class="video-embed-title">Hot Dropping Mangos with FERRA - 2021-03-23</p>
+              <a href="https://www.youtube.com/watch?v=tx44z_2ca44" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/tx44z_2ca44/hqdefault.jpg" alt="Hot Dropping Mangos with FERRA - March 23, 2021">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">MINC hot drops a Mangonel gang alongside FERRA, March 23, 2021.</p>
 
-              <p>On August 16, week 58 of the war, MINC is on grid for the kill of the T5Z Keepstar.</p>
+              <p>In April, mid-war, the Pochven SIG stands up, bringing in side income running Observatory Flashpoints.</p>
 
-              <p>The war ends in August with an Imperium victory. PAPI's invasion collapses. The corp returns to Delve, and attention turns back to Fountain. Primus Buck steps down as CEO and hands off to Khronos Thellere.</p>
+              <p>Then, unexpectedly, PAPI begins to unanchor. On August 16, week 58 of the war, MINC is on grid for the kill of the T5Z Keepstar.</p>
+
+              <p>The war ends in August the way EVE wars usually do: not with a final battle but with the attackers walking away. For over a year PAPI had one goal, destroy the Imperium, and by summer they'd taken Fountain, Querious, Period Basis, and most of Delve, squeezing the Imperium down to a single fortified pocket around 1DQ. After M2-XFE killed PAPI's appetite for another all-in titan fight, PAPI ran out of ways to finish the job, and the will to keep trying went with it. In early August they announced the invasion had failed and pulled out. MINC had spent the whole war working both ends of it, grinding TEST down in Esoteria and standing on the mainline grids in Delve, and both mattered. The corp returns to Delve, and attention turns back to Fountain.</p>
 
               <img src="timeline-assets/DOTLAN_2021-08-19_CEO_PRIMUS_KHRONOS.png" alt="DOTLAN record: CEO Primus Buck to Khronos Thellere, Aug 19 2021" style="max-width:54%; border:1px solid #576b84; display:block">
               <p class="tl-source" style="margin-bottom:8px">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
-              <p>The back half of 2021 sinks into post-war malaise. CCP's scarcity era has thinned the economy, and a real resentment settles in: the corps that did the most during the war did not get the recognition it expected for it. CCP even miscredit the Esoteria campgain to a different corporation FC. The Pochven SIG, already running since April, accelerates as the main outlet for content while leadership figures out what comes next.</p>
+              <p>Primus Buck steps down as CEO and hands off to Khronos Thellere.</p>
+
+              <p>The back half of 2021 sinks into post-war malaise. CCP's scarcity era has thinned the economy, and a real resentment settles in: the corps that did the most during the war got the least recognition for it. The Pochven SIG, already running since April, accelerates as the main outlet for content while leadership figures out what comes next.</p>
               
               <p>From late August, a forward hunting op called Delta Squad runs small-gang fleets looking for kills across the region. The appetite is there, even if the numbers aren't yet.</p>
               
@@ -1896,6 +1931,14 @@ a.tl-ref {
                 <a href="timeline-assets/2022%20Delta%20Nid%20Kill.png" target="_blank" class="battle-thumb"><img src="timeline-assets/2022%20Delta%20Nid%20Kill.png" alt="Delta Squad Nidhoggur kill, 2022"></a>
                 <a href="timeline-assets/2022%20Delta%20Nid%20Kill%20Sin.png" target="_blank" class="battle-thumb"><img src="timeline-assets/2022%20Delta%20Nid%20Kill%20Sin.png" alt="Delta Squad Nidhoggur kill - Sin, 2022"></a>
               </div>
+              <p class="video-embed-title">Delta Squad Deployment - Start to Finish, Early 2022</p>
+              <a href="https://www.youtube.com/watch?v=ylF8e94zhtg" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/ylF8e94zhtg/hqdefault.jpg" alt="Delta Squad Deployment - Start to Finish, Early 2022">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">The last Delta Squad deployment, start to finish.</p>
 
               <span class="battle-tag">Leaving The Bastion, February to March 2022</span>
 
@@ -1931,6 +1974,15 @@ a.tl-ref {
 
               <p>2023 is a lull. The momentum from the post-war rebuild and the move into Goonswarm carries the corp into the year, but it bleeds off fast. Leadership goes quiet. For much of the year there's a real sense that no one is steering the ship, and the corp drifts. A spring Imperium war deployment pulls members away from home and leaves MINC's own Khanid moon holdings exposed in the process. By autumn, leadership is openly weighing whether MINC can continue on its own at all, or whether the path forward is a merger into a larger group, or quietly closing the chapter.</p>
 
+              <p class="video-embed-title">Imperium War Deployment - 2023</p>
+              <a href="https://www.youtube.com/watch?v=_N3V80yPFEc" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/_N3V80yPFEc/hqdefault.jpg" alt="Imperium War Deployment - 2023">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">MINC's hype video put together for the start of the 2023 Imperium war deployment.</p>
+
               <p>The tension of the past year is really about that absence of leadership. RVAMitchell, increasingly frustrated by the drift, pushes hard for Khronos Thellere to hand over the corp. The disagreement is difficult and personal, and it nearly costs the two friends their friendship. Khronos stays CEO for the time being, but the underlying problem, that MINC needs someone actively at the helm, goes unresolved and carries straight into the following year.</p>
             </div>
 
@@ -1942,7 +1994,7 @@ a.tl-ref {
               <p class="tl-source">Source: <a href="https://evemaps.dotlan.net" target="_blank">DOTLAN EveMaps</a></p>
 
               <p>On December 6, MINC re-anchors Delirium in RNF-YH (Catch), the same system where the corp's first outpost once stood. It's meant to be a fresh start: drop structures, get industry rolling again, rebuild momentum.</p>
-              <p class="video-embed-title">Warping to MINC Delirium, RNF-YH, December 6, 2024</p>
+              <p class="video-embed-title">Warping to MINC Delirium, RNF-YH, 2024-12-06</p>
               <a href="https://youtu.be/t79BM6nRwd8" target="_blank" class="video-wrap" style="position:relative;">
                 <img src="https://img.youtube.com/vi/t79BM6nRwd8/hqdefault.jpg" alt="Warping to MINC Delirium - watch on YouTube">
                 <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
@@ -2009,6 +2061,14 @@ a.tl-ref {
               
               <p>War erupts between the Imperium and Winter Coalition. The Imperium wants the fight. It pushes north, establishes a beachhead, and starts pressing into Winter Coalition space.</p>
 
+              <p class="video-embed-title">War Against Winter Coalition</p>
+              <a href="https://www.youtube.com/watch?v=AtGb0JWYCjw" target="_blank" class="video-wrap" style="position:relative;">
+                <img src="https://img.youtube.com/vi/AtGb0JWYCjw/hqdefault.jpg" alt="War Against Winter Coalition">
+                <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(0,0,0,0.65); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                  <span style="display:block; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid #fff; margin-left:4px;"></span>
+                </span>
+              </a>
+              <p class="r-caption" style="margin:-6px 4px 10px 4px;">MINC's propaganda video for the war against Winter Coalition.</p>
 
               <div class="battle-box">
                 <div class="battle-header">
@@ -2451,7 +2511,7 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') document.getElementById('r-lightbox').classList.remove('open');
 });
 document.addEventListener('DOMContentLoaded', function() {
-    var SKIP = ['roster-portrait','roster-ship','ship-tier-badge','ceo-portrait','veteran-portrait'];
+    var SKIP = ['roster-portrait','roster-ship','ship-tier-badge','ceo-portrait','veteran-portrait','gif-poster'];
     function excluded(img) {
         var c = img.className || '';
         return SKIP.some(function(s) { return c.indexOf(s) !== -1; });
