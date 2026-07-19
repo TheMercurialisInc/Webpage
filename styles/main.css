@@ -1,0 +1,1326 @@
+/* ================================================================
+   MINC RETRO STYLE — Gunmetal Silver base, Red + Gold accents
+   Colors: Black #000  |  Gunmetal #141414  |  Dark-red #4c0000
+           Gold  #d4b800  |  Yellow #fefe5d  |  Steel-blue #576b84
+           Silver-text #c0c0c0  |  Green #49ce5a
+   ================================================================ */
+
+* { box-sizing: border-box; }
+
+:root {
+    --r-col-side: 170px;
+    --r-outer-w: 858px; /* .r-outer content width: 860px border-box minus 1px border each side */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
+    color: #c8c8c8;
+    background-color: #000;
+    background-image: url(../assets/JWSTPIX.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 1300px;
+    background-position: top right -200px;
+}
+
+/* ----------------------------------------------------------------
+   Page wrapper
+   ---------------------------------------------------------------- */
+.r-page {
+    width: 860px;
+    margin: 8px auto 0 auto;
+}
+
+/* ----------------------------------------------------------------
+   Outer container — gunmetal silver shell
+   ---------------------------------------------------------------- */
+.r-outer {
+    width: 860px;
+    background: linear-gradient(180deg,
+        #202020 0%,
+        #181818 4%,
+        #141414 50%,
+        #181818 96%,
+        #202020 100%);
+    border: 1px solid #3a3a3a;
+    border-top: 1px solid #444;
+}
+
+/* ================================================================
+   HEADER SECTION — CSS Grid
+   col 1 (170px, rowspan 2) | col 2 (1fr) | col 3 (170px, rowspan 2)
+   row 2 col 2 = nav bar (wraps to 2 rows)
+   ================================================================ */
+.r-header-section {
+    display: grid;
+    grid-template-columns: var(--r-col-side) 1fr var(--r-col-side);
+    grid-template-rows: 82px 58px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Logo — spans both header rows */
+.r-logo-cell {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: #0a0a0a;
+    border-right: 1px solid #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.4px;
+    overflow: hidden;
+}
+.r-logo-cell img {
+    display: block;
+    width: 99px;
+    height: 99px;
+    object-fit: contain;
+}
+
+/* Main header — dark red atmospheric gradient */
+.r-header-main-cell {
+    grid-area: 1 / 2 / 2 / 3;
+    background: linear-gradient(180deg,
+        #0a0a0a 0%,
+        #180000 20%,
+        #4c0000 50%,
+        #180000 80%,
+        #0a0a0a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 10px;
+    border-right: 1px solid #2a2a2a;
+}
+
+.r-site-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fefe5d;
+    text-shadow: 0 0 14px rgba(212,184,0,0.5), 1px 1px 0 #000;
+    margin: 0 0 1px 0;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.r-site-subtitle {
+    font-size: 15.4px;
+    font-style: italic;
+    color: #7a95b5;
+    margin: 0;
+    text-align: center;
+}
+
+/* Right badge cell */
+.r-flash-cell {
+    grid-area: 1 / 3 / 3 / 4;
+    background-color: #0a0a0a;
+    border-left: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4.4px;
+    font-size: 12px;
+    text-align: center;
+    color: #808080;
+}
+.r-flash-cell img {
+    display: block;
+    max-width: 55px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ================================================================
+   NAV BAR — flat dark, gold accent underline
+   ================================================================ */
+.r-nav {
+    grid-area: 2 / 2 / 3 / 3;
+    background: #0f0f0f;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #8b6914;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    row-gap: 0;
+}
+
+.r-nav-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.r-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    padding: 0 9px;
+    color: #b89800;
+    text-decoration: none;
+    font-size: 16.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    border-right: 1px solid #222;
+}
+
+.r-nav a:first-child {
+    border-left: 1px solid #222;
+}
+
+.r-nav a:hover {
+    background: #1a0000;
+    color: #fefe5d;
+    text-decoration: none;
+}
+
+.r-nav a:focus-visible {
+    outline: 2px solid #8b6914;
+    outline-offset: -2px;
+}
+
+.r-nav a.r-active {
+    background: #2a0000;
+    color: #fefe5d;
+    border-bottom: 2px solid #d4b800;
+    text-decoration: none;
+}
+
+/* ================================================================
+   BANNER ROW
+   ================================================================ */
+.r-banner-row {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #3a3a3a;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.r-banner-text {
+    color: #d4b800;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 6px 20px;
+    background: linear-gradient(90deg,
+        #141414 0%, #1a0000 20%, #3a0000 50%, #1a0000 80%, #141414 100%);
+    border-top: 1px solid #3a0000;
+    border-bottom: 1px solid #3a0000;
+    width: 840px;
+    text-align: center;
+}
+
+/* ================================================================
+   CONTENT AREA
+   ================================================================ */
+.r-content-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 8px;
+}
+
+/* Legacy spacer divs — gap: 8px on the row replaces them */
+.r-content-gap { display: none; }
+
+/* ----------------------------------------------------------------
+   Box component
+   ---------------------------------------------------------------- */
+.r-box {
+    background: linear-gradient(180deg,
+        #161616 0%,
+        #111111 8%,
+        #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+}
+
+/* Stacked boxes — suppress the doubled top border */
+.r-box + .r-box {
+    border-top: none;
+}
+
+.r-sidebar-box {
+    width: 178px;
+    flex-shrink: 0;
+}
+
+.r-sidebar-box .r-box-body {
+    font-size: 13px;
+}
+
+.r-sidebar-box .r-stats-table {
+    font-size: 12px;
+}
+
+.r-main-box {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Dark red header bar */
+.r-box-header {
+    background: linear-gradient(180deg,
+        #6a0000 0%,
+        #4c0000 30%,
+        #2a0000 65%,
+        #4c0000 100%);
+    text-align: center;
+    padding: 5px 6px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fefe5d;
+    border-bottom: 1px solid #8b6914;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(212,184,0,0.35);
+}
+
+/* Main box uses deep steel-blue header */
+.r-main-box .r-box-header {
+    background: linear-gradient(180deg,
+        #2a3d54 0%,
+        #1e2e42 30%,
+        #111e2e 65%,
+        #1e2e42 100%);
+    border-bottom: 1px solid #3a5070;
+    color: #d4b800;
+    text-shadow: 0 0 8px rgba(212,184,0,0.3);
+}
+
+/* ----------------------------------------------------------------
+   Announcements — same gradient/glow structure as the other
+   box headers, just gunmetal gray instead of red or steel-blue
+   ---------------------------------------------------------------- */
+.r-announce-wrap {
+    position: relative;
+    overflow: hidden;
+    margin: 6px 0 12px 0;
+    border: 1px solid #8b6914;
+}
+.r-announce-wrap::before {
+    content: "Latest";
+    position: absolute;
+    top: 9px;
+    right: -30px;
+    width: 110px;
+    padding: 5px 0;
+    background: linear-gradient(135deg, #6a0000 0%, #4c0000 50%, #2a0000 100%);
+    border-top: 1px solid #8b0000;
+    border-bottom: 1px solid #1a0000;
+    color: #fefe5d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(0,0,0,0.6);
+    transform: rotate(45deg);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    z-index: 1;
+}
+.r-main-box .r-box-header.r-announce-header {
+    background: linear-gradient(180deg,
+        #4a4a4a 0%,
+        #363636 30%,
+        #202020 65%,
+        #363636 100%);
+    border-bottom: 1px solid #5a5a5a;
+    color: #e8e8e8;
+    text-shadow: 0 0 8px rgba(255,255,255,0.25);
+}
+.r-announce-wrap .r-box-body {
+    background: #0a0a0a;
+}
+
+/* Box body */
+.r-box-body {
+    padding: 6px;
+    font-size: 15px;
+    color: #c0c0c0;
+    line-height: 1.6;
+}
+
+.r-box-body p {
+    margin: 0 0 6px 0;
+    line-height: 1.6;
+}
+
+.r-box-body ol {
+    padding-left: 20px;
+    margin: 4px 0 8px 0;
+}
+
+.r-box-body ul {
+    padding-left: 16px;
+    margin: 3px 0 6px 0;
+    list-style-type: square;
+}
+
+.r-box-body li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+/* Section sub-heading inside a box */
+.r-content-heading {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    display: block;
+    margin: 8px 0 4px 0;
+    color: #d4b800;
+}
+
+.r-content-heading:first-child {
+    margin-top: 2px;
+}
+
+/* Portrait images */
+.r-portrait {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    display: block;
+    margin: 4px auto;
+    border: 1px solid #2e2e2e;
+}
+
+/* ----------------------------------------------------------------
+   Sidebar stats table
+   ---------------------------------------------------------------- */
+.r-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+.r-stats-table td {
+    padding: 2px 3px;
+    border-bottom: 1px solid #1e1e1e;
+    vertical-align: top;
+}
+
+.r-stats-table td:first-child {
+    font-weight: bold;
+    width: 55px;
+    color: #d4b800;
+}
+
+/* ----------------------------------------------------------------
+   Announcements list
+   ---------------------------------------------------------------- */
+.r-announcement-item {
+    margin-bottom: 10px;
+}
+
+.r-announcement-item:last-child {
+    margin-bottom: 0;
+}
+
+.r-announcement-date {
+    color: #808080;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* ----------------------------------------------------------------
+   Status indicators
+   ---------------------------------------------------------------- */
+.r-status-open   { color: #49ce5a; font-weight: bold; }
+.r-status-closed { color: #cc3333; font-weight: bold; }
+
+/* ----------------------------------------------------------------
+   Spacer row
+   ---------------------------------------------------------------- */
+.r-spacer-row {
+    height: 12px;
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.r-footer {
+    width: 860px;
+    margin: 0 auto 10px auto;
+    border: 1px solid #3a3a3a;
+    border-top: none;
+}
+
+.r-footer-inner {
+    background: linear-gradient(180deg, #2a0000 0%, #1a0000 100%);
+    text-align: center;
+    padding: 7px 10px;
+    font-size: 14px;
+    color: #888;
+    line-height: 1.4;
+    border-top: 1px solid #4c0000;
+}
+
+/* ================================================================
+   DESIGN B — SITE HEADER SKIN (HeaderBG + LOGOBG)
+   Shared by all pages — banner spans logo-col-edge to flash-cell-edge
+   ================================================================ */
+.r-header-section {
+    background: url('../assets/HeaderBG.png') var(--r-col-side) 0/calc(var(--r-outer-w) - 2 * var(--r-col-side)) 82px no-repeat;
+}
+.r-logo-cell {
+    background: url('../assets/LOGOBG.png') center/100% 100% no-repeat;
+}
+.r-header-main-cell {
+    background: transparent;
+    border-right: none;
+}
+.r-flash-cell {
+    background: url('../assets/LOGOBG.png') center/100% 100% no-repeat;
+    border-left: none;
+}
+.r-logo-cell img,
+.r-flash-cell img {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.18)) drop-shadow(0 0 2px rgba(255,255,255,0.24));
+}
+.r-nav {
+    background: #080808;
+    border-top: 2px solid #1a0000;
+    border-bottom: 1px solid #8b6914;
+}
+.r-nav a {
+    background: url('../assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-nav a:hover {
+    box-shadow:
+        inset 1px 1px 0 rgba(255,220,100,0.55),
+        inset -1px -1px 0 rgba(0,0,0,0.75);
+    filter: brightness(1.2);
+}
+.r-nav a:active {
+    box-shadow:
+        inset 1px 1px 0 rgba(0,0,0,0.75),
+        inset -1px -1px 0 rgba(255,220,100,0.4);
+    filter: brightness(0.9);
+}
+.r-nav a.r-active {
+    background: url('../assets/HeaderBG.png') center/100% 100% no-repeat;
+}
+.r-site-subtitle {
+    color: #e8d080;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7);
+}
+
+/* ----------------------------------------------------------------
+   Retro sidebar audio player
+   ---------------------------------------------------------------- */
+.retro-player {
+    background: linear-gradient(180deg, #181818 0%, #101010 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+    padding: 5px 6px 6px 6px;
+    margin-top: 6px;
+}
+.rp-track {
+    color: #49ce5a;
+    font-size: 11px;
+    font-family: "Courier New", monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    text-shadow: 0 0 7px rgba(73,206,90,0.55);
+    letter-spacing: 0.3px;
+}
+.rp-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.rp-btn {
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 1px solid #444;
+    border-bottom-color: #222;
+    color: #d4b800;
+    font-size: 11px;
+    width: 22px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    line-height: 1;
+}
+.rp-btn:hover {
+    background: linear-gradient(180deg, #2a1800 0%, #1a1000 100%);
+    border-color: #d4b800;
+    color: #fefe5d;
+}
+.rp-btn:focus-visible {
+    outline: 2px solid #8b6914;
+    outline-offset: 2px;
+}
+.rp-btn:active {
+    background: linear-gradient(180deg, #111 0%, #222 100%);
+    border-top-color: #222;
+    border-bottom-color: #444;
+}
+.rp-progress-wrap {
+    flex: 1;
+    height: 8px;
+    background: #060606;
+    border: 1px solid #2a2a2a;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.rp-progress-wrap:focus-visible {
+    outline: 2px solid #8b6914;
+    outline-offset: 2px;
+}
+.rp-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #6a0000 0%, #b80000 55%, #d4b800 100%);
+}
+.rp-time {
+    color: #7a95b5;
+    font-size: 10px;
+    font-family: "Courier New", monospace;
+    margin-top: 4px;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
+
+/* ----------------------------------------------------------------
+   Utility text classes
+   ---------------------------------------------------------------- */
+.r-caption {
+    font-size: 12px;
+    color: #808080;
+}
+
+.r-footer-badge {
+    font-size: 8px;
+    color: #808080;
+}
+
+/* ================================================================
+   GLOBAL LINK STYLES
+   ================================================================ */
+a:link, a:visited {
+    color: #b89800;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fefe5d;
+    text-decoration: none;
+}
+
+a:active {
+    color: #fefe5d;
+    text-decoration: underline;
+}
+
+/* ================================================================
+   CORP HISTORY PAGE — Timeline, Roster Grid, Veteran Cards,
+   Reddit AARs, Video Tiles, Lightbox
+   (history.html-specific components; merged in from an embedded
+   <style> block during CSS consolidation)
+   ================================================================ */
+/* ── Editorial Note ───────────────────────────────────────── */
+.editorial-note {
+    background: #14171a;
+    border: 1px solid #313a42;
+    border-left: 3px solid #5c7a91;
+    margin: 14px 0;
+    padding: 20px 26px;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #bfc6cc;
+    font-size: 15px;
+    line-height: 1.75;
+}
+.editorial-note p {
+    margin: 0 0 12px 0;
+}
+.editorial-note p:last-of-type {
+    margin-bottom: 0;
+}
+.editorial-note .editorial-sign {
+    margin-top: -6px;
+    text-align: right;
+    font-style: italic;
+    color: #7f8e99;
+    line-height: 1;
+}
+.editorial-note .editorial-sign strong {
+    display: block;
+    font-style: normal;
+    color: #d8dbde;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+.editorial-note a:link, .editorial-note a:visited {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #8fb4d1;
+    text-decoration: underline;
+}
+.editorial-note a:hover {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #c3ddf0;
+}
+
+/* ── Year Index Box ───────────────────────────────────────── */
+.r-yindex-section {
+    border-bottom: 1px solid #3a3a3a;
+}
+.r-yindex-body {
+    background: linear-gradient(180deg, #0f0f0f 0%, #090909 100%);
+    border-top: 1px solid #2a2a2a;
+    padding: 7px 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.r-ylink {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    color: #d4b800;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.4px;
+    border: 1px solid #201c0e;
+    transition: color 0.12s ease, text-shadow 0.12s ease, border-color 0.12s ease;
+}
+.r-ylink:hover {
+    color: #fefe5d;
+    text-decoration: none;
+    border-color: #4a3d10;
+    text-shadow: 0 0 6px rgba(212,184,0,0.5);
+}
+.r-ylink:focus-visible {
+    outline: 2px solid #8b6914;
+    outline-offset: 1px;
+}
+
+/* ── CEO Horizontal Timeline ──────────────────────────────── */
+.ceo-timeline {
+    width: 100%;
+    overflow-x: auto;
+    margin: 6px 0 20px 0;
+    padding: 6px 0;
+}
+.ceo-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 0 6px;
+}
+.ceo-track::before {
+    content: '';
+    position: absolute;
+    top: 83px;
+    left: 0; right: 0;
+    height: 1px;
+    background: #2e2e2e;
+    z-index: 0;
+}
+.ceo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 118px;
+    max-width: 144px;
+    position: relative;
+    z-index: 1;
+}
+.ceo-portrait-wrap {
+    width: 74px;
+    height: 74px;
+    border: 1px solid #2e2e2e;
+    overflow: hidden;
+    background: #111;
+    flex-shrink: 0;
+}
+.ceo-portrait {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.ceo-dot {
+    width: 7px; height: 7px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    margin: 6px 0 4px 0;
+    flex-shrink: 0;
+}
+.ceo-card.ceo-current .ceo-dot {
+    background: #49ce5a;
+    box-shadow: 0 0 5px #49ce5a;
+}
+.ceo-card.ceo-current .ceo-portrait-wrap {
+    border-color: #49ce5a;
+    box-shadow: 0 0 6px #49ce5a33;
+}
+.ceo-name {
+    color: #c0c0c0;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    line-height: 1.3;
+}
+.ceo-years {
+    color: #808080;
+    font-size: 12px;
+    display: block;
+    margin-top: 1px;
+}
+
+/* ── Timeline ─────────────────────────────────────────────── */
+.timeline {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.timeline-entry {
+    border-top: 1px solid #1e1e1e;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+.timeline-entry:first-child {
+    border-top: none;
+}
+.timeline-year {
+    display: block;
+    background: linear-gradient(180deg,
+        #2a3d54 0%,
+        #1e2e42 50%,
+        #111e2e 100%);
+    color: #d4b800;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px 10px;
+    border-top: 1px solid #3a5070;
+    border-bottom: 1px solid #0a1520;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(212,184,0,0.3);
+}
+.timeline-entry p {
+    margin: 0 0 5px 4px;
+    color: #c0c0c0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.timeline-note {
+    display: block;
+    margin: 6px 4px 8px 4px;
+    padding: 5px 8px;
+    background: #2a1a00;
+    border-left: 3px solid #d4a800;
+    color: #e8c84a;
+    font-size: 15px;
+    font-family: "Courier New", monospace;
+    font-style: italic;
+}
+.timeline-entry img[tabindex]:focus-visible,
+.battle-box img[tabindex]:focus-visible {
+    outline: 2px solid #8b6914;
+    outline-offset: 2px;
+}
+
+/* ── Battle Box ───────────────────────────────────────────── */
+.battle-box {
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+    margin: 8px 4px;
+}
+.battle-header {
+    background: linear-gradient(180deg,
+        #6a0000 0%, #4c0000 30%, #2a0000 65%, #4c0000 100%);
+    padding: 4px 8px;
+    border-bottom: 1px solid #8b6914;
+    margin: 0;
+}
+.battle-box .battle-header { margin: 0; }
+.battle-header-name {
+    display: block;
+    margin: 0;
+    color: #fefe5d;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(212,184,0,0.35);
+}
+.battle-header-date {
+    display: block;
+    color: #8a7000;
+    font-size: 14px;
+    margin-top: 1px;
+}
+.battle-box-content {
+    padding: 6px 8px 4px 8px;
+    background: linear-gradient(180deg, #111111 0%, #0e0e0e 100%);
+}
+.battle-box-content p {
+    margin: 0 0 5px 0;
+    color: #c0c0c0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.battle-tag {
+    display: block;
+    color: #d4b800;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 8px 4px 3px 4px;
+    text-decoration: underline;
+}
+
+/* ── Roster Grid ──────────────────────────────────────────── */
+.roster-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 6px 4px;
+}
+.roster-card {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-areas:
+        "portrait ship"
+        "pname    pname";
+    column-gap: 3px;
+    row-gap: 1px;
+    background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    padding: 3px;
+    align-items: start;
+    position: relative;
+}
+.roster-portrait {
+    grid-area: portrait;
+    width: 50px; height: 50px;
+    object-fit: cover;
+    display: block;
+}
+.roster-ship {
+    grid-area: ship;
+    width: 43px; height: 43px;
+    object-fit: contain;
+    display: block;
+}
+.roster-ships {
+    grid-area: ship;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.roster-ships .roster-ship { grid-area: unset; }
+.roster-ship-wrap {
+    position: relative;
+    display: inline-block;
+    width: 43px; height: 43px;
+    grid-area: ship;
+    flex-shrink: 0;
+}
+.roster-ship-wrap .roster-ship {
+    grid-area: unset;
+    width: 100%; height: 100%;
+}
+.roster-ships .roster-ship-wrap { grid-area: unset; }
+.ship-tier-badge {
+    position: absolute;
+    top: 0; left: 0;
+    width: 14px;
+    height: auto;
+    pointer-events: none;
+}
+.roster-ship-wrap.ship-lost::after {
+    content: '\2715';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #cc3333;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000;
+    pointer-events: none;
+    z-index: 2;
+    line-height: 1;
+}
+.roster-ship-wrap.ship-at {
+    outline: 1px solid #8b6914;
+    box-shadow: 0 0 5px #d4b80044;
+}
+.ship-count {
+    color: #808080;
+    font-size: 14px;
+    font-style: italic;
+    align-self: center;
+    margin-right: 2px;
+}
+.roster-name {
+    grid-area: pname;
+    font-size: 14px;
+    color: #c0c0c0;
+    display: block;
+    line-height: 1.3;
+}
+.roster-ship-name { display: none; }
+#ship-tip {
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    background: rgba(10,10,10,0.95);
+    border: 1px solid #8b6914;
+    color: #d4b86a;
+    font-size: 14px;
+    font-family: "Courier New", monospace;
+    padding: 2px 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    line-height: 1.6;
+}
+.roster-faction-header {
+    font-size: 14px;
+    color: #808080;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 6px 4px 3px 4px;
+    display: block;
+}
+
+/* ── Battle thumbnails ────────────────────────────────────── */
+.battle-thumbnails {
+    display: flex;
+    gap: 4px;
+    margin: 5px 4px 8px 4px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.battle-thumb {
+    display: block;
+    border: 1px solid #2e2e2e;
+    width: calc(33.33% - 3px);
+}
+.battle-thumb img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.battle-thumb:hover { border-color: #8b6914; }
+.battle-thumb:focus-visible { outline: 2px solid #8b6914; outline-offset: 2px; }
+
+/* ── Embedded videos ──────────────────────────────────────── */
+.video-embed-title {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48%;
+    font-size: 13px;
+    font-weight: bold;
+    color: #d4b800;
+    margin: 10px 4px 0 4px;
+    padding: 4px 8px;
+    border-left: 3px solid #d4b800;
+    background: rgba(212, 184, 0, 0.07);
+    letter-spacing: 0.2px;
+}
+.video-wrap {
+    position: relative;
+    width: 48%;
+    margin: 2px 4px 10px 4px;
+    display: block;
+}
+.video-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #2e2e2e;
+}
+.video-wrap:focus-visible img {
+    border-color: #8b6914;
+    outline: 2px solid #8b6914;
+    outline-offset: 2px;
+}
+
+/* ── 10 Year Club ─────────────────────────────────────────── */
+.veteran-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 5px 4px 14px 4px;
+    justify-content: center;
+}
+#ten-year-club .roster-faction-header { text-align: center; }
+.veteran-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 88px;
+    background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
+    border: 1px solid #2e2e2e;
+    border-top: 1px solid #3a3a3a;
+    padding: 6px 4px;
+}
+.veteran-card.current {
+    border-color: #49ce5a;
+    border-top-color: #49ce5a;
+    box-shadow: 0 0 6px rgba(73,206,90,0.10);
+}
+.veteran-portrait-wrap {
+    width: 64px; height: 64px;
+    border: 1px solid #2e2e2e;
+    overflow: hidden;
+    background: #111;
+    flex-shrink: 0;
+}
+.veteran-card.current .veteran-portrait-wrap {
+    border-color: #49ce5a;
+    box-shadow: 0 0 5px rgba(73,206,90,0.2);
+}
+.veteran-portrait {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.veteran-dot {
+    width: 6px; height: 6px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    margin: 5px 0 4px 0;
+    flex-shrink: 0;
+}
+.veteran-card.current .veteran-dot {
+    background: #49ce5a;
+    box-shadow: 0 0 4px #49ce5a;
+}
+.veteran-name {
+    color: #c0c0c0;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    line-height: 1.3;
+    min-height: 2.6em;
+    margin-bottom: 2px;
+}
+.veteran-joined {
+    color: #808080;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 3px;
+}
+.veteran-tenure {
+    color: #808080;
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.veteran-tenure.ticking { color: #49ce5a; }
+.veteran-stints {
+    color: #808080;
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+}
+.veteran-card.memorial {
+    border-color: #4a3800;
+    border-top-color: #6a5200;
+    box-shadow: 0 0 5px rgba(212,184,0,0.08);
+}
+.veteran-card.memorial .veteran-portrait-wrap {
+    border-color: #4a3800;
+    filter: grayscale(40%);
+}
+.veteran-card.memorial .veteran-dot {
+    background: #8b6914;
+    box-shadow: 0 0 3px #8b691455;
+}
+.veteran-card.memorial .veteran-tenure { color: #d4b800; }
+#r-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+#r-lightbox.open { display: flex; }
+#r-lightbox-wrap {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    max-width: 92vw;
+}
+#r-lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    border: 1px solid #8b6914;
+    box-shadow: 0 0 40px rgba(0,0,0,0.9);
+}
+#r-lightbox-caption {
+    padding: 6px 10px;
+    background: rgba(0,0,0,0.75);
+    color: #d4b86a;
+    font-size: 15px;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    border: 1px solid #8b6914;
+    border-top: none;
+    pointer-events: none;
+}
+/* Video grid */
+.video-grid { gap:4px; margin:8px 0; }
+.video-tile {
+    display:inline-flex; flex-direction:column;
+    width:172px; text-decoration:none;
+    border:1px solid #2e2e2e; overflow:hidden;
+}
+.video-tile:hover { border-color:#8b6914; }
+.video-tile:focus-visible { outline: 2px solid #8b6914; outline-offset: 2px; }
+.video-tile-img { position:relative; }
+.video-tile-img img { width:100%; height:97px; object-fit:cover; display:block; }
+.vplay {
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:36px; height:36px;
+    background:rgba(0,0,0,0.65); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    pointer-events:none;
+}
+.vplay > span {
+    display:block; width:0; height:0;
+    border-top:6px solid transparent;
+    border-bottom:6px solid transparent;
+    border-left:11px solid #fff;
+    margin-left:2px;
+}
+.video-label {
+    background:rgba(12,12,12,0.92); color:#d4b86a;
+    font-size:11px; font-family:"Courier New",monospace;
+    padding:3px 5px; display:block;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.video-date { color:#7a95b5; }
+/* Reddit member posts */
+.reddit-box {
+    border: 1px solid #333333;
+    border-top: 1px solid #606060;
+    margin: 8px 4px;
+}
+.reddit-header {
+    background: linear-gradient(180deg, #282828 0%, #1a1a1a 30%, #101010 65%, #1a1a1a 100%);
+    padding: 4px 8px;
+    border-bottom: 1px solid #505050;
+}
+.reddit-header-title {
+    display: block;
+    color: #d0d0d0;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(200,200,200,0.12);
+}
+.reddit-header-title::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23FF4500'/%3E%3Cpath d='M16.67 10a1.46 1.46 0 0 0-2.47-1 7.12 7.12 0 0 0-3.85-1.23l.65-3.08 2.13.45a1 1 0 1 0 1-.97 1 1 0 0 0-.96.66l-2.38-.5a.16.16 0 0 0-.19.12L9.89 8c-1.42.07-2.7.49-3.64 1.13a1.46 1.46 0 1 0-1.62 2.36 2.87 2.87 0 0 0 0 .4c0 2.02 2.35 3.66 5.24 3.66s5.24-1.64 5.24-3.66a2.87 2.87 0 0 0 0-.4 1.46 1.46 0 0 0 .66-1.49zM8.07 11a1 1 0 1 1 1 1 1 1 0 0 1-1-1zm5.56 2.65a3.44 3.44 0 0 1-2.76.63 3.44 3.44 0 0 1-2.76-.63.27.27 0 0 1 .38-.38 2.89 2.89 0 0 0 2.38.48 2.89 2.89 0 0 0 2.38-.48.27.27 0 0 1 .38.38zm-.19-1.65a1 1 0 1 1 1-1 1 1 0 0 1-1 1z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 7px;
+    position: relative;
+    top: -1px;
+}
+.reddit-header-meta {
+    display: block;
+    color: #808080;
+    font-size: 14px;
+    margin-top: 1px;
+}
+.reddit-box-content {
+    padding: 6px 8px 4px 8px;
+    background: linear-gradient(180deg, #181818 0%, #151515 100%);
+}
+.reddit-box-content p {
+    margin: 0 0 5px 0;
+    color: #b4b4b4;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.reddit-expand > summary {
+    list-style: none;
+    cursor: pointer;
+    color: #808080;
+    font-size: 14px;
+    font-family: "Courier New", monospace;
+    padding: 4px 0 2px 0;
+    display: block;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 2px;
+}
+.reddit-expand > summary:hover { color: #8b6914; }
+.reddit-expand[open] > summary { display: none; }
+.reddit-expand > summary::-webkit-details-marker { display: none; }
+.reddit-collapse {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    list-style: none;
+    cursor: pointer;
+    color: #808080;
+    font-size: 14px;
+    font-family: "Courier New", monospace;
+    text-align: left;
+    padding: 6px 0 2px 0;
+    margin: 4px 0 0 0;
+    border-top: 1px solid #2a2a2a;
+}
+.reddit-collapse:hover { color: #8b6914; }
+.reddit-collapse:focus-visible { outline: 2px solid #8b6914; outline-offset: 2px; }
+/* Source credit lines below entries / battle boxes */
+.tl-source {
+    font-size: 12px;
+    color: #7a95b5;
+    margin: 4px 0 0 0;
+    font-style: italic;
+}
+/* External reference links (zkillboard, reddit, battle reports) */
+a.tl-ref {
+    font-size: 12px;
+    color: #7a95b5;
+    font-style: italic;
+}
